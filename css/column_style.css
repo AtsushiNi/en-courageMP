@@ -85,15 +85,63 @@ header{
   font-size: 24px;
 }
 
+img.sample_img{
+  width: 100%;
+  height: auto;
+}
 
+.pcol ul, .ncol ul, .tabs ul{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  padding: 0%;
+}
+
+.pcol li, .ncol li, .tabs li{
+  padding: 2.5%;
+  margin: 0 3%;
+  list-style: none;
+}
+
+
+.pcol li a, .ncol li a, .tabs li a {
+  color: #000B77;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.pcol li a:hover, .ncol li a:hover, .tabs li a:hover {
+  /* background-color: #fff; */
+  color:  #000c77b9;
+   -webkit-transition: 0.7s;
+   -moz-transition: 0.7s;
+   -o-transition: 0.7s;
+   transition: 0.7s;
+   opacity: 0.7;
+}
+
+
+/* 人気記事の切り替えスタイル */
 /*タブ切り替え全体のスタイル*/
-.tabs1 {
+.pcol {
   margin-top: 50px;
   padding-bottom: 40px;
-  margin: 0 auto;}
+  margin: 0 auto;
+}
 
 /*タブのスタイル*/
-.tab_item1 {
+.pcol_item {
   margin-bottom: 2.5%;
   border: 1px solid #eceaea;
   box-sizing: border-box;
@@ -111,19 +159,76 @@ header{
   transition: all 0.2s ease;
 }
 
-.tab_item1:hover {
+.pcol_item:hover {
   opacity: 0.75;
   color: #000c77be;
   transition: 0.5s;
 }
 
 /*ラジオボタンを全て消す*/
-input[name="tab_item1"] {
+input[name="pcol_item"] {
   display: none;
 }
 
 /*タブ切り替えの中身のスタイル*/
-.tab_content1 {
+.pcol_content {
+  display: none;
+  clear: both;
+  overflow: hidden;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#pcol1:checked ~ #pcol1_content,
+#pcol2:checked ~ #pcol2_content,
+#pcol3:checked ~ #pcol3_content {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.pcol input:checked + .pcol_item {
+  background-color: #000c77b9;;
+  color: #fff;
+}
+
+/* 新着記事の切り替え */
+/*タブ切り替え全体のスタイル*/
+.ncol {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  margin: 0 auto;}
+
+/*タブのスタイル*/
+.ncol_item {
+  margin-bottom: 2.5%;
+  border: 1px solid #eceaea;
+  box-sizing: border-box;
+  background-color: #eceaea;
+  width: calc(100%/3);
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #000B77;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.ncol_item:hover {
+  opacity: 0.75;
+  color: #000c77be;
+  transition: 0.5s;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="ncol_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.ncol_content {
   display: none;
   clear: both;
   overflow: hidden;
@@ -131,18 +236,20 @@ input[name="tab_item1"] {
 
 
 /*選択されているタブのコンテンツのみを表示*/
-#all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
+#ncol1:checked ~ #ncol1_content,
+#ncol2:checked ~ #ncol2_content,
+#ncol3:checked ~ #ncol3_content {
   display: block;
 }
 
 /*選択されているタブのスタイルを変える*/
-.tabs1 input:checked + .tab_item1 {
+.ncol input:checked + .ncol_item {
   background-color: #000c77b9;;
   color: #fff;
 }
 
+
+/* 用途別の切り替え */
 /*タブ切り替え全体のスタイル*/
 .tabs {
   margin-top: 50px;
@@ -188,66 +295,9 @@ input[name="tab_item"] {
 
 
 /*選択されているタブのコンテンツのみを表示*/
-#all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
-  display: block;
-}
-
-/*選択されているタブのスタイルを変える*/
-.tabs input:checked + .tab_item {
-  background-color: #000c77b9;;
-  color: #fff;
-}
-
-/*タブ切り替え全体のスタイル*/
-.tabs {
-  margin-top: 50px;
-  padding-bottom: 40px;
-  margin: 0 auto;}
-
-/*タブのスタイル*/
-.tab_item {
-  margin-bottom: 2.5%;
-  border: 1px solid #eceaea;
-  box-sizing: border-box;
-  background-color: #eceaea;
-  width: calc(100%/3);
-  height: 50px;
-  line-height: 50px;
-  font-size: 16px;
-  text-align: center;
-  color: #000B77;
-  display: block;
-  float: left;
-  text-align: center;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.tab_item:hover {
-  opacity: 0.75;
-  color: #000c77be;
-  transition: 0.5s;
-}
-
-/*ラジオボタンを全て消す*/
-input[name="tab_item"] {
-  display: none;
-}
-
-/*タブ切り替えの中身のスタイル*/
-.tab_content {
-  display: none;
-  clear: both;
-  overflow: hidden;
-}
-
-
-/*選択されているタブのコンテンツのみを表示*/
-#all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
+#home1:checked ~ #home1_content,
+#home2:checked ~ #home2_content,
+#home3:checked ~ #home3_content {
   display: block;
 }
 

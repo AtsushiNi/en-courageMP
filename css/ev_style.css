@@ -141,7 +141,7 @@ img.ev{
   text-align: center;
   display:flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 0%;
 }
 
@@ -165,12 +165,7 @@ img.ev{
   opacity: 1;
 }
 
-/* #new_event li p, .tabs li p{
-
-} */
-
 #new_event li a:hover, .tabs li a:hover {
-  /* background-color: #fff; */
   color:  #000c77b9;
    -webkit-transition: 0.7s;
    -moz-transition: 0.7s;
@@ -225,9 +220,9 @@ input[name="tab_item"] {
 
 
 /*選択されているタブのコンテンツのみを表示*/
-#all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
+#home1:checked ~ #home1_content,
+#home2:checked ~ #home2_content,
+#home3:checked ~ #home3_content {
   display: block;
 }
 
@@ -293,6 +288,11 @@ input[name="tab_item"] {
   background-color: #000c7794;
   color: #f3f2efb2;
   transition: 0.5s;
+}
+
+img.sample_img{
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 768px){
