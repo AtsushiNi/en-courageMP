@@ -6,6 +6,8 @@
 <link href='css/ev_style.css' rel='stylesheet' />
 <script src='js/ev_script.js'></script>
 <script src='lib/main.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 
 </head>
@@ -33,8 +35,82 @@
     </div>
     <div id='calendar'></div>
   </div>
-  
 
-  <div>aa</div>
+  <div id="select">
+    <div id="new_event">
+      <h1>新着イベント</h1>
+      <ul>
+        <li><a href="#q_02"><img src="./images/img.png"><p>5/15 業界セミナー</p></a></li>
+        <li><a href="#q_02"><img src="./images/img.png"><p>5/15 キャリアシアター</p></a></li>
+        <li><a href="#q_02"><img src="./images/img.png"><p>5/15 GD対策セミナー</p></a></li>
+      </ul>
+    </div>
+
+    <div class="tabs">
+      <h1>おすすめイベント</h1>
+      <input id="all" type="radio" name="tab_item" checked>
+      <label class="tab_item" for="all">自己分析</label>
+      <input id="programming" type="radio" name="tab_item">
+      <label class="tab_item" for="programming">業界理解</label>
+      <input id="design" type="radio" name="tab_item">
+      <label class="tab_item" for="design">選考対策</label>
+      <div class="tab_content" id="all_content">
+        <ul>
+          <li><a href="#q_02"><img src="./images/img.png"><p>5/15 業界セミナー1</p></a></li>
+          <li><a href="#q_02"><img src="./images/img.png"><p>5/15 キャリアシアター1</p></a></li>
+          <li><a href="#q_02"><img src="./images/img.png"><p>5/15 GD対策セミナー1</p></a></li>
+        </ul>
+      </div>
+      <div class="tab_content" id="programming_content">
+        <ul>
+          <li><a href="#q_02"><img src="./images/img.png"><p>5/15 業界セミナー2</p></a></li>
+          <li><a href="#q_02"><img src="./images/img.png"><p>5/15 キャリアシアター2</p></a></li>
+          <li><a href="#q_02"><img src="./images/img.png"><p>5/15 GD対策セミナー2</p></a></li>
+        </ul>
+      </div>
+      <div class="tab_content" id="design_content">
+        <ul>
+          <li><a href="#q_02"><img src="./images/img.png"><p>5/15 業界セミナー3</p></a></li>
+          <li><a href="#q_02"><img src="./images/img.png"><p>5/15 キャリアシアター3</p></a></li>
+          <li><a href="#q_02"><img src="./images/img.png"><p>5/15 GD対策セミナー3</p></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="voice">
+      <h1>利用者の声</h1>
+      <ul>
+        <li>
+          <div class="name">
+            <p>情報研究科 匿名希望</p>
+          </div>
+          <div class="voice_content">
+            <p>自己分析セミナーでは自分の過去の経験から好きなタイプを知ることができました！
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="name">
+            <p>情報研究科 つつつ&nbsp;さん</p>
+          </div>
+          <div class="voice_content">
+            <p>業界研究セミナーでは各メンバーの特徴を知ることができ、志望業界（推しメン）を見つけることができました！</p>
+          </div>
+        </li>
+        <li>
+          <div class="name">
+            <p>情報研究科 河原達也&nbsp;さん</p>
+          </div>
+          <div class="voice_content">
+            <p>選考対策に参加して良かったです！ライブ当日は対策していた曲が披露され、心の中で応援することができました！</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="return-btn">
+      <a class="return" href="index.html">もどる</a>
+    </div>
+  </div>
 </body>
 </html>
