@@ -1,0 +1,143 @@
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  width:90%;
+  margin:0% 5%;
+  background-color:#F3F2EF;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #000B77;
+}
+
+header{
+  padding-top: 2.5%;
+  display: flex;
+}
+
+#header-logo{
+  float: left;
+  width: 20%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-logo a{
+  text-decoration: none;
+  padding: auto;
+  
+}
+
+#header-list{
+  display:flex; 
+  width: 80%;
+  margin: 0 0 0 5%;
+}
+
+#header-list ul{
+  display:flex; 
+  justify-content:end;
+  width:112.5%;
+}
+
+#header-list li {
+  text-align: center;
+  padding: 0%;
+  width: 12.4%;
+  list-style: none;
+} 
+
+#header-list li a {
+  width: auto;
+  white-space: nowrap;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10% 7%;
+  border: 2px solid none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+#header-list li a:hover {
+  background-color: rgba(255, 255, 255, 0.781);
+  color:  #000c77b9;
+   -webkit-transition: 0.7s;
+   -moz-transition: 0.7s;
+   -o-transition: 0.7s;
+   transition: 0.7s;
+   opacity: 0.7;
+}
+
+h1 {
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: #000c7713;/*背景色*/
+  border-left: solid 5px #000B77;/*左線*/
+  border-bottom: solid 3px #d7d7d7;/*下線*/
+  font-size: 36px;
+  margin: 5% 0%;
+}
+
+#select{
+  margin: 5%;
+  box-shadow: 0px 0px 5px #000c77b9;
+  border-radius: 5px;
+  border: 1px solid #000c77b9;
+}
+
+.main{
+  margin: 5%;
+}
+
+.main p{
+  font-size: 24px;
+}
+
+img.sample_img{
+  width: 30%;
+  height: auto;
+  display: block;
+  margin:auto;
+  
+}
+
+.return-btn {
+  width: 90%;
+  margin: 5% auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.return {
+  /* color: #000B77; */
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #F3F2EF;
+  background-color: #000c77b9;
+  width: calc(90%/3);
+  margin: 0% 5%;
+  padding: 10px 10px;
+  border: 1px solid #000c77b9;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.return:link, .return:visited {
+  color: #F3F2EF;
+  font-weight: 700;
+}
+.return:hover {
+  border: 1px solid #000c7794 ;
+  background-color: #000c7794;
+  color: #f3f2efb2;
+  transition: 0.5s;
+}
+
+/* @media screen and (max-width: 768px){
+} */

@@ -1,5 +1,5 @@
 body {
-  font-family: 'Rounded Mplus 1c Bold';
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-style: normal;
   font-weight: 700;
   width:90%;
@@ -90,7 +90,12 @@ img.sample_img{
   height: auto;
 }
 
-.pcol ul, .ncol ul, .tabs ul{
+img.sample_img{
+  width: 100%;
+  height: auto;
+}
+
+.pcol ul, .ncol ul, .tabs ul, #list_view ul{
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -100,14 +105,14 @@ img.sample_img{
   padding: 0%;
 }
 
-.pcol li, .ncol li, .tabs li{
+.pcol li, .ncol li, .tabs li, #list_view li{
   padding: 2.5%;
   margin: 0 3%;
   list-style: none;
 }
 
 
-.pcol li a, .ncol li a, .tabs li a {
+.pcol li a, .ncol li a, .tabs li a, #list_view li a{
   color: #000B77;
   font-weight: 700;
   display: block;
@@ -121,7 +126,7 @@ img.sample_img{
   opacity: 1;
 }
 
-.pcol li a:hover, .ncol li a:hover, .tabs li a:hover {
+.pcol li a:hover, .ncol li a:hover, .tabs li a:hover, #list_view li a:hover {
   /* background-color: #fff; */
   color:  #000c77b9;
    -webkit-transition: 0.7s;
@@ -134,14 +139,14 @@ img.sample_img{
 
 /* 人気記事の切り替えスタイル */
 /*タブ切り替え全体のスタイル*/
-.pcol {
+.pcol, .ncol, .tabs {
   margin-top: 50px;
   padding-bottom: 40px;
   margin: 0 auto;
 }
 
 /*タブのスタイル*/
-.pcol_item {
+.pcol_item, .ncol_item, .tab_item  {
   margin-bottom: 2.5%;
   border: 1px solid #eceaea;
   box-sizing: border-box;
@@ -159,7 +164,7 @@ img.sample_img{
   transition: all 0.2s ease;
 }
 
-.pcol_item:hover {
+.pcol_item:hover, .ncol_item:hover, .tab_item:hover {
   opacity: 0.75;
   color: #000c77be;
   transition: 0.5s;
@@ -191,36 +196,6 @@ input[name="pcol_item"] {
 }
 
 /* 新着記事の切り替え */
-/*タブ切り替え全体のスタイル*/
-.ncol {
-  margin-top: 50px;
-  padding-bottom: 40px;
-  margin: 0 auto;}
-
-/*タブのスタイル*/
-.ncol_item {
-  margin-bottom: 2.5%;
-  border: 1px solid #eceaea;
-  box-sizing: border-box;
-  background-color: #eceaea;
-  width: calc(100%/3);
-  height: 50px;
-  line-height: 50px;
-  font-size: 16px;
-  text-align: center;
-  color: #000B77;
-  display: block;
-  float: left;
-  text-align: center;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.ncol_item:hover {
-  opacity: 0.75;
-  color: #000c77be;
-  transition: 0.5s;
-}
 
 /*ラジオボタンを全て消す*/
 input[name="ncol_item"] {
@@ -233,7 +208,6 @@ input[name="ncol_item"] {
   clear: both;
   overflow: hidden;
 }
-
 
 /*選択されているタブのコンテンツのみを表示*/
 #ncol1:checked ~ #ncol1_content,
@@ -250,36 +224,6 @@ input[name="ncol_item"] {
 
 
 /* 用途別の切り替え */
-/*タブ切り替え全体のスタイル*/
-.tabs {
-  margin-top: 50px;
-  padding-bottom: 40px;
-  margin: 0 auto;}
-
-/*タブのスタイル*/
-.tab_item {
-  margin-bottom: 2.5%;
-  border: 1px solid #eceaea;
-  box-sizing: border-box;
-  background-color: #eceaea;
-  width: calc(100%/3);
-  height: 50px;
-  line-height: 50px;
-  font-size: 16px;
-  text-align: center;
-  color: #000B77;
-  display: block;
-  float: left;
-  text-align: center;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.tab_item:hover {
-  opacity: 0.75;
-  color: #000c77be;
-  transition: 0.5s;
-}
 
 /*ラジオボタンを全て消す*/
 input[name="tab_item"] {
@@ -306,6 +250,7 @@ input[name="tab_item"] {
   background-color: #000c77b9;;
   color: #fff;
 }
+
 
 .return-btn {
   padding: 0% 20%;
@@ -338,6 +283,10 @@ input[name="tab_item"] {
   background-color: #000c7794;
   color: #f3f2efb2;
   transition: 0.5s;
+}
+
+.list_up {
+  margin: 10% auto;
 }
 
 @media screen and (max-width: 768px){
