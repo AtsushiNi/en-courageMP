@@ -8,10 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src='js/script2.js'></script>
-
-
 </head>
 <body>
   <header>
@@ -58,7 +54,9 @@
           <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー3</p></a></li>
         </ul>
       </div>
-      <a class="page_change"  data-value=1>view more</a>
+      <div class="page_change">
+        <a class="page_change_btn"  data-value=1>view more</a>
+      </div>
     </div>
 
     <div class="ncol">
@@ -90,6 +88,9 @@
           <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー3</p></a></li>
         </ul>
       </div>
+      <div class="page_change">
+        <a class="page_change_btn"  data-value=1>view more</a>
+      </div>
     </div>
 
     <div class="tabs">
@@ -102,7 +103,7 @@
       <label class="tab_item" for="home3">選考対策</label>
       <div class="tab_content" id="home1_content">
         <ul>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー1</p></a></li>
+          <li><a href="./column_source/column1.html"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー1</p></a></li>
           <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター1</p></a></li>
           <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー1</p></a></li>
         </ul>
@@ -121,6 +122,9 @@
           <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー3</p></a></li>
         </ul>
       </div>
+      <div class="page_change">
+        <a class="page_change_btn"  data-value=1>view more</a>
+      </div>
     </div>
     <div class="return-btn">
       <a class="return" href="index.html">もどる</a>
@@ -129,24 +133,29 @@
 
   <div id="list_up" class="column_pages" style="display: none;">
     <div class="list_up">
-      <div class="list_view">
-        <ul>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー3</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター3</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー3</p></a></li>
-        </ul>
-        <ul>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー3</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター3</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー3</p></a></li>
-        </ul>
-        <ul>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー3</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター3</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー3</p></a></li>
-        </ul>
+      <div id="list_view">
       </div>
     </div>
   </div>
+
+  <div id="colcol" style="display: none;">
+    <li class="list_content"><a href="./column_source/column1.html"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー1</p></a></li>
+    <li class="list_content"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー3</p></a></li>
+    <li class="list_content"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー3</p></a></li>
+    <li class="list_content"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー2</p></a></li>
+    <li class="list_content"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー3</p></a></li>
+    <li class="list_content"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー6</p></a></li>
+    <li class="list_content"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー3</p></a></li>
+    <li class="list_content"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー6</p></a></li>
+  </div>
+
+  <div id="colcol1" style="display: none;">
+    <li class="list_content_sub"><a><img src="./images/img.png" class="sample_img"><p></p></a></li>
+    <li class="list_content_sub"><a><img src="./images/img.png" class="sample_img"><p></p></a></li>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src='js/script2.js'></script>
+
+
 </body>
 </html>

@@ -13,7 +13,7 @@ $(function(){
   //   $(this).closest("div").css("display", "none");
   // });  
   
-  $(".page_change").each(function(){
+  $(".page_change_btn").each(function(){
       $(this).on('click',function(){
         var value = $(this).data("value");
         console.log(value)

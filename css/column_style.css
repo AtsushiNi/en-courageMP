@@ -165,9 +165,9 @@ img.sample_img{
 }
 
 .pcol_item:hover, .ncol_item:hover, .tab_item:hover {
-  opacity: 0.75;
-  color: #000c77be;
-  transition: 0.5s;
+    opacity: 0.75;
+    color: #000c77be;
+    transition: 0.5s;
 }
 
 /*ラジオボタンを全て消す*/
@@ -251,6 +251,23 @@ input[name="tab_item"] {
   color: #fff;
 }
 
+.page_change{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page_change_btn{
+  font-size: 16px;
+  color: #000c77be;
+  width: 10%;
+  text-align: center;
+}
+
+.page_change_btn:hover{
+  opacity: 0.75;
+  transition: 0.5s;
+  background-color: #cfcdcd;
+}
 
 .return-btn {
   padding: 0% 20%;
