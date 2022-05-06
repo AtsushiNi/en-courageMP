@@ -96,7 +96,6 @@ img.sample_img{
 }
 
 .pcol ul, .ncol ul, .tabs ul, #list_view ul{
-  width: 80%;
   margin: 0 auto;
   text-align: center;
   display:flex;

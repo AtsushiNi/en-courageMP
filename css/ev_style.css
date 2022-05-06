@@ -136,7 +136,6 @@ img.ev{
 }
 
 #new_event ul, .tabs ul{
-  width: 80%;
   margin: 0 auto;
   text-align: center;
   display:flex;

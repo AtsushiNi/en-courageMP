@@ -93,8 +93,15 @@ h1 {
   margin: 5%;
 }
 
-.main p{
+.main h2{
+  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+  border-bottom: solid 3px #000B77;/*下線*/
+  width:30%;
   font-size: 24px;
+}
+
+.main p{
+  font-size: 16px;
 }
 
 img.sample_img{
@@ -103,6 +110,23 @@ img.sample_img{
   display: block;
   margin:auto;
   
+}
+
+img.wrap_img{
+  width: 80%;
+  height: auto;
+  display: block;
+  margin:auto;
+}
+
+.wrapper{
+  display:flex;
+  padding: 5% 0;
+}
+
+.wrapper_img{
+  float: left;
+  width: 30%;
 }
 
 .return-btn {
