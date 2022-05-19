@@ -231,6 +231,10 @@ img.bg{
 /****************************************
 自己分析
 ****************************************/
+.contents {
+    max-width: 1040px;
+    margin: 0 auto;
+}
 .appeal-area {
     text-align: center;
 }
