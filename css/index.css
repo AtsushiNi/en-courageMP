@@ -1,0 +1,121 @@
+/*****************************************
+トップページ
+*****************************************/
+header {
+    padding-bottom: 0;
+}
+
+.top-wrap{
+    display:flex;
+}
+
+img.top-img {
+    width: 18%;
+    height: 18%;
+    }
+
+.top h1{
+    color: #000B77;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 76px;
+    margin-left: 5%;
+    margin-bottom: 0%;
+    letter-spacing: 0.1em;
+}
+
+/* .top h1 span{
+    background: linear-gradient(transparent 65%, #74A2C1 65%, transparent 90%);
+} */
+
+.top h1 span {
+	position: relative;
+}
+
+.top h1 span:before {
+	border-bottom: 20px solid rgba(0, 16, 118, 0.23);
+	border-radius: 5px;
+	content: '';
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.top h2{
+    color: #000B77;
+    font-weight: 700;
+    display:flex; 
+    justify-content:end;
+    font-size: 32px;
+    margin-top: -5%;
+    padding-top: 0.5%;
+    letter-spacing: 0.2em;
+    margin-right: 5%;
+}
+  
+.flexbox {
+    margin: 5% auto;
+    padding: 0%;
+    padding-top: 2.5%;
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+  
+.flexbox li {
+    width: 30%;
+    margin: 0 auto;
+    list-style: none;
+}
+  
+.flexbox li a {
+    color: #000B77;
+    font-weight: 700;
+    width: 90%;
+    margin: auto;
+    display: block;
+    padding: 0 5%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+    text-decoration: none;
+    border: 2px solid none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    opacity: 1;
+}
+  
+.flexbox li p{
+    margin: 0% auto;
+}
+
+.flexbox li a:hover {
+    /* background-color: #fff; */
+    color:  #000c77b9;
+     -webkit-transition: 0.7s;
+     -moz-transition: 0.7s;
+     -o-transition: 0.7s;
+     transition: 0.7s;
+     opacity: 0.7;
+}
+  
+img.self-img{
+    width: 80%;
+    height: auto;
+    background-color: #fff;
+}
+
+img.comp-img{
+    width: 80%;
+    height: auto;
+    background-color: #fff;
+}
+
+img.exam-img{
+    width: 80%;
+    height: auto;
+    background-color: #fff;
+}

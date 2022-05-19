@@ -1,0 +1,42 @@
+/****************************************
+自己分析
+****************************************/
+.contents {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+.appeal-area {
+    text-align: center;
+}
+.appeal-area-img {
+    max-height: 500px;
+}
+
+.how-to-use-content {
+    display: flex;
+}
+.left {
+    flex-grow: 1;
+    text-align: center;
+}
+.right {
+    flex-grow: 1;
+    text-align: center;
+}
+.how-to-use-img {
+    height: 150px;
+    width: 400px;
+}
+.item-list {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.item {
+    margin: 0 3%;
+}
+.sample_img {
+    width: 100%;
+    height: auto;
+}

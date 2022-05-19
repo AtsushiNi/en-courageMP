@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>En-Courage京大支部</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
@@ -11,17 +12,17 @@
   </head>
   <body>
     <header>
-        <div id="header-list">
+        <nav>
             <ul>
                 <li class="tab_menu"><a href="./interview.html">　面談　</a></li>
                 <li class="tab_menu"><a href="./event.html">イベント</a></li>
                 <li class="tab_menu"><a href="./column.html">記事一覧</a></li>
                 <li class="tab_menu"><a href="./use.html">&nbsp;使い方&nbsp;</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <div id="main">
+    <main>
         <div id="q_01" class="fit">
             <div class="top">
                 <div class="top-wrap">
@@ -32,90 +33,12 @@
             </div>
      
             <ul class="flexbox fw">
-                <li><a class="btn" href="#sa"><img src="./images/self.PNG" alt="" class="self-img"><p>自己分析</p></a></li>
-                <li><a class="btn" href="#comsn"><img src="./images/company.PNG" alt="" class="comp-img"><p>業界研究</p></a></li>
-                <li><a class="btn" href="#comsn"><img src="./images/exam.PNG" alt="" class="exam-img"><p>選考対策</p></a></li>
+                <li><a class="btn" href="./self-analysis.html"><img src="./images/self.PNG" alt="" class="self-img"><p>自己分析</p></a></li>
+                <li><a class="btn" href="./industry-research.html"><img src="./images/company.PNG" alt="" class="comp-img"><p>業界研究</p></a></li>
+                <li><a class="btn" href="./selection-preparation.html"><img src="./images/exam.PNG" alt="" class="exam-img"><p>選考対策</p></a></li>
             </ul>
         </div>
-    
-        <div id="sa" class="sa" style="display: none;">
-            <div id="sa-head">
-                <h2>自己分析</h2>
-            </div>
-            <div id="sa-main" class="contents">
-                <div class="appeal-area">
-                    <img src="./images/outstanding.png" alt="" class="appeal-area-img">
-                </div>
-                <div class="how-to-use">
-                    <h2>How to Use</h2>
-                    <div class="how-to-use-content">
-                        <div class="left">
-                            <ul>
-                                <li>知る→対策記事とオモシロコラム</li>
-                                <li>参加→自己分析にピッタリのイベント</li>
-                            </ul>
-                        </div>
-                        <div class="right">
-                            <img src="./images/sample.png" alt="" class="how-to-use-img">
-                        </div>
-                    </div>
-                </div>
-                <div class="know">
-                    <h2>知る</h2>
-                    <h3>対策記事</h3>
-                    <ul class="item-list">
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー1</p></a></li>
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター1</p></a></li>
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー1</p></a></li>
-                    </ul>
-                    <div class="view-more">
-                        <a>view more</a>
-                    </div>
-                    <h3>コラム</h3>
-                    <ul class="item-list">
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー1</p></a></li>
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター1</p></a></li>
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー1</p></a></li>
-                    </ul>
-                    <div class="view-more">
-                        <a>view more</a>
-                    </div>
-                </div>
-                <div class="join">
-                    <h2>参加する</h2>
-                    <h3>Pick Up !</h3>
-                    <ul class="item-list">
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー1</p></a></li>
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター1</p></a></li>
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー1</p></a></li>
-                    </ul>
-                    <div class="view-more">
-                        <a>view more</a>
-                    </div>
-                    <h3>支部イベント</h3>
-                    <ul class="item-list">
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー1</p></a></li>
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター1</p></a></li>
-                        <li class="item"><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー1</p></a></li>
-                    </ul>
-                    <div class="view-more">
-                        <a>view more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="return-btn">
-                <a class="return" href="index.html">トップへ戻る</a>
-            </div>
-        </div>
-    
-        <div id="comsn" style="display: none;">
-            <img src="./images/comingsoon.png" class="bg">
-            <div class="return-btn">
-                <a class="return" href="index.html">トップへ戻る</a>
-            </div>
-        </div>
-
-    </div>
+    <main>
  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
