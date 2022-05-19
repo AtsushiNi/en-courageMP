@@ -253,3 +253,16 @@ img.bg{
     height: 150px;
     width: 400px;
 }
+.item-list {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.item {
+    margin: 0 3%;
+}
+.sample_img {
+    width: 100%;
+    height: auto;
+}
