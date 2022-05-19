@@ -1,0 +1,52 @@
+/*****************************************
+ヘッダー
+*****************************************/
+header {
+    padding: 30px;
+}
+
+.header-logo{
+    float: left;
+    width: 20%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.header-logo a{
+    text-decoration: none;
+    padding: auto;
+}
+
+nav ul{
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+} 
+  
+nav ul li a {
+    color: #000B77;
+    font-weight: 700;
+    width: auto;
+    white-space: nowrap;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.781);
+    color:  #000c77b9;
+     -webkit-transition: 0.7s;
+     -moz-transition: 0.7s;
+     -o-transition: 0.7s;
+     transition: 0.7s;
+     opacity: 0.7;
+}
