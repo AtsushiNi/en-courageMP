@@ -7,13 +7,14 @@
 body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-style: normal;
+    margin: 0px;
     background-color: #F3F2EF;
-    width:90%;
-    margin:0% 5%;
 }
 
 main {
     height: 100%;
+    width:90%;
+    margin:0% 5%;
 }
   
 ul {
@@ -22,11 +23,6 @@ ul {
 
 li {
     list-style: none;
-}
-
-a:link, a:visited, a:hover, a:active {
-    color: #000B77;
-    font-weight: 700;
 }
 
 /*****************************************
