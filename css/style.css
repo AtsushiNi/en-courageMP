@@ -233,5 +233,23 @@ img.bg{
 ****************************************/
 .appeal-area {
     text-align: center;
-    max-height: 500px;    
+}
+.appeal-area-img {
+    max-height: 500px;
+}
+
+.how-to-use-content {
+    display: flex;
+}
+.left {
+    flex-grow: 1;
+    text-align: center;
+}
+.right {
+    flex-grow: 1;
+    text-align: center;
+}
+.how-to-use-img {
+    height: 150px;
+    width: 400px;
 }
