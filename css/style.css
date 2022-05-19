@@ -227,3 +227,11 @@ img.bg{
     color: #f3f2efb2;
     transition: 0.5s;
 }
+
+/****************************************
+自己分析
+****************************************/
+.appeal-area {
+    text-align: center;
+    max-height: 500px;    
+}
