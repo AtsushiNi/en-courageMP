@@ -45,11 +45,14 @@
     width: 30%;
     transition: all 0.4s ease 0s;
 }
+
 .item-list li.is-hidden {
     opacity: 0;
     height: 0;
     margin: 0;
+    z-index: -1;
 }
+
 .sample_img {
     width: 100%;
     height: auto;
