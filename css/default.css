@@ -16,7 +16,7 @@ main {
     width:90%;
     margin:0% 5%;
 }
-  
+
 ul {
     margin: auto;
 }
@@ -41,11 +41,11 @@ li {
     text-align: center;
     text-decoration: none;
     color: #F3F2EF;
-    background-color: #000c77b9;
+    background-color: #000B77;
     width: 100%;
     margin: 0% auto;
     padding: 10px 10px;
-    border: 1px solid #000c77b9;
+    border: 1px solid #000B77;
     border-radius: 10px;
     box-sizing: border-box;
 }
@@ -64,9 +64,9 @@ li {
 
 img.bg{
     display: flex;
-    margin: 0% auto; 
+    margin: 0% auto;
     object-fit: cover;
     width: 90%;
     height: auto;
-    
+
 }

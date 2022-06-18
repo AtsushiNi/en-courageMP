@@ -53,7 +53,7 @@ img.sample_img{
 
 .pcol li a:hover, .ncol li a:hover, .tabs li a:hover, #list_view li a:hover {
   /* background-color: #fff; */
-  color:  #000c77b9;
+  color:  #000B77;
    -webkit-transition: 0.7s;
    -moz-transition: 0.7s;
    -o-transition: 0.7s;
@@ -91,7 +91,7 @@ img.sample_img{
 
 .pcol_item:hover, .ncol_item:hover, .tab_item:hover {
     opacity: 0.75;
-    color: #000c77be;
+    color: #000B77;
     transition: 0.5s;
 }
 
@@ -116,7 +116,7 @@ input[name="pcol_item"] {
 
 /*選択されているタブのスタイルを変える*/
 .pcol input:checked + .pcol_item {
-  background-color: #000c77b9;;
+  background-color: #000B77;;
   color: #fff;
 }
 
@@ -143,7 +143,7 @@ input[name="ncol_item"] {
 
 /*選択されているタブのスタイルを変える*/
 .ncol input:checked + .ncol_item {
-  background-color: #000c77b9;;
+  background-color: #000B77;;
   color: #fff;
 }
 
@@ -172,7 +172,7 @@ input[name="tab_item"] {
 
 /*選択されているタブのスタイルを変える*/
 .tabs input:checked + .tab_item {
-  background-color: #000c77b9;;
+  background-color: #000B77;;
   color: #fff;
 }
 
@@ -183,7 +183,7 @@ input[name="tab_item"] {
 
 .page_change_btn{
   font-size: 16px;
-  color: #000c77be;
+  color: #000B77;
   width: 10%;
   text-align: center;
 }
@@ -207,11 +207,11 @@ input[name="tab_item"] {
   text-align: center;
   text-decoration: none;
   color: #F3F2EF;
-  background-color: #000c77b9;
+  background-color: #000B77;
   width: 100%;
   margin: 0% auto;
   padding: 10px 10px;
-  border: 1px solid #000c77b9;
+  border: 1px solid #000B77;
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -221,8 +221,8 @@ input[name="tab_item"] {
   font-weight: 700;
 }
 .return:hover {
-  border: 1px solid #000c7794 ;
-  background-color: #000c7794;
+  border: 1px solid #000B77;
+  background-color: #000B77;
   color: #f3f2efb2;
   transition: 0.5s;
 }

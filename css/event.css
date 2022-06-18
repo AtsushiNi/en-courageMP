@@ -33,7 +33,7 @@
 img.ev{
   display: flex;
   padding: 0% 20%;
-  margin: 5% auto .5% auto; 
+  margin: 5% auto .5% auto;
   object-fit: cover;
   width: 50%;
   height: auto;
@@ -83,7 +83,7 @@ img.ev{
 }
 
 #new_event li a:hover, .tabs li a:hover {
-  color:  #000c77b9;
+  color:  #000B77;
    -webkit-transition: 0.7s;
    -moz-transition: 0.7s;
    -o-transition: 0.7s;
@@ -145,7 +145,7 @@ input[name="tab_item"] {
 
 /*選択されているタブのスタイルを変える*/
 .tabs input:checked + .tab_item {
-  background-color: #000c77b9;;
+  background-color: #000B77;;
   color: #fff;
 }
 
@@ -168,9 +168,9 @@ input[name="tab_item"] {
 .voice_content{
   width: 90%;
   padding: 5%;
-  border: 1px solid #000c77b9;
+  border: 1px solid #000B77;
   line-height: 35px;
-  box-shadow: 0px 5px 1px #000c77b9;
+  box-shadow: 0px 5px 1px #000B77;
   border-radius: 5px;
 }
 
@@ -187,11 +187,11 @@ input[name="tab_item"] {
   text-align: center;
   text-decoration: none;
   color: #F3F2EF;
-  background-color: #000c77b9;
+  background-color: #000B77;
   width: 100%;
   margin: 0% auto;
   padding: 10px 10px;
-  border: 1px solid #000c77b9;
+  border: 1px solid #000B77;
   border-radius: 10px;
   box-sizing: border-box;
 }
