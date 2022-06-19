@@ -18,25 +18,30 @@
 .how-to-use-content {
     flex-grow: 1;
     text-align: center;
+    position: relative;
+}
+.how-to-use-content ul {
+    position: absolute;
+    top: 210px;
+    left: 150px;
+    font-size: 20px;
+    text-align: left;
 }
 .how-to-use-img {
     background-color: white;
-}
-.left {
-    flex-grow: 1;
-    text-align: center;
-}
-.right {
-    flex-grow: 1;
-    text-align: center;
-}
-.how-to-use-img {
     flex-grow: 1;
     max-width: 400px;
     border: 1px solid #DDD;
     border-radius: 50px;
     box-shadow: 10px 11px #ddd;
     margin-top: 20px;;
+}
+.how-to-use-logo {
+    width: 300px;
+    transform: rotate(-10deg);
+    position: absolute;
+    top: 70px;
+    left: 180px;
 }
 
 .know {
