@@ -1,0 +1,61 @@
+/*****************************************
+フッター
+*****************************************/
+footer {
+    background-color: #000B77;
+    height: 300px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-left {
+    flex-grow: 1;
+}
+.footer-right {
+    flex-grow: 1;
+    margin-top: 20px;
+    text-align: left;
+}
+.footer-right span {
+    font-size: 20px;
+}
+
+.footer-logo {
+    font-size: 30px;
+    margin: 20px;
+}
+
+.footer-description {
+    margin: 20px;
+}
+
+.footer-button {
+    background-color: red;
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    margin: 20px;
+}
+
+.footer-ul {
+    text-align: left;
+    padding-left: 10px;
+}
+.footer-ul li {
+    margin: 10px;
+}
+.footer-copyright {
+    border-top: 1px solid white;
+    margin-top: auto;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
