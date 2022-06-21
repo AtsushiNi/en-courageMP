@@ -5,6 +5,10 @@
 @import url("header.css");
 @import url("footer.css");
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-style: normal;
