@@ -5,6 +5,8 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 SetEnvIf Request_URI ".*" Ngx_Cache_NoCacheMode=off
 SetEnvIf Request_URI ".*" Ngx_Cache_AllCacheMode
 
+AddHandler fcgid-script .html
+
 # BEGIN WordPress
 # "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
 # 動的に生成され、WordPress フィルターによってのみ修正が可能です。
@@ -20,4 +22,7 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
-
+AuthUserFile "/home/xs286814/encourage-ku10.com/htpasswd/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user
