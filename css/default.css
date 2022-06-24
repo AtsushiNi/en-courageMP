@@ -4,6 +4,7 @@
 
 @import url("header.css");
 @import url("footer.css");
+@import url("sidebar.css");
 
 html {
     scroll-behavior: smooth;
@@ -16,10 +17,15 @@ body {
     background-color: #F3F2EF;
 }
 
+.content {
+    display: flex;
+    margin: 0 5% 40px 5%;
+    align-items: flex-end;
+}
+
 main {
     height: 100%;
     width:90%;
-    margin:0% 5%;
 }
 
 ul {
