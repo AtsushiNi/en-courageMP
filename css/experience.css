@@ -1,7 +1,19 @@
+h1 {
+	margin-bottom: 70px;
+}
+
 img {
   width: 500px;
   margin: 50px auto;
   display: block;
+}
+
+.section {
+	margin-bottom: 70px;
+}
+
+.section .text {
+	font-size: 14px;
 }
 
 .flow {
@@ -24,7 +36,6 @@ img {
 	list-style: none;
 	text-align: center;
 	text-overflow: ellipsis;
-	color: #b0bec5;
 	 -ms-flex: 1;
 	-moz-flex: 1;
 	-webkit-box-flex: 1;
@@ -39,7 +50,6 @@ img {
 .cp_stepflow01 > li div:hover {
   background-color: #CFD8DC;
   border-radius: 10px;
-  color: black;
   box-shadow: 1px 1px 5px 1px #999;
   transition: .2s;
 }
@@ -49,7 +59,7 @@ img {
 }
 .cp_stepflow01 > li a {
   text-decoration: none;
-	color: #b0bec5;
+	color: black;
 }
 .cp_stepflow01 > li .bubble {
 	display: block;
@@ -75,12 +85,9 @@ img {
 	margin-right: 50%;
 }
 
-h2 {
-  margin-top: 50px;
-}
-
 h3 {
   padding-bottom: 5px;
+	margin-top: 30px;
   border-bottom: 2px solid #b0bec5;
 }
 
