@@ -26,3 +26,4 @@ AuthUserFile "/home/xs286814/encourage-ku10.com/htpasswd/.htpasswd"
 AuthName "Member Site"
 AuthType BASIC
 require valid-user
+
