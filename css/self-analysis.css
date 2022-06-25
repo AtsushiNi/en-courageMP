@@ -27,6 +27,9 @@
     font-size: 20px;
     text-align: left;
 }
+.how-to-use-content ul li {
+    list-style: none;
+}
 .how-to-use-img {
     background-color: white;
     flex-grow: 1;
@@ -83,6 +86,7 @@
     margin-bottom: 30px;
     padding: 0;
     overflow-x: scroll;
+    list-style: none;
 }
 .item {
     margin: 0 20px;

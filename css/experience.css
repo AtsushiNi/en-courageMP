@@ -12,13 +12,10 @@ img {
 	margin-bottom: 70px;
 }
 
-.section .text {
+.text {
 	font-size: 14px;
 }
 
-.flow {
-  width: 80%;
-}
 .cp_stepflow01 {
 	font-size: 80%;
 	display: -webkit-box;
@@ -26,24 +23,22 @@ img {
 	display: flex;
 	margin: 0 0 1em;
 	padding: 0;
+	flex-wrap: wrap;
+	gap: 20px 0px;
 }
 .cp_stepflow01 > li {
 	position: relative;
 	display: block;
-	width: auto;
+	width: 160px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	text-align: center;
 	text-overflow: ellipsis;
-	 -ms-flex: 1;
-	-moz-flex: 1;
-	-webkit-box-flex: 1;
-	     flex: 1;
 }
 .cp_stepflow01 > li div {
   margin-right: auto;
-  width: 50px;
+  width: 70px;
   margin-left: auto;
   padding: 2px 40px;
 }
@@ -79,6 +74,10 @@ img {
 	content: '';
 	background-color: #b0bec5;
 }
+.cp_stepflow01 > li .last::after,
+.cp_stepflow01 > li .last::before {
+	content: none;
+}
 .cp_stepflow01 > li:last-child .bubble::after,
 .cp_stepflow01 > li:last-child .bubble::before {
 	width: 0%;
@@ -95,6 +94,7 @@ div.table {
     margin-left: 106px;
     margin-right: 176px;
     position: relative;
+		font-size: 14px;
 }
 .table table {
     width: 100%;

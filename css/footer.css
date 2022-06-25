@@ -51,6 +51,7 @@ footer {
 .footer-ul li {
     padding: 10px;
     position: relative;
+    list-style: none;
 }
 .footer-ul li:before {
   content: '';
