@@ -1,112 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset='utf-8' />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset='utf-8' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+    <link href='lib/main.css' rel='stylesheet' />
+    <link href='css/default.css' rel='stylesheet' />
+    <link href='css/event.css' rel='stylesheet' />
+    <script src='js/ev_script.js'></script>
+    <script src='lib/main.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
 
+  <?php $Path = './'; ?>
+  <body>
+    <?php include(__DIR__ . '/components/header.html'); ?>
+    <div id='loading'>loading...</div>
 
-<link href='lib/main.css' rel='stylesheet' />
-<link href='css/default.css' rel='stylesheet' />
-<link href='css/event.css' rel='stylesheet' />
-<script src='js/ev_script.js'></script>
-<script src='lib/main.js'></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-
-</head>
-<body>
-  <?php
-    $Path = './';
-    include(__DIR__ . '/components/header.html');
-  ?>
-  <div id='loading'>loading...</div>
-
-  <main>
-    <div id="main-title">
-      <img src="./images/ev.png" class="ev">
-    </div>
-    <div id='calendar'></div>
-  </div>
-
-  <div id="select">
-    <div id="new_event">
-      <h1>新着イベント</h1>
-      <ul>
-        <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー</p></a></li>
-        <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター</p></a></li>
-        <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー</p></a></li>
-      </ul>
+    <main>
+      <div id="main-title">
+        <img src="./images/ev.png" class="ev">
+      </div>
+      <div id='calendar'></div>
     </div>
 
-    <div class="tabs">
-      <h1>おすすめイベント</h1>
-      <input id="home1" type="radio" name="tab_item" checked>
-      <label class="tab_item" for="home1">自己分析</label>
-      <input id="home2" type="radio" name="tab_item">
-      <label class="tab_item" for="home2">業界理解</label>
-      <input id="home3" type="radio" name="tab_item">
-      <label class="tab_item" for="home3">選考対策</label>
-      <div class="tab_content" id="home1_content">
+    <div id="select">
+      <div id="new_event">
+        <h1>新着イベント</h1>
         <ul>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー1</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター1</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー1</p></a></li>
+          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー</p></a></li>
+          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター</p></a></li>
+          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー</p></a></li>
         </ul>
       </div>
-      <div class="tab_content" id="home2_content">
+
+      <div class="tabs">
+        <h1>おすすめイベント</h1>
+        <input id="home1" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="home1">自己分析</label>
+        <input id="home2" type="radio" name="tab_item">
+        <label class="tab_item" for="home2">業界理解</label>
+        <input id="home3" type="radio" name="tab_item">
+        <label class="tab_item" for="home3">選考対策</label>
+        <div class="tab_content" id="home1_content">
+          <ul>
+            <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー1</p></a></li>
+            <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター1</p></a></li>
+            <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー1</p></a></li>
+          </ul>
+        </div>
+        <div class="tab_content" id="home2_content">
+          <ul>
+            <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー2</p></a></li>
+            <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター2</p></a></li>
+            <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー2</p></a></li>
+          </ul>
+        </div>
+        <div class="tab_content" id="home3_content">
+          <ul>
+            <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー3</p></a></li>
+            <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター3</p></a></li>
+            <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー3</p></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="voice">
+        <h1>利用者の声</h1>
         <ul>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー2</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター2</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー2</p></a></li>
+          <li>
+            <div class="name">
+              <p>情報研究科 匿名希望</p>
+            </div>
+            <div class="voice_content">
+              <p>自己分析セミナーでは自分の過去の経験から好きなタイプを知ることができました！
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="name">
+              <p>情報研究科 つつつ&nbsp;さん</p>
+            </div>
+            <div class="voice_content">
+              <p>業界研究セミナーでは各メンバーの特徴を知ることができ、志望業界（推しメン）を見つけることができました！</p>
+            </div>
+          </li>
+          <li>
+            <div class="name">
+              <p>情報研究科 河原達也&nbsp;さん</p>
+            </div>
+            <div class="voice_content">
+              <p>選考対策に参加して良かったです！ライブ当日は対策していた曲が披露され、心の中で応援することができました！</p>
+            </div>
+          </li>
         </ul>
       </div>
-      <div class="tab_content" id="home3_content">
-        <ul>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 業界セミナー3</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 キャリアシアター3</p></a></li>
-          <li><a href="#q_02"><img src="./images/img.png" class="sample_img"><p>5/15 GD対策セミナー3</p></a></li>
-        </ul>
+
+      <div class="return-btn">
+        <a class="return" href="index.html">もどる</a>
       </div>
-    </div>
-
-    <div id="voice">
-      <h1>利用者の声</h1>
-      <ul>
-        <li>
-          <div class="name">
-            <p>情報研究科 匿名希望</p>
-          </div>
-          <div class="voice_content">
-            <p>自己分析セミナーでは自分の過去の経験から好きなタイプを知ることができました！
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="name">
-            <p>情報研究科 つつつ&nbsp;さん</p>
-          </div>
-          <div class="voice_content">
-            <p>業界研究セミナーでは各メンバーの特徴を知ることができ、志望業界（推しメン）を見つけることができました！</p>
-          </div>
-        </li>
-        <li>
-          <div class="name">
-            <p>情報研究科 河原達也&nbsp;さん</p>
-          </div>
-          <div class="voice_content">
-            <p>選考対策に参加して良かったです！ライブ当日は対策していた曲が披露され、心の中で応援することができました！</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="return-btn">
-      <a class="return" href="index.html">もどる</a>
-    </div>
-  </main>
-  <?php include(__DIR__ . '/components/footer.html'); ?>
-</body>
+    </main>
+    <?php include(__DIR__ . '/components/footer.html'); ?>
+  </body>
 </html>

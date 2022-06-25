@@ -7,16 +7,21 @@
             <div class="footer-description">
                 2022年6月現在、1700人以上もの24卒の<br>方々に利用して頂いています。面談・ES添削・<br>面接練習・イベント紹介、なんでもござれ！
             </div>
-            <button class="footer-button">面談申し込みはこちら</button>
+            <button
+                class="footer-button"
+                onClick="location.href='<?php print $Path;?>interview.html'"
+            >
+                面談申し込みはこちら
+            </button>
         </div>
         <div class="footer-right">
             <span>menu</span>
             <ul class="footer-ul">
-                <li>トップ</li>
-                <li>面談</li>
-                <li>イベント</li>
-                <li>記事一覧</li>
-                <li>使い方</li>
+                <li><a href="<?php print $Path;?>index.html">トップ</a></li>
+                <li><a href="<?php print $Path;?>interview.html">面談</a></li>
+                <li><a href="<?php print $Path;?>event.html">イベント</a></li>
+                <li><a href="<?php print $Path;?>column.html">記事一覧</a></li>
+                <li><a href="<?php print $Path;?>use.html">使い方</a></li>
             </ul>
         </div>
     </div>
