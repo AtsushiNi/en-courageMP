@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>選考体験記HTMLジェネレータ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <div>
+      <header>
+        <div>
+          <span>選考体験記HTMLジェネレータ</span>
+        </div>
+      </header>
+
+      <main>
+        <div class="sections">
+          <div class="section shadow p-3 mb-5 bg-body rounded" id="0">
+            <h2>
+              <input type="text" placeholder="選考段階名">
+              <button type="button" class="section-delete-button btn btn-outline-danger">-</button>
+            </h2>
+            <div class="contents">
+              <div class="content">
+                <h3>
+                  <input type="text">
+                  <button type="button" class="content-delete-button btn btn-outline-danger">-</button>
+                </h3>
+                <textarea></textarea>
+              </div>
+            </div>
+            <button type="button" class="content-add-button btn btn-outline-primary">+</button>
+          </div>
+        </div>
+
+        <button type="button" class="section-add-button btn btn-outline-primary">+</button>
+
+        <hr>
+
+        <div class="actions">
+          <button type="button" class="btn btn-primary">プレビュー</button>
+          <button type="button" class="btn btn-primary">上書き保存</button>
+          <button type="button" class="btn btn-primary">完了</button>
+          <button type="button" class="btn btn-danger">破棄</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
