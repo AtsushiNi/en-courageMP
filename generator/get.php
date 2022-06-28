@@ -18,7 +18,7 @@
     $tmp_json = file_get_contents($tmp_json_name);
     $tmp_json = mb_convert_encoding($tmp_json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
     $tmp_json = json_decode($tmp_json, true);
-    /* print_r($tmp_json); */
+
     echo json_encode($tmp_json, JSON_PRETTY_PRINT);
   } else {
     echo "not exists";

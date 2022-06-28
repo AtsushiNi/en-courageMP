@@ -4,6 +4,36 @@ function get() {
   return $.get('get.php')
 }
 
+function post() {
+  return $.post('post.php', createJson())
+}
+
+function complete() {
+  return $.post('complete.php')
+}
+
+function destroy() {
+  return $.post('destroy.php')
+}
+
+function createJson() {
+  let json = { data: [] }
+  $(".section").each(function() {
+    let sectionData = { "title": "", "contents": [] }
+
+    sectionData["title"] = $(this).find("h2 input").val()
+    $(this).find(".content").each(function() {
+      let contentData = {
+        "title": $(this).find("input").val(),
+        "content": $(this).find("textarea").val()
+      }
+      sectionData["contents"].push(contentData)
+    })
+    json["data"].push(sectionData)
+  })
+  return json
+}
+
 $(function () {
   get().then(function(res) {
     data = res.data
@@ -41,12 +71,12 @@ $(document).on("click", ".section-delete-button", function() {
 })
 
 // 選考段階の追加ボタン
-$(".section-add-button").on("click", function() {
+$(document).on("click", ".section-add-button", function() {
   const section = $(".section").eq(0).clone()
   // 二番目以降のcontentを削除
   section.find(".content:not(:first)").each(function() { $(this).remove() })
   // idを設定
-  section.attr('id', data.length.toString())
+  section.attr('id', $(".section").length.toString())
   // input初期化
   section.find("input").each(function() { $(this).val('') })
   section.find("textarea").val('')
@@ -64,4 +94,32 @@ $(document).on("click", ".content-add-button", function() {
   content.find("input").val('')
   content.find("textarea").val('')
   $(this).prev().append(content)
+})
+
+// プレビューボタン
+$(document).on("click", ".preview-button", function() {
+  post().then(function(data) {
+    window.open(data)
+  })
+})
+
+// 一時保存ボタン
+$(document).on("click", ".save-button", function() {
+  post()
+})
+
+// 書き出しボタン
+$(document).on("click", ".complete-button", function() {
+  post().then(function() {
+    complete().then(function(data) {
+      window.open(data)
+    })
+  })
+})
+
+// 破棄ボタン
+$(document).on("click", ".destroy-button", function() {
+  destroy().then(function() {
+    location.reload()
+  })
 })
