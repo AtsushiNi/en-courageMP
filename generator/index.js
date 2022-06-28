@@ -39,6 +39,13 @@ function createJson() {
   return json
 }
 
+function flushWindow() {
+  $(".section:not(:first)").each(function() { $(this).remove() })
+  $(".content:not(:first)").each(function() { $(this).remove() })
+  $(".section").find("input").each(function() { $(this).val('') })
+  $(".section").find("textarea").val('')
+}
+
 $(function () {
   get().then(function(res) {
     data = res.data
@@ -118,6 +125,7 @@ $(document).on("click", ".save-button", function() {
 $(document).on("click", ".complete-button", function() {
   post().then(function() {
     complete().then(function(data) {
+      flushWindow()
       window.open(data)
     })
   })
