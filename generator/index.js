@@ -17,7 +17,12 @@ function destroy() {
 }
 
 function createJson() {
-  let json = { data: [] }
+  let json = {
+    data: {
+      title: "",
+      sections: []
+    }
+  }
   $(".section").each(function() {
     let sectionData = { "title": "", "contents": [] }
 
@@ -29,7 +34,7 @@ function createJson() {
       }
       sectionData["contents"].push(contentData)
     })
-    json["data"].push(sectionData)
+    json["data"]["sections"].push(sectionData)
   })
   return json
 }
@@ -38,15 +43,16 @@ $(function () {
   get().then(function(res) {
     data = res.data
 
+    const sections_data = data["sections"]
     // 選考段階の追加
     const section = $(".section").clone()
-    for (var i = 1; i < data.length; i++) {
+    for (var i = 1; i < sections_data.length; i++) {
       section.attr('id', i.toString())
       $(".sections").append(section)
     }
 
     // 各選考段階
-    data.forEach(function(section_data, i) {
+    sections_data.forEach(function(section_data, i) {
       // 選考段階名の設定
       let section = $(".sections .section").eq(i)
       section.children("h2").children("input").val(section_data["title"])

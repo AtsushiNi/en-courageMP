@@ -17,7 +17,7 @@
   file_put_contents($tmp_json_name, json_encode($_POST, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
   ob_start();
-  foreach ($_POST["data"] as $index => $section) {
+  foreach ($_POST["data"]["sections"] as $index => $section) {
     $title = $section["title"];
     echo <<<EOM
       <div class="section">
