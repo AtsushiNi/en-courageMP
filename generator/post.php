@@ -16,6 +16,8 @@
   // jsonファイルの作成
   file_put_contents($tmp_json_name, json_encode($_POST, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
+  $company_name = $_POST["data"]["title"];
+
   ob_start();
   foreach ($_POST["data"]["sections"] as $index => $section) {
     $title = $section["title"];
@@ -65,7 +67,7 @@
         <div class="content">
             <main>
                 <img src="../../images/self-analysis/IMG_5934.PNG" class="sample_img">
-                <h1>日本総合研究所の選考体験記</h1>
+                <h1>${company_name}の選考体験記</h1>
 
                 <div class="section">
                     <h2>目次</h2>

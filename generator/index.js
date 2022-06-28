@@ -23,6 +23,9 @@ function createJson() {
       sections: []
     }
   }
+
+  json["data"]["title"] = $("h1 input").val()
+
   $(".section").each(function() {
     let sectionData = { "title": "", "contents": [] }
 
@@ -40,6 +43,7 @@ function createJson() {
 }
 
 function flushWindow() {
+  $("h1 input").val('')
   $(".section:not(:first)").each(function() { $(this).remove() })
   $(".content:not(:first)").each(function() { $(this).remove() })
   $(".section").find("input").each(function() { $(this).val('') })
@@ -49,6 +53,8 @@ function flushWindow() {
 $(function () {
   get().then(function(res) {
     data = res.data
+
+    $("h1 input").val(data["title"])
 
     const sections_data = data["sections"]
     // 選考段階の追加
