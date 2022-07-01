@@ -19,6 +19,27 @@
   $company_name = $_POST["data"]["title"];
 
   ob_start();
+  foreach ($_POST["data"]["mokujis"] as $index => $mokuji) {
+    $title = $mokuji["title"];
+    $iconURL = "../../images/experience/" . $mokuji["icon"] . ".png";
+    $class = $mokuji["title"] == "内定"? "bubble last" : "bubble";
+    echo <<<EOM
+      <li>
+          <span class="$class"></span>
+          <a href="#$index">
+              <div>
+                  <img src="$iconURL">
+                  $title
+              </div>
+          </a>
+      </li>
+
+    EOM;
+  }
+  $mokujis = ob_get_contents();
+  ob_end_clean();
+
+  ob_start();
   foreach ($_POST["data"]["sections"] as $index => $section) {
     $title = $section["title"];
     echo <<<EOM
@@ -73,87 +94,7 @@
                     <h2>目次</h2>
                     <div class="flow">
                         <ul class="cp_stepflow01">
-                          <li>
-                              <span class="bubble"></span>
-                              <a href="#entry-sheet">
-                                  <div>
-                                      <img src="../../images/experience/paper.png">
-                                      ES/Webテスト
-                                  </div>
-                              </a>
-                          </li>
-                          <li>
-                              <span class="bubble"></span>
-                              <a href="#interview1">
-                                  <div>
-                                      <img src="../../images/experience/interview.png">
-                                      面接 1
-                                  </div>
-                              </a>
-                          </li>
-                          <li>
-                              <span class="bubble"></span>
-                              <a href="#intern">
-                                  <div>
-                                      <img src="../../images/experience/intern.png">
-                                      インターン
-                                  </div>
-                              </a>
-                          </li>
-                          <li>
-                              <span class="bubble"></span>
-                              <a href="#employee-interview">
-                                  <div>
-                                      <img src="../../images/experience/interview.png">
-                                      社員面談
-                                  </div>
-                              </a>
-                          </li>
-                          <li>
-                              <span class="bubble"></span>
-                              <a href="#director-interview">
-                                  <div>
-                                      <img src="../../images/experience/interview.png">
-                                      部長面談
-                                  </div>
-                              </a>
-                          </li>
-                          <li>
-                              <span class="bubble"></span>
-                              <a href="#es">
-                                  <div>
-                                      <img src="../../images/experience/paper.png">
-                                      ES
-                                  </div>
-                              </a>
-                          </li>
-                          <li>
-                              <span class="bubble"></span>
-                              <a href="#final-interview">
-                                  <div>
-                                      <img src="../../images/experience/interview.png">
-                                      最終面接
-                                  </div>
-                              </a>
-                          </li>
-                          <li>
-                              <span class="bubble last"></span>
-                              <a href="#unofficial-decision">
-                                  <div>
-                                      <img src="../../images/experience/good.png">
-                                      内定
-                                  </div>
-                              </a>
-                          </li>
-                          <li>
-                              <span class="bubble"></span>
-                              <a href="#impressions">
-                                  <div>
-                                      <img src="../../images/experience/impressions.png">
-                                      選考の感想
-                                  </div>
-                              </a>
-                          </li>
+                          $mokujis
                         </ul>
                     </div>
                 </div>

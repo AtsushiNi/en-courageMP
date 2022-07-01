@@ -20,11 +20,23 @@ function createJson() {
   let json = {
     data: {
       title: "",
+      mokujis: [],
       sections: []
     }
   }
 
   json["data"]["title"] = $("h1 input").val()
+
+  $(".cp_stepflow01 > li").each(function() {
+    let mokujiData = { "title": "", "icon": "" }
+
+    const target = $(this).find(".title")
+    mokujiData["title"] = target.text()
+    let icon = target.prev().attr("src").replace(/.*\//, "").replace(/\.png/, "")
+    mokujiData["icon"] = icon
+
+    json["data"]["mokujis"].push(mokujiData)
+  })
 
   $(".section").each(function() {
     let sectionData = { "title": "", "contents": [] }
