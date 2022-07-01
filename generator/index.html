@@ -1,61 +1,187 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>選考体験記HTMLジェネレータ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="index.css">
-  </head>
 
-  <body>
-    <div>
-      <header>
+<head>
+  <meta charset="utf-8">
+  <title>選考体験記HTMLジェネレータ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="lib/remodal/dist/remodal.css">
+  <link rel="stylesheet" href="lib/remodal/dist/remodal-default-theme.css">
+  <link rel="stylesheet" href="lib/dropdown/dist/jquery.gorilla-dropdown.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div>
+    <header>
+      <div>
+        <span>選考体験記HTMLジェネレータ</span>
+      </div>
+    </header>
+
+    <main>
+      <h1>
+        <input type="text" placeholder="企業名">
+        の選考体験記
+      </h1>
+
+      <div class="table-of-contents shadow p-3 mb-5 bg-body rounded">
         <div>
-          <span>選考体験記HTMLジェネレータ</span>
+          <h2>目次</h2>
+          <button class="create-mokuji btn btn-outline-primary">内容から作成</button>
         </div>
-      </header>
-
-      <main>
-        <h1>
-          <input type="text" placeholder="企業名">
-          の選考体験記
-        </h1>
-
-        <div class="sections">
-          <div class="section shadow p-3 mb-5 bg-body rounded" id="0">
-            <h2>
-              <input type="text" placeholder="選考段階名">
-              <button type="button" class="section-delete-button btn btn-outline-danger">-</button>
-            </h2>
-            <div class="contents">
-              <div class="content">
-                <h3>
+        <div class="flow">
+          <ul class="cp_stepflow01">
+            <li>
+              <span class="bubble"></span>
+              <a href="#modal_0">
+                <div>
+                  <img src="../images/experience/ES.png">
+                  ES/Webテスト
+                </div>
+              </a>
+              <div class="remodal" data-remodal-id="modal_0">
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <div>
+                  <h2>アイコン</h2>
+                  <select id="icon-select">
+                    <?php
+                      $files = glob("../images/experience/*.png");
+                      foreach ($files as $index => $file) {
+                        $val=str_replace('.png', '', $file);
+                        $val=preg_replace("#.*/#", '', $file);
+                        echo "<option data-index=$index value=$val data-imgsrc=$file></option>";
+                      }
+                    ?>
+                  </select>
+                </div>
+                <div>
+                  <h2>タイトル</h2>
                   <input type="text">
-                  <button type="button" class="content-delete-button btn btn-outline-danger">-</button>
-                </h3>
-                <textarea rows=5></textarea>
+                </div>
+                <h2>ジャンプ先</h2>
+                <br>
+                <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+                <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
               </div>
+            </li>
+            <!-- <li> -->
+            <!--   <span class="bubble"></span> -->
+            <!--   <a href="#interview1"> -->
+            <!--     <div> -->
+            <!--       <img src="../images/experience/interview.png"> -->
+            <!--       面接 1 -->
+            <!--     </div> -->
+            <!--   </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!--   <span class="bubble"></span> -->
+            <!--   <a href="#intern"> -->
+            <!--     <div> -->
+            <!--       <img src="../images/experience/intern.png"> -->
+            <!--       インターン -->
+            <!--     </div> -->
+            <!--   </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!--   <span class="bubble"></span> -->
+            <!--   <a href="#employee-interview"> -->
+            <!--     <div> -->
+            <!--       <img src="../images/experience/interview.png"> -->
+            <!--       社員面談 -->
+            <!--     </div> -->
+            <!--   </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!--   <span class="bubble"></span> -->
+            <!--   <a href="#director-interview"> -->
+            <!--     <div> -->
+            <!--       <img src="../images/experience/interview.png"> -->
+            <!--       部長面談 -->
+            <!--     </div> -->
+            <!--   </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!--   <span class="bubble"></span> -->
+            <!--   <a href="#es"> -->
+            <!--     <div> -->
+            <!--       <img src="../images/experience/paper.png"> -->
+            <!--       ES -->
+            <!--     </div> -->
+            <!--   </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!--   <span class="bubble"></span> -->
+            <!--   <a href="#final-interview"> -->
+            <!--     <div> -->
+            <!--       <img src="../images/experience/interview.png"> -->
+            <!--       最終面接 -->
+            <!--     </div> -->
+            <!--   </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!--   <span class="bubble last"></span> -->
+            <!--   <a href="#unofficial-decision"> -->
+            <!--     <div> -->
+            <!--       <img src="../images/experience/good.png"> -->
+            <!--       内定 -->
+            <!--     </div> -->
+            <!--   </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!--   <span class="bubble"></span> -->
+            <!--   <a href="#impressions"> -->
+            <!--     <div> -->
+            <!--       <img src="../images/experience/impressions.png"> -->
+            <!--       選考の感想 -->
+            <!--     </div> -->
+            <!--   </a> -->
+            <!-- </li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="sections">
+        <div class="section shadow p-3 mb-5 bg-body rounded" id="0">
+          <h2>
+            <input type="text" placeholder="選考段階名">
+            <button type="button" class="section-delete-button btn btn-outline-danger">-</button>
+          </h2>
+          <div class="contents">
+            <div class="content">
+              <h3>
+                <input type="text">
+                <button type="button" class="content-delete-button btn btn-outline-danger">-</button>
+              </h3>
+              <textarea rows=5></textarea>
             </div>
-            <button type="button" class="content-add-button btn btn-outline-primary">+</button>
           </div>
+          <button type="button" class="content-add-button btn btn-outline-primary">+</button>
         </div>
+      </div>
 
-        <button type="button" class="section-add-button btn btn-outline-primary">+</button>
+      <button type="button" class="section-add-button btn btn-outline-primary">+</button>
 
-        <hr>
+      <hr>
 
-        <div class="actions">
-          <button type="button" class="preview-button btn btn-primary">プレビュー</button>
-          <button type="button" class="save-button btn btn-primary">一時保存</button>
-          <button type="button" class="complete-button btn btn-primary">書き出し</button>
-          <button type="button" class="destroy-button btn btn-danger">破棄</button>
-        </div>
-      </main>
-    </div>
+      <div class="actions">
+        <button type="button" class="preview-button btn btn-primary">プレビュー</button>
+        <button type="button" class="save-button btn btn-primary">一時保存</button>
+        <button type="button" class="complete-button btn btn-primary">書き出し</button>
+        <button type="button" class="destroy-button btn btn-danger">破棄</button>
+      </div>
+    </main>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script src="lib/remodal/dist/remodal.min.js"></script>
+  <script src="lib/dropdown/dist/jquery.gorilla-dropdown.min.js"></script>
+</body>
+
 </html>

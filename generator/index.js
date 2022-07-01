@@ -50,6 +50,28 @@ function flushWindow() {
   $(".section").find("textarea").val('')
 }
 
+function exstimateIcon(title) {
+  switch(true) {
+    case /ES|エントリーシート/.test(title):
+      return "ES"
+    case /テスト/.test(title):
+      return "web-test"
+    case /GD|グループディスカッション/.test(title):
+      return "GD"
+    case /面接|面談/.test(title):
+      return "interview"
+    case /インターン|ジョブ/.test(title):
+      return "intern"
+    case /内定/.test(title):
+      return "good"
+    case /感想/.test(title):
+      return "impressions"
+    default:
+      return "ES"
+  }
+}
+
+// 画面表示時にデータを読み込み
 $(function () {
   get().then(function(res) {
     data = res.data
@@ -58,8 +80,8 @@ $(function () {
 
     const sections_data = data["sections"]
     // 選考段階の追加
-    const section = $(".section").clone()
     for (var i = 1; i < sections_data.length; i++) {
+      const section = $(".section:first").clone()
       section.attr('id', i.toString())
       $(".sections").append(section)
     }
@@ -82,6 +104,37 @@ $(function () {
       })
     })
   })
+})
+
+// 目次のドロップダウン
+$(function() {
+  var options = {
+     dropdownHeight: "200px",  // 高さ
+     padding: 10,            // padding
+     select: 2,              // 初期表示にするインデックス番号
+     width: 100              // 幅
+  }
+  $("select").gorillaDropdown(options)
+})
+
+// 目次作成ボタン
+$(document).on("click", ".create-mokuji", function() {
+  // 目次を表示
+  $(".table-of-contents .flow").css("display", "block")
+  // 初期化
+  $(".table-of-contents li:not(:first)").each(function(){ $(this).remove() })
+
+  // 目次項目追加
+  let li = $(".table-of-contents li").clone()
+  let ul = $(".table-of-contents ul")
+
+  for (var i = 1; i < $(".sections .section").length; i++) {
+    li = $(".table-of-contents li:first").clone()
+    li.find(".remodal").setAttribute("data-remodal-id", "modal_"+i.toString())
+    li.find("select").setAttribute("id", "select-" + i.toString())
+    ul.append(li)
+  }
+  const selected = $("#icon-select").gorillaDropdown("selected")
 })
 
 // 選考段階の削除ボタン

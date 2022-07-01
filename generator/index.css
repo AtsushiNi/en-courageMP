@@ -25,6 +25,11 @@ h1 {
   margin-bottom: 40px;
 }
 
+.table-of-contents > div {
+  display: flex;
+  margin-bottom: 30px;
+}
+
 h2 {
   display: flex;
   margin-top: 20px;
@@ -110,3 +115,86 @@ hr {
 .actions button {
   margin: 0;
 }
+
+.table-of-contents .flow {
+  display: none;
+}
+
+.cp_stepflow01 {
+	font-size: 80%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0 0 1em;
+	padding: 0;
+	flex-wrap: wrap;
+	gap: 20px 0px;
+}
+.cp_stepflow01 > li {
+	position: relative;
+	display: block;
+	width: 160px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	text-overflow: ellipsis;
+}
+.cp_stepflow01 > li div {
+  margin-right: auto;
+  width: 70px;
+  margin-left: auto;
+}
+.cp_stepflow01 > li div:hover {
+  background-color: #CFD8DC;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px #999;
+  transition: .2s;
+}
+.cp_stepflow01 > li img {
+  width: 50px;
+  margin: 20px auto 5px auto;
+  display: block;
+}
+.cp_stepflow01 > li a {
+  text-decoration: none;
+	color: black;
+}
+.cp_stepflow01 > li .bubble {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 0 auto 0.5em;
+	border-radius: 1000px;
+	background-color: #b0bec5;
+}
+.cp_stepflow01 > li .bubble::after,
+.cp_stepflow01 > li .bubble::before {
+	position: absolute;
+	top: 9px;
+	display: block;
+	width: 100%;
+	height: 3px;
+	content: '';
+	background-color: #b0bec5;
+}
+.cp_stepflow01 > li .last::after,
+.cp_stepflow01 > li .last::before {
+	content: none;
+}
+.cp_stepflow01 > li:last-child .bubble::after,
+.cp_stepflow01 > li:last-child .bubble::before {
+	width: 0%;
+	margin-right: 50%;
+}
+
+.gorilla-dropdown .current {
+  width: 130px !important;
+}
+.gorilla-dropdown img {
+  width: 100px;
+}
+.gorilla-dropdown ul {
+  width: 130px !important;
+}
+
