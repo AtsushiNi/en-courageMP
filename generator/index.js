@@ -106,17 +106,6 @@ $(function () {
   })
 })
 
-// 目次のドロップダウン
-$(function() {
-  var options = {
-     dropdownHeight: "200px",  // 高さ
-     padding: 10,            // padding
-     select: 2,              // 初期表示にするインデックス番号
-     width: 100              // 幅
-  }
-  $("select").gorillaDropdown(options)
-})
-
 // 目次作成ボタン
 $(document).on("click", ".create-mokuji", function() {
   // 目次を表示
@@ -125,15 +114,37 @@ $(document).on("click", ".create-mokuji", function() {
   $(".table-of-contents li:not(:first)").each(function(){ $(this).remove() })
 
   // 目次項目追加
-  let li = $(".table-of-contents li").clone()
-  let ul = $(".table-of-contents ul")
+  const ul = $(".table-of-contents ul")
 
   for (var i = 1; i < $(".sections .section").length; i++) {
-    li = $(".table-of-contents li:first").clone()
-    li.find(".remodal").setAttribute("data-remodal-id", "modal_"+i.toString())
-    li.find("select").setAttribute("id", "select-" + i.toString())
+    let li = $(".table-of-contents li:first").clone()
+    li.attr('id', "li-"+i.toString())
+
     ul.append(li)
   }
+
+  for (var i = 0; i < $(".sections .section").length; i++) {
+    let li = $("#li-"+i.toString())
+
+    // モーダルの設定
+    li.children("div").eq(0).attr("data-remodal-id", "modal_"+i.toString())
+    li.find("a").attr("href", "#modal_"+i.toString())
+
+    // ドロップダウンの設定
+    li.find("select").attr("id", "select-" + i.toString())
+    var optionsDropdown = {
+       dropdownHeight: "200px",  // 高さ
+       padding: 10,            // padding
+       select: i,              // 初期表示にするインデックス番号
+       width: 100              // 幅
+    }
+    li.find("select").gorillaDropdown(optionsDropdown)
+
+    // モーダルの有効化
+    let options = {}
+    li.children("div").remodal(options)
+  }
+
   const selected = $("#icon-select").gorillaDropdown("selected")
 })
 
