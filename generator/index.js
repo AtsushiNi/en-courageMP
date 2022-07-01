@@ -50,7 +50,7 @@ function flushWindow() {
   $(".section").find("textarea").val('')
 }
 
-function exstimateIcon(title) {
+function estimateIcon(title) {
   switch(true) {
     case /ES|エントリーシート/.test(title):
       return "ES"
@@ -115,7 +115,6 @@ $(document).on("click", ".create-mokuji", function() {
 
   // 目次項目追加
   const ul = $(".table-of-contents ul")
-
   for (var i = 1; i < $(".sections .section").length; i++) {
     let li = $(".table-of-contents li:first").clone()
     li.attr('id', "li-"+i.toString())
@@ -123,6 +122,18 @@ $(document).on("click", ".create-mokuji", function() {
     ul.append(li)
   }
 
+  // 目次項目の設定
+  $(".sections .section").each(function(index) {
+    // タイトル
+    const title = $(this).find("h2 input").val()
+    let target = $(".cp_stepflow01").children("li").eq(index).find(".title")
+    target.html(title)
+
+    // アイコン
+    target.prev().attr("src", "../images/experience/"+estimateIcon(title)+".png")
+  })
+
+  // モーダルの設定
   for (var i = 0; i < $(".sections .section").length; i++) {
     let li = $("#li-"+i.toString())
 
@@ -131,7 +142,7 @@ $(document).on("click", ".create-mokuji", function() {
     li.find("a").attr("href", "#modal_"+i.toString())
 
     // ドロップダウンの設定
-    li.find("select").attr("id", "select-" + i.toString())
+    li.find("select").attr("id", "icon-select-" + i.toString())
     var optionsDropdown = {
        dropdownHeight: "200px",  // 高さ
        padding: 10,            // padding
@@ -144,8 +155,6 @@ $(document).on("click", ".create-mokuji", function() {
     let options = {}
     li.children("div").remodal(options)
   }
-
-  const selected = $("#icon-select").gorillaDropdown("selected")
 })
 
 // 選考段階の削除ボタン

@@ -40,7 +40,9 @@
               <a href="#modal_0">
                 <div>
                   <img src="../images/experience/ES.png">
-                  ES/Webテスト
+                  <div class="title">
+                    ES/Webテスト
+                  </div>
                 </div>
               </a>
               <div data-remodal-id="modal_0">
@@ -52,7 +54,7 @@
                       $files = glob("../images/experience/*.png");
                       foreach ($files as $index => $file) {
                         $val=str_replace('.png', '', $file);
-                        $val=preg_replace("#.*/#", '', $file);
+                        $val=preg_replace("#.*/#", '', $val);
                         echo "<option data-index=$index value=$val data-imgsrc=$file></option>";
                       }
                     ?>
