@@ -113,6 +113,12 @@ $(document).on("click", ".create-mokuji", function() {
   // 初期化
   $(".table-of-contents li:not(:first)").each(function(){ $(this).remove() })
 
+  // アイコンデータを取得
+  let iconData = []
+  $("#icon-select").children().each(function() {
+    iconData.push($(this).attr("value"))
+  })
+
   // 目次項目追加
   const ul = $(".table-of-contents ul")
   for (var i = 1; i < $(".sections .section").length; i++) {
@@ -141,12 +147,16 @@ $(document).on("click", ".create-mokuji", function() {
     li.children("div").eq(0).attr("data-remodal-id", "modal_"+i.toString())
     li.find("a").attr("href", "#modal_"+i.toString())
 
+    // モーダル内タイトルの設定
+    const title = $(".section").eq(i).find("h2 input").val()
+    li.find(".modal-title input").val(title)
+
     // ドロップダウンの設定
     li.find("select").attr("id", "icon-select-" + i.toString())
     var optionsDropdown = {
        dropdownHeight: "200px",  // 高さ
        padding: 10,            // padding
-       select: i,              // 初期表示にするインデックス番号
+       select: iconData.indexOf(estimateIcon(title)),              // 初期表示にするインデックス番号
        width: 100              // 幅
     }
     li.find("select").gorillaDropdown(optionsDropdown)
