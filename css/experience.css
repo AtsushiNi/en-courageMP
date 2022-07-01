@@ -49,6 +49,34 @@ img {
 	border-radius: .25rem!important;
 }
 
+.section.atsumori {
+	position: relative;
+	border: 4px dashed #FF4012;
+}
+.section.atsumori:before {
+	content: '';
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  background-image: url(../images/atsumori.png);
+  background-size: contain;
+  vertical-align: middle;
+	position: absolute;
+	right: -60px;
+	top: -60px;
+	transform: rotate(30deg);
+	z-index: 2;
+}
+.section.atsumori:after {
+	content: '';
+	background: #f3f2ef;
+	width: 170px;
+	height: 140px;
+	position: absolute;
+	right: -24px;
+	top: -15px;
+}
+
 .text {
 	font-size: 14px;
 }
