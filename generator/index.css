@@ -198,3 +198,7 @@ hr {
   width: 130px !important;
 }
 
+.actions {
+  display: flex;
+  margin-bottom: 0;
+}

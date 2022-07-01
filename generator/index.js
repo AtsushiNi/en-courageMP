@@ -165,6 +165,22 @@ $(document).on("click", ".create-mokuji", function() {
     let options = {}
     li.children("div").remodal(options)
   }
+
+  $(".create-mokuji").prop("disabled", true)
+})
+
+// 目次モーダルのOKボタン
+$(document).on("confirmation", ".remodal", function() {
+  const newTitle = $(this).find(".modal-title input").val()
+  const newIcon = $(this).find(".gorilla-dropdown").gorillaDropdown("selected")["value"]
+  let index = $(this).attr('data-remodal-id').match(/\d+/g)[0]
+  index = Number(index)
+
+  // タイトル
+  let target = $(".cp_stepflow01").children("li").eq(index).find(".title")
+  target.html(newTitle)
+  // アイコン
+  target.prev().attr("src", "../images/experience/"+newIcon+".png")
 })
 
 // 選考段階の削除ボタン
