@@ -211,6 +211,8 @@ $(document).on("click", ".section-add-button", function() {
   section.find("input").each(function() { $(this).val('') })
   section.find("textarea").val('')
   $(".sections").append(section)
+
+  section.find("h2 input").focus()
 })
 
 // 選考内容の削除
@@ -224,6 +226,8 @@ $(document).on("click", ".content-add-button", function() {
   content.find("input").val('')
   content.find("textarea").val('')
   $(this).prev().append(content)
+
+  content.find("input").focus()
 })
 
 // プレビューボタン
