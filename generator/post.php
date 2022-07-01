@@ -53,7 +53,7 @@
     EOM;
     foreach ($section["contents"] as $content) {
       $title = $content["title"];
-      $text = $content["content"];
+      $text = nl2br($content["content"]);
       echo <<< EOM
         <h3>
           $title
