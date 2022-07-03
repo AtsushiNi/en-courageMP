@@ -1,3 +1,5 @@
 .DS_Store
-.htaccess
 .htpasswd
+generator/tmp/*
+.htaccess
+credentials.js

@@ -83,39 +83,39 @@ function estimateIcon(title) {
   }
 }
 
-// 画面表示時にデータを読み込み
-$(function () {
-  get().then(function(res) {
-    data = res.data
+function createWindow(data) {
+  $("h1 input").val(data["title"])
 
-    $("h1 input").val(data["title"])
+  const sections_data = data["sections"]
+  // 選考段階の追加
+  for (var i = 1; i < sections_data.length; i++) {
+    const section = $(".section:first").clone()
+    section.attr('id', i.toString())
+    $(".sections").append(section)
+  }
 
-    const sections_data = data["sections"]
-    // 選考段階の追加
-    for (var i = 1; i < sections_data.length; i++) {
-      const section = $(".section:first").clone()
-      section.attr('id', i.toString())
-      $(".sections").append(section)
+  // 各選考段階
+  sections_data.forEach(function(section_data, i) {
+    // 選考段階名の設定
+    let section = $(".sections .section").eq(i)
+    section.children("h2").children("input").val(section_data["title"])
+
+    // 選考内容の設定
+    let content = section.children(".contents").children(".content").clone()
+    for (var j = 1; j < section_data["contents"].length; j++) {
+      content = section.children(".contents").children(".content").eq(0).clone()
+      section.children(".contents").append(content)
     }
-
-    // 各選考段階
-    sections_data.forEach(function(section_data, i) {
-      // 選考段階名の設定
-      let section = $(".sections .section").eq(i)
-      section.children("h2").children("input").val(section_data["title"])
-
-      // 選考内容の設定
-      let content = section.children(".contents").children(".content").clone()
-      for (var j = 1; j < section_data["contents"].length; j++) {
-        section.children(".contents").append(content)
-      }
-      section_data["contents"].forEach(function(content_data, m) {
-        let content = section.children(".contents").children(".content").eq(m)
-        content.children("h3").children("input").val(content_data["title"])
-        content.children("textarea").val(content_data["content"])
-      })
+    section_data["contents"].forEach(function(content_data, m) {
+      let content = section.children(".contents").children(".content").eq(m)
+      content.children("h3").children("input").val(content_data["title"])
+      content.children("textarea").val(content_data["content"])
     })
   })
+}
+// 画面表示時にデータを読み込み
+$(document).on("click", "#load_button", () => {
+  get().then( ateWindow(res.data))
 })
 
 // 目次作成ボタン

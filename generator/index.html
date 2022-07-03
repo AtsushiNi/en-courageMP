@@ -23,10 +23,20 @@
     </header>
 
     <main>
-      <h1>
+      <div style="display: flex; justify-content: space-between;">
+        <h1>
         <input type="text" placeholder="企業名">
         の選考体験記
-      </h1>
+        </h1>
+        <div style="display: flex">
+          <button id="authorize_button" onclick="handleAuthClick()" class="btn btn-outline-primary" style="height: 70px; margin-right: 10px;">
+            Google Docsから作成
+          </button>
+          <button id="load_button" class="btn btn-outline-primary" style="height: 70px; margin-right: 10px;">
+            下書きをロード
+          </button>
+        </div>
+      </div>
 
       <div class="table-of-contents shadow p-3 mb-5 bg-body rounded">
         <div>
@@ -112,8 +122,149 @@
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="credentials.js"></script>
   <script src="lib/remodal/dist/remodal.min.js"></script>
   <script src="lib/dropdown/dist/jquery.gorilla-dropdown.min.js"></script>
+  <script type="text/javascript">
+    const {CLIENT_ID, API_KEY} = credentials()
+    // Discovery doc URL for APIs used by the quickstart
+    const DISCOVERY_DOC = 'https://docs.googleapis.com/$discovery/rest?version=v1';
+
+    const SCOPES = 'https://www.googleapis.com/auth/documents.readonly';
+
+    let tokenClient;
+    let gapiInited = false;
+    let gisInited = false;
+
+    document.getElementById('authorize_button').style.visibility = 'hidden';
+
+    /**
+     * Callback after api.js is loaded.
+     */
+    function gapiLoaded() {
+      gapi.load('client', intializeGapiClient);
+    }
+
+    /**
+     * Callback after the API client is loaded. Loads the
+     * discovery doc to initialize the API.
+     */
+    async function intializeGapiClient() {
+      await gapi.client.init({
+        apiKey: API_KEY,
+        discoveryDocs: [DISCOVERY_DOC],
+      });
+      gapiInited = true;
+      maybeEnableButtons();
+    }
+
+    /**
+     * Callback after Google Identity Services are loaded.
+     */
+    function gisLoaded() {
+      tokenClient = google.accounts.oauth2.initTokenClient({
+        client_id: CLIENT_ID,
+        scope: SCOPES,
+        callback: '', // defined later
+      });
+      gisInited = true;
+      maybeEnableButtons();
+    }
+
+    /**
+     * Enables user interaction after all libraries are loaded.
+     */
+    function maybeEnableButtons() {
+      if (gapiInited && gisInited) {
+        document.getElementById('authorize_button').style.visibility = 'visible';
+      }
+    }
+
+    /**
+     *  Sign in the user upon button click.
+     */
+    function handleAuthClick() {
+      tokenClient.callback = async (resp) => {
+        if (resp.error !== undefined) {
+          throw (resp);
+        }
+        $("#authorize_button").prop("disabled", true)
+        await printDocTitle();
+      };
+
+      if (gapi.client.getToken() === null) {
+        // Prompt the user to select a Google Account and ask for consent to share their data
+        // when establishing a new session.
+        tokenClient.requestAccessToken({prompt: 'consent'});
+      } else {
+        // Skip display of account chooser and consent dialog for an existing session.
+        tokenClient.requestAccessToken({prompt: ''});
+      }
+    }
+
+    /**
+     * Prints the title of a sample doc:
+     */
+    async function printDocTitle() {
+      try {
+        const response = await gapi.client.docs.documents.get({
+          documentId: '1doPMLjYGv_fglPvuNrTxC9dCNh5jO5w0sNjL773w2M4',
+        });
+
+        // いらないレスポンスを削除してデータを整理
+        let data = response.result.body.content.map(
+          element =>
+            element.paragraph
+              ? {"paragraph": element.paragraph.elements[0].textRun.content}
+              : element.table
+              ? {"table": element.table.tableRows.map(
+                    row => row.tableCells.map(
+                      cell => cell.content.map(
+                        c => c.paragraph.elements.map(
+                          element => element.textRun.content
+                        )
+                      ).join("")
+                    )
+                  )
+                }
+                : null
+        )
+
+        // nullや中身のない要素を削除
+        data = data.filter(e => e).filter(
+          element => Object.values(element)[0][0] !== '\n'
+        )
+
+        const json = {
+          "mokujis": [],
+          "title": data[0].paragraph,
+          "sections": []
+        }
+        data = data.map((d,index) => {
+          if (Object.keys(d)[0] === 'table') {
+            const dd = {
+              "title": data[index-1].paragraph,
+              "contents": d.table.map(row => {
+                return(
+                  {"title": row[0],"content": row[1]}
+                )
+              })
+            }
+            return(dd)
+          }
+        }).filter(e=>e)
+        json.sections = data
+
+        console.log(json)
+        createWindow(json)
+      } catch (err) {
+        console.log(err)
+        return;
+      }
+    }
+  </script>
+  <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+  <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
 </body>
 
 </html>
