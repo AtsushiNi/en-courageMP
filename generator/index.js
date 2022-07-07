@@ -118,6 +118,13 @@ $(document).on("click", "#load_button", () => {
   get().then( ateWindow(res.data))
 })
 
+// Googleドキュメント読み込みボタン
+$(document).on("click", "#google-creation", () => {
+  $("#default-create").css("left", "-340px")
+  $("#google-input").css("left", "0px")
+  $("#google-input input").focus()
+})
+
 // 目次作成ボタン
 $(document).on("click", ".create-mokuji", function() {
   // 目次を表示

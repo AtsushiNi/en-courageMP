@@ -28,13 +28,21 @@
         <input type="text" placeholder="企業名">
         の選考体験記
         </h1>
-        <div style="display: flex">
-          <button id="authorize_button" onclick="handleAuthClick()" class="btn btn-outline-primary" style="height: 70px; margin-right: 10px;">
-            Google Docsから作成
-          </button>
-          <button id="load_button" class="btn btn-outline-primary" style="height: 70px; margin-right: 10px;">
-            下書きをロード
-          </button>
+        <div id="create-actions">
+          <div id="default-create">
+            <button id="google-creation" class="btn btn-outline-primary">
+              Gooogle Docsから作成
+            </button>
+            <button id="load_button" class="btn btn-outline-primary">
+              下書きをロード
+            </button>
+          </div>
+          <div id="google-input">
+            <input type="text">
+            <button id="authorize_button" onclick="handleAuthClick()" class="btn btn-outline-primary">
+              Google Docsから作成
+            </button>
+          </div>
         </div>
       </div>
 
@@ -184,12 +192,13 @@
      *  Sign in the user upon button click.
      */
     function handleAuthClick() {
+      const documentId = $("#google-input input").val()
       tokenClient.callback = async (resp) => {
         if (resp.error !== undefined) {
           throw (resp);
         }
         $("#authorize_button").prop("disabled", true)
-        await printDocTitle();
+        await printDocTitle(documentId);
       };
 
       if (gapi.client.getToken() === null) {
@@ -205,10 +214,10 @@
     /**
      * Prints the title of a sample doc:
      */
-    async function printDocTitle() {
+    async function printDocTitle(documentId) {
       try {
         const response = await gapi.client.docs.documents.get({
-          documentId: '1doPMLjYGv_fglPvuNrTxC9dCNh5jO5w0sNjL773w2M4',
+          documentId: documentId,
         });
 
         // いらないレスポンスを削除してデータを整理

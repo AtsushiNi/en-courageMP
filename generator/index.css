@@ -202,3 +202,30 @@ hr {
   display: flex;
   margin-bottom: 0;
 }
+
+#create-actions {
+  width: 340px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+#default-create, #google-input {
+  display: flex;
+  position: absolute;
+  width: 340px;
+  transition: all 1s;
+}
+#default-create {
+  left: 0;
+}
+#google-input {
+  left: 340px;
+}
+#default-create > * {
+  width: 160px;
+  margin: auto 5px;
+}
+#google-input > * {
+  width: 160px;
+  margin: auto;
+}
