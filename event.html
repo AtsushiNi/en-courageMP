@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8' />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-    <link href='lib/main.css' rel='stylesheet' />
-    <link href='css/default.css' rel='stylesheet' />
-    <link href='css/event.css' rel='stylesheet' />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    <script src='js/ev_script.js'></script>
-    <script src='lib/main.js'></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  </head>
 
-  <?php $Path = './'; ?>
-  <body>
-    <?php include(__DIR__ . '/components/header.html'); ?>
-    <div id='loading'>loading...</div>
+<head>
+  <meta charset='utf-8' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link href='css/default.css' rel='stylesheet' />
+  <link href='css/event.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+  <script src='js/ev_script.js'></script>
+  <script src="lib/fullcalendar/main.js"></script>
+  <link href="lib/fullcalendar/main.css" rel="stylesheet">
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
 
-    <main>
-      <div id="main-title">
-        <img src="./images/ev.png" class="ev">
-      </div>
-      <div id='calendar'></div>
+<?php $Path = './'; ?>
+
+<body>
+  <?php include(__DIR__ . '/components/header.html'); ?>
+  <div id='loading'>loading...</div>
+
+  <main>
+    <div id="main-title">
+      <img src="./images/ev.png" class="ev">
+    </div>
+    <div id='calendar'></div>
     </div>
 
     <div id="select">
       <div id="new_event">
         <h1>新着イベント</h1>
         <ul>
-          <li><a href="#q_02"><img src="./events/syudan-seminer.jpeg" class="sample_img"><p>7/9・15<br>集団面接セミナー</p></a></li>
-          <li><a href="#q_02"><img src="./events/shibuya-next.jpeg" class="sample_img"><p>7/13<br>大企業？ベンチャー？起業？ 令和時代に市場価値を最大化するキャリアの方程式</p></a></li>
-          <li><a href="#q_02"><img src="./events/interview-nozokimi.jpeg" class="sample_img"><p>模擬面接のぞき見<br>～自信を持って面接を受けるための第一歩～</p></a></li>
+          <li><a href="#q_02"><img src="./events/syudan-seminer.jpeg" class="sample_img">
+              <p>7/9・15<br>集団面接セミナー</p>
+            </a></li>
+          <li><a href="#q_02"><img src="./events/shibuya-next.jpeg" class="sample_img">
+              <p>7/13<br>大企業？ベンチャー？起業？ 令和時代に市場価値を最大化するキャリアの方程式</p>
+            </a></li>
+          <li><a href="#q_02"><img src="./events/interview-nozokimi.jpeg" class="sample_img">
+              <p>模擬面接のぞき見<br>～自信を持って面接を受けるための第一歩～</p>
+            </a></li>
         </ul>
       </div>
 
@@ -47,23 +55,41 @@
         <label class="tab_item" for="home3">選考対策</label>
         <div class="tab_content" id="home1_content">
           <ul>
-            <li><a href="#q_02"><img src="./events/outstanding-05.png" class="sample_img"><p>7/9・13 「自己分析」の方法論③</p></a></li>
-            <li><a href="#q_02"><img src="./events/outstanding-07.jpeg" class="sample_img"><p>7/23・27 「強い志望動機の作り方」</p></a></li>
-            <li><a href="#q_02"><img src="./events/outstanding-08.jpeg" class="sample_img"><p>7/16・20 「企業分析」の方法論</p></a></li>
+            <li><a href="#q_02"><img src="./events/outstanding-05.png" class="sample_img">
+                <p>7/9・13 「自己分析」の方法論③</p>
+              </a></li>
+            <li><a href="#q_02"><img src="./events/outstanding-07.jpeg" class="sample_img">
+                <p>7/23・27 「強い志望動機の作り方」</p>
+              </a></li>
+            <li><a href="#q_02"><img src="./events/outstanding-08.jpeg" class="sample_img">
+                <p>7/16・20 「企業分析」の方法論</p>
+              </a></li>
           </ul>
         </div>
         <div class="tab_content" id="home2_content">
           <ul>
-            <li><a href="#q_02"><img src="./events/kinyu-seminer.jpeg" class="sample_img"><p>7/11<br>～カッコいい金融マンになりたいあなたへ～<br>金融業界セミナー</p></a></li>
-            <li><a href="#q_02"><img src="./events/it-seminer.jpeg" class="sample_img"><p>7/14<br>IT業界大解剖セミナー💻<br>～業界理解を深めて、早期内定を勝ち取ろう！！～</p></a></li>
-            <li><a href="#q_02"><img src="./events/outstanding-08.jpeg" class="sample_img"><p>7/16・20 「企業分析」の方法論</p></a></li>
+            <li><a href="#q_02"><img src="./events/kinyu-seminer.jpeg" class="sample_img">
+                <p>7/11<br>～カッコいい金融マンになりたいあなたへ～<br>金融業界セミナー</p>
+              </a></li>
+            <li><a href="#q_02"><img src="./events/it-seminer.jpeg" class="sample_img">
+                <p>7/14<br>IT業界大解剖セミナー💻<br>～業界理解を深めて、早期内定を勝ち取ろう！！～</p>
+              </a></li>
+            <li><a href="#q_02"><img src="./events/outstanding-08.jpeg" class="sample_img">
+                <p>7/16・20 「企業分析」の方法論</p>
+              </a></li>
           </ul>
         </div>
         <div class="tab_content" id="home3_content">
           <ul>
-            <li><a href="#q_02"><img src="./events/summer-circuit.png" class="sample_img"><p>8/6 GD一気にインターンに近づこう！<br>SUMMER CIRCUIT IN 全国</p></a></li>
-            <li><a href="#q_02"><img src="./events/syudan-seminer.jpeg" class="sample_img"><p>7/9・15<br>集団面接セミナー</p></a></li>
-            <li><a href="#q_02"><img src="./events/GD-nozokimi.jpeg" class="sample_img"><p>GDのぞき見👀<br>〜GDってメンバーゲー?!〜</p></a></li>
+            <li><a href="#q_02"><img src="./events/summer-circuit.png" class="sample_img">
+                <p>8/6 GD一気にインターンに近づこう！<br>SUMMER CIRCUIT IN 全国</p>
+              </a></li>
+            <li><a href="#q_02"><img src="./events/syudan-seminer.jpeg" class="sample_img">
+                <p>7/9・15<br>集団面接セミナー</p>
+              </a></li>
+            <li><a href="#q_02"><img src="./events/GD-nozokimi.jpeg" class="sample_img">
+                <p>GDのぞき見👀<br>〜GDってメンバーゲー?!〜</p>
+              </a></li>
           </ul>
         </div>
       </div>
@@ -102,8 +128,9 @@
       <div class="return-btn">
         <a class="return" href="index.html">もどる</a>
       </div>
-    </main>
-    <div id="page_top"><a href="#"></a></div>
-    <?php include(__DIR__ . '/components/footer.html'); ?>
-  </body>
+  </main>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/components/footer.html'); ?>
+</body>
+
 </html>

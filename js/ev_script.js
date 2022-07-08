@@ -1,49 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
+document.addEventListener('DOMContentLoaded', function () {
+  var calendarEl = document.getElementById('calendar');
 
-    var calendar = new FullCalendar.Calendar(calendarEl, 
-    {
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    googleCalendarApiKey: 'AIzaSyAoWJyeuPyvRs3mVv8mbxAh1zDQ3WeL-0A',
+    events: 'g56gfkgj6d1adk03ofcf1kh5c0@group.calendar.google.com',
 
-      locale:'ja',
+    eventClick: function (arg) {
+      window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
+      arg.jsEvent.preventDefault()
+    },
 
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,listYear'
-      },
+    loading: function (bool) {
+      document.getElementById('loading').style.display =
+        bool ? 'block' : 'none';
+    }
+  });
 
-      displayEventTime: false, // don't show the time column in list view
-
-      // THIS KEY WON'T WORK IN PRODUCTION!!!
-      // To make your own Google API key, follow the directions here:
-      // http://fullcalendar.io/docs/google_calendar/
-      googleCalendarApiKey: 'AIzaSyBHTm42ctqQ8Cqcz-kCX85NE4F1tN2NGAM',
-
-      // US Holidays
-      // events: 't.oya-kyoto10-232@en-courage.net',
-      eventSources: [
-        // {
-        //   googleCalendarId: 'ja.japanese#holiday@group.v.calendar.google.com',
-        //   className: 'event_holiday'
-        // },
-        {
-          googleCalendarId: 't.oya-kyoto10-232@en-courage.net',
-        }
-      ],
-
-      eventClick: function(arg) {
-        // opens events in a popup window
-        window.open(arg.event.url, 'google-calendar-event', 'width=700,height=600');
-
-        arg.jsEvent.preventDefault() // don't navigate in main tab
-      },
-
-      loading: function(bool) {
-        document.getElementById('loading').style.display =
-          bool ? 'block' : 'none';
-      }
-
-    });
-
-    calendar.render();
+  calendar.render();
 });
