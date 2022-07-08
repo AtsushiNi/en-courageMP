@@ -219,3 +219,6 @@ img.sample_img{
   }
 }
 
+div[id^=tippy-] {
+  pointer-events: auto !important;
+}
