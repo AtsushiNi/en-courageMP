@@ -110,6 +110,16 @@ button.view-more-btn {
     font-size: large;
 }
 
+.pickup {
+    display: flex;
+    align-items: flex-start;
+}
+.pickup a {
+    margin: auto;
+}
+.pickup a img {
+    width: 100%;
+}
 .pickup-img {
     max-width: 400px;
 }
