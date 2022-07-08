@@ -94,6 +94,11 @@ function estimateIcon(title) {
 function createWindow(data) {
   $("h1 input").val(data["title"])
 
+  // 目次の作成
+  if(data["mokujis"].length !== 1) {
+    createMokuji(data["mokujis"])
+  }
+
   const sections_data = data["sections"]
   // 選考段階の追加
   for (var i = 1; i < sections_data.length; i++) {
@@ -136,6 +141,68 @@ function createWindow(data) {
     })
   })
 }
+
+function createMokuji(data) {
+  // 目次を表示
+  $(".table-of-contents .flow").css("display", "block")
+  // 初期化
+  $(".table-of-contents li:not(:first)").each(function(){ $(this).remove() })
+
+  // アイコンデータを取得
+  let iconData = []
+  $("#icon-select").children().each(function() {
+    iconData.push($(this).attr("value"))
+  })
+
+  // 目次項目追加
+  const ul = $(".table-of-contents ul")
+  for (var i = 1; i < data.length; i++) {
+    let li = $(".table-of-contents li:first").clone()
+    li.attr('id', "li-"+i.toString())
+
+    ul.append(li)
+  }
+
+  // 目次項目の設定
+  data.forEach((hash, index) => {
+    // タイトル
+    const title = hash["title"]
+    let target = $(".cp_stepflow01").children("li").eq(index).find(".title")
+    target.html(title)
+
+    // アイコン
+    target.prev().attr("src", "../images/experience/"+hash["icon"]+".png")
+  })
+
+  // モーダルの設定
+  for (var i = 0; i < data.length; i++) {
+    let li = $("#li-"+i.toString())
+
+    // モーダルの設定
+    li.children("div").eq(0).attr("data-remodal-id", "modal_"+i.toString())
+    li.find("a").attr("href", "#modal_"+i.toString())
+
+    // モーダル内タイトルの設定
+    const title = data[i]["title"]
+    li.find(".modal-title input").val(title)
+
+    // ドロップダウンの設定
+    li.find("select").attr("id", "icon-select-" + i.toString())
+    var optionsDropdown = {
+       dropdownHeight: "200px",  // 高さ
+       padding: 10,            // padding
+       select: iconData.indexOf(data[i]["icon"]),              // 初期表示にするインデックス番号
+       width: 100              // 幅
+    }
+    li.find("select").gorillaDropdown(optionsDropdown)
+
+    // モーダルの有効化
+    let options = {}
+    li.children("div").remodal(options)
+  }
+
+  $(".create-mokuji").prop("disabled", true)
+}
 // 画面表示時にデータを読み込み
 $(document).on("click", "#load_button", () => {
   get().then( res => createWindow(res.data))
@@ -150,65 +217,14 @@ $(document).on("click", "#google-creation", () => {
 
 // 目次作成ボタン
 $(document).on("click", ".create-mokuji", function() {
-  // 目次を表示
-  $(".table-of-contents .flow").css("display", "block")
-  // 初期化
-  $(".table-of-contents li:not(:first)").each(function(){ $(this).remove() })
-
-  // アイコンデータを取得
-  let iconData = []
-  $("#icon-select").children().each(function() {
-    iconData.push($(this).attr("value"))
+  let data = []
+  $(".sections .section").each(function(section) {
+    let hash = {"title": "", "icon": ""}
+    hash["title"] = $(this).find("h2 input").val()
+    hash["icon"] = estimateIcon(hash["title"])
+    data.push(hash)
   })
-
-  // 目次項目追加
-  const ul = $(".table-of-contents ul")
-  for (var i = 1; i < $(".sections .section").length; i++) {
-    let li = $(".table-of-contents li:first").clone()
-    li.attr('id', "li-"+i.toString())
-
-    ul.append(li)
-  }
-
-  // 目次項目の設定
-  $(".sections .section").each(function(index) {
-    // タイトル
-    const title = $(this).find("h2 input").val()
-    let target = $(".cp_stepflow01").children("li").eq(index).find(".title")
-    target.html(title)
-
-    // アイコン
-    target.prev().attr("src", "../images/experience/"+estimateIcon(title)+".png")
-  })
-
-  // モーダルの設定
-  for (var i = 0; i < $(".sections .section").length; i++) {
-    let li = $("#li-"+i.toString())
-
-    // モーダルの設定
-    li.children("div").eq(0).attr("data-remodal-id", "modal_"+i.toString())
-    li.find("a").attr("href", "#modal_"+i.toString())
-
-    // モーダル内タイトルの設定
-    const title = $(".section").eq(i).find("h2 input").val()
-    li.find(".modal-title input").val(title)
-
-    // ドロップダウンの設定
-    li.find("select").attr("id", "icon-select-" + i.toString())
-    var optionsDropdown = {
-       dropdownHeight: "200px",  // 高さ
-       padding: 10,            // padding
-       select: iconData.indexOf(estimateIcon(title)),              // 初期表示にするインデックス番号
-       width: 100              // 幅
-    }
-    li.find("select").gorillaDropdown(optionsDropdown)
-
-    // モーダルの有効化
-    let options = {}
-    li.children("div").remodal(options)
-  }
-
-  $(".create-mokuji").prop("disabled", true)
+  createMokuji(data)
 })
 
 // 目次モーダルのOKボタン
