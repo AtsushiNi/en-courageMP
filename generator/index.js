@@ -39,9 +39,16 @@ function createJson() {
   })
 
   $(".section").each(function() {
-    let sectionData = { "title": "", "contents": [] }
+    let sectionData = { "title": "", "table": [], "contents": [] }
 
     sectionData["title"] = $(this).find("h2 input").val()
+    $(this).find("tr").each(function() {
+      let tableData = {
+        "key": $(this).find("th").text(),
+        "value": $(this).find("td").text()
+      }
+      sectionData["table"].push(tableData)
+    })
     $(this).find(".content").each(function() {
       let contentData = {
         "title": $(this).find("input").val(),
@@ -100,6 +107,15 @@ function createWindow(data) {
     let section = $(".sections .section").eq(i)
     section.children("h2").children("input").val(section_data["title"])
 
+    //tableの設定
+    if (section_data["table"]) {
+      section_data["table"].forEach(data => {
+        section.find("tbody").append("<tr><th></th><td></td></tr>")
+        section.find("th:last").text(data["key"])
+        section.find("td:last").text(data["value"])
+      })
+    }
+
     // 選考内容の設定
     let content = section.children(".contents").children(".content").clone()
     for (var j = 1; j < section_data["contents"].length; j++) {
@@ -115,7 +131,7 @@ function createWindow(data) {
 }
 // 画面表示時にデータを読み込み
 $(document).on("click", "#load_button", () => {
-  get().then( ateWindow(res.data))
+  get().then( res => createWindow(res.data))
 })
 
 // Googleドキュメント読み込みボタン
@@ -220,6 +236,16 @@ $(document).on("click", ".section-add-button", function() {
   $(".sections").append(section)
 
   section.find("h2 input").focus()
+})
+
+// 選考内容をテーブルへ
+$(document).on("click", ".add-table", function() {
+  $(this).parents(".contents").find("tbody").append("<tr><th><td></td></tr>")
+  const key = $(this).parents(".content").find("input").val()
+  const value = $(this).parents(".content").find("textarea").val()
+  $(this).parents(".contents").find("th:last").text(key)
+  $(this).parents(".contents").find("td:last").text(value)
+  $(this).parents(".content").remove()
 })
 
 // 選考内容の削除

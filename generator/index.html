@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="lib/remodal/dist/remodal-default-theme.css">
   <link rel="stylesheet" href="lib/dropdown/dist/jquery.gorilla-dropdown.min.css">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
 </head>
 
 <body>
@@ -99,10 +100,21 @@
             <button type="button" class="section-delete-button btn btn-outline-danger">-</button>
           </h2>
           <div class="contents">
+            <div class="table">
+              <table>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
             <div class="content">
               <h3>
                 <input type="text">
-                <button type="button" class="content-delete-button btn btn-outline-danger">-</button>
+                <div>
+                  <button type="button" class="add-table btn btn-outline-secondary">
+                    <img src="table.png">
+                  </button>
+                  <button type="button" class="content-delete-button btn btn-outline-danger">-</button>
+                </div>
               </h3>
               <textarea rows=5></textarea>
             </div>
@@ -123,6 +135,7 @@
         <button type="button" class="destroy-button btn btn-danger">破棄</button>
       </div>
     </main>
+    <div id="page_top"><a href="#"></a></div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

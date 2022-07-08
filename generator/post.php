@@ -51,6 +51,35 @@
         </h2>
 
     EOM;
+    if (!empty($section["table"])) {
+      echo <<< EOM
+        <div class="table">
+          <table>
+            <tbody>
+
+      EOM;
+      foreach ($section["table"] as $table) {
+        $key = $table["key"];
+        $value = $table["value"];
+        echo <<< EOM
+          <tr>
+            <th>
+              $key
+            </th>
+            <td>
+              $value
+            </td>
+          </tr>
+
+        EOM;
+      }
+      echo <<< EOM
+          </tbody>
+        </table>
+
+      EOM;
+    }
+
     foreach ($section["contents"] as $content) {
       $title = $content["title"];
       $text = nl2br($content["content"]);
