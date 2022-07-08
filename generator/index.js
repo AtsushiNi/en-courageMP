@@ -42,6 +42,7 @@ function createJson() {
     let sectionData = { "title": "", "table": [], "contents": [] }
 
     sectionData["title"] = $(this).find("h2 input").val()
+    sectionData["atsumori"] = $(this).find(".atsumori").attr("data-checked") === "true"
     $(this).find("tr").each(function() {
       let tableData = {
         "key": $(this).find("th").text(),
@@ -106,6 +107,12 @@ function createWindow(data) {
     // 選考段階名の設定
     let section = $(".sections .section").eq(i)
     section.children("h2").children("input").val(section_data["title"])
+
+    // 難関の設定
+    if(section_data["atsumori"] === "true") {
+      section.find(".atsumori").attr("data-checked", "true")
+      section.find(".atsumori").css("box-shadow", "0 0 1px #fff, 0 0 3px #fff, 0 0 6px #fc3600, 0 0 9px #fc3600")
+    }
 
     //tableの設定
     if (section_data["table"]) {
@@ -216,6 +223,17 @@ $(document).on("confirmation", ".remodal", function() {
   target.html(newTitle)
   // アイコン
   target.prev().attr("src", "../images/experience/"+newIcon+".png")
+})
+
+// 難関ボタン
+$(document).on("click", ".atsumori", function() {
+  if ($(this).attr("data-checked") === "true") {
+    $(this).css("box-shadow", "")
+    $(this).attr("data-checked", "false")
+  } else {
+    $(this).css("box-shadow", "0 0 1px #fff, 0 0 3px #fff, 0 0 6px #fc3600, 0 0 9px #fc3600")
+    $(this).attr("data-checked", "true")
+  }
 })
 
 // 選考段階の削除ボタン

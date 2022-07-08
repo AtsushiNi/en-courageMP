@@ -42,8 +42,17 @@
   ob_start();
   foreach ($_POST["data"]["sections"] as $index => $section) {
     $title = $section["title"];
+    $atsumori = $section["atsumori"] == "true" ? "atsumori" : "";
+    $atsumori_event = <<< EOM
+      <div class="atsumori-event">
+        <h2>対策イベント！</h2>
+        <a href="#q_02"><img src="../../images/self-analysis/IMG_5935.JPG" class="sample_img"></a>
+      </div>
+
+    EOM;
+
     echo <<<EOM
-      <div class="section">
+      <div class="section $atsumori">
         <h2>
           <a id="$index">
             $title
@@ -98,6 +107,10 @@
     }
 
     echo "</div>";
+
+    if($section["atsumori"] == "true") {
+      echo $atsumori_event;
+    }
   }
   $sections = ob_get_contents();
   ob_end_clean();

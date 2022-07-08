@@ -48,6 +48,19 @@ h2 input {
   margin-inline-end: 0px;
   font-weight: bold;
   margin-top: 0;
+  margin-right: auto;
+}
+h2 .btns {
+  display: flex;
+}
+h2 .btns button {
+  margin-left: 10px;
+}
+h2 .btns .atsumori {
+  padding: 0;
+}
+h2 .btns img {
+  width: 60px;
 }
 h2 button {
   margin-bottom: 40px;
@@ -89,17 +102,6 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-/*
-table tr:after {
-  content: ' ';
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  opacity: 0.5;
-  background: #b0bec5;
-}
-*/
 table th {
   width: 110px;
 	background-color: #ECEFF1;
