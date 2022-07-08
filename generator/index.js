@@ -95,7 +95,7 @@ function createWindow(data) {
   $("h1 input").val(data["title"])
 
   // 目次の作成
-  if(data["mokujis"].length !== 1) {
+  if(data["mokujis"].length > 1) {
     createMokuji(data["mokujis"])
   }
 
