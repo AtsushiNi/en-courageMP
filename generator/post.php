@@ -74,25 +74,29 @@
         EOM;
       }
       echo <<< EOM
-          </tbody>
-        </table>
-
-      EOM;
-    }
-
-    foreach ($section["contents"] as $content) {
-      $title = $content["title"];
-      $text = nl2br($content["content"]);
-      echo <<< EOM
-        <h3>
-          $title
-        </h3>
-        <div class="text">
-          $text
+            </tbody>
+          </table>
         </div>
 
       EOM;
     }
+
+    if(!empty($section["contents"])) {
+      foreach ($section["contents"] as $content) {
+        $title = $content["title"];
+        $text = nl2br($content["content"]);
+        echo <<< EOM
+          <h3>
+            $title
+          </h3>
+          <div class="text">
+            $text
+          </div>
+
+        EOM;
+      }
+    }
+
     echo "</div>";
   }
   $sections = ob_get_contents();
