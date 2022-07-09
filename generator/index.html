@@ -249,7 +249,7 @@
                       cell => cell.content.map(
                         c => c.paragraph.elements.map(
                           element => element.textRun.content
-                        )
+                        ).join("")
                       ).join("")
                     )
                   )
