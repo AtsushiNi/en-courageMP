@@ -24,148 +24,43 @@
       - 記事やカレンダーでOCEVイベントを掲載、紹介することで個別訴求の頻度を減らす
 
 ## ディレクトリ構成
-‘‘‘
+~~~
 .
 ├── README.md
-├── column.html
-├── column_source
-│   ├── column1.html
-│   └── column_source_style.css
-├── components
-│   ├── footer.html
-│   ├── header.html
-│   └── sidebar.html
+├── column_source // 記事個別フォルダ。古いバージョン
+├── components // ヘッダー・フッター・サイドバー
 ├── css
-│   ├── column.css
-│   ├── default.css
-│   ├── event.css
-│   ├── experience.css
-│   ├── footer.css
-│   ├── header.css
-│   ├── index.css
-│   ├── industry-research.css
-│   ├── interview.css
-│   ├── selection-preparation.css
-│   ├── self-analysis.css
-│   ├── sidebar.css
+│   ├── default.css // 全ページ共通
+│   ├── experience.css // 以下個別ページごと
+│   ├── ...
 │   └── use.css
-├── default_page.png
-├── event.html
-├── events
-│   ├── 47-internship.jpeg
-│   ├── GD-nozokimi.jpeg
-│   ├── ikkatsu-build-entry.png
-│   ├── ikkatsu-eng-entry.png
-│   ├── ikkatsu-entry.png
-│   ├── ikkatsu-it-entry.png
-│   ├── ikkatsu-kiden-entry.png
-│   ├── interview-nozokimi.jpeg
-│   ├── it-seminer.jpeg
-│   ├── kinyu-seminer.jpeg
-│   ├── outstanding-01.png
-│   ├── outstanding-05.png
-│   ├── outstanding-06.png
-│   ├── outstanding-07.jpeg
-│   ├── outstanding-08.jpeg
-│   ├── outstanding-09.jpeg
-│   ├── outstanding-15.jpeg
-│   ├── outstanding-16.jpeg
-│   ├── outstanding-17.jpeg
-│   ├── shibuya-next.jpeg
-│   ├── summer-circuit.png
-│   └── syudan-seminer.jpeg
-├── experiences
-│   └── 1.html
-├── generator
-│   ├── atsumori.png
-│   ├── complete.php
-│   ├── credentials.js
-│   ├── destroy.php
-│   ├── get.php
-│   ├── index.css
-│   ├── index.html
-│   ├── index.js
-│   ├── lib
-│   │   ├── dropdown
-│   │   │   └── dist
-│   │   │       ├── jquery.gorilla-dropdown.min.css
-│   │   │       └── jquery.gorilla-dropdown.min.js
-│   │   └── remodal
-│   │       └── dist
-│   │           ├── remodal-default-theme.css
-│   │           ├── remodal.css
-│   │           └── remodal.min.js
-│   ├── post.php
-│   ├── table.png
-│   └── tmp
-│       ├── 2_tmp.html
-│       └── 2_tmp.json
+├── events // 案件・イベントのアイキャッチ画像の格納フォルダ
+├── experiences // 選考体験記の格納フォルダ
+├── generator // 選考体験記のHTMLを自動生成するツール
+│   └── README.md
 ├── images
+│   ├── experience // 体験記の目次アイコン
+│   ├── self-analysis // 自己分析ページ用画像
+│   ├── sidebar // サイドバー用画像
 │   ├── atsumori.png
-│   ├── border.png
-│   ├── comingsoon.png
-│   ├── company.PNG
-│   ├── ev.png
-│   ├── exam.PNG
-│   ├── experience
-│   │   ├── ES.png
-│   │   ├── GD.png
-│   │   ├── good.png
-│   │   ├── impressions.png
-│   │   ├── intern.png
-│   │   ├── interview.png
-│   │   └── web-test.png
-│   ├── img.png
-│   ├── sample.png
-│   ├── self-analysis
-│   │   ├── IMG_0789.PNG
-│   │   ├── IMG_5934.PNG
-│   │   ├── IMG_5935.JPG
-│   │   ├── IMG_5942.PNG
-│   │   ├── how-to-use.jpg
-│   │   └── outstanding.png
-│   ├── self.PNG
-│   ├── sidebar
-│   │   └── search.png
+│   ├── ...
 │   └── top.PNG
+├── js
+│   ├── script.js // 共通するjavascript
+│   ├── ev_script.js
+│   ├── ...
+│   └── view_more.js
+├── lib // javascriptのライブラリ
+│   └── fullcalendar // カレンダー
+├── column.html
+├── event.html
 ├── index.html
 ├── industry-research.html
 ├── interview.html
-├── js
-│   ├── column_script.js
-│   ├── ev_script.js
-│   ├── footer_script.js
-│   ├── script.js
-│   └── view_more.js
-├── lib
-│   └── fullcalendar
-│       ├── main.css
-│       └── main.js
-├── node_modules
-│   ├── @popperjs
-│   │   └── core
-│   │       ├── dist
-│   │       │   ├── cjs
-│   │       │   ├── esm
-│   │       │   │   ├── dom-utils
-│   │       │   │   ├── modifiers
-│   │       │   │   └── utils
-│   │       │   └── umd
-│   │       └── lib
-│   │           ├── dom-utils
-│   │           ├── modifiers
-│   │           └── utils
-│   └── tippy.js
-│       ├── animations
-│       ├── dist
-│       ├── headless
-│       │   └── dist
-│       └── themes
-├── readme.pdf
 ├── selection-preparation.html
 ├── self-analysis.html
 └── use.html
-‘‘‘
+~~~
 ## アクセス制限
 
 ## ローカル環境構築
