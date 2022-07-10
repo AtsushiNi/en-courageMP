@@ -82,7 +82,7 @@ HP更新時の動作確認や記事作成に使用
 1. gitをインストール
 2. MAMPをインストール
 3. MAMPのhtdocsフォルダに本レポジトリをclone
-4. localhost/本ディレクトリ名 にブラウザでアクセス
+4. localhost/{本ディレクトリ名} にブラウザでアクセス
 
 ## デプロイ
 GitHub Actionsを用いて自動化した<br>
