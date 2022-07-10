@@ -1,6 +1,9 @@
 # en-courage 京大支部 HP
 
-## 概要
+### URL
+https://encourage-ku10.com/index.html
+
+### 目的
 なぜ1から作り始めたか
 - エンカレで活動していく個々人としての側面
   - 0→1の経験を作りに行きたい
@@ -28,6 +31,14 @@
 .
 ├── README.md
 ├── column_source // 記事個別フォルダ。古いバージョン
+├── pages // 各ページHTML
+│   ├── column.html // 記事一覧ページ
+│   ├── event.html // イベントページ
+│   ├── industry-research.html // 業界分析ページ
+│   ├── interview.html // 面談ページ
+│   ├── selection-preparation.html // 選考対策ページ
+│   ├── self-analysis.html // 自己分析ページ
+│   └── use.html // 使い方ページ
 ├── components // ヘッダー・フッター・サイドバー
 ├── css
 │   ├── default.css // 全ページ共通
@@ -36,8 +47,6 @@
 │   └── use.css
 ├── events // 案件・イベントのアイキャッチ画像の格納フォルダ
 ├── experiences // 選考体験記の格納フォルダ
-├── generator // 選考体験記のHTMLを自動生成するツール
-│   └── README.md
 ├── images
 │   ├── experience // 体験記の目次アイコン
 │   ├── self-analysis // 自己分析ページ用画像
@@ -52,19 +61,28 @@
 │   └── view_more.js
 ├── lib // javascriptのライブラリ
 │   └── fullcalendar // カレンダー
-├── column.html
-├── event.html
-├── index.html
-├── industry-research.html
-├── interview.html
-├── selection-preparation.html
-├── self-analysis.html
-└── use.html
+├── generator // 選考体験記のHTMLを自動生成するツール
+│   └── README.md
+└── index.html // トップページ
 ~~~
+
 ## アクセス制限
+- サイト全体
+  - xserverのアクセス制限管理で制御
+  - 本番環境ではBASIC認証
+- HTMLジェネレータ
+  - generator/.htaccessで制御
+  - 本番環境ではアクセス禁止
+
+.htaccess, .htpasswdはGit管理しない
 
 ## ローカル環境構築
+HP更新時の動作確認や記事作成に使用
+### MAC
 
 ## デプロイ
 
 ## HTMLジェネレータ
+選考体験記の記事を自動作成するツール<br>
+ローカル環境でのみ使用可能<br>
+[README](generator/README.md)
