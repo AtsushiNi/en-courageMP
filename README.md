@@ -78,9 +78,15 @@ https://encourage-ku10.com/index.html
 
 ## ローカル環境構築
 HP更新時の動作確認や記事作成に使用
-### MAC
+
+1. gitをインストール
+2. MAMPをインストール
+3. MAMPのhtdocsフォルダに本レポジトリをclone
+4. localhost/本ディレクトリ名 にブラウザでアクセス
 
 ## デプロイ
+GitHub Actionsを用いて自動化した<br>
+mainブランチが更新されると本番サーバーのファイルを更新する
 
 ## HTMLジェネレータ
 選考体験記の記事を自動作成するツール<br>
