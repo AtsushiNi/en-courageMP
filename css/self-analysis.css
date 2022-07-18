@@ -5,14 +5,27 @@
     margin: 0 auto;
     margin-top: 30px;
 }
-.appeal-area {
+
+.block {
+    margin-top: 90px;
+}
+
+.component {
+    margin-top: 60px;
+}
+
+.image {
+    height: 180px;
+}
+
+#appeal-area {
     text-align: center;
 }
 .appeal-area-img {
     width: 100%;
 }
 
-.how-to-use {
+#how-to-use {
     display: flex;
 }
 .how-to-use-content {
@@ -47,13 +60,6 @@
     left: 180px;
 }
 
-.know {
-    margin-top: 40px;
-}
-.join {
-    margin-top: 40px;
-}
-
 .band {
     background-color: #000B77;
     margin-left: calc(-50vw + 50%);
@@ -66,7 +72,7 @@
     margin-top: 5px;
     padding: 5px 0 5px 5%;
 }
-.join .band-string {
+#join .band-string {
     text-align: right;
     padding-right: 5%;
 }
@@ -91,10 +97,16 @@
 .item {
     margin: 0 20px;
     min-width: 350px;
+    text-align: center;
 }
-.sample_img {
-    width: 100%;
+.item a {
+    text-decoration: none;
+    color: inherit;
 }
+.item a div {
+    text-align: center;
+}
+
 div.view-more {
     text-align: center;
     margin-bottom: 20px;

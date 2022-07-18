@@ -10,16 +10,17 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
     </head>
 
-    <?php $Path = './'; ?>
+    <?php $Path = '../'; ?>
     <body>
         <?php include(__DIR__ . '/../components/header.html'); ?>
         <div class="content">
             <main>
                 <div id="sa-main" class="contents">
-                    <div class="appeal-area">
+                    <div class="block" id="appeal-area">
                         <img src="../images/self-analysis/outstanding.png" alt="" class="appeal-area-img">
                     </div>
-                    <div class="how-to-use">
+
+                    <div class="block" id="how-to-use">
                         <img src='../images/self-analysis/IMG_0789.PNG' alt="" class='how-to-use-img'>
                         <div class="how-to-use-content">
                             <img src='../images/self-analysis/how-to-use.jpg' alt="" class='how-to-use-logo'>
@@ -29,39 +30,128 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="know">
+
+                    <div class="block" id="know">
                         <div class='band'>
                             <div class="band-string">
-                                <h1>読む&nbsp;&nbsp;&nbsp;<span>read</span></h1>
+                                <h1>知る&nbsp;&nbsp;&nbsp;<span>know</span></h1>
                             </div>
                         </div>
-                        <h1>対策記事</h1>
-                        <ul class="item-list" id="prepare-item-list">
-                            <li class="item"><a href="../experiences/1.html"><img src="../images/self-analysis/IMG_5934.PNG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5934.PNG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5934.PNG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5934.PNG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5934.PNG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5934.PNG" class="sample_img"></a></li>
-                        </ul>
-                        <div class="view-more" id="prepare-view-more">
-                            <button class="view-more-btn" id="prepare">view more</button>
+                        <div class="component">
+                            <h1>対策記事</h1>
+                            <ul class="item-list" id="prepare-item-list">
+                                <li class="item">
+                                    <a href="../experiences/1.html">
+                                        <img src="../images/industries/publishing.png" class="image">
+                                        <div>
+                                            出版業界の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/IT.png" class="image">
+                                        <div>
+                                            IT業界の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/food.png" class="image">
+                                        <div>
+                                            食品業界の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/bridal.png" class="image">
+                                        <div>
+                                            ブライダル業界の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/medical.png" class="image">
+                                        <div>
+                                            医療業界の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/trading.png" class="image">
+                                        <div>
+                                            商社の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/venture.png" class="image">
+                                        <div>
+                                            ベンチャー企業の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/aviation.png" class="image">
+                                        <div>
+                                            航空企業の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/cosmetic.png" class="image">
+                                        <div>
+                                            化粧品業界の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/developer.png" class="image">
+                                        <div>
+                                            デベロッパー業界の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../images/industries/financial.png" class="image">
+                                        <div>
+                                            金融業界の選考体験記
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="view-more" id="prepare-view-more">
+                                <button class="view-more-btn" id="prepare">view more</button>
+                            </div>
                         </div>
-                        <h1>コラム</h1>
-                        <ul class="item-list" id="prepare-item-list">
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="sample_img"></a></li>
-                        </ul>
-                        <div class="view-more" id="prepare-view-more">
-                            <button class="view-more-btn" id="prepare">view more</button>
+
+                        <div class="component">
+                            <h1>コラム</h1>
+                            <ul class="item-list" id="prepare-item-list">
+                                <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../images/self-analysis/IMG_5935.JPG" class="image"></a></li>
+                            </ul>
+                            <div class="view-more" id="prepare-view-more">
+                                <button class="view-more-btn" id="prepare">view more</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="join">
+
+                    <div class="block" id="join">
                         <div class='band'>
                             <div class="band-string">
                                 <h1><span>join</span>&nbsp;&nbsp;&nbsp;参加する</h1>
@@ -76,35 +166,84 @@
                                 <img src="../events/47-internship.jpeg"/>
                             </a>
                         </div>
-                        <ul class="item-list" id="prepare-item-list">
-                            <li class="item"><a href="#q_02"><img src="../events/outstanding-01.png" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/outstanding-05.png" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/outstanding-06.png" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/outstanding-07.jpeg" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/outstanding-08.jpeg" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/outstanding-09.jpeg" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/outstanding-15.jpeg" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/outstanding-16.jpeg" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/outstanding-17.jpeg" class="sample_img"></a></li>
-                        </ul>
-                        <div class="view-more" id="prepare-view-more">
-                            <button class="view-more-btn" id="prepare">view more</button>
+
+                        <div class="component">
+                            <ul class="item-list" id="prepare-item-list">
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../events/outstanding-06.png" class="image">
+                                        <div>
+                                            7/20<br>
+                                            就活講座 ”Outstanding”<br>
+                                            第6回「企業分析」の方法論
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../events/outstanding-07.jpeg" class="image">
+                                        <div>
+                                            7/23・27<br>
+                                            就活講座 ”Outstanding”<br>
+                                            第7回「強い志望動機の作り方」
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../events/outstanding-08.jpeg" class="image">
+                                        <div>
+                                            7/30・8/3<br>
+                                            就活講座 ”Outstanding”<br>
+                                            第8回「ビジネス基礎知識」
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../events/outstanding-09.jpeg" class="image">
+                                        <div>
+                                            8/6・10<br>
+                                            就活講座 ”Outstanding”<br>
+                                            第9回「1流のGD（レクチャー編）」
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#q_02">
+                                        <img src="../events/outstanding-10.jpeg" class="image">
+                                        <div>
+                                            8/20・24<br>
+                                            就活講座 ”Outstanding”<br>
+                                            第10回「1流のGD（トレーニング編）」
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="view-more" id="prepare-view-more">
+                                <button class="view-more-btn" id="prepare">view more</button>
+                            </div>
                         </div>
-                        <ul class="item-list" id="prepare-item-list">
-                            <li class="item"><a href="#q_02"><img src="../events/ikkatsu-entry.png" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/ikkatsu-eng-entry.png" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/ikkatsu-build-entry.png" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/ikkatsu-it-entry.png" class="sample_img"></a></li>
-                            <li class="item"><a href="#q_02"><img src="../events/ikkatsu-kiden-entry.png" class="sample_img"></a></li>
-                        </ul>
-                        <div class="view-more" id="prepare-view-more">
-                            <button class="view-more-btn" id="prepare">view more</button>
+
+                        <div class="component">
+                            <ul class="item-list" id="prepare-item-list">
+                                <li class="item"><a href="#q_02"><img src="../events/ikkatsu-entry.png" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../events/ikkatsu-eng-entry.png" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../events/ikkatsu-build-entry.png" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../events/ikkatsu-it-entry.png" class="image"></a></li>
+                                <li class="item"><a href="#q_02"><img src="../events/ikkatsu-kiden-entry.png" class="image"></a></li>
+                            </ul>
+                            <div class="view-more" id="prepare-view-more">
+                                <button class="view-more-btn" id="prepare">view more</button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="return-btn">
-                    <a class="return" href="../index.html">トップへ戻る</a>
+                    <div class="block">
+                        <div class="return-btn">
+                            <a class="return" href="../index.html">トップへ戻る</a>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
