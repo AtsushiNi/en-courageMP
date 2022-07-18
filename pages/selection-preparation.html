@@ -56,16 +56,19 @@
                     <div class="component">
                         <h1 class="arrow">ES対策</h1>
                         <ul class="item-list" id="prepare-item-list">
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-07.jpeg" class="image">
-                                    <div>
-                                        7/23・27<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第7回「強い志望動機の作り方」
-                                    </div>
-                                </a>
-                            </li>
+                            <?php
+                                include("../event_list.php");
+                                foreach ($selection_preparation["ES"] as $event) {
+                                    echo "
+                                        <li class='item'>
+                                            <a href='{$event["path"]}'>
+                                                <img src='../images/events/{$event["image"]}' class='image'>
+                                                <div>{$event["title"]}</div>
+                                            </a>
+                                        </li>
+                                    ";
+                                }
+                            ?>
                         </ul>
                     </div>
 
