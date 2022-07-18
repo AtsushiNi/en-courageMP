@@ -55,9 +55,14 @@
                             <h1 class="arrow">Pick Up !</h1>
                             <img src="../images/selection-preparation/IMG_5942.PNG" class="pickup-img"/>
                         </div>
-                        <a href="https://bit.ly/3NEEHQF" target="_blank">
-                            <img src="../events/47-internship.jpeg"/>
-                        </a>
+                        <?php
+                            include("../event_list.php");
+                            echo "
+                                <a href='{$selection_preparation["pickup"]["path"]}' target='_blank'>
+                                    <img src='../images/events/{$selection_preparation["pickup"]["image"]}'>
+                                </a>
+                            ";
+                        ?>
                     </div>
 
                     <div class="component">
@@ -88,52 +93,57 @@
                     <div class="component">
                         <h1 class="arrow right">GD対策</h1>
                         <ul class="item-list" id="prepare-item-list">
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-09.jpeg" class="image">
-                                    <div>
-                                        8/6・10<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第9回「1流のGD（レクチャー編）」
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-10.jpeg" class="image">
-                                    <div>
-                                        8/20・24<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第10回「1流のGD（トレーニング編）」
-                                    </div>
-                                </a>
-                            </li>
+                            <?php
+                                include("../event_list.php");
+                                foreach ($selection_preparation["GD"] as $event) {
+                                    echo "
+                                        <li class='item'>
+                                            <a href='{$event["path"]}'>
+                                                <img src='../images/events/{$event["image"]}' class='image'>
+                                                <div>{$event["title"]}</div>
+                                            </a>
+                                        </li>
+                                    ";
+                                }
+                            ?>
                         </ul>
                     </div>
 
                     <div class="component">
-                        <h1 class="arrow">その他</h1>
+                        <h1 class="arrow">インターン</h1>
                         <ul class="item-list" id="prepare-item-list">
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-06.png" class="image">
-                                    <div>
-                                        7/20<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第6回「企業分析」の方法論
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-08.jpeg" class="image">
-                                    <div>
-                                        7/30・8/3<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第8回「ビジネス基礎知識」
-                                    </div>
-                                </a>
-                            </li>
+                            <?php
+                                include("../event_list.php");
+                                foreach ($selection_preparation["intern"] as $event) {
+                                    echo "
+                                        <li class='item'>
+                                            <a href='{$event["path"]}'>
+                                                <img src='../images/events/{$event["image"]}' class='image'>
+                                                <div>{$event["title"]}</div>
+                                            </a>
+                                        </li>
+                                    ";
+                                }
+                            ?>
+                        </ul>
+                    </div>
+
+                    <div class="component">
+                        <h1 class="arrow right">その他</h1>
+                        <ul class="item-list" id="prepare-item-list">
+                            <?php
+                                include("../event_list.php");
+                                foreach ($selection_preparation["other"] as $event) {
+                                    echo "
+                                        <li class='item'>
+                                            <a href='{$event["path"]}'>
+                                                <img src='../images/events/{$event["image"]}' class='image'>
+                                                <div>{$event["title"]}</div>
+                                            </a>
+                                        </li>
+                                    ";
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>
