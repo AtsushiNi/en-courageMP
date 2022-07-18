@@ -66,12 +66,16 @@
     display: flex;
     align-items: flex-start;
 }
-.pickup h1 {
-    border-image: url("../images/selection-preparation/arrow.png");
+h1.arrow {
+    width: 300px;
+    border-image: url("../images/selection-preparation/arrow.png") 50 50 / 40px;
     padding-bottom: 20px;
     border-bottom: solid;
-    border-image-width: 40px;
-    border-image-slice: 50 50;
+}
+h1.arrow.right {
+    text-align: right;
+    border-image: url("../images/selection-preparation/arrow-right.png") 50 50 / 40px;
+    margin-left: auto;
 }
 .pickup a {
     margin: auto;
