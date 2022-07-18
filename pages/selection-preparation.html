@@ -65,87 +65,41 @@
                         ?>
                     </div>
 
-                    <div class="component">
-                        <h1 class="arrow right">合同説明会</h1>
-                        <ul class="item-list" id="prepare-item-list">
-                        <ul>
-                    </div>
+                    <?php
+                        $index = 1;
+                        foreach ($selection_preparation as $title => $component) {
+                            if ($title == "pickup") continue;
+                            if (count($component) == 0) continue;
 
-                    <div class="component">
-                        <h1 class="arrow">ES対策</h1>
-                        <ul class="item-list" id="prepare-item-list">
-                            <?php
-                                include("../event_list.php");
-                                foreach ($selection_preparation["ES"] as $event) {
-                                    echo "
-                                        <li class='item'>
-                                            <a href='{$event["path"]}'>
-                                                <img src='../images/events/{$event["image"]}' class='image'>
-                                                <div>{$event["title"]}</div>
-                                            </a>
-                                        </li>
-                                    ";
-                                }
-                            ?>
-                        </ul>
-                    </div>
+                            if ($index % 2 == 1) {
+                                $right = "right";
+                            } else {
+                                $right = "";
+                            }
 
-                    <div class="component">
-                        <h1 class="arrow right">GD対策</h1>
-                        <ul class="item-list" id="prepare-item-list">
-                            <?php
-                                include("../event_list.php");
-                                foreach ($selection_preparation["GD"] as $event) {
-                                    echo "
-                                        <li class='item'>
-                                            <a href='{$event["path"]}'>
-                                                <img src='../images/events/{$event["image"]}' class='image'>
-                                                <div>{$event["title"]}</div>
-                                            </a>
-                                        </li>
-                                    ";
-                                }
-                            ?>
-                        </ul>
-                    </div>
+                            echo <<< EOM
+                                <div class="component">
+                                    <h1 class="arrow {$right}">{$title}</h1>
+                                    <ul class="item-list" id="prepare-item-list">
+                            EOM;
+                            foreach ($component as $event) {
+                                echo "
+                                    <li class='item'>
+                                        <a href='{$event["path"]}'>
+                                            <img src='../images/events/{$event["image"]}' class='image'>
+                                            <div>{$event["title"]}</div>
+                                        </a>
+                                    </li>
+                                ";
+                            }
+                            echo <<< EOM
+                                    <ul>
+                                </div>
+                            EOM;
 
-                    <div class="component">
-                        <h1 class="arrow">インターン</h1>
-                        <ul class="item-list" id="prepare-item-list">
-                            <?php
-                                include("../event_list.php");
-                                foreach ($selection_preparation["intern"] as $event) {
-                                    echo "
-                                        <li class='item'>
-                                            <a href='{$event["path"]}'>
-                                                <img src='../images/events/{$event["image"]}' class='image'>
-                                                <div>{$event["title"]}</div>
-                                            </a>
-                                        </li>
-                                    ";
-                                }
-                            ?>
-                        </ul>
-                    </div>
-
-                    <div class="component">
-                        <h1 class="arrow right">その他</h1>
-                        <ul class="item-list" id="prepare-item-list">
-                            <?php
-                                include("../event_list.php");
-                                foreach ($selection_preparation["other"] as $event) {
-                                    echo "
-                                        <li class='item'>
-                                            <a href='{$event["path"]}'>
-                                                <img src='../images/events/{$event["image"]}' class='image'>
-                                                <div>{$event["title"]}</div>
-                                            </a>
-                                        </li>
-                                    ";
-                                }
-                            ?>
-                        </ul>
-                    </div>
+                            ++$index;
+                        }
+                    ?>
                 </div>
             </main>
         </div>

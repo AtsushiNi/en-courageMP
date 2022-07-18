@@ -5,14 +5,9 @@
       "image" => "10/7/47-internship.jpeg",
       "title" => ""
     ],
-    "information_session" => [
-      [
-        "path" => "https://aaa",
-        "image" => "",
-        "title" => ""
-      ],
+    "合同説明会" => [
     ],
-    "ES" => [
+    "ES対策" => [
       [
         "path" => "https://aaa",
         "image" => "10/7/outstanding-07.jpeg",
@@ -49,7 +44,7 @@
         "title" => "《締切：8/15》<br>ES1枚で26社へ！文理混合一括エントリー"
       ],
     ],
-    "GD" => [
+    "GD対策" => [
       [
         "path" => "https://en-courage.com/events/EWcm52YEpLjFi9lsa6MN",
         "image" => "10/8/outstanding-09.jpeg",
@@ -71,14 +66,14 @@
         "title" => "7/22・26・28・8/3・5<br>【参加者特典あり】<br>採用担当・面接官になれば就活が見える！！<br>グループディスカッション付き"
       ],
     ],
-    "intern" => [
+    "インターン" => [
       [
         "path" => "https://en-courage.com/events/sbAQUz21fd3N6MiqWjSg",
         "image" => "10/8/outstanding-01.png",
         "title" => "8/5・6・8・9・20・23<br>就活講座 ”Outstanding”<br>第17回「超1流の面接」"
       ],
     ],
-    "other" => [
+    "その他" => [
       [
         "path" => "https://en-courage.com/events/sbAQUz21fd3N6MiqWjSg",
         "image" => "10/8/outstanding-01.png",
