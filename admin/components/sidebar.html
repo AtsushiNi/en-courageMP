@@ -1,0 +1,59 @@
+<?php
+  if (in_array($page, ['oc', 'ev', 'experience', 'column'])) {
+    $active_nav = 'contents';
+  } else {
+    $active_nav = 'pages';
+  }
+?>
+
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+  <a href="<?php print $rootPath;?>" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <span class="fs-4">HP Admin</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a href="#contents-ul" class="nav-link <?php if ($active_nav == 'contents'){echo 'active';}?>" aria-current="page" data-bs-toggle="collapse">
+        コンテンツ
+      </a>
+      <ul class="collapse <?php if ($active_nav == 'contents'){echo 'show';}?>" id="contents-ul">
+        <li class="nav-sub-item <?php if($page == 'oc'){echo 'active';}?>">
+          <a href="<?php print $rootPath;?>pages/oc.html">
+            OC案件
+          </a>
+        </li>
+        <li class="nav-sub-item">
+          <a>イベント</a>
+        </li>
+        <li class="nav-sub-item">
+          <a>体験記</a>
+        </li>
+        <li class="nav-sub-item">
+          <a>コラム</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a href="#pages-ul" class="nav-link" aria-current="page" data-bs-toggle="collapse">
+        ページ
+      </a>
+      <ul class="collapse" id="pages-ul">
+        <li class="nav-sub-item">
+          <a>自己分析</a>
+        </li>
+        <li class="nav-sub-item">
+          <a>業界研究</a>
+        </li>
+        <li class="nav-sub-item">
+          <a>選考対策</a>
+        </li>
+        <li class="nav-sub-item">
+          <a>イベント</a>
+        </li>
+        <li class="nav-sub-item">
+          <a>選考体験記サイドバー</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
