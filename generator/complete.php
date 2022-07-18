@@ -17,21 +17,30 @@
   $html = file_get_contents($tmp_json_name);
   // リンク張り替え
   $html = str_replace('../../', '../', $html);
-  // Googleアナリティクスのタグを挿入
-  $part = explode("</head>", $html);
-  $part[0] .=<<< EOM
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW6CL3WD3X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-EW6CL3WD3X');
-    </script>
-  </head>
+  // Googleタグマネージャーのタグを挿入
+  $part = explode("<head>", $html);
+  $tag = <<< EOM
+    <head>
+      <!-- Google Tag Manager -->
+      <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WLHCR88');
+      </script>
+      <!-- End Google Tag Manager -->
   EOM;
-  $html = $part[0] . $part[1];
+  $html = $part[0] . $tag . $part[1];
+  $part = explode("<body>", $html);
+  $tag = <<< EOM
+    <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+  EOM;
+  $html = $part[0] . $tag . $part[1];
 
   // HTML生成
   $html_name = "../experiences/" . $new_file_number . ".html";
