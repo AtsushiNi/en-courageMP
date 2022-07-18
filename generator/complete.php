@@ -17,6 +17,21 @@
   $html = file_get_contents($tmp_json_name);
   // リンク張り替え
   $html = str_replace('../../', '../', $html);
+  // Googleアナリティクスのタグを挿入
+  $part = explode("</head>", $html);
+  $part[0] .=<<< EOM
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW6CL3WD3X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EW6CL3WD3X');
+    </script>
+  </head>
+  EOM;
+  $html = $part[0] . $part[1];
 
   // HTML生成
   $html_name = "../experiences/" . $new_file_number . ".html";
