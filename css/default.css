@@ -25,6 +25,30 @@ body {
 
 main {
     height: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.image {
+    height: 180px;
+}
+
+#appeal-area {
+    text-align: center;
+}
+.appeal-area-img {
+    width: 100%;
+}
+
+.block {
+    margin-top: 90px;
+}
+.block:first-child {
+    margin-top: 40px;
+}
+
+.component {
+    margin-top: 60px;
 }
 
 ul {
