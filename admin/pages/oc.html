@@ -32,7 +32,7 @@
           <button onclick="handleSnapshot()" type="button" class="btn btn-outline-primary">
             snapshot
           </button>
-          <button onclick="getSnapshots()" type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+          <button onclick="handleOpenModal()" type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
             data-bs-target="#snapshots">
             差分を表示
           </button>
@@ -61,15 +61,21 @@
               <div class="modal-body">
                 <div class="container">
                   <div class="row">
-                    <input type="range" class="form-range" min="0" max="4" step="1" id="history-select"
-                      list="history-list">
-                    <datalist id="history-list">
-                      <option value="0">
-                      <option value="1">
-                      <option value="2">
-                      <option value="3">
-                      <option value="4">
-                    </datalist>
+                    <div class="col-md-6">
+                      <input type="range" class="form-range" min="0" max="4" step="1" value="4" id="history-select"
+                        list="history-list">
+                      <datalist id="history-list">
+                        <option value="0">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                      </datalist>
+                      <div id="created-at">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
                     <div class="table-wrapper">
                       <table class="table">
                         <thead>

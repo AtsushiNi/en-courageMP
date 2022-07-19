@@ -9,6 +9,7 @@ let gapiInited = false;
 let gisInited = false;
 
 let spreadSheetData = []
+let snapshots = []
 
 document.getElementById('authorize_button').style.visibility = 'hidden';
 
@@ -119,18 +120,22 @@ async function handleSnapshot() {
   const params = {
     "data": spreadSheetData
   }
-  console.log(params)
   return $.post('../post_snapshot.php', params)
 }
 
-async function getSnapshots() {
+async function handleOpenModal() {
   if (spreadSheetData.length == 0) {
     await fetchSpreadSheetData()
   }
 
-  const snapshots = await $.get('../get_snapshots.php')
+  snapshots = await $.get('../get_snapshots.php')
 
-  const snapshot = snapshots[0].data.map(list => [...list])
+  showCompare(snapshots[4])
+}
+
+function showCompare(shot) {
+  // snapshotからの更新を抽出
+  const snapshot = shot.data.map(list => [...list])
   const current = Array.from(new Array(snapshots.length), _ => new Array(6).fill(""))
   let rowNumber = 0
   spreadSheetData.forEach(rowData => {
@@ -154,6 +159,7 @@ async function getSnapshots() {
   })
 
   // table表示
+  $(".modal-dialog tbody").empty()
   snapshot.forEach((rowData, index) => {
     const displayData = rowData.concat([""], current[index])
     if (!!displayData[2]) {
@@ -168,12 +174,15 @@ async function getSnapshots() {
     }
     const cells = displayData.map(cellData => "<td>" + cellData + "</td>")
     cells[6] = '<td style="border: 0;"></td>'
-    console.log(cells)
     const row = "<tr>\n" + cells.join('\n') + "</tr>\n"
     $(".modal-dialog tbody").append(row)
   })
+
+  // スナップショット取得時刻の表示
+  $("#created-at").html(new Date(shot.created_at).toLocaleString())
 }
 
 $("#history-select").on("change", function() {
-  console.log($(this).val())
+  const val = $(this).val()
+  showCompare(snapshots[val])
 })
