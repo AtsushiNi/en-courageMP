@@ -15,7 +15,7 @@ thead {
   max-width: 1300px;
 }
 
-.modal-next-action,.added-action {
+.modal-next-action,.added-action,.removed-action {
   text-align: right;
   padding-top: 20px;
 }

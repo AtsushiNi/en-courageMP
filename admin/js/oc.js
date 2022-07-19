@@ -201,16 +201,28 @@ async function handleNext() {
   $("#update").removeClass("none")
   $("#update").animate({ opacity: 1 }, { duration: 300, easing: 'linear' })
   added.forEach((oc,i) => {
-    let accordion = $("#accordion-tmp").clone(true,true)
+    let accordion = $("#accordion-added-tmp").clone(true,true)
     accordion.removeAttr('id')
     accordion.css('display', '')
     accordion.find(".accordion-button").html(oc[2])
-    accordion.find(".accordion-button").attr('data-bs-target', '#accordion-'+String(i))
-    accordion.find(".accordion-collapse").attr('id', 'accordion-'+String(i))
+    accordion.find(".accordion-button").attr('data-bs-target', '#accordion-added-'+String(i))
+    accordion.find(".accordion-collapse").attr('id', 'accordion-added-'+String(i))
     accordion.find(".accordion-body input").each(function(index, input){
       input.value = oc[index+1]
     })
-    $("#accordion").append(accordion)
+    $("#accordion-added").append(accordion)
+  })
+  removed.forEach((oc,i) => {
+    let accordion = $("#accordion-removed-tmp").clone(true,true)
+    accordion.removeAttr('id')
+    accordion.css('display', '')
+    accordion.find(".accordion-button").html(oc[2])
+    accordion.find(".accordion-button").attr('data-bs-target', '#accordion-removed-'+String(i))
+    accordion.find(".accordion-collapse").attr('id', 'accordion-removed-'+String(i))
+    accordion.find(".accordion-body input").each(function(index, input){
+      input.value = oc[index+1]
+    })
+    $("#accordion-removed").append(accordion)
   })
 }
 
@@ -218,5 +230,11 @@ $(".added-action button").on("click", function(){
   const index = $(".added-action button").index(this)
   const parent = $(this).parents(".accordion-item")
   added.splice(index,1)
+  parent.remove()
+})
+$(".removed-action button").on("click", function(){
+  const index = $(".removed-action button").index(this)
+  const parent = $(this).parents(".accordion-item")
+  removed.splice(index,1)
   parent.remove()
 })
