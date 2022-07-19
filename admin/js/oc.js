@@ -11,6 +11,7 @@ let gisInited = false;
 let spreadSheetData = []
 let added = []
 let removed = []
+let editted = []
 
 document.getElementById('authorize_button').style.visibility = 'hidden';
 
@@ -180,9 +181,11 @@ async function showCompare(ocData) {
       row = "<tr class='table-success'>\n" + cells.join('\n') + "</tr>\n"
     } else {
       row = "<tr>\n" + cells.join('\n') + "</tr>\n" // 変更なし
+      const keys = ['分類', '企業', 'イベント名', 'URL', '申し込み最終日', '日程']
       for (let i=1; i < 6;i++) {
         if (rowData[i] !== current[index][i]) { // 内容が変更された
           row = "<tr class='table-warning'>\n" + cells.join('\n') + "</tr>\n"
+          editted.push({title: rowData[2], key: keys[i], before: rowData[i], after: current[index][i]})
         }
       }
     }
@@ -200,6 +203,7 @@ async function handleNext() {
   $("#compare").addClass("none")
   $("#update").removeClass("none")
   $("#update").animate({ opacity: 1 }, { duration: 300, easing: 'linear' })
+  // 追加案件のアコーディオン
   added.forEach((oc,i) => {
     let accordion = $("#accordion-added-tmp").clone(true,true)
     accordion.removeAttr('id')
@@ -212,6 +216,7 @@ async function handleNext() {
     })
     $("#accordion-added").append(accordion)
   })
+  // 削除案件のアコーディオン
   removed.forEach((oc,i) => {
     let accordion = $("#accordion-removed-tmp").clone(true,true)
     accordion.removeAttr('id')
@@ -223,6 +228,11 @@ async function handleNext() {
       input.value = oc[index+1]
     })
     $("#accordion-removed").append(accordion)
+  })
+  // 編集案件のテーブル
+  editted.forEach(rowData => {
+    const row = "<tr><td>" + rowData.title + "</td><td>" + rowData.key + "</td><td>" + rowData.before + "</td><td>" + rowData.after + "</td></tr>"
+    $("#update-oc tbody").append(row)
   })
 }
 
