@@ -231,7 +231,8 @@ async function handleNext() {
   })
   // 編集案件のテーブル
   editted.forEach(rowData => {
-    const row = "<tr><td>" + rowData.title + "</td><td>" + rowData.key + "</td><td>" + rowData.before + "</td><td>" + rowData.after + "</td></tr>"
+    const button = '<input class="form-check-input" type="checkbox" value="" checked>'
+    const row = "<tr><td>" + button + "</td><td>" + rowData.title + "</td><td>" + rowData.key + "</td><td>" + rowData.before + "</td><td>" + rowData.after + "</td></tr>"
     $("#update-oc tbody").append(row)
   })
 }
