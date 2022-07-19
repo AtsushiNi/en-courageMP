@@ -11,6 +11,6 @@
   foreach ($snapshots as $key => $row) {
     $sort_arary[$key] = $row["created_at"];
   }
-  array_multisort($sort_arary, SORT_DESC, $snapshots);
+  array_multisort($sort_arary, SORT_ASC, $snapshots);
   echo json_encode($snapshots, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 ?>
