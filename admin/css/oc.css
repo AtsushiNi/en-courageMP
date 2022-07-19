@@ -1,0 +1,16 @@
+.table-wrapper {
+  height: 500px;
+  overflow-y: auto;
+}
+table {
+  font-size: 12px;
+}
+thead {
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+
+.form-range {
+  appearance: auto;
+}

@@ -16,3 +16,7 @@ main {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
+.content {
+  margin: 30px;
+}
