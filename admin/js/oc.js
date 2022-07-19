@@ -9,7 +9,8 @@ let gapiInited = false;
 let gisInited = false;
 
 let spreadSheetData = []
-let snapshots = []
+let added = []
+let removed = []
 
 document.getElementById('authorize_button').style.visibility = 'hidden';
 
@@ -52,6 +53,7 @@ function gisLoaded() {
 function maybeEnableButtons() {
   if (gapiInited && gisInited) {
     document.getElementById('authorize_button').style.visibility = 'visible';
+    fetchSpreadSheetData()
   }
 }
 
@@ -113,55 +115,49 @@ async function fetchSpreadSheetData() {
   })
 }
 
-async function handleSnapshot() {
-  if (spreadSheetData.length == 0) {
-    await fetchSpreadSheetData()
-  }
-  const params = {
-    "data": spreadSheetData
-  }
-  return $.post('../post_snapshot.php', params)
-}
-
 async function handleOpenModal() {
   if (spreadSheetData.length == 0) {
     await fetchSpreadSheetData()
   }
 
-  snapshots = await $.get('../get_snapshots.php')
+  const ocData = await $.get('../get_oc.php')
 
-  showCompare(snapshots[4])
+  showCompare(ocData)
 }
 
-async function showCompare(shot) {
-  // snapshotからの更新を抽出
-  const snapshot = shot.data.map(list => [...list])
-  const current = Array.from(new Array(snapshots.length), _ => new Array(6).fill(""))
+async function showCompare(ocData) {
+  // 現在掲載中OCデータからの更新を抽出
+  const ocList = ocData.data.map(list => [...list])
+  const current = Array.from(new Array(ocList.length), _ => new Array(6).fill(""))
   let rowNumber = 0
+  removed = []
+  added = []
   spreadSheetData.forEach(rowData => {
     // 変更なし
-    if (rowData[2] === snapshot[rowNumber][2]) {
+    if (rowData[2] === ocList[rowNumber][2]) {
       current[rowNumber] = [...rowData]
       rowNumber++
       return
     }
     // 案件が削除された場合
-    const nextIndex = snapshot.findIndex(row => row[2] === rowData[2])
+    const nextIndex = ocList.findIndex(row => row[2] === rowData[2])
     if (nextIndex !== -1) {
       current[nextIndex] = [...rowData]
+      removed.push([...rowData])
       rowNumber = nextIndex + 1
       return
     }
     // 案件が追加された場合
-    snapshot.splice(rowNumber, 0, new Array(6).fill(""))
+    ocList.splice(rowNumber, 0, new Array(6).fill(""))
     current.splice(rowNumber, 0, [...rowData])
+    added.push([...rowData])
     rowNumber++
   })
 
   // table表示
-  await $(".modal-dialog tbody").animate({ opacity: 0 }, { duration: 300, easing: 'linear' }).promise()
-  $(".modal-dialog tbody").empty()
-  snapshot.forEach((rowData, index) => {
+  await $("#compare-table tbody").animate({ opacity: 0 }, { duration: 300, easing: 'linear' }).promise()
+  $("#compare-table tbody").empty()
+  ocList.forEach((rowData, index) => {
     const displayData = rowData.concat([""], current[index])
     if (!!displayData[2]) {
       displayData[3] = "<a href=\"" + displayData[3] + "\" target=\"_blank\">リンク</a>"
@@ -191,15 +187,36 @@ async function showCompare(shot) {
       }
     }
 
-    $(".modal-dialog tbody").append(row)
+    $("#compare-table tbody").append(row)
   })
 
   // スナップショット取得時刻の表示
-  $("#created-at").html(new Date(shot.created_at).toLocaleString())
-  $(".modal-dialog tbody").animate({ opacity: 1 }, { duration: 300, easing: 'linear' })
+  $("#created-at").html(new Date(ocData.created_at).toLocaleString())
+  $("#compare-table tbody").animate({ opacity: 1 }, { duration: 300, easing: 'linear' })
 }
 
-$("#history-select").on("change", function() {
-  const val = $(this).val()
-  showCompare(snapshots[val])
+async function handleNext() {
+  await $("#compare").animate({ opacity: 0 }, { duration: 300, easing: 'linear' }).promise()
+  $("#compare").addClass("none")
+  $("#update").removeClass("none")
+  $("#update").animate({ opacity: 1 }, { duration: 300, easing: 'linear' })
+  added.forEach((oc,i) => {
+    let accordion = $("#accordion-tmp").clone(true,true)
+    accordion.removeAttr('id')
+    accordion.css('display', '')
+    accordion.find(".accordion-button").html(oc[2])
+    accordion.find(".accordion-button").attr('data-bs-target', '#accordion-'+String(i))
+    accordion.find(".accordion-collapse").attr('id', 'accordion-'+String(i))
+    accordion.find(".accordion-body input").each(function(index, input){
+      input.value = oc[index+1]
+    })
+    $("#accordion").append(accordion)
+  })
+}
+
+$(".added-action button").on("click", function(){
+  const index = $(".added-action button").index(this)
+  const parent = $(this).parents(".accordion-item")
+  added.splice(index,1)
+  parent.remove()
 })

@@ -15,6 +15,15 @@ thead {
   max-width: 1300px;
 }
 
-.form-range {
-  appearance: auto;
+.modal-next-action,.added-action {
+  text-align: right;
+  padding-top: 20px;
+}
+
+#update {
+  opacity: 0;
+}
+
+.none {
+  display: none;
 }
