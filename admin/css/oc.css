@@ -11,6 +11,10 @@ thead {
   background: #fff;
 }
 
+.modal-xl {
+  max-width: 1300px;
+}
+
 .form-range {
   appearance: auto;
 }

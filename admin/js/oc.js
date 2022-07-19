@@ -133,7 +133,7 @@ async function handleOpenModal() {
   showCompare(snapshots[4])
 }
 
-function showCompare(shot) {
+async function showCompare(shot) {
   // snapshotからの更新を抽出
   const snapshot = shot.data.map(list => [...list])
   const current = Array.from(new Array(snapshots.length), _ => new Array(6).fill(""))
@@ -159,6 +159,7 @@ function showCompare(shot) {
   })
 
   // table表示
+  await $(".modal-dialog tbody").animate({ opacity: 0 }, { duration: 300, easing: 'linear' }).promise()
   $(".modal-dialog tbody").empty()
   snapshot.forEach((rowData, index) => {
     const displayData = rowData.concat([""], current[index])
@@ -174,12 +175,28 @@ function showCompare(shot) {
     }
     const cells = displayData.map(cellData => "<td>" + cellData + "</td>")
     cells[6] = '<td style="border: 0;"></td>'
-    const row = "<tr>\n" + cells.join('\n') + "</tr>\n"
+
+    // 変更行に背景色をつける
+    let row
+    if (!!displayData[2] && !displayData[9]) { // 削除された
+      row = "<tr class='table-danger'>\n" + cells.join('\n') + "</tr>\n"
+    } else if (!displayData[2] && !!displayData[9]) { // 追加された
+      row = "<tr class='table-success'>\n" + cells.join('\n') + "</tr>\n"
+    } else {
+      row = "<tr>\n" + cells.join('\n') + "</tr>\n" // 変更なし
+      for (let i=1; i < 6;i++) {
+        if (rowData[i] !== current[index][i]) { // 内容が変更された
+          row = "<tr class='table-warning'>\n" + cells.join('\n') + "</tr>\n"
+        }
+      }
+    }
+
     $(".modal-dialog tbody").append(row)
   })
 
   // スナップショット取得時刻の表示
   $("#created-at").html(new Date(shot.created_at).toLocaleString())
+  $(".modal-dialog tbody").animate({ opacity: 1 }, { duration: 300, easing: 'linear' })
 }
 
 $("#history-select").on("change", function() {
