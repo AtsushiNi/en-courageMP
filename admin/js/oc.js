@@ -249,3 +249,18 @@ $(".removed-action button").on("click", function(){
   removed.splice(index,1)
   parent.remove()
 })
+
+$('#snapshots').on('hidden.bs.modal', function () {
+  spreadSheetData = []
+  editted = []
+  added = []
+  removed = []
+  $("#compare").removeClass("none")
+  $("#compare-table tbody").empty()
+  $("#update").addClass("none")
+  $("#accordion-added").empty()
+  $("#accordion-removed").empty()
+  $("#update-oc tbody").empty()
+  $("#compare").css("opacity", 1)
+  $("#update").css("opacity", 0)
+})
