@@ -264,3 +264,19 @@ $('#snapshots').on('hidden.bs.modal', function () {
   $("#compare").css("opacity", 1)
   $("#update").css("opacity", 0)
 })
+
+async function getOCList() {
+  const response = await $.get("../get_oc.php")
+  const list = response.data
+  const updated_at = new Date(response.created_at).toLocaleString()
+  $("#oc-list-updated-at").html(updated_at)
+  list.forEach(itemData => {
+    const item = $("#oc-item-tmp li").clone(true, true)
+    item.css("display", "")
+    // item.find("img").attr("src", itemData[3])
+    item.find("div").html(itemData[2])
+    $("#event-list ul").append(item)
+    console.log(item)
+  })
+}
+getOCList()

@@ -19,37 +19,30 @@
 
     <div class="container">
       <div class="row">
-
-        <div class="col-md-6">
+        <div>
           <h1>HP掲載データ</h1>
           <button onclick="handleOpenModal()" type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
             data-bs-target="#snapshots">
             更新
           </button>
-        </div>
-
-        <div class="col-md-6" id="spreadsheet">
-          <h1>案件一覧スプレッドシート</h1>
           <button id="authorize_button" onclick="handleAuthClick()" type="button" class="btn btn-outline-primary">
             読み込み
           </button>
-          <div class="table-wrapper">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>分類</th>
-                  <th>企業</th>
-                  <th>イベント名</th>
-                  <th>URL</th>
-                  <th>申し込み最終日</th>
-                  <th>日程</th>
-                </tr>
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
+          <div id="oc-list-updated-at">
+            --/-/- --:--:--
           </div>
-
+          <div id="event-list">
+            <ul>
+            </ul>
+            <div id="oc-item-tmp">
+              <li style="display: none;">
+                <a>
+                  <img>
+                  <div>
+                  </div>
+                </a>
+              </li>
+            </div>
         </div>
 
         <div class="modal fade" tabindex="-1" id="snapshots">
