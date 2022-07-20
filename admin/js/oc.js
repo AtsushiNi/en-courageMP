@@ -135,7 +135,7 @@ async function showCompare(ocData) {
   added = []
   spreadSheetData.forEach(rowData => {
     // 変更なし
-    if (rowData[2] === ocList[rowNumber][2]) {
+    if (!!ocList[rowNumber] && rowData[2] === ocList[rowNumber][2]) {
       current[rowNumber] = [...rowData]
       rowNumber++
       return
