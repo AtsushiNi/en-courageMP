@@ -102,7 +102,19 @@ async function fetchSpreadSheetData() {
     return;
   }
 
-  spreadSheetData = range.values.map(list => [...list]) // ディープコピー
+  let type = ""
+  range.values.forEach(list => {
+    if (list[0] !== "") { type = list[0] }
+    spreadSheetData.push({
+      type: type,
+      company: list[1],
+      title: list[2],
+      description: list[2],
+      url: list[3],
+      deadline: list[4],
+      day: list[5]
+    })
+  })
   spreadSheetData.shift() // ヘッダー行を削除
 
   range.values.shift()
@@ -128,30 +140,32 @@ async function handleOpenModal() {
 
 async function showCompare(ocData) {
   // 現在掲載中OCデータからの更新を抽出
-  const ocList = ocData.data.map(list => [...list])
-  const current = Array.from(new Array(ocList.length), _ => new Array(6).fill(""))
+  const ocList = ocData.data.map(list => Object.assign({}, list))
+  const current = []
   let rowNumber = 0
   removed = []
   added = []
   spreadSheetData.forEach(rowData => {
     // 変更なし
-    if (!!ocList[rowNumber] && rowData[2] === ocList[rowNumber][2]) {
-      current[rowNumber] = [...rowData]
+    if (!!ocList[rowNumber] && rowData.title === ocList[rowNumber].title) {
+      current[rowNumber] = Object.assign({}, rowData)
       rowNumber++
       return
     }
     // 案件が削除された場合
-    const nextIndex = ocList.findIndex(row => row[2] === rowData[2])
+    const nextIndex = ocList.findIndex(row => row.title === rowData.title)
     if (nextIndex !== -1) {
       current[nextIndex] = [...rowData]
-      removed.push([...rowData])
+      removed.push(Object.assign({}, rowData))
       rowNumber = nextIndex + 1
       return
     }
     // 案件が追加された場合
-    ocList.splice(rowNumber, 0, new Array(6).fill(""))
-    current.splice(rowNumber, 0, [...rowData])
-    added.push([...rowData])
+    const blankData = Object.assign({}, rowData)
+    for (let key in blankData) { blankData[key] = "" }
+    ocList.splice(rowNumber, 0, blankData)
+    current.splice(rowNumber, 0, Object.assign({}, rowData))
+    added.push(Object.assign({}, rowData))
     rowNumber++
   })
 
@@ -159,33 +173,38 @@ async function showCompare(ocData) {
   await $("#compare-table tbody").animate({ opacity: 0 }, { duration: 300, easing: 'linear' }).promise()
   $("#compare-table tbody").empty()
   ocList.forEach((rowData, index) => {
-    const displayData = rowData.concat([""], current[index])
-    if (!!displayData[2]) {
-      displayData[3] = "<a href=\"" + displayData[3] + "\" target=\"_blank\">リンク</a>"
-      displayData[4] = displayData[4].slice(5)
-      displayData[5] = displayData[5].split(/\s+/).map(s => s.slice(3).replace(/\(.*\)/,"")).join("<br>")
-    }
-    if (!!displayData[9]) {
-      displayData[10] = "<a href=\"" + displayData[10] + "\" target=\"_blank\">リンク</a>"
-      displayData[11] = displayData[11].slice(5)
-      displayData[12] = displayData[12].split(/\s+/).map(s => s.slice(3).replace(/\(.*\)/,"")).join("<br>")
-    }
-    const cells = displayData.map(cellData => "<td>" + cellData + "</td>")
-    cells[6] = '<td style="border: 0;"></td>'
+    let beforeData = [
+      rowData.type,
+      rowData.company,
+      rowData.title,
+      rowData.url && "<a href=\"" + rowData.url + "\" target=\"_blank\">リンク</a>",
+      rowData.deadline && rowData.deadline.slice(5),
+      rowData.day && rowData.day.split(/\s+/).map(s => s.slice(3).replace(/\(.*\)/,"")).join("<br>")
+    ]
+    const beforeCells = beforeData.map(cellData => "<td>" + cellData + "</td>")
+    let afterData = [
+      current[index].type,
+      current[index].company,
+      current[index].title,
+      current[index].url && "<a href=\"" + current[index].url + "\" target=\"_blank\">リンク</a>",
+      current[index].deadline && current[index].deadline.slice(5),
+      current[index].day && current[index].day.split(/\s+/).map(s => s.slice(3).replace(/\(.*\)/,"")).join("<br>")
+    ]
+    const afterCells = afterData.map(cellData => "<td>" + cellData + "</td>")
 
     // 変更行に背景色をつける
     let row
-    if (!!displayData[2] && !displayData[9]) { // 削除された
-      row = "<tr class='table-danger'>\n" + cells.join('\n') + "</tr>\n"
-    } else if (!displayData[2] && !!displayData[9]) { // 追加された
-      row = "<tr class='table-success'>\n" + cells.join('\n') + "</tr>\n"
+    if (!!beforeData[2] && !afterData[2]) { // 削除された
+      row = "<tr class='table-danger'>" + beforeCells.join() + '<td style="border: 0;"></td>' + afterCells.join() + "</tr>"
+    } else if (!beforeData[2] && !!afterData[2]) { // 追加された
+      row = "<tr class='table-success'>" + beforeCells.join() + '<td style="border: 0;"></td>' + afterCells.join() + "</tr>"
     } else {
-      row = "<tr>\n" + cells.join('\n') + "</tr>\n" // 変更なし
-      const keys = ['分類', '企業', 'イベント名', 'URL', '申し込み最終日', '日程']
-      for (let i=1; i < 6;i++) {
-        if (rowData[i] !== current[index][i]) { // 内容が変更された
-          row = "<tr class='table-warning'>\n" + cells.join('\n') + "</tr>\n"
-          editted.push({title: rowData[2], key: keys[i], before: rowData[i], after: current[index][i]})
+      row = "<tr>" + beforeCells.join() + '<td style="border: 0;"></td>' + afterCells.join() + "</tr>"
+      const keys = {type: '分類', company: '企業', title: 'イベント名', url: 'URL', deadline: '申し込み最終日', day: '日程'}
+      for (let key in rowData) {
+        if (rowData[key] !== current[index][key]) { // 内容が変更された
+          row = "<tr class='table-warning'>" + beforeCells.join() + '<td style="border: 0;"></td>' + afterCells.join() + "</tr>"
+          editted.push({title: rowData.title, key: keys[key], before: rowData[key], after: current[index][key]})
         }
       }
     }
@@ -208,11 +227,11 @@ async function handleNext() {
     let accordion = $("#accordion-added-tmp").clone(true,true)
     accordion.removeAttr('id')
     accordion.css('display', '')
-    accordion.find(".accordion-button").html(oc[2])
+    accordion.find(".accordion-button").html(oc.title)
     accordion.find(".accordion-button").attr('data-bs-target', '#accordion-added-'+String(i))
     accordion.find(".accordion-collapse").attr('id', 'accordion-added-'+String(i))
-    accordion.find(".accordion-body input").each(function(index, input){
-      input.value = oc[index+1]
+    accordion.find(".accordion-body input").each(function(_i, input){
+      input.value = oc[input.getAttribute("data-key")]
     })
     $("#accordion-added").append(accordion)
   })
@@ -221,11 +240,11 @@ async function handleNext() {
     let accordion = $("#accordion-removed-tmp").clone(true,true)
     accordion.removeAttr('id')
     accordion.css('display', '')
-    accordion.find(".accordion-button").html(oc[2])
+    accordion.find(".accordion-button").html(oc.title)
     accordion.find(".accordion-button").attr('data-bs-target', '#accordion-removed-'+String(i))
     accordion.find(".accordion-collapse").attr('id', 'accordion-removed-'+String(i))
-    accordion.find(".accordion-body input").each(function(index, input){
-      input.value = oc[index+1]
+    accordion.find(".accordion-body input").each(function(input){
+      input.value = oc[input.getAttribute("data-key")]
     })
     $("#accordion-removed").append(accordion)
   })
@@ -273,10 +292,9 @@ async function getOCList() {
   list.forEach(itemData => {
     const item = $("#oc-item-tmp li").clone(true, true)
     item.css("display", "")
-    // item.find("img").attr("src", itemData[3])
-    item.find("div").html(itemData[2])
+    item.find("img").attr("src", itemData.image)
+    item.find("div").html(itemData.title)
     $("#event-list ul").append(item)
-    console.log(item)
   })
 }
 getOCList()
