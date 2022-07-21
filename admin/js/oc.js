@@ -155,7 +155,7 @@ async function showCompare(ocData) {
     // 案件が削除された場合
     const nextIndex = ocList.findIndex(row => row.title === rowData.title)
     if (nextIndex !== -1) {
-      current[nextIndex] = [...rowData]
+      current[nextIndex] = Object.assign({}, rowData)
       removed.push(Object.assign({}, rowData))
       rowNumber = nextIndex + 1
       return
@@ -201,7 +201,7 @@ async function showCompare(ocData) {
     } else {
       row = "<tr>" + beforeCells.join() + '<td style="border: 0;"></td>' + afterCells.join() + "</tr>"
       const keys = {type: '分類', company: '企業', title: 'イベント名', url: 'URL', deadline: '申し込み最終日', day: '日程'}
-      for (let key in rowData) {
+      for (let key in keys.keys) {
         if (rowData[key] !== current[index][key]) { // 内容が変更された
           row = "<tr class='table-warning'>" + beforeCells.join() + '<td style="border: 0;"></td>' + afterCells.join() + "</tr>"
           editted.push({title: rowData.title, key: keys[key], before: rowData[key], after: current[index][key]})
@@ -292,7 +292,7 @@ async function getOCList() {
   list.forEach(itemData => {
     const item = $("#oc-item-tmp li").clone(true, true)
     item.css("display", "")
-    item.find("img").attr("src", itemData.image)
+    item.find("img").attr("src", "../../images/events/" + itemData.image)
     item.find("div").html(itemData.title)
     $("#event-list ul").append(item)
   })
