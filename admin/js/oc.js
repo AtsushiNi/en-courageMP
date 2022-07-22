@@ -280,6 +280,7 @@ getOCList()
 
 class OC {
   constructor(json) {
+    this.id = json ? parseInt(json.id) : null
     this.type = json ? json.type : ""
     this.company = json ? json.company : ""
     this.title = json ? json.title : ""
