@@ -210,7 +210,7 @@ async function handleNext() {
     accordion.find(".accordion-button").attr('data-bs-target', '#accordion-added-'+String(i))
     accordion.find(".accordion-collapse").attr('id', 'accordion-added-'+String(i))
     accordion.find(".accordion-body input").each(function(_i, input){
-      input.value = oc[input.getAttribute("data-key")]
+      input.value = oc[input.getAttribute("data-key")] || ""
     })
     $("#accordion-added").append(accordion)
   })
@@ -223,13 +223,13 @@ async function handleNext() {
     accordion.find(".accordion-button").attr('data-bs-target', '#accordion-removed-'+String(i))
     accordion.find(".accordion-collapse").attr('id', 'accordion-removed-'+String(i))
     accordion.find(".accordion-body input").each(function(_i, input){
-      input.value = oc[input.getAttribute("data-key")]
+      input.value = oc[input.getAttribute("data-key")] || ""
     })
     $("#accordion-removed").append(accordion)
   })
   // 編集案件のテーブル
-  editted.forEach(rowData => {
-    const button = '<input class="form-check-input" type="checkbox" value="" checked>'
+  editted.forEach((rowData, index) => {
+    const button = '<input class="form-check-input" type="checkbox" value="" onchange="handleEditCheckBox(this)" data-index='+index+' checked>'
     const row = "<tr><td>" + button + "</td><td>" + rowData.title + "</td><td>" + rowData.displayKey + "</td><td>" + rowData.before + "</td><td>" + rowData.after + "</td></tr>"
     $("#update-oc tbody").append(row)
   })
@@ -248,6 +248,7 @@ $(".removed-action button").on("click", function(){
   parent.remove()
 })
 
+// モーダルを閉じる
 $('#snapshots').on('hidden.bs.modal', function () {
   spreadSheetData = []
   editted = []
@@ -344,4 +345,20 @@ function handleUpdate() {
   if (edittedJson.data.length > 0) {
     $.post("../backend/batch_update_oc.php", edittedJson)
   }
+}
+
+$(document).on("click", ".added-action button", function() {
+  const DOMId = $(this).parents(".accordion-collapse").attr("id")
+  const index = parseInt(DOMId.replace(/[^0-9]/g, ''))
+  added.splice(index, 1)
+})
+$(document).on("click", ".removeed-action button", function() {
+  const DOMId = $(this).parents(".accordion-collapse").attr("id")
+  const index = parseInt(DOMId.replace(/[^0-9]/g, ''))
+  removed.splice(index, 1)
+})
+
+function handleEditCheckBox(element) {
+  const index = element.getAttribute("data-index")
+  editted.splice(index, 1)
 }
