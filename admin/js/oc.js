@@ -301,7 +301,7 @@ class OC {
 
   displayCode() {
     if (this.isBlank()) {
-      return Object.values(this).map(value => "<td>" + value + "</td>")
+      return this.displayValues().map(value => "<td>" + value + "</td>").join()
     }
     let tmp = new OC(this)
     tmp.url = "<a href=\"" + tmp.url + "\" target=\"_blank\">リンク</a>"
