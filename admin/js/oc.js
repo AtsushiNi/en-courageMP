@@ -322,3 +322,10 @@ function* zip(...args) {
     yield elms;
   }
 }
+
+function handleUpdate() {
+  let json = {
+    data: added.map(item => JSON.stringify(item))
+  }
+  $.post("../backend/batch_create_oc.php", json)
+}
