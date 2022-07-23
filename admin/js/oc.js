@@ -12,6 +12,7 @@ let spreadSheetData = []
 let added = []
 let removed = []
 let editted = []
+let cancelEdittedIndex = []
 
 document.getElementById('authorize_button').style.visibility = 'hidden';
 
@@ -134,6 +135,7 @@ async function showCompare(ocData) {
   let rowNumber = 0
   removed = []
   added = []
+  cancelEdittedIndex = []
   spreadSheetData.forEach(afterData => {
     // 変更なし
     if (!!beforeList[rowNumber] && afterData.title === beforeList[rowNumber].title) {
@@ -254,6 +256,7 @@ $('#snapshots').on('hidden.bs.modal', function () {
   editted = []
   added = []
   removed = []
+  cancelEdittedIndex = []
   $("#compare").removeClass("none")
   $("#compare-table tbody").empty()
   $("#update").addClass("none")
@@ -339,6 +342,7 @@ function handleUpdate() {
     $.post("../backend/batch_destroy_oc.php", removedJson)
   }
 
+  cancelEdittedIndex.forEach(index => editted.splice(index, 1))
   const edittedJson = {
     data: editted.map(item => JSON.stringify(item))
   }
@@ -347,6 +351,7 @@ function handleUpdate() {
   }
 }
 
+// OC追加・削除のキャンセルボタン
 $(document).on("click", ".added-action button", function() {
   const DOMId = $(this).parents(".accordion-collapse").attr("id")
   const index = parseInt(DOMId.replace(/[^0-9]/g, ''))
@@ -357,8 +362,15 @@ $(document).on("click", ".removeed-action button", function() {
   const index = parseInt(DOMId.replace(/[^0-9]/g, ''))
   removed.splice(index, 1)
 })
-
+// OC編集のキャンセルチェックボックス
 function handleEditCheckBox(element) {
   const index = element.getAttribute("data-index")
-  editted.splice(index, 1)
+  cancelEdittedIndex.push(index)
+}
+// OC追加のinput
+function handleChangeAddedInput(element) {
+  const DOMId = element.closest(".accordion-collapse").getAttribute("id")
+  const index = parseInt(DOMId.replace(/[^0-9]/g, ''))
+  const key = element.getAttribute("data-key")
+  added[index][key] = element.value
 }
