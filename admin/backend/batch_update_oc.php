@@ -4,13 +4,14 @@
   $oc_list = file_get_contents("../data/oc.json");
   $oc_list = json_decode($oc_list, true);
 
-  $max_id = max(array_column($oc_list["data"], "id"));
+  $ids = array_column($oc_list["data"], "id");
+  foreach ($_POST["data"] as $item) {
+    $params = json_decode($item, true);
 
-  foreach ($_POST["data"] as $index => $item) {
-    $oc = json_decode($item, true);
-    $oc["id"] = $max_id + $index + 1;
-    array_push($oc_list["data"], $oc);
-    print_r($oc);
+    $id = array_search($params["id"], $ids);
+    $oc_list["data"][$id][$params["key"]] = $params["after"];
+
+    print_r($params);
   }
 
   $json = json_encode($oc_list, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);

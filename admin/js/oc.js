@@ -180,12 +180,12 @@ async function showCompare(ocData) {
     } else {
       row = "<tr>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
       const keys = {type: '分類', company: '企業', title: 'イベント名', url: 'URL', deadline: '申し込み最終日', day: '日程'}
-      for (let key in keys.keys) {
+      Object.keys(keys).forEach(key => {
         if (beforeItem[key] !== afterItem[key]) { // 内容が変更された
           row = "<tr class='table-warning'>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
-          editted.push({title: beforeItem.title, key: keys[key], before: beforeItem[key], after: afterItem[key]})
+          editted.push({title: beforeItem.title, key: key, displayKey: keys[key], before: beforeItem[key], after: afterItem[key], id: beforeItem.id})
         }
-      }
+      })
     }
 
     $("#compare-table tbody").append(row)
@@ -230,7 +230,7 @@ async function handleNext() {
   // 編集案件のテーブル
   editted.forEach(rowData => {
     const button = '<input class="form-check-input" type="checkbox" value="" checked>'
-    const row = "<tr><td>" + button + "</td><td>" + rowData.title + "</td><td>" + rowData.key + "</td><td>" + rowData.before + "</td><td>" + rowData.after + "</td></tr>"
+    const row = "<tr><td>" + button + "</td><td>" + rowData.title + "</td><td>" + rowData.displayKey + "</td><td>" + rowData.before + "</td><td>" + rowData.after + "</td></tr>"
     $("#update-oc tbody").append(row)
   })
 }
@@ -336,5 +336,12 @@ function handleUpdate() {
   }
   if(removedJson.data.length > 0) {
     $.post("../backend/batch_destroy_oc.php", removedJson)
+  }
+
+  const edittedJson = {
+    data: editted.map(item => JSON.stringify(item))
+  }
+  if (edittedJson.data.length > 0) {
+    $.post("../backend/batch_update_oc.php", edittedJson)
   }
 }
