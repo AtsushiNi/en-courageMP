@@ -324,8 +324,17 @@ function* zip(...args) {
 }
 
 function handleUpdate() {
-  let json = {
+  const addedJson = {
     data: added.map(item => JSON.stringify(item))
   }
-  $.post("../backend/batch_create_oc.php", json)
+  if(addedJson.data.length > 0) {
+    $.post("../backend/batch_create_oc.php", addedJson)
+  }
+
+  const removedJson = {
+    data: removed.map(item => String(item.id))
+  }
+  if(removedJson.data.length > 0) {
+    $.post("../backend/batch_destroy_oc.php", removedJson)
+  }
 }
