@@ -138,13 +138,13 @@ async function showCompare(ocData) {
   cancelEdittedIndex = []
   spreadSheetData.forEach(afterData => {
     // 変更なし
-    if (!!beforeList[rowNumber] && afterData.title === beforeList[rowNumber].title) {
+    if (!!beforeList[rowNumber] && afterData.url === beforeList[rowNumber].url) {
       afterList[rowNumber] = new OC(afterData)
       rowNumber++
       return
     }
     // 案件が削除された場合
-    const nextIndex = beforeList.findIndex(row => row.title === afterData.title)
+    const nextIndex = beforeList.findIndex(row => row.url === afterData.url)
     if (nextIndex !== -1) {
       for (let i=rowNumber;i<nextIndex;i++) {
         afterList[i] = new OC()
