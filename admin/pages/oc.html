@@ -134,30 +134,36 @@
         </h5>
         <div class="accordion-collapse collapse" data-bs-parent="#accordion-added">
           <div class="accordion-body">
-            <div class="md-3">
-              <label class="form-label">主催企業</label>
-              <input class="form-control" type="text" data-key="company" onchange="handleChangeAddedInput(this)">
-            </div>
-            <div class="md-3">
-              <label class="form-label">イベント名</label>
-              <input class="form-control" type="text" data-key="title" onchange="handleChangeAddedInput(this)">
-            </div>
-            <div class="md-3">
-              <label class="form-label">URL</label>
-              <input class="form-control" type="text" data-key="url" onchange="handleChangeAddedInput(this)">
-            </div>
-            <div class="md-3">
-              <label class="form-label">申し込み最終日</label>
-              <input class="form-control" type="text" data-key="deadline" onchange="handleChangeAddedInput(this)">
-            </div>
-            <div class="md-3">
-              <label class="form-label">日程</label>
-              <input class="form-control" type="text" data-key="day" onchange="handleChangeAddedInput(this)">
-            </div>
-            <div class="md-3">
-              <label class="form-label">画像</label>
-              <input class="form-control image-upload-select" type="file" data-key="image">
-              <img class="image-preview img-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="md-3">
+                  <label class="form-label">主催企業</label>
+                  <input class="form-control" type="text" data-key="company" onchange="handleChangeAddedInput(this)">
+                </div>
+                <div class="md-3">
+                  <label class="form-label">イベント名</label>
+                  <input class="form-control" type="text" data-key="title" onchange="handleChangeAddedInput(this)">
+                </div>
+                <div class="md-3">
+                  <label class="form-label">URL</label>
+                  <input class="form-control" type="text" data-key="url" onchange="handleChangeAddedInput(this)">
+                </div>
+                <div class="md-3">
+                  <label class="form-label">申し込み最終日</label>
+                  <input class="form-control" type="text" data-key="deadline" onchange="handleChangeAddedInput(this)">
+                </div>
+                <div class="md-3">
+                  <label class="form-label">日程</label>
+                  <input class="form-control" type="text" data-key="day" onchange="handleChangeAddedInput(this)">
+                </div>
+              </div>
+              <div class="col-md-6" style="min-width: 600px;">
+                <div class="md-3">
+                  <label class="form-label">画像</label>
+                  <input class="form-control image-upload-select" type="file" data-key="image">
+                  <img class="image-preview img-fluid" src="../no-image.png">
+                </div>
+              </div>
             </div>
             <div class="added-action">
               <button class="btn btn-outline-danger">

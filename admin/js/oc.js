@@ -375,10 +375,12 @@ function handleChangeAddedInput(element) {
   added[index][key] = element.value
 }
 // OC追加のimage
-$(document).on("change", ".image-upload-select", function(event) {
+$(document).on("change", ".image-upload-select", async function(event) {
   const file = event.target.files[0]
   const reader = new FileReader()
   const input = $(this)
+  const DOMId = $(this).parents(".accordion-collapse").attr("id")
+  const index = parseInt(DOMId.replace(/[^0-9]/g, ''))
 
   if (file.type.indexOf("image") < 0) { return false }
 
@@ -386,4 +388,10 @@ $(document).on("change", ".image-upload-select", function(event) {
     input.next().attr("src", e.target.result)
   }
   reader.readAsDataURL(file)
+
+  const formData = new FormData()
+  formData.append("image", file)
+  const response = await fetch("../backend/upload_image.php", { method: "POST", body: formData })
+  const fileName = await response.json()
+  added[index].image = fileName
 })
