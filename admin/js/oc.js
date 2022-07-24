@@ -214,6 +214,7 @@ async function handleNext() {
     accordion.find(".accordion-body input").each(function(_i, input){
       input.value = oc[input.getAttribute("data-key")] || ""
     })
+    accordion.find(".url-link").attr("onclick", "window.open('" + oc.url + "')")
     $("#accordion-added").append(accordion)
   })
   // 削除案件のアコーディオン
