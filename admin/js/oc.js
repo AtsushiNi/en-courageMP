@@ -350,6 +350,8 @@ function handleUpdate() {
   if (edittedJson.data.length > 0) {
     $.post("../backend/batch_update_oc.php", edittedJson)
   }
+
+  $("#snapshots").modal("hide")
 }
 
 // OC追加・削除のキャンセルボタン
