@@ -374,3 +374,16 @@ function handleChangeAddedInput(element) {
   const key = element.getAttribute("data-key")
   added[index][key] = element.value
 }
+// OC追加のimage
+$(document).on("change", ".image-upload-select", function(event) {
+  const file = event.target.files[0]
+  const reader = new FileReader()
+  const input = $(this)
+
+  if (file.type.indexOf("image") < 0) { return false }
+
+  reader.onload =  function(e) {
+    input.next().attr("src", e.target.result)
+  }
+  reader.readAsDataURL(file)
+})
