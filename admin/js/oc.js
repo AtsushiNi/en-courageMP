@@ -277,7 +277,8 @@ async function getOCList() {
   list.forEach(itemData => {
     const item = $("#oc-item-tmp li").clone(true, true)
     item.css("display", "")
-    item.find("img").attr("src", "../../images/events/" + itemData.image)
+    const image = itemData.image ? "../../images/events/" + itemData.image : "../no-image.png"
+    item.find("img").attr("src", image)
     item.find("div").html(itemData.title)
     $("#event-list ul").append(item)
   })
