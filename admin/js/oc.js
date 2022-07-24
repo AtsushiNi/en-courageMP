@@ -270,9 +270,10 @@ $('#snapshots').on('hidden.bs.modal', function () {
 
 async function getOCList() {
   const response = await $.get("../get_oc.php")
-  const list = response.data
+  const list = response.data.reverse()
   const updated_at = new Date(response.created_at).toLocaleString()
   $("#oc-list-updated-at").html(updated_at)
+  $("#event-list ul").empty()
   list.forEach(itemData => {
     const item = $("#oc-item-tmp li").clone(true, true)
     item.css("display", "")
@@ -328,19 +329,19 @@ function* zip(...args) {
   }
 }
 
-function handleUpdate() {
+async function handleUpdate() {
   const addedJson = {
     data: added.map(item => JSON.stringify(item))
   }
   if(addedJson.data.length > 0) {
-    $.post("../backend/batch_create_oc.php", addedJson)
+     await $.post("../backend/batch_create_oc.php", addedJson)
   }
 
   const removedJson = {
     data: removed.map(item => String(item.id))
   }
   if(removedJson.data.length > 0) {
-    $.post("../backend/batch_destroy_oc.php", removedJson)
+    await $.post("../backend/batch_destroy_oc.php", removedJson)
   }
 
   cancelEdittedIndex.forEach(index => editted.splice(index, 1))
@@ -348,10 +349,11 @@ function handleUpdate() {
     data: editted.map(item => JSON.stringify(item))
   }
   if (edittedJson.data.length > 0) {
-    $.post("../backend/batch_update_oc.php", edittedJson)
+    await $.post("../backend/batch_update_oc.php", edittedJson)
   }
 
   $("#snapshots").modal("hide")
+  await getOCList()
 }
 
 // OC追加・削除のキャンセルボタン

@@ -1,5 +1,5 @@
 <?php
-  header("Content-type: application/json; charset=UTF-8");
+  header("Content-type: text; charset=UTF-8");
 
   $oc_list = file_get_contents("../data/oc.json");
   $oc_list = json_decode($oc_list, true);
