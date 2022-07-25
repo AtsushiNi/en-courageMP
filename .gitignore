@@ -3,3 +3,4 @@
 generator/tmp/*
 .htaccess
 credentials.js
+admin/vendor
