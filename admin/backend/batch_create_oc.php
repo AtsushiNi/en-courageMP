@@ -13,6 +13,8 @@
     print_r($oc);
   }
 
+  $oc_list["created_at"] = date(DATE_ATOM);
+
   $json = json_encode($oc_list, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
   file_put_contents("../data/oc.json", $json);
 ?>

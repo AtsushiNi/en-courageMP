@@ -20,16 +20,20 @@
     <div class="container">
       <div class="row">
         <div>
-          <h3>HP掲載データ</h3>
-          <button onclick="handleOpenModal()" type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-            data-bs-target="#snapshots">
-            更新
-          </button>
-          <button id="authorize_button" onclick="handleAuthClick()" type="button" class="btn btn-outline-primary">
-            読み込み
-          </button>
-          <div id="oc-list-updated-at">
-            --/-/- --:--:--
+          <div class="d-flex justify-content-between" style="margin-bottom: 20px;">
+            <h3>HP掲載データ</h3>
+            <div>
+              <button onclick="handleOpenModal()" type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                data-bs-target="#snapshots">
+                最新情報から一括更新
+              </button>
+              <div id="oc-list-updated-at">
+                前回の一括更新時刻:
+                <span>
+                  --/-/- --:--:--
+                </span>
+              </div>
+            </div>
           </div>
           <div id="event-list">
             <ul>
@@ -48,17 +52,25 @@
         <div class="modal fade" tabindex="-1" id="snapshots">
           <div class="modal-dialog modal-xl">
             <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">最新情報から一括更新</h5>
+                <button type="button" class="btn-close" data-dismiss="modal">
+                </button>
+              </div>
               <div class="modal-body">
                 <div class="container">
                   <div id="compare">
                     <div class="row">
                       <div class="col-md-6">
                         <div id="created-at">
-                          --/-/- -:-:-
+                          前回の一括更新時刻
+                          <span>
+                            --/-/- -:-:-
+                          </span>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="width: 100%;">
                       <div class="table-wrapper" id="compare-table">
                         <table class="table">
                           <thead>

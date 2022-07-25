@@ -14,8 +14,6 @@ let removed = []
 let editted = []
 let cancelEdittedIndex = []
 
-document.getElementById('authorize_button').style.visibility = 'hidden';
-
 /**
  * Callback after api.js is loaded.
  */
@@ -54,7 +52,6 @@ function gisLoaded() {
  */
 function maybeEnableButtons() {
   if (gapiInited && gisInited) {
-    document.getElementById('authorize_button').style.visibility = 'visible';
     fetchSpreadSheetData()
   }
 }
@@ -194,7 +191,7 @@ async function showCompare(ocData) {
   }
 
   // スナップショット取得時刻の表示
-  $("#created-at").html(new Date(ocData.created_at).toLocaleString())
+  $("#created-at span").html(new Date(ocData.created_at).toLocaleString())
   $("#compare-table tbody").animate({ opacity: 1 }, { duration: 300, easing: 'linear' })
 }
 
@@ -272,7 +269,7 @@ async function getOCList() {
   const response = await $.get("../get_oc.php")
   const list = response.data.reverse()
   const updated_at = new Date(response.created_at).toLocaleString()
-  $("#oc-list-updated-at").html(updated_at)
+  $("#oc-list-updated-at span").html(updated_at)
   $("#event-list ul").empty()
   list.forEach(itemData => {
     const item = $("#oc-item-tmp li").clone(true, true)
@@ -356,6 +353,12 @@ async function handleUpdate() {
   $("#snapshots").modal("hide")
   await getOCList()
 }
+
+// モーダルcloseボタン
+$(document).on("click", "#snapshots-close", async function() {
+  $("#snapshots").modal("hide")
+  await getOCList()
+})
 
 // OC追加・削除のキャンセルボタン
 $(document).on("click", ".added-action button", function() {
