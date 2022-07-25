@@ -120,7 +120,7 @@ async function handleOpenModal() {
     await fetchSpreadSheetData()
   }
 
-  const ocData = await $.get('../get_oc.php')
+  const ocData = await $.get('../backend/get_oc.php')
 
   showCompare(ocData)
 }
@@ -266,7 +266,7 @@ $('#snapshots').on('hidden.bs.modal', function () {
 })
 
 async function getOCList() {
-  const response = await $.get("../get_oc.php")
+  const response = await $.get("../backend/get_oc.php")
   const list = response.data.reverse()
   const updated_at = new Date(response.created_at).toLocaleString()
   $("#oc-list-updated-at span").html(updated_at)
