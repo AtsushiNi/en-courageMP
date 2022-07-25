@@ -10,7 +10,7 @@
     $tmp_name = pathinfo($img_name, PATHINFO_FILENAME) . "(". (string)$i . ").". pathinfo($img_name, PATHINFO_EXTENSION);
     $i++;
   }
-  $file_name = "../../images/events/10/" . $month . "/" . $tmp_name;
+  $file_name = "10/" . $month . "/" . $tmp_name;
 
   move_uploaded_file($_FILES['image']['tmp_name'], "../../images/events/" . $file_name);
 

@@ -4,7 +4,7 @@
   $oc_list = file_get_contents("../data/oc.json");
   $oc_list = json_decode($oc_list, true);
 
-  $max_id = max(array_column($oc_list["data"], "id"));
+  $max_id = empty($oc_list["data"]) ? 0 : max(array_column($oc_list["data"], "id"));
 
   foreach ($_POST["data"] as $index => $item) {
     $oc = json_decode($item, true);

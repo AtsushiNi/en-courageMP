@@ -1,0 +1,10 @@
+{
+    "require": {
+        "php-webdriver/webdriver": "^1.12"
+    },
+    "config": {
+        "platform": {
+            "php": "8.0.8"
+        }
+    }
+}

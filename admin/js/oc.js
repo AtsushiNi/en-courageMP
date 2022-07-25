@@ -200,7 +200,16 @@ async function handleNext() {
   $("#compare").addClass("none")
   $("#update").removeClass("none")
   $("#update").animate({ opacity: 1 }, { duration: 300, easing: 'linear' })
+
   // 追加案件のアコーディオン
+  let addedImagePaths = []
+  try {
+    const urls = added.map(oc => oc.url)
+    addedImagePaths = await $.post("../backend/download_oc_images.php", {url: urls})
+  } catch(error) {
+    console.log(error)
+  }
+
   added.forEach((oc,i) => {
     let accordion = $("#accordion-added-tmp").clone(true,true)
     accordion.removeAttr('id')
@@ -212,6 +221,11 @@ async function handleNext() {
       input.value = oc[input.getAttribute("data-key")] || ""
     })
     accordion.find(".url-link").attr("onclick", "window.open('" + oc.url + "')")
+    if(addedImagePaths.length > 0) {
+      oc.image = addedImagePaths[i]
+      accordion.find(".image-preview").attr("src", "../../images/events/" + oc.image)
+    }
+
     $("#accordion-added").append(accordion)
   })
   // 削除案件のアコーディオン
