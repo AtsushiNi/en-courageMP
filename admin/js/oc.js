@@ -120,7 +120,7 @@ async function handleOpenModal() {
     await fetchSpreadSheetData()
   }
 
-  const ocData = await $.get('../backend/get_oc.php')
+  const ocData = await $.get('../backend/get_oc_list.php')
 
   showCompare(ocData)
 }
@@ -266,7 +266,7 @@ $('#snapshots').on('hidden.bs.modal', function () {
 })
 
 async function getOCList() {
-  const response = await $.get("../backend/get_oc.php")
+  const response = await $.get("../backend/get_oc_list.php")
   const list = response.data.reverse()
   const updated_at = new Date(response.created_at).toLocaleString()
   $("#oc-list-updated-at span").html(updated_at)
@@ -275,6 +275,7 @@ async function getOCList() {
     const item = $("#oc-item-tmp li").clone(true, true)
     item.css("display", "")
     const image = itemData.image ? "../../images/events/" + itemData.image : "../no-image.png"
+    item.find("a").attr("href", "../pages/oc-edit.html?id="+String(itemData.id))
     item.find("img").attr("src", image)
     item.find("div").html(itemData.title)
     $("#event-list ul").append(item)

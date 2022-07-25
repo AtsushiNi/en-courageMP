@@ -1,0 +1,19 @@
+#page-title {
+  margin-bottom: 80px;
+}
+
+.btn-close {
+  border-radius: 50%;
+  padding: 10px;
+}
+.btn-close:hover {
+  background-color: rgba(32,33,36,0.039);
+}
+
+.actions {
+  margin-top: 80px;
+}
+
+.actions button {
+  margin-left: 20px;
+}
