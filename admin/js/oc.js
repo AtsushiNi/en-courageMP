@@ -291,7 +291,10 @@ async function getOCList() {
     const image = itemData.image ? "../../images/events/" + itemData.image : "../no-image.png"
     item.find("a").attr("href", "../pages/oc-edit.html?id="+String(itemData.id))
     item.find("img").attr("src", image)
-    item.find("div").html(itemData.title)
+    item.find("td").each((_i, element) => {
+      const key = element.getAttribute("class")
+      element.innerText = itemData[key]
+    })
     $("#event-list ul").append(item)
   })
 }
