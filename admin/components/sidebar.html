@@ -34,12 +34,14 @@
       </ul>
     </li>
     <li class="nav-item">
-      <a href="#pages-ul" class="nav-link" aria-current="page" data-bs-toggle="collapse">
+      <a href="#pages-ul" class="nav-link <?php if($active_nav == 'pages'){echo 'active';}?>" aria-current="page" data-bs-toggle="collapse">
         ページ
       </a>
-      <ul class="collapse" id="pages-ul">
-        <li class="nav-sub-item">
-          <a>自己分析</a>
+      <ul class="collapse <?php if($active_nav == 'pages'){echo 'show';}?>" id="pages-ul">
+        <li class="nav-sub-item <?php if($page == 'self-analytics'){echo 'active';}?>">
+          <a href="<?php print $rootPath;?>pages/self-analysis.html">
+            自己分析
+          </a>
         </li>
         <li class="nav-sub-item">
           <a>業界研究</a>
