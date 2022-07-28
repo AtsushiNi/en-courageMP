@@ -2,8 +2,8 @@ let draggingItem = null
 let draggingIndex = null
 
 async function getOCList() {
-  const response = await $.get("../backend/get_oc_list.php")
-  const list = response.data
+  const response = await $.get("../backend/pages/get_self_analytics.php")
+  const list = response.events
   $(".event ul").empty()
 
   list.forEach(itemData => {
