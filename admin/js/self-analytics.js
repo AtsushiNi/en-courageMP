@@ -1,3 +1,6 @@
+let draggingItem = null
+let draggingIndex = null
+
 async function getOCList() {
   const response = await $.get("../backend/get_oc_list.php")
   const list = response.data
@@ -6,6 +9,7 @@ async function getOCList() {
   list.forEach(itemData => {
     const li = $("#li-tmp").clone(true, true)
     li.attr("data-id", itemData.id)
+    li.attr("id", itemData.id)
     li.css("display", "")
     const image = itemData.image ? "../../images/events/" + itemData.image : "../no-image.png"
     li.find("img").attr("src", image)
@@ -33,6 +37,8 @@ function onDragStart(event) {
   event.target.classList.add("dragging")
   event.currentTarget.style.opacity = 0
   event.currentTarget.style.transition = "none"
+  draggingItem = this
+  draggingIndex = $(".event ul li").index(this)
 }
 
 function onDrag(event) {
@@ -47,12 +53,23 @@ function onDragOver(event) {
 
   const targetElement = event.currentTarget.getBoundingClientRect()
   const x = event.originalEvent.clientX - targetElement.left
-  if (x < ($(this).innerWidth() / 2)) {
-    $(this).css('left', '0')
-    $(this).css("transition", "all 0.5s")
-  } else {
-    $(this).css('left', - event.currentTarget.clientWidth + 'px')
-    $(this).css("transition", "all 0.5s")
+  const thisIndex = $(".event ul li").index(this)
+  if (draggingIndex < thisIndex) { // 要素を後ろにドラッグした場合
+    if (x < ($(this).innerWidth() / 2)) {
+      $(this).css('left', '0')
+      $(this).css("transition", "all 0.5s")
+    } else {
+      $(this).css('left', - event.currentTarget.clientWidth + 'px')
+      $(this).css("transition", "all 0.5s")
+    }
+  } else { // 要素を前にドラッグした場合
+    if (x < ($(this).innerWidth() / 2)) {
+      $(this).css('left', event.currentTarget.clientWidth + 'px')
+      $(this).css("transition", "all 0.5s")
+    } else {
+      $(this).css('left', '0')
+      $(this).css("transition", "all 0.5s")
+    }
   }
 }
 
@@ -64,7 +81,11 @@ function onDragEnd(event) {
   $(".event ul li").each((_i,li) => left.push(li.getBoundingClientRect().left))
   left = left.filter(value => value < pageX)
   this.style.opacity = 1
-  $(".event ul")[0].insertBefore(this, $(".event ul li")[left.length-1])
+  if(draggingIndex < left.length) { // 後ろにドラッグした場合
+    $(".event ul")[0].insertBefore(this, $(".event ul li")[left.length-1])
+  } else { // 前にドラッグした場合
+    $(".event ul")[0].insertBefore(this, $(".event ul li")[left.length])
+  }
   $(".event ul li").each((_i, li) => {
     li.style.left = 0
     li.style.transition = "none"
