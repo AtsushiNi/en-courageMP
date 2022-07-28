@@ -20,6 +20,25 @@
     </head>
 
     <?php $Path = '../'; ?>
+    <?php
+        $json = file_get_contents("../admin/data/pages/self-analytics.json");
+        $page_data = json_decode($json, true);
+
+        $oc_list = file_get_contents("../admin/data/oc.json");
+        $oc_list = json_decode($oc_list, true);
+        $oc_ids = array_column($oc_list["data"], "id");
+
+        $pick_up_index = array_search($page_data["pickup"], $oc_ids);
+        $pick_up = $oc_list["data"][$pick_up_index];
+
+        $events = [];
+        foreach ($page_data["events"] as $id) {
+            $event_index = array_search($id, $oc_ids);
+            $event = $oc_list["data"][$event_index];
+            array_push($events, $event);
+        }
+    ?>
+
     <body>
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
@@ -175,62 +194,34 @@
                             <img src="../images/self-analysis/IMG_5942.PNG" class="pickup-img"/>
                         </div>
                         <a href="https://bit.ly/3NEEHQF" target="_blank">
-                            <img src="../events/47-internship.jpeg"/>
+                            <?php
+                                $path = "../images/events/".$pick_up["image"];
+                                echo '<img src="'.$path.'"/>';
+                            ?>
                         </a>
                     </div>
 
                     <div class="component">
                         <ul class="item-list" id="prepare-item-list">
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-06.png" class="image">
-                                    <div>
-                                        7/20<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第6回「企業分析」の方法論
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-07.jpeg" class="image">
-                                    <div>
-                                        7/23・27<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第7回「強い志望動機の作り方」
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-08.jpeg" class="image">
-                                    <div>
-                                        7/30・8/3<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第8回「ビジネス基礎知識」
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-09.jpeg" class="image">
-                                    <div>
-                                        8/6・10<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第9回「1流のGD（レクチャー編）」
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#q_02">
-                                    <img src="../events/outstanding-10.jpeg" class="image">
-                                    <div>
-                                        8/20・24<br>
-                                        就活講座 ”Outstanding”<br>
-                                        第10回「1流のGD（トレーニング編）」
-                                    </div>
-                                </a>
-                            </li>
+                            <?php
+                                foreach ($events as $event) {
+                                    $href = $event["url"];
+                                    $title = $event["title"];
+                                    $day = $event["day"];
+                                    $image_path = "../images/events/".$event["image"];
+                                    echo <<< EOM
+                                        <li class="item">
+                                            <a href="$href">
+                                                <img src="$image_path" class="image">
+                                                <div>
+                                                    $day<br>
+                                                    $title
+                                                </div>
+                                            </a>
+                                        </li>
+                                    EOM;
+                                }
+                            ?>
                         </ul>
                         <div class="view-more" id="prepare-view-more">
                             <button class="view-more-btn" id="prepare">view more</button>
