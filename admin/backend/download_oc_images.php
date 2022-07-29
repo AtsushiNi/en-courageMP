@@ -31,15 +31,8 @@
 
     $month = date("n");
 
-    // ファイル名の重複がないように保存
-    $i = 2;
     $img_name = basename($img_url);
-    $tmp_name = $img_name;
-    while (file_exists("../../images/events/10/" . $month . "/" . $tmp_name)) {
-      $tmp_name = pathinfo($img_name, PATHINFO_FILENAME) . "(". (string)$i . ").". pathinfo($img_name, PATHINFO_EXTENSION);
-      $i++;
-    }
-    $file_name = "10/" . $month . "/" . $tmp_name;
+    $file_name = "10/" . $month . "/" . $img_name;
 
     file_put_contents("../../images/events/" . $file_name, $image);
 
