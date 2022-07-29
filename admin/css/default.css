@@ -18,6 +18,7 @@ main {
 }
 
 .container {
+  font-size: 14px;
   width: 100%;
   overflow-x: auto;
   margin: 30px;

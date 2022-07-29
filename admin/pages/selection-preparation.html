@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="../css/default.css" rel="stylesheet">
+  <link href="../css/selection-preparation.css" rel="stylesheet">
+</head>
+
+<?php $page = 'selection-preparation'; ?>
+<?php $rootPath = '../'; ?>
+
+<body>
+  <main>
+    <?php include(__DIR__ . '/../components/sidebar.html'); ?>
+
+    <div class="container">
+      <div>
+        <h3>選考対策ページ</h3>
+      </div>
+      <div>
+        <h4>参加する</h4>
+        <div class="section pickup">
+          <h6>Pick up!</h6>
+          <div>
+            <img>
+            <a class="background"></a>
+          </div>
+        </div>
+        <div class="section es">
+          <h6>ES対策</h6>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>案件名</th>
+                <th>申し込み期限</th>
+                <th>実施日</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="section gd">
+          <h6>GD対策</h6>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>案件名</th>
+                <th>申し込み期限</th>
+                <th>実施日</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="section intern">
+          <h6>インターン</h6>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>案件名</th>
+                <th>申し込み期限</th>
+                <th>実施日</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="section other">
+          <h6>その他</h6>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>案件名</th>
+                <th>申し込み期限</th>
+                <th>実施日</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <li id="li-tmp" style="display: none" draggable="true">
+      <div>
+        <img>
+      </div>
+    </li>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="../js/selection-preparation.js" type="text/javascript"></script>
+  <script src="../js/sidebar.js" type="text/javascript"></script>
+</body>
+
+</html>
