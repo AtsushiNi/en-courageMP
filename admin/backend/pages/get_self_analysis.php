@@ -5,7 +5,7 @@
   $oc_list = json_decode($oc_list, true);
   $oc_ids = array_column($oc_list["data"], "id");
 
-  $page_data = file_get_contents("../../data/pages/self-analytics.json");
+  $page_data = file_get_contents("../../data/pages/self-analysis.json");
   $page_data = json_decode($page_data, true);
 
   $pick_up_index = array_search($page_data["pickup"], $oc_ids);

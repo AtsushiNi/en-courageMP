@@ -2,7 +2,7 @@ let draggingItem = null
 let draggingIndex = null
 
 async function getOCList() {
-  const response = await $.get("../backend/pages/get_self_analytics.php")
+  const response = await $.get("../backend/pages/get_self_analysis.php")
   const list = response.events
   $(".event ul").empty()
 
