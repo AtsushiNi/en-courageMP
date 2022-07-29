@@ -163,6 +163,11 @@ button.view-more-btn {
 }
 .pickup a img {
     width: 100%;
+    filter: brightness(100%);
+}
+.pickup a img:hover {
+    filter: brightness(70%);
+    transition: all 0.3s;
 }
 .pickup-img {
     max-width: 400px;
