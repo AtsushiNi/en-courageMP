@@ -32,6 +32,7 @@
         </div>
         <div class="section es">
           <h6>ES対策</h6>
+          <button class="btn btn-outline-primary">add</button>
           <table class="table">
             <thead>
               <tr>
@@ -86,6 +87,16 @@
             </tbody>
           </table>
         </div>
+
+        <table id="tr-tmp" style="display: none;">
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div id="pickup-selection">
@@ -93,6 +104,20 @@
         </ul>
       </div>
       <div id="pickup-selection-background">
+      </div>
+
+      <div id="event-selection">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>案件名</th>
+              <th>申し込み期限</th>
+              <th>実施日</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -104,6 +129,7 @@
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>

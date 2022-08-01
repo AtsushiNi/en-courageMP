@@ -40,6 +40,16 @@
   height: 100%;
 }
 
+#event-selection {
+  position: fixed;
+  width: calc(100% - 240px);
+  height: 60%;
+  left: 240px;
+  top: 120%;
+  background: white;
+  transition: all, 0.6s;
+}
+
 .background {
   position: absolute;
   top: 0;

@@ -12,12 +12,22 @@ async function setPageData() {
   const listNames = ["es", "gd", "intern", "other"]
   listNames.forEach(listName => {
     const list = response[listName]
-    const ul = $("."+listName+" tbody")
-    ul.empty()
+    const tbody = $("."+listName+" tbody")
+    tbody.empty()
 
     list.forEach(itemData => {
-      const row = "<tr><td>"+itemData.title+"</td><td>"+itemData.deadline+"</td><td>"+itemData.day+"</td></tr>"
-      ul.append(row)
+      const row = $("#tr-tmp tr").clone(true, true)
+      row.attr("id", itemData.id)
+      row.css("display", "")
+      row.children("td").get(0).textContent = itemData.title
+      row.children("td").get(1).textContent = itemData.deadline
+      row.children("td").get(2).textContent = itemData.day
+      tbody.append(row)
+    })
+    tbody.sortable({
+      update: function() {
+        console.log(tbody.sortable("toArray"))
+      }
     })
   })
 }
@@ -51,4 +61,8 @@ $(document).on("click","#pickup-selection li", function() {
   $(".pickup img").attr("src", image)
   $("#pickup-selection").css("right", "-120%")
   $("#pickup-selection-background").css("width", 0)
+})
+
+$(".es > button").on("click", function(){
+  $("#event-selection").css("top", "40%")
 })
