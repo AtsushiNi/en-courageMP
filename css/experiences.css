@@ -27,11 +27,11 @@ body * {
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
-  max-width: 1300px;
+  max-width: 840px;
 }
 
 .card {
-  width: 300px;
+  width: 258px;
   border-radius: 15px;
   margin: 10px;
 }
@@ -40,4 +40,18 @@ body * {
 }
 .card p {
   font-size: 14px;
+}
+
+aside {
+  margin-top: 100px;
+}
+aside .input-group input {
+  border-right: none;
+}
+aside .input-group-text {
+  background-color: white;
+}
+aside .input-group-text img {
+  width: 20px;
+  height: 20px;
 }
