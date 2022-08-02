@@ -1,0 +1,43 @@
+body * {
+  box-sizing: content-box;
+}
+
+#main-title {
+  position: relative;
+}
+
+#main-title img {
+  display: flex;
+  padding: 0% 20%;
+  margin: 5% auto .5% auto;
+  object-fit: cover;
+  width: 50%;
+  height: auto;
+  background-color: #FFF;
+}
+
+#main-title div {
+    position: absolute;
+    top: 150px;
+    left: 600px;
+    font-size: 40px;
+}
+
+#card-group {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 1300px;
+}
+
+.card {
+  width: 300px;
+  border-radius: 15px;
+  margin: 10px;
+}
+.card img {
+  border-radius: 15px 15px 0 0;
+}
+.card p {
+  font-size: 14px;
+}
