@@ -45,6 +45,7 @@ async function getOCList() {
 }
 getOCList()
 
+// サイドバーを出す/隠す
 $(".pickup a").on("click", function() {
   $("#pickup-selection").css("right", 0)
   $("#pickup-selection-background").css("width", "calc(100% - 400px)")
@@ -54,6 +55,7 @@ $("#pickup-selection-background").on("click", function() {
   $("#pickup-selection-background").css("width", 0)
 })
 
+// サイドバー中アイテムのクリックイベント
 $(document).on("click","#pickup-selection li", function() {
   const id = $(this).attr("data-id")
   const oc = ocList.find(item => item.id == id)
@@ -63,6 +65,12 @@ $(document).on("click","#pickup-selection li", function() {
   $("#pickup-selection-background").css("width", 0)
 })
 
+// 下から出てくる候補を出す/隠す
 $(".es > button").on("click", function(){
   $("#event-selection").css("top", "40%")
+  $("#event-selection-background").css("top", "0")
+})
+$("#event-selection-background").on("click", function() {
+  $("#event-selection").css("top", "120%")
+  $("#event-selection-background").css("top", "120%")
 })
