@@ -1,8 +1,10 @@
 <?php
   if (in_array($page, ['oc', 'ev', 'experience', 'column'])) {
     $active_nav = 'contents';
-  } else {
+  } else if (in_array($page,  ['self-analysis', 'selection-preparation'])) {
     $active_nav = 'pages';
+  } else {
+  $active_nav = 'top';
   }
 ?>
 
