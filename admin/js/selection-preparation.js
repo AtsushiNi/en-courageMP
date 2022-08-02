@@ -27,7 +27,8 @@ async function setPageData() {
     tbody.sortable({
       update: function() {
         console.log(tbody.sortable("toArray"))
-      }
+      },
+      axis: "y"
     })
   })
 }
@@ -37,10 +38,19 @@ async function getOCList() {
   const response = await $.get("../backend/get_oc_list.php")
   ocList = response.data.reverse()
   $("#pickup-selection ul").empty()
+
   ocList.forEach(itemData => {
     const image = itemData.image ? "../../images/events/" + itemData.image : "../no-image.png"
     const li = '<li data-id="'+itemData.id+'"><img src="'+image+'"></li>'
     $("#pickup-selection ul").append(li)
+
+    const tr = $("#tr-tmp tr").clone(true, true)
+    tr.css("display", "")
+    tr.attr("data-id", itemData.id)
+    tr.children("td").get(0).textContent = itemData.title
+    tr.children("td").get(1).textContent = itemData.deadline
+    tr.children("td").get(2).textContent = itemData.day
+    $("#event-selection tbody").append(tr)
   })
 }
 getOCList()
@@ -73,4 +83,17 @@ $(".es > button").on("click", function(){
 $("#event-selection-background").on("click", function() {
   $("#event-selection").css("top", "120%")
   $("#event-selection-background").css("top", "120%")
+})
+
+// 下から出てくる候補のクリックイベント
+$(document).on("click", "#event-selection tr", function() {
+  const id = $(this).attr("data-id")
+  const oc = ocList.find(item => item.id == id)
+  const tr = $("#tr-tmp tr").clone(true, true)
+  tr.css("display", "")
+  tr.attr("data-id", id)
+  tr.children("td").get(0).textContent = oc.title
+  tr.children("td").get(1).textContent = oc.deadline
+  tr.children("td").get(2).textContent = oc.day
+  $(".es tbody").prepend(tr)
 })
