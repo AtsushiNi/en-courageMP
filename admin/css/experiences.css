@@ -1,0 +1,10 @@
+.tab-pane-title {
+  margin-top: 20px;
+}
+.tab-pane-title h5 {
+  margin: auto 30px auto 0;
+}
+.tab-pane-title button {
+  /* width: 30px; */
+  /* height: 30px; */
+}
