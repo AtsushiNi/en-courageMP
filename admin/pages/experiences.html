@@ -96,9 +96,32 @@
                 </table>
               </div>
               <div class="col-md-6" id="edit-industries">
-                <div class="tab-pane-title">
+                <div class="d-flex tab-pane-title">
                   <h5>業界の編集</h5>
+                  <button class="btn btn-outline-primary btn-sm">
+                    <i class="fa-solid fa-plus fa-sm"></i>
+                  </button>
                 </div>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <td>業界名</td>
+                      <td>体験記数</td>
+                      <td>削除</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="industry-tr-tmp" style="display: none">
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button class="btn btn-outline-danger">
+                          <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
