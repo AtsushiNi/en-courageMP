@@ -1,240 +1,95 @@
-#select{
-  margin: 5%;
+article {
+  width: 650px;
+  margin: auto;
 }
 
-#select h1 {
-  padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
-  color: #494949;/*文字色*/
-  background: #f4f4f4;/*背景色*/
-  border-left: solid 5px #000B77;/*左線*/
-  border-bottom: solid 3px #d7d7d7;/*下線*/
-  font-size: 24px;
+.section {
+  margin-top: 70px;
 }
 
-img.sample_img{
+img {
   width: 100%;
-  height: auto;
 }
 
-img.sample_img{
-  width: 100%;
-  height: auto;
+.title h4 {
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 
-.pcol ul, .ncol ul, .tabs ul, #list_view ul{
-  margin: 0 auto;
-  text-align: center;
-  display:flex;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
-  padding: 0%;
+.title h1 {
+  font-size: 30px;
+  margin-top: 5px;
 }
 
-.pcol li, .ncol li, .tabs li, #list_view li{
-  padding: 2.5%;
-  margin: 0 3%;
+#mokuji {
+  padding: 10px;
+  padding-left: 16px;
+  background-color: #f7f9f9;
+}
+
+#mokuji ul {
+  padding: 5px;
+}
+
+#mokuji li {
+  font-size: 14px;
+  border-bottom: 1px solid #7d807f;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
   list-style: none;
+  color: #7d807f;
 }
 
-
-.pcol li a, .ncol li a, .tabs li a, #list_view li a{
-  color: #000B77;
-  font-weight: 700;
-  display: block;
-  text-align: center;
-  font-weight: 600;
+#mokuji li a {
+  color: inherit;
   text-decoration: none;
-  border: 2px solid none;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  opacity: 1;
 }
 
-.pcol li a:hover, .ncol li a:hover, .tabs li a:hover, #list_view li a:hover {
-  /* background-color: #fff; */
-  color:  #000B77;
-   -webkit-transition: 0.7s;
-   -moz-transition: 0.7s;
-   -o-transition: 0.7s;
-   transition: 0.7s;
-   opacity: 0.7;
+#mokuji-button button {
+  position: relative;
+  padding-left: 15px;
+  color: #7d807f;
+  border: none;
+  background-color: inherit;
 }
 
-
-/* 人気記事の切り替えスタイル */
-/*タブ切り替え全体のスタイル*/
-.pcol, .ncol, .tabs {
-  margin-top: 50px;
-  padding-bottom: 40px;
-  margin: 0 auto;
+#mokuji-button h3 {
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
-/*タブのスタイル*/
-.pcol_item, .ncol_item, .tab_item  {
-  margin-bottom: 2.5%;
-  border: 1px solid #eceaea;
-  box-sizing: border-box;
-  background-color: #eceaea;
-  width: calc(100%/3);
-  height: 50px;
-  line-height: 50px;
-  font-size: 16px;
-  text-align: center;
-  color: #000B77;
-  display: block;
-  float: left;
-  text-align: center;
-  font-weight: bold;
-  transition: all 0.2s ease;
+#mokuji #mokuji-button button :before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
 }
 
-.pcol_item:hover, .ncol_item:hover, .tab_item:hover {
-    opacity: 0.75;
-    color: #000B77;
-    transition: 0.5s;
+#mokuji.open #mokuji-button button :before {
+  top: calc(50% - 3px);
+  border-top: 5px solid #7d807f;
+  border-left: 5px solid transparent;
 }
 
-/*ラジオボタンを全て消す*/
-input[name="pcol_item"] {
-  display: none;
+#mokuji.close #mokuji-button button :before {
+  top: calc(50% - 5px);
+  border-top: 5px solid transparent;
+  border-left: 5px solid #7d807f;
 }
 
-/*タブ切り替えの中身のスタイル*/
-.pcol_content {
-  display: none;
-  clear: both;
-  overflow: hidden;
-}
-
-/*選択されているタブのコンテンツのみを表示*/
-#pcol1:checked ~ #pcol1_content,
-#pcol2:checked ~ #pcol2_content,
-#pcol3:checked ~ #pcol3_content {
+#mokuji.open #mokuji-ul {
   display: block;
 }
 
-/*選択されているタブのスタイルを変える*/
-.pcol input:checked + .pcol_item {
-  background-color: #000B77;;
-  color: #fff;
-}
-
-/* 新着記事の切り替え */
-
-/*ラジオボタンを全て消す*/
-input[name="ncol_item"] {
+#mokuji.close #mokuji-ul {
   display: none;
 }
 
-/*タブ切り替えの中身のスタイル*/
-.ncol_content {
-  display: none;
-  clear: both;
-  overflow: hidden;
+.section-body {
+  text-indent: 1rem;
+  line-height: 200%;
+  letter-spacing: 0.6px;
 }
-
-/*選択されているタブのコンテンツのみを表示*/
-#ncol1:checked ~ #ncol1_content,
-#ncol2:checked ~ #ncol2_content,
-#ncol3:checked ~ #ncol3_content {
-  display: block;
-}
-
-/*選択されているタブのスタイルを変える*/
-.ncol input:checked + .ncol_item {
-  background-color: #000B77;;
-  color: #fff;
-}
-
-
-/* 用途別の切り替え */
-
-/*ラジオボタンを全て消す*/
-input[name="tab_item"] {
-  display: none;
-}
-
-/*タブ切り替えの中身のスタイル*/
-.tab_content {
-  display: none;
-  clear: both;
-  overflow: hidden;
-}
-
-
-/*選択されているタブのコンテンツのみを表示*/
-#home1:checked ~ #home1_content,
-#home2:checked ~ #home2_content,
-#home3:checked ~ #home3_content {
-  display: block;
-}
-
-/*選択されているタブのスタイルを変える*/
-.tabs input:checked + .tab_item {
-  background-color: #000B77;;
-  color: #fff;
-}
-
-.page_change{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.page_change_btn{
-  font-size: 16px;
-  color: #000B77;
-  width: 10%;
-  text-align: center;
-}
-
-.page_change_btn:hover{
-  opacity: 0.75;
-  transition: 0.5s;
-  background-color: #cfcdcd;
-}
-
-.return-btn {
-  padding: 0% 20%;
-  width: 30%;
-  margin: 5% auto;
-}
-
-.return {
-  /* color: #000B77; */
-  font-weight: 700;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  color: #F3F2EF;
-  background-color: #000B77;
-  width: 100%;
-  margin: 0% auto;
-  padding: 10px 10px;
-  border: 1px solid #000B77;
-  border-radius: 10px;
-  box-sizing: border-box;
-}
-
-.return:link, .return:visited {
-  color: #F3F2EF;
-  font-weight: 700;
-}
-.return:hover {
-  border: 1px solid #000B77;
-  background-color: #000B77;
-  color: #f3f2efb2;
-  transition: 0.5s;
-}
-
-.list_up {
-  margin: 10% auto;
-}
-
-@media screen and (max-width: 768px){
-  #calendar {
-    width: 150%;
-    margin: 0 auto;
-  }
-}
-
