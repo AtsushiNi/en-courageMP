@@ -1,112 +1,161 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Google Tag Manager -->
-        <script>
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-WLHCR88');
-        </script>
-        <!-- End Google Tag Manager -->
-        <meta charset='utf-8' />
-        <link href='../css/default.css' rel='stylesheet' />
-        <link href='../css/selection-preparation.css' rel='stylesheet' />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    </head>
 
-    <?php $Path = '../'; ?>
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        <?php include(__DIR__ . '/../components/header.html'); ?>
-        <div class="content">
-            <main>
-                <div class="block" id="appeal-area">
-                    <img src="../images/selection-preparation/outstanding.png" alt="" class="appeal-area-img">
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset='utf-8' />
+    <link href='../css/default.css' rel='stylesheet' />
+    <link href='../css/selection-preparation.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+
+<?php $Path = '../'; ?>
+<?php
+    $json = file_get_contents("../admin/data/pages/selection-preparation.json");
+    $page_data = json_decode($json, true);
+
+    $oc_list = file_get_contents("../admin/data/oc.json");
+    $oc_list = json_decode($oc_list, true);
+    $oc_ids = array_column($oc_list["data"], "id");
+
+    $pick_up_index = array_search($page_data["pickup"], $oc_ids);
+    $pick_up = $oc_list["data"][$pick_up_index];
+
+    $es_events = [];
+    foreach ($page_data["es"] as $id) {
+        $event_index = array_search($id, $oc_ids);
+        $event = $oc_list["data"][$event_index];
+        array_push($es_events, $event);
+    }
+    $gd_events = [];
+    foreach ($page_data["gd"] as $id) {
+        $event_index = array_search($id, $oc_ids);
+        $event = $oc_list["data"][$event_index];
+        array_push($gd_events, $event);
+    }
+    $intern_events = [];
+    foreach ($page_data["intern"] as $id) {
+        $event_index = array_search($id, $oc_ids);
+        $event = $oc_list["data"][$event_index];
+        array_push($intern_events, $event);
+    }
+    $other_events = [];
+    foreach ($page_data["other"] as $id) {
+        $event_index = array_search($id, $oc_ids);
+        $event = $oc_list["data"][$event_index];
+        array_push($other_events, $event);
+    }
+
+   $events = array("ES対策" => $es_events, "GD対策" => $gd_events, "インターン" => $intern_events, "その他" => $other_events)
+?>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <?php include(__DIR__ . '/../components/header.html'); ?>
+    <div class="content">
+        <main>
+            <div class="block" id="appeal-area">
+                <img src="../images/selection-preparation/outstanding.png" alt="" class="appeal-area-img">
+            </div>
+
+            <div class="block" id="how-to-use">
+                <img src='../images/selection-preparation/IMG_0789.PNG' alt="" class='how-to-use-img'>
+                <div class="how-to-use-content">
+                    <img src='../images/selection-preparation/how-to-use.jpg' alt="" class='how-to-use-logo'>
+                    <ul>
+                        <li>参加→選考対策にピッタリのイベント</li>
+                        <li>知る→エンカレメンターの選考体験記</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="block" id="join">
+                <div class='band'>
+                    <div class="band-string">
+                        <h1>参加&nbsp;&nbsp;&nbsp;<span>join</span></h1>
+                    </div>
                 </div>
 
-                <div class="block" id="how-to-use">
-                    <img src='../images/selection-preparation/IMG_0789.PNG' alt="" class='how-to-use-img'>
-                    <div class="how-to-use-content">
-                        <img src='../images/selection-preparation/how-to-use.jpg' alt="" class='how-to-use-logo'>
-                        <ul>
-                            <li>参加→選考対策にピッタリのイベント</li>
-                            <li>知る→エンカレメンターの選考体験記</li>
-                        </ul>
+                <div class="pickup">
+                    <div>
+                        <h1 class="arrow">Pick Up !</h1>
+                        <img src="../images/selection-preparation/IMG_5942.PNG" class="pickup-img" />
                     </div>
-                </div>
-
-                <div class="block" id="join">
-                    <div class='band'>
-                        <div class="band-string">
-                            <h1>参加&nbsp;&nbsp;&nbsp;<span>join</span></h1>
-                        </div>
-                    </div>
-
-                    <div class="pickup">
-                        <div>
-                            <h1 class="arrow">Pick Up !</h1>
-                            <img src="../images/selection-preparation/IMG_5942.PNG" class="pickup-img"/>
-                        </div>
-                        <?php
-                            include("../event_list.php");
-                            echo "
-                                <a href='{$selection_preparation["pickup"]["path"]}' target='_blank'>
-                                    <img src='../images/events/{$selection_preparation["pickup"]["image"]}'>
-                                </a>
-                            ";
-                        ?>
-                    </div>
-
                     <?php
-                        $index = 1;
-                        foreach ($selection_preparation as $title => $component) {
-                            if ($title == "pickup") continue;
-                            if (count($component) == 0) continue;
-
-                            if ($index % 2 == 1) {
-                                $right = "right";
-                            } else {
-                                $right = "";
-                            }
-
-                            echo <<< EOM
-                                <div class="component">
-                                    <h1 class="arrow {$right}">{$title}</h1>
-                                    <ul class="item-list" id="prepare-item-list">
-                            EOM;
-                            foreach ($component as $event) {
-                                echo "
-                                    <li class='item'>
-                                        <a href='{$event["path"]}'>
-                                            <img src='../images/events/{$event["image"]}' class='image'>
-                                            <div>{$event["title"]}</div>
-                                        </a>
-                                    </li>
-                                ";
-                            }
-                            echo <<< EOM
-                                    <ul>
-                                </div>
-                            EOM;
-
-                            ++$index;
-                        }
+                        $path = "../images/events/".$pick_up["image"];
+                        echo "
+                            <a href='{$pick_up["url"]}' target='_blank'>
+                                <img src='{$path}'>
+                            </a>
+                        ";
                     ?>
                 </div>
-            </main>
-        </div>
-        <div id="page_top"><a href="#"></a></div>
-        <?php include(__DIR__ . '/../components/footer.html'); ?>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/script.js"></script>
-    </body>
+                <?php
+                    $index = 1;
+                    foreach ($events as $title => $component) {
+                        if (count($component) == 0) continue;
+
+                        if ($index % 2 == 1) {
+                            $right = "right";
+                        } else {
+                            $right = "";
+                        }
+
+                        echo <<< EOM
+                            <div class="component">
+                                <h1 class="arrow {$right}">{$title}</h1>
+                                <div class="item-list">
+                                    <button class="ul-button left"></button>
+                                    <ul id="prepare-item-list">
+                        EOM;
+                        foreach ($component as $event) {
+                            echo "
+                                <li class='item'>
+                                    <div>
+                                        <img src='../images/events/{$event["image"]}' class='image'>
+                                        <div>{$event["title"]}</div>
+                                    </div>
+                                    <a class='background' href='{$event["url"]}'></a>
+                                </li>
+                            ";
+                        }
+                        echo <<< EOM
+                                    </ul>
+                                    <button class="ul-button right"></button>
+                                </div>
+                            </div>
+                        EOM;
+
+                        ++$index;
+                    }
+                ?>
+            </div>
+        </main>
+    </div>
+    <div id="page_top"><a href="#"></a></div>
+    <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/selection-preparation.js"></script>
+</body>
+
 </html>

@@ -25,23 +25,23 @@
 
 <?php $Path = '../'; ?>
 <?php
-        $json = file_get_contents("../admin/data/pages/self-analysis.json");
-        $page_data = json_decode($json, true);
+    $json = file_get_contents("../admin/data/pages/self-analysis.json");
+    $page_data = json_decode($json, true);
 
-        $oc_list = file_get_contents("../admin/data/oc.json");
-        $oc_list = json_decode($oc_list, true);
-        $oc_ids = array_column($oc_list["data"], "id");
+    $oc_list = file_get_contents("../admin/data/oc.json");
+    $oc_list = json_decode($oc_list, true);
+    $oc_ids = array_column($oc_list["data"], "id");
 
-        $pick_up_index = array_search($page_data["pickup"], $oc_ids);
-        $pick_up = $oc_list["data"][$pick_up_index];
+    $pick_up_index = array_search($page_data["pickup"], $oc_ids);
+    $pick_up = $oc_list["data"][$pick_up_index];
 
-        $events = [];
-        foreach ($page_data["events"] as $id) {
-            $event_index = array_search($id, $oc_ids);
-            $event = $oc_list["data"][$event_index];
-            array_push($events, $event);
-        }
-    ?>
+    $events = [];
+    foreach ($page_data["events"] as $id) {
+        $event_index = array_search($id, $oc_ids);
+        $event = $oc_list["data"][$event_index];
+        array_push($events, $event);
+    }
+?>
 
 <body>
     <!-- Google Tag Manager (noscript) -->

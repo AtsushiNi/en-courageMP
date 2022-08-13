@@ -88,6 +88,10 @@ h1.arrow.right {
 }
 
 .item-list {
+    position: relative;
+}
+
+.item-list ul {
     width: 85vw;
     display: flex;
     margin: 0 auto;
@@ -96,15 +100,60 @@ h1.arrow.right {
     overflow-x: scroll;
     list-style: none;
 }
+
+.item-list .ul-button {
+    background-color: rgba(15,23,30,.3);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 0;
+    color: transparent;
+    height: 100%;
+    outline: 0 none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: opacity .25s ease,background-color .25s ease;
+    transition: opacity .25s ease,background-color .25s ease;
+    width: 50px;
+    z-index: 1;
+}
+.item-list .ul-button.right {
+    opacity: 1;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0Ljc2MyAxNy4yMzd2LTIuNDc0bC0xNCAxNGExLjc0OCAxLjc0OCAwIDAgMCAwIDIuNDc0Yy42ODMuNjg0IDEuNzkuNjg0IDIuNDc0IDBsMTQtMTRhMS43NDggMS43NDggMCAwIDAgMC0yLjQ3NGwtMTQtMTRBMS43NSAxLjc1IDAgMCAwIC43NjMgMy4yMzdsMTQgMTR6IiBmaWxsPSIjRUZGMUYxIi8+PC9zdmc+");
+    right: 0;
+    border-radius: 0 5px 5px 0;
+}
+.item-list .ul-button.left {
+    opacity: 0;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMuMjM3IDE3LjIzN3YtMi40NzRsMTQgMTRjLjY4NC42ODMuNjg0IDEuNzkgMCAyLjQ3NGExLjc0OCAxLjc0OCAwIDAgMS0yLjQ3NCAwbC0xNC0xNGExLjc0OCAxLjc0OCAwIDAgMSAwLTIuNDc0bDE0LTE0YTEuNzQ4IDEuNzQ4IDAgMCAxIDIuNDc0IDBjLjY4NC42ODMuNjg0IDEuNzkgMCAyLjQ3NGwtMTQgMTR6IiBmaWxsPSIjRUZGMUYxIi8+PC9zdmc+");
+    left: 0;
+    border-radius: 5px 0 0 5px;
+}
+
 .item {
-    margin: 0 20px;
+    padding: 0 20px;
     min-width: 350px;
     text-align: center;
+    position: relative;
 }
-.item a {
-    text-decoration: none;
-    color: inherit;
+
+.item img {
+    width: 100%;
 }
-.item a div {
-    text-align: center;
+
+.item .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: 100%;
+    border-radius: 3px;
+    z-index: 2;
+    background: black;
+    opacity: 0;
+    transition: all 0.3s;
+    margin: 0 20px;
+}
+.item .background:hover {
+    opacity: 0.3;
 }
