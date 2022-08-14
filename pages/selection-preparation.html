@@ -2,6 +2,15 @@
 <html>
 
 <head>
+    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+    <script>
+        const userName = "<?php echo array_key_exists('REMOTE_USER', $_SERVER) && $_SERVER['REMOTE_USER'];?>"
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            "userName": userName
+        })
+    </script>
+
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -23,10 +32,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
 </head>
 
-<?php
-    print_r($_SERVER);
-    echo($_SERVER["REMOTE_USER"]);
-?>
 <?php $Path = '../'; ?>
 <?php
     $json = file_get_contents("../admin/data/pages/selection-preparation.json");
