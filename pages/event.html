@@ -2,6 +2,15 @@
 <html>
 
 <head>
+    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+    <script>
+        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            "userName": userName
+        })
+    </script>
+
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
