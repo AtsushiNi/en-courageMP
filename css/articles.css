@@ -32,14 +32,25 @@ body * {
 
 .card {
   width: 258px;
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 10px;
 }
-.card img {
-  border-radius: 15px 15px 0 0;
+.card-body {
+  padding: 5px;
 }
-.card p {
-  font-size: 14px;
+.card-body .badges span {
+  margin-right: 4px;
+  font-size: 10px;
+}
+.card-body h5 {
+  margin-top: 10px;
+}
+.card-body img {
+  border-radius: 10px 10px 0 0;
+}
+.card-body p {
+  text-align: right;
+  font-size: 10px;
 }
 
 aside {
