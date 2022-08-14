@@ -6,11 +6,22 @@ async function setArticles() {
 
   articles.forEach(article => {
     const image = "../images/industries/" + article.image
+    let path = ""
+    switch(article.type) {
+      case "選考体験コラム":
+        path = "../columns/" + article.id + ".html"
+        break
+      case "選考体験記":
+        path = "../experiences/" + article.id + ".html"
+        break
+    }
     const card = $("#card-tmp > div").clone(true, true)
+
     card.css("display", "")
     card.find("img").attr("src", image)
     card.find("h5").html("<strong>"+article.company+"</strong>")
     card.find("p").html(new Date(article.created_at).toLocaleDateString())
+    card.find(".background").attr("href", path)
     card.find(".badges").append('<span class="badge rounded-pill bg-secondary">' + article.type + '</span>')
     article.industries.forEach(industry => {
       card.find(".badges").append('<span class="badge rounded-pill bg-secondary">' + industry + '</span>')
