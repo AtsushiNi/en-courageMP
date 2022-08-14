@@ -3,6 +3,7 @@
 
 <head>
     <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+    <?php echo array_key_exists('REMOTE_USER', $_SERVER) && $_SERVER['REMOTE_USER'];?>
     <script>
         const userName = "<?php echo array_key_exists('REMOTE_USER', $_SERVER) && $_SERVER['REMOTE_USER'];?>"
         window.dataLayer = window.dataLayer || [];
