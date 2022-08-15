@@ -120,6 +120,10 @@
 <html>
     <head>
         <meta charset='utf-8' />
+        <title>en-courage京大支部</title>
+        <link rel=”shortcut icon” href=”../images/favicons/favicon.ico” type=”image/x-icon”>
+        <link rel=”apple-touch-icon” href=”../images/favicons/apple-touch-icon-180×180.png” sizes=”180×180″>
+        <link rel=”icon” type=”image/png” href=”../images/favicons/android-chrome-192×192.png” sizes=”192×192″>
         <link href='../../css/default.css' rel='stylesheet' />
         <link href='../../css/experience.css' rel='stylesheet' />
         <link rel="preconnect" href="https://fonts.googleapis.com">
