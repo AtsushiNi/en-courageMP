@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,dayGridDay,listMonth'
+      right: 'dayGridMonth'
     },
     navLinks: true,
     googleCalendarApiKey: 'AIzaSyAoWJyeuPyvRs3mVv8mbxAh1zDQ3WeL-0A',
@@ -29,25 +29,50 @@ document.addEventListener('DOMContentLoaded', function () {
     eventDidMount: function (info) {
       const description = info.event._def.extendedProps.description
       const title = info.event._def.title
-      let url = description.match(/url:.*\n/)[0]
-      url = url.slice(4, -1)
-      let image = description.match(/image:.*/)[0]
+      let url = description.match(/url:.*/)[0]
+      url = url.match(/https?:\/\/[\w\/:%#\$&\?\(\)~\.=\+\-]+/g)[0]
+      let image = description.match(/image:[\w\/\.]+/)[0]
       image = image.slice(6)
-      const path  = "./events/" + image
-      const content = `
-        <div style="text-align: center">
-          <div>${title}</div>
-          <a href="${url}" class="tooltip-img" target="_blank">
-            <img src="${path}" style="width: 200px;">
-          </a>
-        </div>`
-      tippy(".fc-event-title", {
-        content: content,
-        trigger: "click",
-        allowHTML: true
-      })
+      image = "../images/events/" + image
+
+      const tooltip = $("#tooltip").clone(true, true)
+      tooltip.find("img").attr("src", image)
+      tooltip.find(".title").html(title)
+      tooltip.find(".background").attr("href", url)
+
+      $(info.el).parent().append(tooltip)
     }
   });
 
   calendar.render();
 });
+
+let isEventHover = false
+let isTooltipHover = false
+let width = 0
+$(document).on({
+  "mouseenter": function() {
+    $(this).next().css("display", "")
+    width = $(this).width()
+    $(this).next().css("left", "calc("+width/2+"px - 140px)")
+    isEventHover = true
+  },
+  "mouseleave": function() {
+    if(!isTooltipHover) {
+      $(this).next().css("display", "none")
+    }
+    isEventHover = false
+  }
+}, ".fc-event")
+$(document).on({
+  "mouseenter": function() {
+    $(this).css("display", "")
+    isTooltipHover = true
+  },
+  "mouseleave": function() {
+    if(!isEventHover) {
+      $(this).css("display", "none")
+    }
+    isTooltipHover = false
+  }
+}, "#tooltip")

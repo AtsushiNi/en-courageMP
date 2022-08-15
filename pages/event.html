@@ -2,22 +2,25 @@
 <html>
 
 <head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
 
   <!-- Google Tag Manager -->
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WLHCR88');
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
   </script>
   <!-- End Google Tag Manager -->
   <meta charset='utf-8' />
@@ -27,19 +30,15 @@
   <link href='../css/default.css' rel='stylesheet' />
   <link href='../css/event.css' rel='stylesheet' />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-  <script src='../js/ev_script.js'></script>
-  <script src="../lib/fullcalendar/main.js"></script>
   <link href="../lib/fullcalendar/main.css" rel="stylesheet">
-  <script type="text/javascript" src="../js/script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <?php $Path = '../'; ?>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <?php include(__DIR__ . '/../components/header.html'); ?>
   <div id='loading'>loading...</div>
@@ -48,7 +47,15 @@
     <div id="main-title">
       <img src="../images/ev.png" class="ev">
     </div>
-    <div id='calendar'></div>
+    <div class="calender-wrapper">
+      <div id='calendar'></div>
+      <div id="tooltip" style="display: none;">
+        <div>
+          <div class="title"></div>
+          <img>
+        </div>
+        <a class="background" target="_blank"></a>
+      </div>
     </div>
 
     <div id="select">
@@ -150,11 +157,15 @@
       <div class="return-btn">
         <a class="return" href="../index.html">もどる</a>
       </div>
+    </div>
   </main>
   <div id="page_top"><a href="#"></a></div>
   <?php include(__DIR__ . '/../components/footer.html'); ?>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src='../js/ev_script.js'></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script src="../lib/fullcalendar/main.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 </body>
 
 </html>
