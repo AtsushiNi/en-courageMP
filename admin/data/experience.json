@@ -1,45 +1,73 @@
 {
     "data": [
         {
-            "id": 1,
+            "id": 2,
             "type": "選考体験記",
             "company": "日本総合研究所",
             "industries": [
                 "コンサルティング", "IT"
             ],
+            "atsumori": "GD",
             "image": "financial.png",
             "author": "津田基秀",
             "created_at": "2022-07-25T13:34:34+00:00"
         },
         {
-            "id": 1,
+            "id": 3,
             "type": "選考体験記",
             "company": "日本総合研究所",
             "industries": [
                 "コンサルティング"
             ],
+            "atsumori": "ES",
             "image": "financial.png",
             "author": "津田基秀",
             "created_at": "2022-07-25T13:34:34+00:00"
         },
         {
-            "id": 1,
+            "id": 6,
             "type": "選考体験記",
             "company": "テスト企業",
             "industries": [
                 "コンサルティング"
             ],
+            "atsumori": "interview",
             "image": "financial.png",
             "author": "津田基秀",
             "created_at": "2022-07-29T13:34:34+00:00"
         },
         {
-            "id": 1,
+            "id": 8,
             "type": "選考体験記",
             "company": "日本総合研究所",
             "industries": [
                 "コンサルティング"
             ],
+            "atsumori": "interview",
+            "image": "financial.png",
+            "author": "津田基秀",
+            "created_at": "2022-07-25T13:34:34+00:00"
+        },
+        {
+            "id": 9,
+            "type": "選考体験記",
+            "company": "日本総合研究所",
+            "industries": [
+                "コンサルティング"
+            ],
+            "atsumori": "interview",
+            "image": "financial.png",
+            "author": "津田基秀",
+            "created_at": "2022-07-25T13:34:34+00:00"
+        },
+        {
+            "id": 10,
+            "type": "選考体験記",
+            "company": "日本総合研究所",
+            "industries": [
+                "コンサルティング"
+            ],
+            "atsumori": "GD",
             "image": "financial.png",
             "author": "津田基秀",
             "created_at": "2022-07-25T13:34:34+00:00"
@@ -51,6 +79,7 @@
             "industries": [
                 "コンサルティング"
             ],
+            "atsumori": "GD",
             "image": "financial.png",
             "author": "津田基秀",
             "created_at": "2022-07-25T13:34:34+00:00"
@@ -62,6 +91,7 @@
             "industries": [
                 "コンサルティング"
             ],
+            "atsumori": "ES",
             "image": "financial.png",
             "author": "津田基秀",
             "created_at": "2022-07-25T13:34:34+00:00"
@@ -73,6 +103,7 @@
             "industries": [
                 "コンサルティング"
             ],
+            "atsumori": "GD",
             "image": "financial.png",
             "author": "津田基秀",
             "created_at": "2022-07-25T13:34:34+00:00"
@@ -84,6 +115,7 @@
             "industries": [
                 "コンサルティング"
             ],
+            "atsumori": "ES",
             "image": "financial.png",
             "author": "津田基秀",
             "created_at": "2022-07-25T13:34:34+00:00"
@@ -95,28 +127,7 @@
             "industries": [
                 "コンサルティング"
             ],
-            "image": "financial.png",
-            "author": "津田基秀",
-            "created_at": "2022-07-25T13:34:34+00:00"
-        },
-        {
-            "id": 1,
-            "type": "選考体験記",
-            "company": "日本総合研究所",
-            "industries": [
-                "コンサルティング"
-            ],
-            "image": "financial.png",
-            "author": "津田基秀",
-            "created_at": "2022-07-25T13:34:34+00:00"
-        },
-        {
-            "id": 1,
-            "type": "選考体験記",
-            "company": "日本総合研究所",
-            "industries": [
-                "コンサルティング"
-            ],
+            "atsumori": "GD",
             "image": "financial.png",
             "author": "齋藤貴允",
             "created_at": "2022-07-25T13:34:34+00:00"
