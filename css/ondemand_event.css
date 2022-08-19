@@ -1,0 +1,21 @@
+.block {
+  margin-top: 60px;
+}
+
+.block.description {
+  box-shadow: 0 2px 4px 0 rgb(2 20 17 / 8%);
+  background-color: #fff;
+  padding: 24px;
+}
+
+.section {
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 26px;
+}
+.section h2 {
+  border-bottom: 2px solid #0314c2;
+  padding-bottom: 4px;
+}
+

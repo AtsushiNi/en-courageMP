@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset='utf-8' />
+  <title>en-courage京大支部</title>
+  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
+  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
+  <link href='../css/default.css' rel='stylesheet' />
+  <link href='../css/ondemand_event.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+<?php $Path = '../'; ?>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <div class="block title">
+        <img src="../images/ondemand_events/2bTVWgvTlFoWE7vpYpnIJV9JwSsnThuIW45AMWY1q6fBIqnrvCH3Hv6XFDnSpwVd.jpeg">
+        <h1>インターンでぶっちぎれ！！</h1>
+      </div>
+
+      <div class="block description">
+        <div class="section">
+          <h2>インターンでぶっちぎれ！！インターン本番で活躍するための秘訣</h2>
+          インターンで活躍するための情報を詰め込みました！<br>
+          他のどこにも載っていないメンター直伝の情報盛りだくさん！<br>
+          これを見るだけでインターン参加前から参加後の動きがすべて分かります！<br>
+        </div>
+        <div class="section">
+          <h2>こんな人におすすめ！</h2>
+          ✅インターンで圧倒的に活躍したい人<br>
+          ✅インターンを通じて選考優遇、内定を獲得したい人<br>
+          ✅インターンを受けっぱなしにしたくない人<br>
+        </div>
+        <div class="section">
+          <h2>コンテンツ内容</h2>
+          💡インターンの目的<br>
+          💡インターン前の動き<br>
+          💡インターン中の動き<br>
+          💡インターン後の動き<br>
+          💡インターンお役立ちサイト<br>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="section">
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTCBUwTUlbrNdRZk5QXSrO3UB3nxxK7ukmWgXxFxjBLdLyrxeKTUiY-q_6dUpaHF3q46VhmkvxebQoQ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
+</html>

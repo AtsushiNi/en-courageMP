@@ -14,16 +14,23 @@ async function setArticles() {
       case "選考体験記":
         path = "../experiences/" + article.id + ".html"
         break
+      case "オンデマンド講座":
+        path = "../ondemand_events/" + article.id + ".html"
+        break
     }
     const card = $("#card-tmp > div").clone(true, true)
 
     card.css("display", "")
     card.find("img").attr("src", image)
-    card.find("h5").html("<strong>"+article.company+"</strong>")
+    if (article.type === "オンデマンド講座") {
+      card.find("h5").html("<strong>"+article.title+"</strong>")
+    } else {
+      card.find("h5").html("<strong>"+article.company+"</strong>")
+    }
     card.find("p").html(new Date(article.created_at).toLocaleDateString())
     card.find(".background").attr("href", path)
     card.find(".badges").append('<span class="badge rounded-pill bg-secondary">' + article.type + '</span>')
-    article.industries.forEach(industry => {
+    !!article.industries && article.industries.forEach(industry => {
       card.find(".badges").append('<span class="badge rounded-pill bg-secondary">' + industry + '</span>')
     })
     $("#card-group").append(card)
