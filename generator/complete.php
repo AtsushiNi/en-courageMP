@@ -19,7 +19,7 @@
   $html = str_replace('../../', '../', $html);
   // Googleタグマネージャーのタグを挿入
   $part = explode("<head>", $html);
-  $tag = <<< EOM
+  $tag = <<< 'EOM'
     <head>
       <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
       <script>
