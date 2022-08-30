@@ -29,7 +29,9 @@
           <a href="#$index">
               <div>
                   <img src="$iconURL">
-                  $title
+                  <div>
+                    $title
+                  </div>
               </div>
           </a>
       </li>
