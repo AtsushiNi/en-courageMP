@@ -45,10 +45,17 @@
   foreach ($_POST["data"]["sections"] as $index => $section) {
     $title = $section["title"];
     $atsumori = $section["atsumori"] == "true" ? "atsumori" : "";
-    $atsumori_event = <<< EOM
+    $atsumori_event = <<< 'EOM'
       <div class="atsumori-event">
         <h2>対策イベント！</h2>
-        <a href="#q_02"><img src="../../images/self-analysis/IMG_5935.JPG" class="sample_img"></a>
+        <div class="event">
+          <?php
+            $page_title = basename(__FILE__);
+            preg_match("/[0-9]+/", $page_title, $id);
+            $id = $id[0];
+            require("../backend/get_atsumori_event.php");
+          ?>
+        </div>
       </div>
 
     EOM;

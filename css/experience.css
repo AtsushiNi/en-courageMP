@@ -114,6 +114,27 @@ img.sample_img {
 	width: 250px;
 	margin: 10px auto;
 }
+.atsumori-event .event {
+	padding-top: 10px;
+	position: relative;
+	text-align: center;
+}
+.atsumori-event .background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 40px);
+	height: 100%;
+	border-radius: 3px;
+	z-index: 2;
+	background: black;
+	opacity: 0;
+	transition: all 0.3s;
+	margin: 0 20px;
+}
+.atsumori-event .background:hover {
+	opacity: 0.3;
+}
 
 .text {
 	font-size: 14px;

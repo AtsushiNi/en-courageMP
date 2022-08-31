@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "type": "インターン",
+            "title": "【今の時期からバッチリ対策！！】秋冬インターンセミナー",
+            "url": "https://en-courage.com/events/ZOjQcnOkFQFfwS6i7FUc",
+            "image": "10\/8\/HE22nc75gS2XB3lclJDmFJPx66c4MCUkbGJCze2TBn4OwZLqNIQ2jFSHKGb4oqEH.png"
+        },
+        {
+            "id": 2,
+            "type": "自己分析",
+            "title": "インフラ業界のいろは　～選考に通ずるインフラ業界セミナー",
+            "url": "https://en-courage.com/events/XzedAA4qg9xCUeddtOtJ",
+            "image": "10\/8\/qy8I6OiR9DEB1yM9ZU69UFZyAQqlV2d0ISXRM1naNALsdUy48anVbHTCdzNJQ8pZ.jpeg"
+        },
+        {
+            "id": 3,
+            "type": "GD",
+            "title": "GDセミナー実践編 vol.1",
+            "url": "https://en-courage.com/events/dVz9ys9VphAtu3Xzz3Cw",
+            "image": "10\/8\/eHhizNGzRLE2NYdYBqV0qT7IRzdwUdv23oyzgQcu2sV2nVfkrK6gYvk3DWUbnrYc.jpeg"
+        },
+        {
+            "id": 4,
+            "type": "GD",
+            "title": "GDセミナー実践編 vol.2",
+            "url": "https://en-courage.com/events/jZ8QXRBxE8Pey1SDMDWK",
+            "image": "10\/8\/z8NkrumDwdEVm2wwHLA96Z3fpS88TkUZL2j51CwBY0ofOOohHsMa6sngmuqmtfGF.jpeg"
+        },
+        {
+            "id": 5,
+            "type": "面接",
+            "title": "集団面接セミナー",
+            "url": "https://en-courage.com/events/Npp2opqeAj8cOHtKTTqv",
+            "image": "10\/8\/62UjE2lHRuR64kHxMiiy4IsezQqsg1t4cQlgk4mJoXFoQUlfvooOr7PJ89J226Hw.jpeg"
+        }
+    ]
+}
