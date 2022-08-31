@@ -31,7 +31,7 @@
     array_push($recommend_events, $event);
   }
 
-  $json = array("similars"=>$similars, "recommend_events"=>$recommend_events);
+  $json = array("similars"=>array_values($similars), "recommend_events"=>array_values($recommend_events));
   $json = json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
   echo $json;
 ?>
