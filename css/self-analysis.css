@@ -1,8 +1,13 @@
 /****************************************
 自己分析
 ****************************************/
+.block.pickup  {
+    margin-top: 50px;
+}
+
 #how-to-use {
     display: flex;
+    margin-top: 50px;
 }
 .how-to-use-content {
     flex-grow: 1;
@@ -22,7 +27,7 @@
 .how-to-use-img {
     background-color: white;
     flex-grow: 1;
-    max-width: 400px;
+    max-width: 300px;
     border: 1px solid #DDD;
     border-radius: 50px;
     box-shadow: 10px 11px #ddd;

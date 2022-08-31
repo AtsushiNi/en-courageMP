@@ -103,20 +103,9 @@ img.top-img {
      opacity: 0.7;
 }
 
-img.self-img{
+.flexbox li img {
     width: 80%;
     height: auto;
     background-color: #fff;
-}
-
-img.comp-img{
-    width: 80%;
-    height: auto;
-    background-color: #fff;
-}
-
-img.exam-img{
-    width: 80%;
-    height: auto;
-    background-color: #fff;
+    border-radius: 20px;
 }

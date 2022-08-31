@@ -10,7 +10,8 @@
   $ondemand_events = file_get_contents("../admin/data/ondemand_events.json");
   $ondemand_events = json_decode($ondemand_events, true);
 
-  $articles = array("data" => array_merge($experiences["data"], $columns["data"], $ondemand_events["data"]));
+  $articles = array("data" => array_merge($experiences["data"]));
+  /* $articles = array("data" => array_merge($experiences["data"], $columns["data"], $ondemand_events["data"])); */
 
   // 著者情報を隠す
   foreach ($articles["data"] as &$data) {

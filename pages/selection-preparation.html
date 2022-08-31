@@ -88,28 +88,9 @@
     <?php include(__DIR__ . '/../components/header.html'); ?>
     <div class="content">
         <main>
-            <div class="block" id="appeal-area">
-                <img src="../images/selection-preparation/outstanding.png" alt="" class="appeal-area-img">
-            </div>
+            <h1>選考対策</h1>
 
-            <div class="block" id="how-to-use">
-                <img src='../images/selection-preparation/IMG_0789.PNG' alt="" class='how-to-use-img'>
-                <div class="how-to-use-content">
-                    <img src='../images/selection-preparation/how-to-use.jpg' alt="" class='how-to-use-logo'>
-                    <ul>
-                        <li>参加→選考対策にピッタリのイベント</li>
-                        <li>知る→選考体験記やオンデマンド講座</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="block" id="join">
-                <div class='band'>
-                    <div class="band-string">
-                        <h1>参加&nbsp;&nbsp;&nbsp;<span>join</span></h1>
-                    </div>
-                </div>
-
+            <div class="block pickup">
                 <div class="pickup">
                     <div>
                         <h1 class="arrow">Pick Up !</h1>
@@ -123,6 +104,79 @@
                             </a>
                         ";
                     ?>
+                </div>
+            </div>
+
+            <div class="block" id="how-to-use">
+                <img src='../images/selection-preparation/IMG_0789.PNG' alt="" class='how-to-use-img'>
+                <div class="how-to-use-content">
+                    <img src='../images/selection-preparation/how-to-use.jpg' alt="" class='how-to-use-logo'>
+                    <ul>
+                        <li>知る→選考体験記やオンデマンド講座</li>
+                        <li>参加→選考対策にピッタリのイベント</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="block" id="know">
+                <div class='band'>
+                    <div class="band-string">
+                        <h1>知る&nbsp;&nbsp;&nbsp;<span>know</span></h1>
+                    </div>
+                </div>
+                <div class="component">
+                    <h1>選考体験記</h1>
+                    <div class="item-list">
+                        <button class="ul-button left"></button>
+                        <ul id="prepare-item-list">
+                            <?php
+                                foreach (array_reverse($experiences) as $experience) {
+                                    $company = $experience["company"];
+                                    $id = $experience["id"];
+                                    $image = $experience["image"];
+                                    echo  <<< EOM
+                                        <li class="item">
+                                            <div>
+                                                <img src="../images/industries/{$image}" class="image">
+                                                <div>
+                                                    {$company}の選考体験記
+                                                </div>
+                                            </div>
+                                            <a href="../experiences/{$id}.html" class="background"></a>
+                                        </li>
+                                    EOM;
+                                }
+                            ?>
+                        </ul>
+                        <button class="ul-button right">
+                        </button>
+                    </div>
+                    <div class="view-more" id="prepare-view-more">
+                        <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a>
+                    </div>
+                </div>
+
+                <!-- <div class="component"> -->
+                <!--     <h1>オンデマンド講座</h1> -->
+                <!--     <div class="item-list"> -->
+                <!--         <ul id="prepare-item-list"> -->
+                <!--             <li class="item"> -->
+                <!--                 <div> -->
+                <!--                     <img src="../images/ondemand_events/2bTVWgvTlFoWE7vpYpnIJV9JwSsnThuIW45AMWY1q6fBIqnrvCH3Hv6XFDnSpwVd.jpeg" class="image"> -->
+                <!--                     <div>インターンでぶっちぎれ！！</div> -->
+                <!--                 </div> -->
+                <!--                 <a href="../ondemand_events/1.html" class="background"></a> -->
+                <!--             </li> -->
+                <!--         </ul> -->
+                <!--     </div> -->
+                <!-- </div> -->
+            </div>
+
+            <div class="block" id="join">
+                <div class='band'>
+                    <div class="band-string">
+                        <h1>参加&nbsp;&nbsp;&nbsp;<span>join</span></h1>
+                    </div>
                 </div>
 
                 <?php
@@ -164,60 +218,6 @@
                         ++$index;
                     }
                 ?>
-            </div>
-
-            <div class="block" id="know">
-                <div class='band'>
-                    <div class="band-string">
-                        <h1>知る&nbsp;&nbsp;&nbsp;<span>know</span></h1>
-                    </div>
-                </div>
-                <div class="component">
-                    <h1>選考体験記</h1>
-                    <div class="item-list">
-                        <button class="ul-button left"></button>
-                        <ul id="prepare-item-list">
-                            <?php
-                                foreach (array_reverse($experiences) as $experience) {
-                                    $company = $experience["company"];
-                                    $id = $experience["id"];
-                                    $image = $experience["image"];
-                                    echo  <<< EOM
-                                        <li class="item">
-                                            <div>
-                                                <img src="../images/industries/{$image}" class="image">
-                                                <div>
-                                                    {$company}の選考体験記
-                                                </div>
-                                            </div>
-                                            <a href="../experiences/{$id}.html" class="background"></a>
-                                        </li>
-                                    EOM;
-                                }
-                            ?>
-                        </ul>
-                        <button class="ul-button right">
-                        </button>
-                    </div>
-                    <div class="view-more" id="prepare-view-more">
-                        <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a>
-                    </div>
-                </div>
-
-                <div class="component">
-                    <h1>オンデマンド講座</h1>
-                    <div class="item-list">
-                        <ul id="prepare-item-list">
-                            <li class="item">
-                                <div>
-                                    <img src="../images/ondemand_events/2bTVWgvTlFoWE7vpYpnIJV9JwSsnThuIW45AMWY1q6fBIqnrvCH3Hv6XFDnSpwVd.jpeg" class="image">
-                                    <div>インターンでぶっちぎれ！！</div>
-                                </div>
-                                <a href="../ondemand_events/1.html" class="background"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </main>
     </div>

@@ -1,8 +1,13 @@
 /****************************************
 選考対策
 ****************************************/
+.block.pickup {
+    margin-top: 50px;
+}
+
 #how-to-use {
     display: flex;
+    margin-top: 50px;
 }
 .how-to-use-content {
     flex-grow: 1;

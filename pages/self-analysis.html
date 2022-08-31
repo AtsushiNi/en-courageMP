@@ -68,8 +68,21 @@
     <?php include(__DIR__ . '/../components/header.html'); ?>
     <div class="content">
         <main>
-            <div class="block" id="appeal-area">
-                <img src="../images/self-analysis/outstanding.png" alt="" class="appeal-area-img">
+            <h1>自己分析</h1>
+
+            <div class="block pickup">
+                <div class="pickup">
+                    <div>
+                        <h1>Pick Up !</h1>
+                        <img src="../images/self-analysis/IMG_5942.PNG" class="pickup-img" />
+                    </div>
+                    <a href="https://bit.ly/3NEEHQF" target="_blank">
+                        <?php
+                                $path = "../images/events/".$pick_up["image"];
+                                echo '<img src="'.$path.'"/>';
+                            ?>
+                    </a>
+                </div>
             </div>
 
             <div class="block" id="how-to-use">
@@ -121,72 +134,27 @@
                     </div>
                 </div>
 
-                <div class="component">
-                    <h1>コラム</h1>
-                    <div class="item-list">
-                        <button class="ul-button left"></button>
-                        <ul id="prepare-item-list">
-                            <li class="item">
-                                <div>
-                                    <img src="../images/self-analysis/IMG_5934.PNG" class="image">
-                                    <div>
-                                        BCGの選考体験コラム
-                                    </div>
-                                </div>
-                                <a href="../columns/1.html" class="background"></a>
-                            </li>
-                            <li class="item">
-                                <div>
-                                    <img src="../images/self-analysis/IMG_5935.JPG" class="image">
-                                    <div>
-                                        comming soon
-                                    </div>
-                                </div>
-                                <a href="#q_02" class="background"></a>
-                            </li>
-                            <li class="item">
-                                <div>
-                                    <img src="../images/self-analysis/IMG_5935.JPG" class="image">
-                                    <div>
-                                        comming soon
-                                    </div>
-                                </div>
-                                <a href="#q_02" class="background"></a>
-                            </li>
-                            <li class="item">
-                                <div>
-                                    <img src="../images/self-analysis/IMG_5935.JPG" class="image">
-                                    <div>
-                                        comming soon
-                                    </div>
-                                </div>
-                                <a href="#q_02" class="background"></a>
-                            </li>
-                            <li class="item">
-                                <div>
-                                    <img src="../images/self-analysis/IMG_5935.JPG" class="image">
-                                    <div>
-                                        comming soon
-                                    </div>
-                                </div>
-                                <a href="#q_02" class="background"></a>
-                            </li>
-                            <li class="item">
-                                <div>
-                                    <img src="../images/self-analysis/IMG_5935.JPG" class="image">
-                                    <div>
-                                        comming soon
-                                    </div>
-                                </div>
-                                <a href="#q_02" class="background"></a>
-                            </li>
-                        </ul>
-                        <button class="ul-button right">
-                    </div>
-                    <div class="view-more" id="prepare-view-more">
-                        <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a>
-                    </div>
-                </div>
+                <!-- <div class="component"> -->
+                <!--     <h1>コラム</h1> -->
+                <!--     <div class="item-list"> -->
+                <!--         <button class="ul-button left"></button> -->
+                <!--         <ul id="prepare-item-list"> -->
+                <!--             <li class="item"> -->
+                <!--                 <div> -->
+                <!--                     <img src="../images/self-analysis/IMG_5934.PNG" class="image"> -->
+                <!--                     <div> -->
+                <!--                         BCGの選考体験コラム -->
+                <!--                     </div> -->
+                <!--                 </div> -->
+                <!--                 <a href="../columns/1.html" class="background"></a> -->
+                <!--             </li> -->
+                <!--         </ul> -->
+                <!--         <button class="ul-button right"> -->
+                <!--     </div> -->
+                <!--     <div class="view-more" id="prepare-view-more"> -->
+                <!--         <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a> -->
+                <!--     </div> -->
+                <!-- </div> -->
             </div>
 
             <div class="block" id="join">
@@ -194,18 +162,6 @@
                     <div class="band-string right">
                         <h1><span>join</span>&nbsp;&nbsp;&nbsp;参加する</h1>
                     </div>
-                </div>
-                <div class="pickup">
-                    <div>
-                        <h1>Pick Up !</h1>
-                        <img src="../images/self-analysis/IMG_5942.PNG" class="pickup-img" />
-                    </div>
-                    <a href="https://bit.ly/3NEEHQF" target="_blank">
-                        <?php
-                                $path = "../images/events/".$pick_up["image"];
-                                echo '<img src="'.$path.'"/>';
-                            ?>
-                    </a>
                 </div>
 
                 <div class="component">
