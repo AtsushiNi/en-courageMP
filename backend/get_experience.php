@@ -17,6 +17,7 @@
       return false;
     }
   });
+  $similars = array_slice($similars, 0, 5);
 
   $atsumori = $experience["atsumori"];
   $oc_list = file_get_contents("../admin/data/oc.json");

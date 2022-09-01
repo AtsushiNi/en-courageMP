@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset='utf-8' />
+  <title>en-courage京大支部</title>
+  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
+  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
+  <link href='../css/default.css' rel='stylesheet' />
+  <link href='../css/experience.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+<?php $Path = '../'; ?>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <img src="../images/industries/IT.png" class="sample_img">
+      <h1>SoftBankの選考体験記</h1>
+
+      <div class="section">
+        <h2>目次</h2>
+        <div class="flow">
+          <ul class="cp_stepflow01">
+            <li>
+              <span class="bubble"></span>
+              <a href="#0">
+                <div>
+                  <img src="../images/experience/ES.png">
+                  <div>
+                    エントリーシート
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#1">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    1次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#2">
+                <div>
+                  <img src="../images/experience/intern.png">
+                  <div>
+                    サマーインターン(エンジニア体感ワーク)
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#3">
+                <div>
+                  <img src="../images/experience/web-test.png">
+                  <div>
+                    WEBテスト・筆記試験
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#4">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    2次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#5">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    3次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble last"></span>
+              <a href="#6">
+                <div>
+                  <img src="../images/experience/good.png">
+                  <div>
+                    内定
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#7">
+                <div>
+                  <img src="../images/experience/impressions.png">
+                  <div>
+                    選考全体の感想
+                  </div>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="0">
+            エントリーシート
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  提出期日/提出方法
+                </th>
+                <td>
+                  5月後半/マイページ
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/通知方法
+                </th>
+                <td>
+                  1週間以内/メール
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問1「自分が勉強や研究してきた内容、それをソフトバンクでどう活かしたいか」
+        </h3>
+        <div class="text">
+          私は哺乳類の体内時計と呼ばれるシステムに対し、脳内の物質が与える影響をテーマに研究しています。マウスのような哺乳類の体内時計は体内時計形成物質によって作り出されます。そのお陰で人間同様、マウスも活動と睡眠の24時間周期の行動をします。私の2群比較実験によって、ある脳の物質を完全にマウスの体内から無くすと通常のマウスに比べて有意に体内時計形成物質が減少し、24時間周期の行動も乱された為、その脳の物質が体内時計の維持に不可欠である事がわかりました。その実験を行った際、特に得られたデータには意味があるのか、それからどのような事が言えるのかなどデータに対する考察を深く行い、結論を導くための適切なプロセスは何かを考えてデータ分析を行い、将来の研究につなげる努力をしました。貴社で働かせていただく際にもこの経験を生かし、得られたデータを深く考察し、そこから適切に分析を行い、事業の発展に繋がる結論を導く事で貴社に貢献ができると自負しています。<br />
+
+        </div>
+        <h3>
+          注意した点
+        </h3>
+        <div class="text">
+          通信とは全く関係ない研究だったので、共通点になりそうなところをうまくまとめた。<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="1">
+            1次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2021/6/22
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  30min
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  1人。人事の方で比較的若め。
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  2週間以内にメールで
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問内容
+        </h3>
+        <div class="text">
+          ・インターンでどんなことがしたいか<br />
+          ・インターンの日程は大丈夫か<br />
+          ・なぜその研究に取り組んだか<br />
+          ・研究において工夫したことは？<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          特になし。インターンで取り組みたいことは聞かれると知っていたので、インターンの内容をしっかり調べた上で臨んだ。<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="2">
+            サマーインターン(エンジニア体感ワーク)
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2021/09/05~06
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  2days
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  6人くらいのグループワーク
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          ・4つくらいのエンジニア関連職について、ワークも交えながら学んでいく。<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          特になし。<br />
+          ここで学生の評価はされているという話は聞いていたので、ファシリっぽいことはした。<br />
+          次の2次面接へは誰でもいくことができる。<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="3">
+            WEBテスト・筆記試験
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  形式
+                </th>
+                <td>
+                  SPI
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  難易度・ボーダー
+                </th>
+                <td>
+                  言語、計数。ボーダーはそんなに高くない。
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  対策方法
+                </th>
+                <td>
+                  他の会社の選考でテストを受験しまくった。
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="4">
+            2次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2021/10/22
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  30分
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  一人、10年目くらいのエンジニアマネージャーの方。
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  2週間以内にメールで
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          ・大手３社の中でなぜうちを受けてくれたのか<br />
+          ・なぜ薬学からソフトバンクを受けてくれているのか<br />
+          ・ソフトバンクでどんなことをしたいか<br />
+          ・ワークではどんな学びがあったか<br />
+          ・なぜ総合職なのか<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          大手3社の中でなぜソフトバンクか、については絶対聞かれると思ったので固めていった。<br />
+
+        </div>
+      </div>
+      <div class="section atsumori">
+        <h2>
+          <a id="5">
+            3次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2021/11/01
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  1時間
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  一人、人事部長の方、歴不明。
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  2週間後、電話で。
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          ・学生時代に頑張ったことは<br />
+          ・人生における挫折経験は<br />
+          ・それをどうやって乗り越えたか<br />
+          ・何か言い残したことはあるか<br />
+          ・ソフトバンクでやりたいことは<br />
+          ・営業に入れられても大丈夫か<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          とにかく最終まで行ったならあとは熱意だと思ったので、ソフトバンクじゃなくてはならない理由を徹底的に固めた。<br />
+          最後に言い残したことはあるか、という質問もくることがわかっていたので、ぜひ御社に入社させてください、と言い残した。ソフトバンクバリューが5つくらいあるが、その五つを必要以上に意識して回答に盛り込んだ。<br />
+
+        </div>
+      </div>
+      <div class="atsumori-event">
+        <h2>対策イベント！</h2>
+        <div class="event">
+          <?php
+        $page_title = basename(__FILE__);
+        preg_match("/[0-9]+/", $page_title, $id);
+        $id = $id[0];
+        require("../backend/get_atsumori_event.php");
+      ?>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="6">
+            内定
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  内定時期
+                </th>
+                <td>
+                  2021/11/16
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾検討期間
+                </th>
+                <td>
+                  2022/03/24まで
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退
+                </th>
+                <td>
+                  辞退
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          承諾or辞退理由
+        </h3>
+        <div class="text">
+          さらに志望度の高い企業に内定をいただいていたため。<br />
+
+        </div>
+        <h3>
+          内定者属性（大学とか文理とか）
+        </h3>
+        <div class="text">
+          不明(比較的高学歴な人が多いと思う)<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="7">
+            選考全体の感想
+          </a>
+        </h2>
+        <h3>
+          内定先に興味を持ったきっかけ
+        </h3>
+        <div class="text">
+          ITを使ってオンライン医療にも進出していて、かつ社会に与える影響力も大きそうだと感じたため。<br />
+
+        </div>
+        <h3>
+          どういった基準でこの企業を選んだか
+        </h3>
+        <div class="text">
+          ・ITを使って医療的課題を解決しているか<br />
+          ・若手から様々な挑戦をさせてもらえるか<br />
+          ・自社のサービスを持っているか<br />
+
+        </div>
+        <h3>
+          選考を通して重要視されたと感じた点
+        </h3>
+        <div class="text">
+          ・ソフトバンクでやりたいことが明確かつSBでしかできないことか(志望度の高さ)<br />
+          ・ソフトバンクバリューに沿った人間か<br />
+
+        </div>
+        <h3>
+          同業他社と比べてこの企業の魅力は？
+        </h3>
+        <div class="text">
+          大手でありながらベンチャーのようなスピード感がある点。<br />
+
+        </div>
+        <h3>
+          この企業を受けるにあたって工夫した点
+        </h3>
+        <div class="text">
+          ソフトバンクバリューに沿った話は一つずつできるようにしておいた。<br />
+          大手３社との違いは抑え、その中でもソフトバンクがいい理由をしっかり固めていった。<br />
+
+        </div>
+        <h3>
+          社員（と内定者）にどのような印象を持ったか
+        </h3>
+        <div class="text">
+          人の話を優しく聞いてくれる人が多い印象。しかし、自由な環境である反面、楽してなんとなく働いているような人も見受けられた。<br />
+
+        </div>
+        <h3>
+          後輩へのアドバイス
+        </h3>
+        <div class="text">
+          インターンに通っていればある程度能力の高さやバリューに沿った人であるかは合格点なので、あとは志望動機をしっかり固め、熱意をしっかり伝えていけば問題なく通ると思う。<br />
+
+        </div>
+      </div>
+    </main>
+    <?php include(__DIR__ . '/../components/sidebar.html'); ?>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/sidebar_script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
+</html>

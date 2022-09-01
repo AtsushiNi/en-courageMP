@@ -40,6 +40,7 @@
 <?php
     $json = file_get_contents("../admin/data/experience.json");
     $experiences = json_decode($json, true)["data"];
+    $experiences = array_slice(array_reverse($experiences), 0, 10);
 ?>
 <?php
     $json = file_get_contents("../admin/data/pages/self-analysis.json");
@@ -108,7 +109,7 @@
                         <button class="ul-button left"></button>
                         <ul id="prepare-item-list">
                             <?php
-                                foreach (array_reverse($experiences) as $experience) {
+                                foreach ($experiences as $experience) {
                                     $company = $experience["company"];
                                     $id = $experience["id"];
                                     $image = $experience["image"];

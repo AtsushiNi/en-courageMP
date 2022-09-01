@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset='utf-8' />
+  <title>en-courage京大支部</title>
+  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
+  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
+  <link href='../css/default.css' rel='stylesheet' />
+  <link href='../css/experience.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+<?php $Path = '../'; ?>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <img src="../images/industries/IT.png" class="sample_img">
+      <h1>DeNAの選考体験記</h1>
+
+      <div class="section">
+        <h2>目次</h2>
+        <div class="flow">
+          <ul class="cp_stepflow01">
+            <li>
+              <span class="bubble"></span>
+              <a href="#0">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    1次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#1">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    二次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#2">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    人事面談x3
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#3">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    最終面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble last"></span>
+              <a href="#4">
+                <div>
+                  <img src="../images/experience/good.png">
+                  <div>
+                    内定
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#5">
+                <div>
+                  <img src="../images/experience/impressions.png">
+                  <div>
+                    選考全体の感想
+                  </div>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="0">
+            1次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2022/01/14
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  1時間
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  1人。新卒3年目のバックエンドエンジニア。
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  当日中、メールで
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問内容
+        </h3>
+        <div class="text">
+          ・なぜ薬学部からITエンジニアになろうとしているのか<br />
+          ・プログラミングに興味を持ったきっかけは<br />
+          ・プログラミングをどう勉強しているか<br />
+          ・学生時代に頑張ったことは(部活・ピアノの二つを答えた)<br />
+          ・実際に作ったアプリケーションを画面共有しながら技術的な質問<br />
+          →どうやって実装しているのか、なぜその技術を使っているのか、他にどんな技術的選択肢があったか、一番苦労した点はどこか。<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          後半30分はプロダクトを見せてひたすら技術的な深掘りがされるため、語れるプロダクトを作ってから臨む必要がある。<br />
+          前半の人物面接は自己分析をしっかりしていればオーソドックスな質問のみ。<br />
+
+        </div>
+      </div>
+      <div class="section atsumori">
+        <h2>
+          <a id="1">
+            二次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2022/01/26
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  1時間30分
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  一人。11年目のエンジニアマネージャー。
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  当日中、メールで
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          ワークショップ面接。<br />
+          詳細な内容は伏せるが、論理的思考力が試される問題が出題され、それについて面接官とディスカッションしながら問題を解いていく形式。<br />
+          最初の10分でword4ページ分くらいの前提条件を読み、その後20分で面接官と前提条件確認、最後の45分で実際に問題を解く。<br />
+          問題はITとはほとんど関係ない。<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          ・わからないことがあれば聞く。<br />
+          ・適当に答えを言わず、論理的に回答する。<br />
+          を心がけた。<br />
+
+        </div>
+      </div>
+      <div class="atsumori-event">
+        <h2>対策イベント！</h2>
+        <div class="event">
+          <?php
+        $page_title = basename(__FILE__);
+        preg_match("/[0-9]+/", $page_title, $id);
+        $id = $id[0];
+        require("../backend/get_atsumori_event.php");
+      ?>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="2">
+            人事面談x3
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2022/02/07, 15, 21
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  それぞれ90分、60分、30分
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  一人
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          ここまでいった人には、一人一人に担当の人事がつく。最終面接で聞かれそうな質問内容について対策、深掘りしてくれる。<br />
+          人事が気になったことを深掘りし、その内容について自分で整理したあとに後日また面談で再確認するという形式。人事がもう深ぼる必要がないと判断した時点で最終面接に送り出してくれる。<br />
+          主にDeNAでやりたいこと、就活の軸について整理してくれる。<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          人事の方のアドバイスに素直に従いつつ、自分なりに軸や志望動機を整理した。<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="3">
+            最終面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2022/02/25
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  1時間
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  一人
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  翌営業日、人事面談担当者から直接電話で
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          ・開発経験に関する深掘り<br />
+          →インターンとアルバイトのそれぞれについてかなり詳細に自分のになっていた役割を聞かれた。また、自分の作ったプロダクトについても簡単に説明を求められた。<br />
+          ・部活での役割<br />
+          ・なぜDeNAに入りたいのか<br />
+          ・なぜ他だとダメなのか<br />
+          ・ヘルスケアがなくてもDeNAに入るか<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          自分の場合、かなりうちでなくてもよくない？というスタンスでこられたので、それでもDeNAに入りたいんだよ、というスタンスを保った。<br />
+          開発経験の深掘りの時には、構造化など非常に説明力が重視された。<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="4">
+            内定
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  内定時期
+                </th>
+                <td>
+                  2022/02/28
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾検討期間
+                </th>
+                <td>
+                  決心するまで(自分の場合は1ヶ月)
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退
+                </th>
+                <td>
+                  承諾
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退理由
+                </th>
+                <td>
+                  自分の就活の軸と照らし合わせた時に、やはり一番適しているのがDeNAであると感じたため。
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  内定者属性（大学とか文理とか）
+                </th>
+                <td>
+                  不明(比較的高学歴な人が多いと聞いた。)
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="5">
+            選考全体の感想
+          </a>
+        </h2>
+        <h3>
+          内定先に興味を持ったきっかけ
+        </h3>
+        <div class="text">
+          DeNAの企業イベントに参加し、南場さんが語っていたビジョンにかなり衝撃を受けてから興味を持った。<br />
+
+        </div>
+        <h3>
+          どういった基準でこの企業を選んだか
+        </h3>
+        <div class="text">
+          自分の軸である<br />
+          事業作りに携われるか、ヘルスケアに進出しているIT企業か、技術力が高いか、若手の成長環境があるか<br />
+          を全て満たす企業であると感じたため。<br />
+
+        </div>
+        <h3>
+          選考を通して重要視されたと感じた点
+        </h3>
+        <div class="text">
+          DeNAは明確に採用基準を公表しており<br />
+          ・ものづくりが好きか<br />
+          ・自ら動けるか<br />
+          ・異なる意見を受け入れるディスカッション力があるか<br />
+          ・技術に関する知識があるか<br />
+          が重視されるが、実際にその通りだったと思う。<br />
+
+        </div>
+        <h3>
+          同業他社と比べてこの企業の魅力は？
+        </h3>
+        <div class="text">
+          潤沢なリソースがありながら、組織のスピード感、個人の裁量、キャリアの自由さが尋常じゃない。何かしらのスキルを身につけながら、事業作りをして世の中の広範囲に新しい価値を提供したい人にとってはぴったりの企業だと思う。<br />
+
+        </div>
+        <h3>
+          この企業を受けるにあたって工夫した点
+        </h3>
+        <div class="text">
+          論理や技術への関心というハード面はもちろん、とにかくものづくりに真剣に取り組んでいること、DeNAで成し遂げたいことがあり、それがDeNAでしかできないという感情的なソフト面も持ち合わせていて、論理とコミュニケーションが両立できている人間であることはアピールした。<br />
+
+        </div>
+        <h3>
+          社員（と内定者）にどのような印象を持ったか
+        </h3>
+        <div class="text">
+          非常に論理的で、時に厳しいことも言われるが、話をしっかり聞いてくれる優しい方が多い。<br />
+          次への行動をしっかりと促してくれる。<br />
+
+        </div>
+        <h3>
+          後輩へのアドバイス
+        </h3>
+        <div class="text">
+          もしDeNAのエンジニア職に興味がある人は<br />
+          ものづくりが好きであること<br />
+          DeNAで成し遂げたいことがあること<br />
+          をしっかりとアピールできるようにして選考に臨めば大丈夫だと思う。<br />
+
+        </div>
+      </div>
+    </main>
+    <?php include(__DIR__ . '/../components/sidebar.html'); ?>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/sidebar_script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
+</html>

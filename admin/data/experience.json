@@ -95,6 +95,102 @@
             "image": "venture.png",
             "author": "西尾美都",
             "created_at": "2022-08-30T18:43:34+00:00"
+        },
+        {
+            "id": 9,
+            "type": "選考体験記",
+            "company": "DeNA",
+            "industries": [
+                "IT"
+            ],
+            "atsumori": "interview",
+            "image": "IT.png",
+            "author": "土井星太朗",
+            "created_at": "2022-09-01T19:35:34+00:00"
+        },
+        {
+            "id": 10,
+            "type": "選考体験記",
+            "company": "EYストラテジー・アンド・コンサルティング",
+            "industries": [
+                "コンサルティング", "IT"
+            ],
+            "atsumori": "GD",
+            "image": "consulting.png",
+            "author": "土井星太朗",
+            "created_at": "2022-09-01T19:37:34+00:00"
+        },
+        {
+            "id": 11,
+            "type": "選考体験記",
+            "company": "SoftBank",
+            "industries": [
+                "IT"
+            ],
+            "atsumori": "interview",
+            "image": "IT.png",
+            "author": "土井星太朗",
+            "created_at": "2022-09-01T19:38:34+00:00"
+        },
+        {
+            "id": 12,
+            "type": "選考体験記",
+            "company": "アビームコンサルティング",
+            "industries": [
+                "コンサルティング"
+            ],
+            "atsumori": "interview",
+            "image": "consulting.png",
+            "author": "土井星太朗",
+            "created_at": "2022-09-01T19:39:34+00:00"
+        },
+        {
+            "id": 13,
+            "type": "選考体験記",
+            "company": "ブレインパッド",
+            "industries": [
+                "IT", "コンサルティング"
+            ],
+            "atsumori": "interview",
+            "image": "IT.png",
+            "author": "土井星太朗",
+            "created_at": "2022-09-01T19:41:34+00:00"
+        },
+        {
+            "id": 14,
+            "type": "選考体験記",
+            "company": "ラクスル",
+            "industries": [
+                "IT"
+            ],
+            "atsumori": "interview",
+            "image": "IT.png",
+            "author": "土井星太朗",
+            "created_at": "2022-09-01T19:42:34+00:00"
+        },
+        {
+            "id": 15,
+            "type": "選考体験記",
+            "company": "アンドパッド",
+            "industries": [
+                "IT"
+            ],
+            "atsumori": "interview",
+            "image": "IT.png",
+            "author": "土井星太朗",
+            "created_at": "2022-09-01T19:43:34+00:00"
+        },
+        {
+            "id": 16,
+            "type": "選考体験記",
+            "company": "RegritPartners",
+            "industries": [
+                "コンサルティング", "ベンチャー"
+            ],
+            "atsumori": "interview",
+            "image": "consulting.png",
+            "author": "土井星太朗",
+            "created_at": "2022-09-01T19:45:34+00:00"
         }
     ]
 }
