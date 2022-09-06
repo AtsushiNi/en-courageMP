@@ -313,7 +313,7 @@ class OC {
   }
 
   displayValues() {
-    const keys = ["type", "company", "title", "url", "deadline", "day"]
+    const keys = ["id", "type", "company", "title", "url", "deadline", "day"]
     return keys.map(key => this[key])
   }
 

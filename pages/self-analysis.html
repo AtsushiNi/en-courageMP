@@ -77,11 +77,11 @@
                         <h1>Pick Up !</h1>
                         <img src="../images/self-analysis/IMG_5942.PNG" class="pickup-img" />
                     </div>
-                    <a href="https://bit.ly/3NEEHQF" target="_blank">
-                        <?php
-                                $path = "../images/events/".$pick_up["image"];
-                                echo '<img src="'.$path.'"/>';
-                            ?>
+                    <?php
+                            $path = "../images/events/".$pick_up["image"];
+                            echo '<a href="'.$pick_up["url"].'" target="_blank"/>';
+                            echo '<img src="'.$path.'"/>';
+                    ?>
                     </a>
                 </div>
             </div>
@@ -179,7 +179,6 @@
                                                 <div>
                                                     <img src="$image_path" class="image">
                                                     <div>
-                                                        $day<br>
                                                         $title
                                                     </div>
                                                 </div>
