@@ -1,6 +1,10 @@
 /****************************************
 選考対策
 ****************************************/
+.title {
+    display: flex;
+    margin-bottom: 100px;
+}
 .block.pickup {
     margin-top: 50px;
 }
@@ -16,8 +20,8 @@
 }
 .how-to-use-content ul {
     position: absolute;
-    top: 210px;
-    left: 150px;
+    top: 30px;
+    left: 350px;
     font-size: 20px;
     text-align: left;
 }
@@ -34,10 +38,10 @@
     margin-top: 20px;;
 }
 .how-to-use-logo {
-    width: 300px;
+    width: 200px;
     transform: rotate(-10deg);
     position: absolute;
-    top: 70px;
+    top: 10px;
     left: 180px;
 }
 
