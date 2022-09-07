@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset='utf-8' />
+  <title>en-courage京大支部</title>
+  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
+  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
+  <link href='../css/default.css' rel='stylesheet' />
+  <link href='../css/ondemand_event.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+<?php $Path = '../'; ?>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <div class="block title">
+        <img src="../images/ondemand_events/mUoNLEBrjCJywGvrV7CuXrBNuqfA2VRpYDJTQqxTRZ8B0GWjTMMXerOgkicQX2nl.jpeg">
+        <h1>総合商社内々定者に聞いた！～7大商社徹底解剖～</h1>
+      </div>
+
+      <div class="block description">
+        <div class="section">
+          <h2>総合商社って、なんか、かっこええんよなあ。</h2>
+          その気持ち、わかります。
+          でもぶっちゃけ、何してるかあんまわからん、どの企業も同じように見える、そう思いませんか？
+
+          と、いうことで今回なんと！
+          7大商社（伊藤忠・三菱・三井・住友・丸紅・双日・豊田通商）それぞれに内定した方々にご協力いただき、こんな激アツオンデマンド資料を作っちゃいました！🔥
+
+          商社、興味あるんだけど総合商社の企業比較むずい･･･、ES通らん、面接も不安･･･、これから何すればいいの･･･？って思ってるそこのあなた！
+          内定者達が、各社の強み・弱み・社風についてや、なぜ総合商社を、そしてなぜその会社を選んだのか？、どうやったら内定に近づけるのか？、留学経験はないけど大丈夫なのか？など、数々の疑問に答えてくれています！
+          こんな資料ここでしか手に入らない･･･！
+
+          ぜひ、ダウンロードしてみてくださいね！👍
+        </div>
+        <div class="section">
+          <h2>こんな人におすすめ！</h2>
+          ✅総合商社を志望しているor興味がある人<br>
+          ✅秋・冬のインターンに向けて、やるべきことを明確にしたい人<br>
+          ✅総合商社の企業比較がしたい人<br>
+          ✅内定者の生の声を聞きたい人<br>
+        </div>
+        <div class="section">
+          <h2>コンテンツ内容</h2>
+          1．総合商社とは<br>
+          2．各社の比較<br>
+          3．インターンに向けて<br>
+          4．内定を掴むために。<br>
+          5．内々定者からの熱々メッセージ🔥<br>
+        </div>
+      </div>
+
+      <div class="block pdf">
+        <div class="section pdf">
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRECsAuJq4TSa_VxH5pPvHjO4kfNBJ1Xh5G6La-IBbqaqYi4_HN6-8ScEEAPFUTMPtKwiekGU4IXxhF/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          <a href="https://docs.google.com/presentation/d/1rX56FxMsomFdrIOHQZfUnFCwPAZ91pIMBJqwX2OqSbI/export?format=pdf" class="download-button">資料DL</a>
+        </div>
+        <div class="name-form-bg">
+        </div>
+        <div class="name-form">
+          <div>
+            資料を見る前にお名前を入力してください
+          </div>
+          <form onsubmit="handleSubmit(); return false;">
+            <input placeholder="例) 山田太朗">
+            <button>送信</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/ondemand_event.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
+</html>
