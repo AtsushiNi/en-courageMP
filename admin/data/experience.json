@@ -77,10 +77,10 @@
             "type": "選考体験記",
             "company": "関西電力",
             "industries": [
-                "メーカー"
+                "インフラ"
             ],
             "atsumori": "interview",
-            "image": "manufacturer.png",
+            "image": "infrastructure.png",
             "author": "津田基秀",
             "created_at": "2022-08-30T18:40:34+00:00"
         },
