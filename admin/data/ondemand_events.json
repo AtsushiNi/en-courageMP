@@ -7,6 +7,14 @@
             "image": "../ondemand_events/2bTVWgvTlFoWE7vpYpnIJV9JwSsnThuIW45AMWY1q6fBIqnrvCH3Hv6XFDnSpwVd.jpeg",
             "industries": [],
             "created_at": "2022-08-19T13:34:34+00:00"
+        },
+        {
+            "id": 2,
+            "type": "オンデマンド講座",
+            "title": "受かるES・落ちるES",
+            "image": "../ondemand_events/AD4s0wa1a7ScfxEK5PT915AHjB1CRvnjfQXCW0R0ZtH64xgYjPuntfhsB4IktLFL.jpeg",
+            "industries": [],
+            "created_at": "2022-09-07T20:34:34+00:00"
         }
     ]
 }
