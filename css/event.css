@@ -18,18 +18,6 @@
   font-weight: 700;
 }
 
-#new_event ul, .tabs ul, #voice ul{
-  display: flex;
-}
-
-#new_event li, .tabs li, #voice li{
-  list-style: none;
-}
-
-#new_event li a, .tabs li a, #voice li a{
-  text-decoration: none;
-}
-
 img.ev{
   display: flex;
   padding: 0% 20%;
@@ -51,76 +39,6 @@ img.ev{
   border-left: solid 5px #000B77;/*左線*/
   border-bottom: solid 3px #d7d7d7;/*下線*/
   font-size: 24px;
-}
-
-#new_event ul, .tabs ul{
-  margin: 0 auto;
-  text-align: center;
-  display:flex;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
-  padding: 0%;
-}
-
-#new_event li, .tabs li{
-  padding: 2.5%;
-  margin: 0 3%;
-}
-
-
-#new_event li a, .tabs li a {
-  color: #000B77;
-  font-weight: 700;
-  display: block;
-  text-align: center;
-  font-weight: 600;
-  text-decoration: none;
-  border: 2px solid none;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  opacity: 1;
-}
-
-#new_event li a:hover, .tabs li a:hover {
-  color:  #000B77;
-   -webkit-transition: 0.7s;
-   -moz-transition: 0.7s;
-   -o-transition: 0.7s;
-   transition: 0.7s;
-   opacity: 0.7;
-}
-
-
-/*タブ切り替え全体のスタイル*/
-.tabs {
-  margin-top: 50px;
-  padding-bottom: 40px;
-  margin: 0 auto;}
-
-/*タブのスタイル*/
-.tab_item {
-  margin-bottom: 2.5%;
-  border: 1px solid #eceaea;
-  box-sizing: border-box;
-  background-color: #eceaea;
-  width: calc(100%/3);
-  height: 50px;
-  line-height: 50px;
-  font-size: 16px;
-  text-align: center;
-  color: #000B77;
-  display: block;
-  float: left;
-  text-align: center;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-
-.tab_item:hover {
-  opacity: 0.75;
-  color: #000c77be;
-  transition: 0.5s;
 }
 
 /*ラジオボタンを全て消す*/
@@ -260,4 +178,77 @@ div[id^=tippy-] {
 }
 #tooltip .background:hover {
   opacity: 0.3;
+}
+
+.item-list {
+    position: relative;
+}
+.item-list ul {
+    width: 85vw;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 0;
+    overflow-x: scroll;
+    list-style: none;
+}
+.item-list ul::-webkit-scrollbar {
+    display: none;
+}
+
+.item-list .ul-button {
+    background-color: rgba(15,23,30,.3);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 0;
+    color: transparent;
+    height: 100%;
+    outline: 0 none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: opacity .25s ease,background-color .25s ease;
+    transition: opacity .25s ease,background-color .25s ease;
+    width: 50px;
+    z-index: 1;
+}
+.item-list .ul-button.right {
+    opacity: 1;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0Ljc2MyAxNy4yMzd2LTIuNDc0bC0xNCAxNGExLjc0OCAxLjc0OCAwIDAgMCAwIDIuNDc0Yy42ODMuNjg0IDEuNzkuNjg0IDIuNDc0IDBsMTQtMTRhMS43NDggMS43NDggMCAwIDAgMC0yLjQ3NGwtMTQtMTRBMS43NSAxLjc1IDAgMCAwIC43NjMgMy4yMzdsMTQgMTR6IiBmaWxsPSIjRUZGMUYxIi8+PC9zdmc+");
+    right: 0;
+    border-radius: 0 5px 5px 0;
+}
+.item-list .ul-button.left {
+    opacity: 0;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMuMjM3IDE3LjIzN3YtMi40NzRsMTQgMTRjLjY4NC42ODMuNjg0IDEuNzkgMCAyLjQ3NGExLjc0OCAxLjc0OCAwIDAgMS0yLjQ3NCAwbC0xNC0xNGExLjc0OCAxLjc0OCAwIDAgMSAwLTIuNDc0bDE0LTE0YTEuNzQ4IDEuNzQ4IDAgMCAxIDIuNDc0IDBjLjY4NC42ODMuNjg0IDEuNzkgMCAyLjQ3NGwtMTQgMTR6IiBmaWxsPSIjRUZGMUYxIi8+PC9zdmc+");
+    left: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.item {
+    padding: 0 20px;
+    min-width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: 100%;
+    border-radius: 3px;
+    z-index: 2;
+    background: black;
+    opacity: 0;
+    transition: all 0.3s;
+    margin: 0 20px;
+}
+.item .background:hover {
+    opacity: 0.3;
 }
