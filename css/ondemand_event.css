@@ -80,3 +80,18 @@
   color: white;
 }
 
+.download-button {
+  transition: all 0.3s;
+  padding: 5px 10px;
+  margin: 10px 0 10px auto;
+  border-radius: 5px;
+  background-color: #0311a9;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  display: none;
+}
+.download-button:hover {
+  transition: all 0.3s;
+  background-color: #3646f6;
+}

@@ -7,4 +7,5 @@ async function handleSubmit() {
 
   $(".name-form-bg").css("display", "none")
   $(".name-form").css("display", "none")
+  $(".download-button").css("display", "inline")
 }
