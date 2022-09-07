@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset='utf-8' />
+  <title>en-courage京大支部</title>
+  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
+  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
+  <link href='../css/default.css' rel='stylesheet' />
+  <link href='../css/ondemand_event.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+<?php $Path = '../'; ?>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <div class="block title">
+        <img src="../images/ondemand_events/cGfh0DiOts1RNnvbQ556bxGAmuFuCxadvrsLjKxSet6Ta5I7mFJz6mWC8kBS1ywX.jpeg">
+        <h1>【オンデマンド】テレビ・広告</h1>
+      </div>
+
+      <div class="block description">
+        <div class="section">
+          <h2>テレビ・広告業界について隅から隅まで解説！</h2>
+          狭き門であるテレビ・広告行異界のインターンに参加した京大メンターが全面協力してできあがったこの資料！<br>
+          各社の特徴は？受かる人のESって？動画、どうしたらいいんだ･･･？などの数々の疑問を徹底解消！<br>
+          インターンに合格したES・動画・プラニング課題がみれるなんて･･･こんな資料他にはない！<br>
+是非ダウンロードしてみてください！
+        </div>
+        <div class="section">
+          <h2>こんな人におすすめ！</h2>
+          ✅テレビ・広告業界を志望している人<br>
+          ✅テレビ・広告業界の企業研究がしたい人<br>
+          ✅テレビ・広告の選考を経験したメンターの合格者ES・動画・提出課題がみたい人<br>
+        </div>
+        <div class="section">
+          <h2>コンテンツ内容</h2>
+          広告・テレビ業界徹底解剖！<br>
+          →　業界・企業研究が進む<br>
+          →　インターン選考のコツが知れる（合格者ES公開！）<br>
+        </div>
+      </div>
+
+      <div class="block pdf">
+        <div class="section pdf">
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQVkB2HvDPp6ZUkwWsXwQN4pTa5ltrShnQa52z6T6SjvamcRhGXqtltaUjU2QNqU4N36Z2-FFLp5ki4/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          <a href="https://docs.google.com/presentation/d/1yUjrKeYpMd0tieW8AlMPZ03jgSnkppbhUo-6g7DOv10/export?format=pdf" class="download-button">資料DL</a>
+        </div>
+        <div class="name-form-bg">
+        </div>
+        <div class="name-form">
+          <div>
+            資料を見る前にお名前を入力してください
+          </div>
+          <form onsubmit="handleSubmit(); return false;">
+            <input placeholder="例) 山田太朗">
+            <button>送信</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/ondemand_event.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
+</html>

@@ -23,6 +23,46 @@
             "image": "../ondemand_events/mUoNLEBrjCJywGvrV7CuXrBNuqfA2VRpYDJTQqxTRZ8B0GWjTMMXerOgkicQX2nl.jpeg",
             "industries": [],
             "created_at": "2022-09-07T20:52:34+00:00"
+        },
+        {
+            "id": 4,
+            "type": "オンデマンド講座",
+            "title": "【オンデマンド版】IT業界完全攻略資料💻",
+            "image": "../ondemand_events/JT1AT572WGdDXLbpdkT3JpIKC9ZpbASKcxFBQedaAEhTY53jmtEITu4TNzPMUPQ9.jpeg",
+            "industries": [],
+            "created_at": "2022-09-08T01:17:34+00:00"
+        },
+        {
+            "id": 5,
+            "type": "オンデマンド講座",
+            "title": "【オンデマンド】デベロッパー",
+            "image": "../ondemand_events/lBRPA0jFycMPDWGljqFkOfHJtw34EFFUFWZkEwDpzulb9ZdbHD4GJWUJSWnsJioS.jpeg",
+            "industries": [],
+            "created_at": "2022-09-08T01:35:34+00:00"
+        },
+        {
+            "id": 6,
+            "type": "オンデマンド講座",
+            "title": "【オンデマンド】テレビ・広告",
+            "image": "../ondemand_events/cGfh0DiOts1RNnvbQ556bxGAmuFuCxadvrsLjKxSet6Ta5I7mFJz6mWC8kBS1ywX.jpeg",
+            "industries": [],
+            "created_at": "2022-09-08T01:46:34+00:00"
+        },
+        {
+            "id": 7,
+            "type": "オンデマンド講座",
+            "title": "【オンデマンド】食品飲料",
+            "image": "../ondemand_events/85S5n7zGnalub8YErbxOdbamkyg4TSpxmMGWnuvxVtmAhKytruNt5U12wS43EFmB.jpeg",
+            "industries": [],
+            "created_at": "2022-09-08T01:54:34+00:00"
+        },
+        {
+            "id": 8,
+            "type": "オンデマンド講座",
+            "title": "【オンデマンド】コンサル",
+            "image": "../ondemand_events/dTKtxIMDAo9rCEAaVn3TUZmD2GNlrI6nJkKXDIOtRpLNKmaOUivlf8kFUdqq1dHN.jpeg",
+            "industries": [],
+            "created_at": "2022-09-08T02:08:34+00:00"
         }
     ]
 }

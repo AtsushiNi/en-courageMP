@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset='utf-8' />
+  <title>en-courage京大支部</title>
+  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
+  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
+  <link href='../css/default.css' rel='stylesheet' />
+  <link href='../css/ondemand_event.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+<?php $Path = '../'; ?>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <div class="block title">
+        <img src="../images/ondemand_events/85S5n7zGnalub8YErbxOdbamkyg4TSpxmMGWnuvxVtmAhKytruNt5U12wS43EFmB.jpeg">
+        <h1>【オンデマンド】食品飲料</h1>
+      </div>
+
+      <div class="block description">
+        <div class="section">
+          <h2>【オンデマンド版】食品飲料業界☕</h2>
+        </div>
+        <div class="section">
+          <h2>コンテンツ内容</h2>
+          食品飲料業界の職種や動向まで幅広い内容について掲載しております。<br>
+          これから食品飲料業界を検討される方や、業界分析を進めたい方におススメのコンテンツ<br>
+        </div>
+      </div>
+
+      <div class="block pdf">
+        <div class="section pdf">
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQBQv5fEGTyQmV4enxpPKLRpnEozzVdrscM5iLkdP8Mof51rHzoj66p3-RHm2QWHSauKG751lsL6uKE/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          <a href="https://docs.google.com/presentation/d/1YoBr3S3MM-dvKY1E2KsXwwrd_GinM4YBjnvhWloqFiM/export?format=pdf" class="download-button">資料DL</a>
+        </div>
+        <div class="name-form-bg">
+        </div>
+        <div class="name-form">
+          <div>
+            資料を見る前にお名前を入力してください
+          </div>
+          <form onsubmit="handleSubmit(); return false;">
+            <input placeholder="例) 山田太朗">
+            <button>送信</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/ondemand_event.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
+</html>
