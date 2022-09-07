@@ -8,10 +8,8 @@ body * {
 
 #main-title img {
   display: flex;
-  padding: 0% 20%;
-  margin: 5% auto .5% auto;
   object-fit: cover;
-  width: 50%;
+  margin: 30px auto;
   height: auto;
   background-color: #FFF;
 }
