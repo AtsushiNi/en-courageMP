@@ -5,28 +5,29 @@ async function setArticles() {
   articles= response.data
 
   articles.forEach(article => {
-    const image = "../images/industries/" + article.image
+    let image = "../images/industries/" + article.image
     let path = ""
+    let title = ""
     switch(article.type) {
       case "内定先決定理由コラム":
+        image = "../images/columns/" + article.image
         path = "../columns/" + article.id + ".html"
+        title = article.title
         break
       case "選考体験記":
         path = "../experiences/" + article.id + ".html"
+        title= article.company
         break
       case "オンデマンド講座":
         path = "../ondemand_events/" + article.id + ".html"
+        title = article.title
         break
     }
     const card = $("#card-tmp > div").clone(true, true)
 
     card.css("display", "")
     card.find("img").attr("src", image)
-    if (article.type === "オンデマンド講座") {
-      card.find("h5").html("<strong>"+article.title+"</strong>")
-    } else {
-      card.find("h5").html("<strong>"+article.company+"</strong>")
-    }
+    card.find("h5").html("<strong>"+ title +"</strong>")
     card.find("p").html(new Date(article.created_at).toLocaleDateString())
     card.find(".background").attr("href", path)
     card.find(".badges").append('<span class="badge rounded-pill bg-secondary">' + article.type + '</span>')

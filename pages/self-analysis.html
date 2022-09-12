@@ -43,6 +43,11 @@
     $experiences = array_slice(array_reverse($experiences), 0, 10);
 ?>
 <?php
+    $json = file_get_contents("../admin/data/column.json");
+    $columns = json_decode($json, true)["data"];
+    $columns = array_slice(array_reverse($columns), 0, 10);
+?>
+<?php
     $json = file_get_contents("../admin/data/pages/self-analysis.json");
     $page_data = json_decode($json, true);
 
@@ -133,27 +138,36 @@
                     </div>
                 </div>
 
-                <!-- <div class="component"> -->
-                <!--     <h1>コラム</h1> -->
-                <!--     <div class="item-list"> -->
-                <!--         <button class="ul-button left"></button> -->
-                <!--         <ul id="prepare-item-list"> -->
-                <!--             <li class="item"> -->
-                <!--                 <div> -->
-                <!--                     <img src="../images/self-analysis/IMG_5934.PNG" class="image"> -->
-                <!--                     <div> -->
-                <!--                         BCGの選考体験コラム -->
-                <!--                     </div> -->
-                <!--                 </div> -->
-                <!--                 <a href="../columns/1.html" class="background"></a> -->
-                <!--             </li> -->
-                <!--         </ul> -->
-                <!--         <button class="ul-button right"> -->
-                <!--     </div> -->
-                <!--     <div class="view-more" id="prepare-view-more"> -->
-                <!--         <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a> -->
-                <!--     </div> -->
-                <!-- </div> -->
+                <div class="component">
+                    <h1>コラム</h1>
+                    <div class="item-list">
+                        <button class="ul-button left"></button>
+                        <ul id="prepare-item-list">
+                            <?php
+                                foreach($columns as $column) {
+                                    $id = $column["id"];
+                                    $title = $column["title"];
+                                    $image = $column["image"];
+                                    echo <<< EOM
+                                        <li class="item">
+                                            <div>
+                                                <img src="../images/columns/{$image}" class="image">
+                                                <div>
+                                                    {$title}
+                                                </div>
+                                            </div>
+                                            <a href="../columns/{$id}.html" class="background"></a>
+                                        </li>
+                                    EOM;
+                                }
+                            ?>
+                        </ul>
+                        <button class="ul-button right">
+                    </div>
+                    <div class="view-more" id="prepare-view-more">
+                        <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a>
+                    </div>
+                </div>
             </div>
 
             <div class="block" id="join">
