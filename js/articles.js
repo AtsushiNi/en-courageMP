@@ -73,7 +73,7 @@ function search() {
   if(checked.length && unChecked.length) {
     showingIndexes = showingIndexes.filter(index => {
       const article = articles[index]
-      return article.industries.some(industry => checkedIndustries.includes(industry))
+      return article.industries && article.industries.some(industry => checkedIndustries.includes(industry))
     })
   }
 
