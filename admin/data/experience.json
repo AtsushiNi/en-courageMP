@@ -203,6 +203,42 @@
             "image": "consulting.png",
             "author": "田邉はるか",
             "created_at": "2022-09-13T00:09:34+00:00"
+        },
+        {
+            "id": 18,
+            "type": "選考体験記",
+            "company": "日本経済新聞社",
+            "industries": [
+                "出版"
+            ],
+            "atsumori": "interview",
+            "image": "publishing.png",
+            "author": "竹下玲治",
+            "created_at": "2022-09-13T00:42:34+00:00"
+        },
+        {
+            "id": 19,
+            "type": "選考体験記",
+            "company": "三菱UFJモルガンスタンレー証券",
+            "industries": [
+                "金融"
+            ],
+            "atsumori": "interview",
+            "image": "financial.png",
+            "author": "竹下玲治",
+            "created_at": "2022-09-13T00:43:34+00:00"
+        },
+        {
+            "id": 20,
+            "type": "選考体験記",
+            "company": "みずほ証券",
+            "industries": [
+                "金融"
+            ],
+            "atsumori": "interview",
+            "image": "financial.png",
+            "author": "竹下玲治",
+            "created_at": "2022-09-13T00:44:34+00:00"
         }
     ]
 }
