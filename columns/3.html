@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset='utf-8' />
+  <title>en-courage京大支部</title>
+  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
+  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
+  <link href='../css/default.css' rel='stylesheet' />
+  <link href='../css/column.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+<?php $Path = '../'; ?>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <article>
+      <div class="section title">
+        <img src="../images/selection-reason.jpg" class="sample_img">
+        <h4>内定先決定理由コラム</h4>
+        <h1>文系学部生・証券会社IBD</h1>
+      </div>
+
+      <div class="section">
+        <div id="mokuji" class="close">
+          <div id="mokuji-button">
+            <button>
+              <h3>目次</h3>
+            </button>
+          </div>
+          <div id="mokuji-ul">
+            <ul>
+              <li>
+                <a href="#1">
+                  就活を始めたきっかけ
+                </a>
+              </li>
+              <li>
+                <a href="#2">
+選抜コミュニティ参加と初のインターン
+                </a>
+              </li>
+              <li>
+                <a href="#3">
+絶望の6月・迷走の7月
+                </a>
+              </li>
+              <li>
+                <a href="#4">
+サマーインターンラッシュ・思考の転換
+                </a>
+              </li>
+              <li>
+                <a href="#5">
+意志決定の決め手は「未来志向」
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title" id="1">
+                  就活を始めたきっかけ
+        </h3>
+        <div class="section-body">
+自分自身初めて就活に目を向けたのは、2年生の9月です。ゼミの先輩の内定先が日系の投資銀行で、3回生向けの説明会に混じって参加したことがきっかけです。当初はゼミでの経験からファイナンスには一定興味を持っていましたが、この時点ではそこまで「働くこと」に対して特に意識は持っていなかったなあと思います。
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title" id="2">
+選抜コミュニティ参加と初のインターン
+        </h3>
+        <div class="section-body">
+          2回生の2月ごろ、その先輩が所属していた選抜コミュニティの選考をなんとなーく受けて、何故か合格してしまいました。ここから本格的に「外資系投資銀行」と言われる世界を見始めるようになります。<br>
+          その一方であるベンチャー企業の5daysインターンに行って、正解のないビジネスの世界に向き合うことの難しさと面白さを実感することになります。また、この時に会った班のメンバーが優秀すぎて、これまで自分が出会ったことのないほど事業への熱意が溢れ、真剣に思考しているなと感じました。このような魅力的な人達と働きたいと思い、事業開発の仕事にも興味を持ち始めます。<br>
+          コミュニティで対策しながら業界を調べ、一旦の就活の方針として「金融を軸にしつつ、興味のある事業会社をポツポツと出して行く」という方針で進めて行くことにしました。<br>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title" id="3">
+絶望の6月・迷走の7月
+        </h3>
+        <div class="section-body">
+          6月に入ると外資系投資銀行の選考が本格化します。しかしうまくいかない。シンプルな能力不足もあるかもしれませんが、話していて「刺さってないな」と思うことが多々ありました。<br>
+          今振り返ってみると、「投資銀行に見合う自分像」に固執するあまり、自分の本当にアピールしたい事項がうやむやになっていたんだろうなあと思います。本当にしたいことは何なのか、それはどの仕事で成り立つものなのか、業界知識も自己理解もあまりにも浅かったと思います。<br>
+          とはいえめちゃくちゃ落ちる（ベンチャー含めると30は落ちました）とシンプルに萎えます。特に選考序盤で落ちたらいいものの、個人面接で落とされると本当に人格否定されたように感じて絶望感を抱きました。この時期めちゃくちゃサウナに行ってました（単純に気を紛らわしていたんだと思います）<br>
+          7月になり、徐々に自分のことを内省し始めます。「今言ってる志望動機って本当なのか？」「自分が思っている強みは本当の強みなのか？」とこれまで取り繕ってきた就活を振り返り、本当の自分を探しに行くことを始めました。<br>
+          やったことは単純で、「これまで自分が出会ってきた人に話を聞きに行くこと」です。大学時代に関しては友人などに聞いて何人かとサシメシに行きました。さらにはzoomで中高の担任や塾の先生とも面談し、改めて「自分はどんな人間なのか？」客観的に立ち戻ることができました。<br>
+          この結果取り繕ってきたものはすぐに剥がれ落ち、自分の就活軸が定まりました。それは3つで、「金融経済に関わること」「自分の名前で仕事をすること」「情報で人を動かすこと」でした。原体験は割愛します。<br>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title" id="4">
+サマーインターンラッシュ・思考の転換
+        </h3>
+        <div class="section-body">
+          受かったサマーインターンを断らなかったことと、業界の性質上複数daysが多かったこともあり、8月末から9月にかけて「8日連続インターン→土日→12日連続インターン」というブラックスケジュールが生まれました。本命の投資銀行から事業会社・ベンチャーまで幅広く行きましたが、その中で事業開発になんの面白みも感じなかったこと、逆に投資銀行の面白さを感じたことで志望度はグッと上がりました。その中でも一番大きかったところは、「この部署は合わなそうだけど、この部署ならば活躍できそう」という実感が具体的に持てたことです。<br>
+          自分自身投資銀行でやりたい業務が明確になればなるほど、その仕事の悪い点も少しずつじぶんのなかで見えてきていたような気がします。この人たちは本当に面白いと思って仕事をしているのか、案件の制約のために時には情報をねじ曲げることもあるのではないか、と考えるようになりました。そんな投資銀行へのアンチテーゼとして興味を持った仕事がありました。それが「新聞記者」です。この仕事ならば純粋な経済の情報を伝えることが出来、自分の名前で仕事が出来ることも軸と合致していました。<br>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title" id="5">
+意志決定の決め手は「未来志向」
+        </h3>
+        <div class="section-body">
+          最終的には日系投資銀行数社と新聞記者に内定をいただくことが出来ましたが、正直意志決定の決め手は最後まで明確ではありませんでした。いろいろ悩んだ末に、自分自身キャリアを考える上で欠けていたことが「10年の自分の姿を描くこと」だったのだと気づきました。<br>
+          10年後どちらの選択をしたら後悔していないか。自分の中で納得できているかを考えたとき、まずは投資銀行の中で戦うことだと思いました。結果的に投資銀行に嫌気がさして別のことをしたり、はたまたメディアの世界に入ることもあるかも知れません。ただ、一度いろいろなことを学んだ上で将来のことはゆっくり決断しようと思います。<br>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+  <script type="text/javascript" src="../js/column.js"></script>
+</body>
+
+</html>

@@ -8,7 +8,7 @@ async function setArticles() {
     const image = "../images/industries/" + article.image
     let path = ""
     switch(article.type) {
-      case "選考体験コラム":
+      case "内定先決定理由コラム":
         path = "../columns/" + article.id + ".html"
         break
       case "選考体験記":

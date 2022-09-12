@@ -45,6 +45,10 @@ img {
   text-decoration: none;
 }
 
+.mokuji-sub-ul li {
+  border: 0 !important;
+}
+
 #mokuji-button button {
   position: relative;
   padding-left: 15px;

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset='utf-8' />
+  <title>en-courage京大支部</title>
+  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
+  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
+  <link href='../css/default.css' rel='stylesheet' />
+  <link href='../css/column.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+<?php $Path = '../'; ?>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <article>
+      <div class="section title">
+        <img src="../images/selection-reason.jpg" class="sample_img">
+        <h4>内定先決定理由コラム</h4>
+        <h1>文系学部生・日系総合コンサルティングファーム</h1>
+      </div>
+
+      <div class="section">
+        <div id="mokuji" class="close">
+          <div id="mokuji-button">
+            <button>
+              <h3>目次</h3>
+            </button>
+          </div>
+          <div id="mokuji-ul">
+            <ul>
+              <li>
+                <a href="#1">
+1.なんとなく就活(春から夏)
+                </a>
+              </li>
+              <li>
+                <a href="#2">
+2.業界分析で迷走(夏から冬前まで)
+                </a>
+              </li>
+              <li>
+                <a href="#3">
+3. 最初にやめた道に目を向けてみた(冬から)
+                </a>
+              </li>
+              <li>
+                <a href="#4">
+4.選考を終えて
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-body">
+          就活生なので、結論ファーストで述べる。このコラムを通して伝えたいことは大きく分けて3つある。１つは、なんとなくで就活をするといつか皺寄せが来る。２つ目は、なんとなくで就活してもご縁はどこかにある。ただ、３つ目、なんとなくでは受からない。この３つだ。<br>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title" id="1">
+1.なんとなく就活(春から夏)
+        </h3>
+        <div class="section-body">
+          なんとなく周りが始めたから就活を始めないと、と思った。なんとなく4月にエンカレに登録した。なんとなく6月からのインターン選考に向けて、今まで大学生活でなんとなく始めたアルバイトに意味付けをしてガクチカを作り、メンターさんに添削してもらうようになった。<br>
+          　当時は手探りでもエントリーシートを出して、インターンに行くことに満足していた。<br>
+          　しかし、インターンの先に本選考があることをわかっていたようでわかっていなかった。　こうやって「なんとなく就活」を夏のインターンが終わるまで続けてしまったことが、こちこち「もっと前からデベロッパー見たかったのに！」「メガバンク見てないやん！」という焦りにつながっていった。<br>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title" id="2">
+2.業界分析で迷走(夏から冬前まで)
+        </h3>
+        <div class="section-body">
+          「金融業界以外も見てやっぱり金融だ、と言えるようにしよう！」<br>
+          夏インターン終わりの中だるみし始めた時期にメンターさんに言われた。確かに、金融だけに決めうちしすぎていたかもしれない。名前の馴染みのなさだけで避けていたインフラやデベロッパーも見てみるか、と秋から業界を広げた。(デベロッパーの説明会を見てワクワクしたけど、これまで金融と思ってやってきてしまったから、今から対策するのがめんどくさいとも思ったりした。そんなわけで広げられていないと言ったら広げられていない。)<br>
+          　とにかくOB訪問や説明会の回数だけ重ねていた。しかし、これといった企業分析のフォーマットも用意せずに受けた会社説明会は無益ではなかったような、でも実りがあったとは言えないような感じだった。その状態でふらふら色々な業界を見ていた。<br>
+          　そんな中、興味のあった証券会社にもともと勤めていたコンサルタントの方にOB訪問する機会を得た。<br>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title" id="3">
+3. 最初にやめた道に目を向けてみた(冬から)
+        </h3>
+        <div class="section-body">
+          　コンサルは就活を始めた段階で選択肢から外していた。ブラックそう。カタカナもよくわからんし。<br>
+          　でもOBと話していて、自分が今まで設定していた軸って内定先のコンサルティングファームにも当てはまると感じた。<b>①幅広い業界に携われる、②無形商材で自分の専門性が相手の利益になる、③人柄に惹かれる</b>。裏軸の家庭を重視して働けるかはちょっと働くまでわからないとも思いつつ、メガバンクを見て内定先のコンサルティングファームを見ない理由はなかった。<br>
+          　とはいえ、今まで本命だと信じていた金融を捨てきれなかった。受けたい企業を30、行きたいわけではないが受かったら行こうと思える企業を20、行きたくないが受かりそうな企業を20、リストアップしろとリクルーターに言われた時はたぶん55/70社は金融だった。<br>
+          しかし、受けたい企業の中に今までの私にとって異色だったコンサルティングが入った。<br>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title" id="4">
+4.選考を終えて
+        </h3>
+        <div class="section-body">
+          　なぜ内定先に決めたのか。まずやっぱり軸に合っていた。そしてリクルーターがついてくれてすごくよくお世話してくれた。そういうのに弱い。話し始めたらもっと話せるけど結局はこの２点だと思う。めちゃめちゃ働かされるかも…という不安はなくはないが、そんなバリキャリできるのも今のうちか、と思って諦めた。<br>
+          <br>
+          　最後まで成り行きに左右される就活だった。でも私は後悔なく来年からこの会社で働いていけると思う。なんとなくで始めた就活だったけど。最後、内定先を決める時にしっかり自己分析と照らし合わせて、人と話して決めたという自信と、あとはなんとでもなる精神を持って、社会人として精進していきます。<br>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+  <script type="text/javascript" src="../js/column.js"></script>
+</body>
+
+</html>
