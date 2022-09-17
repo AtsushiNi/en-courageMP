@@ -9,9 +9,9 @@ let gapiInited = false;
 let gisInited = false;
 
 let spreadSheetData = []
-let added = []
-let removed = []
-let editted = []
+let addedList = []
+let removedList = []
+let edittedList = []
 let cancelEdittedIndex = []
 
 /**
@@ -129,66 +129,60 @@ async function showCompare(ocData) {
   // 現在掲載中OCデータからの更新を抽出
   const beforeList = ocData.data.map(list => new OC(list))
   const afterList = []
-  let rowNumber = 0
-  removed = []
-  added = []
-  cancelEdittedIndex = []
-  spreadSheetData.forEach(afterData => {
-    // 変更なし
-    if (!!beforeList[rowNumber] && afterData.url === beforeList[rowNumber].url) {
-      afterList[rowNumber] = new OC(afterData)
-      rowNumber++
-      return
+
+  removedList = []
+  addedList = []
+  constList = []
+
+  beforeList.forEach(beforeData => {
+    const afterData = spreadSheetData.find(data => data.url === beforeData.url)
+    if(!!afterData) {
+      constList.push(afterData) // 削除されていな場合
+    } else {
+      removedList.push(beforeData) // 削除された場合
     }
-    // 案件が削除された場合
-    const nextIndex = beforeList.findIndex(row => row.url === afterData.url)
-    if (nextIndex !== -1) {
-      for (let i=rowNumber;i<nextIndex;i++) {
-        afterList[i] = new OC()
-        removed.push(new OC(beforeList[i]))
-      }
-      afterList[nextIndex] = new OC(afterData)
-      rowNumber = nextIndex + 1
-      return
-    }
-    // 案件が追加された場合
-    beforeList.splice(rowNumber, 0, new OC())
-    afterList.splice(rowNumber, 0, new OC(afterData))
-    added.push(new OC(afterData))
-    rowNumber++
   })
-  // リスト中で最後の案件が削除された場合
-  for (let index=rowNumber;index<beforeList.length;index++) {
-    afterList[index] = new OC()
-    removed.push(new OC(beforeList[index]))
-  }
+  spreadSheetData.forEach(afterData => {
+    const beforeData = beforeList.find(data => data.url === afterData.url)
+    if(!beforeData) {
+      addedList.push(afterData) // 追加された場合
+    }
+  })
 
   // table表示
   await $("#compare-table tbody").animate({ opacity: 0 }, { duration: 300, easing: 'linear' }).promise()
   $("#compare-table tbody").empty()
-  for (let [beforeItem, afterItem] of zip(beforeList, afterList)) {
-    let beforeRow = beforeItem.displayCode()
-    let afterRow = afterItem.displayCode()
+  addedList.forEach(addedItem => { // 追加された案件
+    let beforeRow = (new OC()).displayCode()
+    let afterRow = addedItem.displayCode()
 
-    // 変更行に背景色をつける
-    let row
-    if (!beforeItem.isBlank() && afterItem.isBlank()) { // 削除された
-      row = "<tr class='table-danger'>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
-    } else if (beforeItem.isBlank() && !afterItem.isBlank()) { // 追加された
-      row = "<tr class='table-success'>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
-    } else {
-      row = "<tr>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
-      const keys = {type: '分類', company: '企業', title: 'イベント名', url: 'URL', deadline: '申し込み最終日', day: '日程'}
-      Object.keys(keys).forEach(key => {
-        if (beforeItem[key] !== afterItem[key]) { // 内容が変更された
-          row = "<tr class='table-warning'>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
-          editted.push({title: beforeItem.title, key: key, displayKey: keys[key], before: beforeItem[key], after: afterItem[key], id: beforeItem.id})
-        }
-      })
-    }
-
+    const row = "<tr class='table-success'>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
     $("#compare-table tbody").append(row)
-  }
+  })
+
+  removedList.forEach(removedItem => {
+    let beforeRow = removedItem.displayCode()
+    let afterRow = (new OC()).displayCode()
+
+    const row = "<tr class='table-danger'>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
+    $("#compare-table tbody").append(row)
+  })
+
+  constList.forEach(constItem => {
+    const beforeItem = beforeList.find(data => data.url === constItem.url)
+    let beforeRow = beforeItem.displayCode()
+    let afterRow = constItem.displayCode()
+
+    let row = "<tr>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
+    const keys = {type: '分類', company: '企業', title: 'イベント名', url: 'URL', deadline: '申し込み最終日', day: '日程'}
+    Object.keys(keys).forEach(key => {
+      if (beforeItem[key] !== constItem[key]) { // 内容が変更された
+        row = "<tr class='table-warning'>" + beforeRow + '<td style="border: 0;"></td>' + afterRow + "</tr>"
+        edittedList.push({title: beforeItem.title, key: key, displayKey: keys[key], before: beforeItem[key], after: constItem[key], id: beforeItem.id})
+      }
+    })
+    $("#compare-table tbody").append(row)
+  })
 
   // スナップショット取得時刻の表示
   $("#created-at span").html(new Date(ocData.created_at).toLocaleString())
@@ -204,13 +198,13 @@ async function handleNext() {
   // 追加案件のアコーディオン
   let addedImagePaths = []
   try {
-    const urls = added.map(oc => oc.url)
+    const urls = addedList.map(oc => oc.url)
     addedImagePaths = await $.post("../backend/download_oc_images.php", {url: urls})
   } catch(error) {
     console.log(error)
   }
 
-  added.forEach((oc,i) => {
+  addedList.forEach((oc,i) => {
     let accordion = $("#accordion-added-tmp").clone(true,true)
     accordion.removeAttr('id')
     accordion.css('display', '')
@@ -229,7 +223,7 @@ async function handleNext() {
     $("#accordion-added").append(accordion)
   })
   // 削除案件のアコーディオン
-  removed.forEach((oc,i) => {
+  removedList.forEach((oc,i) => {
     let accordion = $("#accordion-removed-tmp").clone(true,true)
     accordion.removeAttr('id')
     accordion.css('display', '')
@@ -242,7 +236,7 @@ async function handleNext() {
     $("#accordion-removed").append(accordion)
   })
   // 編集案件のテーブル
-  editted.forEach((rowData, index) => {
+  edittedList.forEach((rowData, index) => {
     const button = '<input class="form-check-input" type="checkbox" value="" onchange="handleEditCheckBox(this)" data-index='+index+' checked>'
     const row = "<tr><td>" + button + "</td><td>" + rowData.title + "</td><td>" + rowData.displayKey + "</td><td>" + rowData.before + "</td><td>" + rowData.after + "</td></tr>"
     $("#update-oc tbody").append(row)
@@ -252,22 +246,22 @@ async function handleNext() {
 $(".added-action button").on("click", function(){
   const index = $(".added-action button").index(this)
   const parent = $(this).parents(".accordion-item")
-  added.splice(index,1)
+  addedList.splice(index,1)
   parent.remove()
 })
 $(".removed-action button").on("click", function(){
   const index = $(".removed-action button").index(this)
   const parent = $(this).parents(".accordion-item")
-  removed.splice(index,1)
+  removedList.splice(index,1)
   parent.remove()
 })
 
 // モーダルを閉じる
 $('#snapshots').on('hidden.bs.modal', function () {
   spreadSheetData = []
-  editted = []
-  added = []
-  removed = []
+  edittedList = []
+  addedList = []
+  removedList = []
   cancelEdittedIndex = []
   $("#compare").removeClass("none")
   $("#compare-table tbody").empty()
@@ -347,22 +341,22 @@ function* zip(...args) {
 
 async function handleUpdate() {
   const addedJson = {
-    data: added.map(item => JSON.stringify(item))
+    data: addedList.map(item => JSON.stringify(item))
   }
   if(addedJson.data.length > 0) {
      await $.post("../backend/batch_create_oc.php", addedJson)
   }
 
   const removedJson = {
-    data: removed.map(item => String(item.id))
+    data: removedList.map(item => String(item.id))
   }
   if(removedJson.data.length > 0) {
     await $.post("../backend/batch_destroy_oc.php", removedJson)
   }
 
-  cancelEdittedIndex.forEach(index => editted.splice(index, 1))
+  cancelEdittedIndex.forEach(index => edittedList.splice(index, 1))
   const edittedJson = {
-    data: editted.map(item => JSON.stringify(item))
+    data: edittedList.map(item => JSON.stringify(item))
   }
   if (edittedJson.data.length > 0) {
     await $.post("../backend/batch_update_oc.php", edittedJson)
@@ -382,12 +376,12 @@ $(document).on("click", "#snapshots-close", async function() {
 $(document).on("click", ".added-action button", function() {
   const DOMId = $(this).parents(".accordion-collapse").attr("id")
   const index = parseInt(DOMId.replace(/[^0-9]/g, ''))
-  added.splice(index, 1)
+  addedList.splice(index, 1)
 })
 $(document).on("click", ".removeed-action button", function() {
   const DOMId = $(this).parents(".accordion-collapse").attr("id")
   const index = parseInt(DOMId.replace(/[^0-9]/g, ''))
-  removed.splice(index, 1)
+  removedList.splice(index, 1)
 })
 // OC編集のキャンセルチェックボックス
 function handleEditCheckBox(element) {
@@ -399,7 +393,7 @@ function handleChangeAddedInput(element) {
   const DOMId = element.closest(".accordion-collapse").getAttribute("id")
   const index = parseInt(DOMId.replace(/[^0-9]/g, ''))
   const key = element.getAttribute("data-key")
-  added[index][key] = element.value
+  addedList[index][key] = element.value
 }
 // OC追加のimage
 $(document).on("change", ".image-upload-select", async function(event) {
@@ -420,5 +414,5 @@ $(document).on("change", ".image-upload-select", async function(event) {
   formData.append("image", file)
   const response = await fetch("../backend/upload_image.php", { method: "POST", body: formData })
   const fileName = await response.json()
-  added[index].image = fileName
+  addedList[index].image = fileName
 })
