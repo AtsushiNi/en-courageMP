@@ -1,22 +1,9 @@
 {
     "data": [
         {
-            "id": 1,
-            "type": "インターン",
-            "title": "【今の時期からバッチリ対策！！】秋冬インターンセミナー",
-            "url": "https://en-courage.com/events/ZOjQcnOkFQFfwS6i7FUc",
-            "image": "10\/8\/HE22nc75gS2XB3lclJDmFJPx66c4MCUkbGJCze2TBn4OwZLqNIQ2jFSHKGb4oqEH.png"
-        },
-        {
-            "id": 2,
-            "type": "自己分析",
-            "title": "インフラ業界のいろは　～選考に通ずるインフラ業界セミナー",
-            "url": "https://en-courage.com/events/XzedAA4qg9xCUeddtOtJ",
-            "image": "10\/8\/qy8I6OiR9DEB1yM9ZU69UFZyAQqlV2d0ISXRM1naNALsdUy48anVbHTCdzNJQ8pZ.jpeg"
-        },
-        {
             "id": 3,
             "type": "GD",
+            "date": "9/22",
             "title": "GDセミナー実践編 vol.1",
             "url": "https://en-courage.com/events/dVz9ys9VphAtu3Xzz3Cw",
             "image": "10\/8\/eHhizNGzRLE2NYdYBqV0qT7IRzdwUdv23oyzgQcu2sV2nVfkrK6gYvk3DWUbnrYc.jpeg"
@@ -24,6 +11,7 @@
         {
             "id": 4,
             "type": "GD",
+            "date": "9/26",
             "title": "GDセミナー実践編 vol.2",
             "url": "https://en-courage.com/events/jZ8QXRBxE8Pey1SDMDWK",
             "image": "10\/8\/z8NkrumDwdEVm2wwHLA96Z3fpS88TkUZL2j51CwBY0ofOOohHsMa6sngmuqmtfGF.jpeg"
@@ -31,9 +19,50 @@
         {
             "id": 5,
             "type": "面接",
+            "date": "9/30",
             "title": "集団面接セミナー",
             "url": "https://en-courage.com/events/Npp2opqeAj8cOHtKTTqv",
             "image": "10\/8\/62UjE2lHRuR64kHxMiiy4IsezQqsg1t4cQlgk4mJoXFoQUlfvooOr7PJ89J226Hw.jpeg"
+        },
+        {
+            "id": 6,
+            "type": "GD",
+            "date": "10/14",
+            "title": "【GD vol1 の続編！】GD vol 1.5 　～秋冬インターン・選考対策に向けて～",
+            "url": "https://en-courage.com/events/QXiCzQ445pqFcQZQD86P",
+            "image": "10\/9\/X1F6AJEwAfBo2hhfFKJ1wHEwCyEwJLNjvEl6eqazIdnfJrfqCgk9bXSt8zG988Hy.jpeg"
+        },
+        {
+            "id": 7,
+            "type": "面接",
+            "date": "10/17",
+            "title": "【選考突破率グーンとアップ】集団面接セミナー（前回参加者も参加可能！）",
+            "url": "https://en-courage.com/events/Kn8kIbYKkoHhbpQGGR0f",
+            "image": "10\/9\/vocHisyb80zaZH1QtlhAqrZfIIP5h5cgdiH721UNGLTvIjMBg52zNuEGt8OkcCec.jpeg"
+        },
+        {
+            "id": 8,
+            "type": "GD",
+            "date": "10/24",
+            "title": "【秋冬インターンに向けて最後のブラッシュアップ】GD実践編vol2",
+            "url": "https://en-courage.com/events/jZ8QXRBxE8Pey1SDMDWK",
+            "image": "10\/9\/z8NkrumDwdEVm2wwHLA96Z3fpS88TkUZL2j51CwBY0ofOOohHsMa6sngmuqmtfGF.jpeg"
+        },
+        {
+            "id": 9,
+            "type": "説明会",
+            "date": "10/29",
+            "title": "今だからこそ、業界広く見とかない？👀　10業界（まだまだ増える予定！）内定者座談会",
+            "url": "https://en-courage.com/events/NhGGP3XQKUXUkAt26xOt",
+            "image": "10\/9\/mmvj98TwkrTqHxaKJJkstQRTQqSM9YTTtFMszvToNRQwSZR2kjXsyZebv4keF7vt.jpeg"
+        },
+        {
+            "id": 10,
+            "type": "説明会",
+            "date": "10/31",
+            "title": "文系も理系も！メーカー気になる人集まれ座談会📢～機械・食品飲料・化学など～",
+            "url": "https://en-courage.com/events/gBGNkLZQEl2vX7KTaAX2",
+            "image": "10\/9\/1oLqlZkuYnUxW05ywF2xGcECQOWbhY0MTHhyJSUjZ2ahdpey8vM1gBI1dtXApLNn.png"
         }
     ]
 }

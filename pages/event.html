@@ -38,6 +38,11 @@
 </head>
 
 <?php $Path = '../'; ?>
+<?php
+  $json = file_get_contents("../admin/data/ev.json");
+  $events = json_decode($json, true)["data"];
+  $events = array_slice($events, 0, 10);
+?>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -68,51 +73,25 @@
         <div class="item-list">
           <button class="ul-button left"></button>
             <ul>
-              <li class="item">
-                <div>
-                  <img src="../images/events/10/9/62UjE2lHRuR64kHxMiiy4IsezQqsg1t4cQlgk4mJoXFoQUlfvooOr7PJ89J226Hw.jpeg" class="image">
-                  <div>
-                    <p>9/12<br>【選考突破率グーンとアップ】集団面接セミナー</p>
-                  </div>
-                </div>
-                <a href="https://en-courage.com/events/Npp2opqeAj8cOHtKTTqv" target="_blank" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img src="../images/events/10/9/HE22nc75gS2XB3lclJDmFJPx66c4MCUkbGJCze2TBn4OwZLqNIQ2jFSHKGb4oqEH.png" class="image">
-                  <div>
-                    <p>9/15<br>【今の時期からバッチリ対策！！】秋冬インターンセミナー</p>
-                  </div>
-                </div>
-                <a href="https://en-courage.com/events/ZOjQcnOkFQFfwS6i7FUc" target="_blank" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img src="../images/events/10/9/eHhizNGzRLE2NYdYBqV0qT7IRzdwUdv23oyzgQcu2sV2nVfkrK6gYvk3DWUbnrYc.jpeg" class="image">
-                  <div>
-                    <p>9/22<br>gd実践編vol1 （gd日系・gdvol1参加者も参加可）</p>
-                  </div>
-                </div>
-                <a href="https://en-courage.com/events/dVz9ys9VphAtu3Xzz3Cw" target="_blank" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img src="../images/events/10/9/z8NkrumDwdEVm2wwHLA96Z3fpS88TkUZL2j51CwBY0ofOOohHsMa6sngmuqmtfGF.jpeg" class="image">
-                  <div>
-                    <p>9/26<br>【秋冬インターンに向けてブラッシュアップ】GD実践編vol2</p>
-                  </div>
-                </div>
-                <a href="https://en-courage.com/events/jZ8QXRBxE8Pey1SDMDWK" target="_blank" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img src="../images/events/10/9/qy8I6OiR9DEB1yM9ZU69UFZyAQqlV2d0ISXRM1naNALsdUy48anVbHTCdzNJQ8pZ.jpeg" class="image">
-                  <div>
-                    <p>9/30<br>インフラ業界のいろは　～選考へ通ずるインフラ業界セミナー～</p>
-                  </div>
-                </div>
-                <a href="https://en-courage.com/events/XzedAA4qg9xCUeddtOtJ" target="_blank" class="background"></a>
-              </li>
+              <?php
+                  foreach($events as $event) {
+                    $title = $event["title"];
+                    $date = $event["date"];
+                    $image = $event["image"];
+                    $url = $event["url"];
+                    echo <<< EOM
+                      <li class="item">
+                        <div>
+                          <img src="../images/events/{$image}" class="image">
+                          <div>
+                            <p>{$date}<br>{$title}</p>
+                          </div>
+                        </div>
+                        <a href="{$url}" target="_blank" class="background"></a>
+                      </li>
+                    EOM;
+                  }
+              ?>
             </ul>
           <button class="ul-button right"></button>
         </div>
