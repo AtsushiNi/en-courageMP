@@ -40,7 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
       tooltip.find(".title").html(title)
       tooltip.find(".background").attr("href", url)
 
-      $(info.el).parent().append(tooltip)
+      const item = $(info.el).parent()
+      item.append(tooltip)
+      $(document).on('click', item, function() {
+        window.open(url, '_blank')
+      })
     }
   });
 
