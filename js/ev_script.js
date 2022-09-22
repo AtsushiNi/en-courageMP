@@ -17,11 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
     businessHours: {
       daysOfWeek: [1, 2, 3, 4, 5]
     },
-
-    eventClick: function (arg) {
-      arg.jsEvent.preventDefault()
-    },
-
     loading: function (bool) {
       document.getElementById('loading').style.display =
         bool ? 'block' : 'none';
@@ -40,11 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
       tooltip.find(".title").html(title)
       tooltip.find(".background").attr("href", url)
 
-      const item = $(info.el).parent()
-      item.append(tooltip)
-      $(document).on('click', item, function() {
-        window.open(url, '_blank')
-      })
+      $(info.el).parent().append(tooltip)
+      $(info.el).attr("href", url)
+      $(info.el).attr("target", "_blank")
     }
   });
 

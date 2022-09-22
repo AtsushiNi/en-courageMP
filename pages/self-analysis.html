@@ -39,8 +39,18 @@
 <?php $Path = '../'; ?>
 <?php
     $json = file_get_contents("../admin/data/experience.json");
-    $experiences = json_decode($json, true)["data"];
-    $experiences = array_slice(array_reverse($experiences), 0, 10);
+    $json = json_decode($json, true);
+    $experiences = array_reverse($json["data"]);
+    $priorities = $json["priorities"];
+    foreach(array_reverse($priorities) as $priority) {
+       foreach ($experiences as $index => $experience) {
+            if($experience["id"] == $priority) {
+                $item = array_splice($experiences, $index, 1);
+                array_unshift($experiences, $item[0]);
+           }
+       }
+    }
+    $experiences = array_slice($experiences, 0, 10);
 ?>
 <?php
     $json = file_get_contents("../admin/data/column.json");
