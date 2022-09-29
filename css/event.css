@@ -10,6 +10,12 @@
     height:auto;
     margin: 0 auto;
 }
+#calendar .fc-toolbar-chunk div {
+  display: flex;
+}
+#calendar .fc-toolbar-chunk h2 {
+  margin: 0 10px;
+}
 
 #main-title h2{
   padding: 2.5% 5%;
@@ -234,6 +240,15 @@ div[id^=tippy-] {
 
 .item img {
     width: 100%;
+}
+
+.item p {
+  margin: 0;
+}
+
+.item .event-datetime {
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .item .background {
