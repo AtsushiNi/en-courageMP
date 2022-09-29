@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     events: 'g56gfkgj6d1adk03ofcf1kh5c0@group.calendar.google.com',
     displayEventTime: false,
     locale: "ja",
-    height: window.innerHeight - 100,
+    height: window.innerHeight,
     businessHours: {
       daysOfWeek: [1, 2, 3, 4, 5]
     },
@@ -38,6 +38,22 @@ document.addEventListener('DOMContentLoaded', function () {
       $(info.el).parent().append(tooltip)
       $(info.el).attr("href", url)
       $(info.el).attr("target", "_blank")
+      $(info.el).find(".fc-event-title").css("white-space", "normal")
+      $(info.el).css("display", "block")
+      const dotStyle =  {
+        "color": "black",
+        "width": "auto",
+        "height": "auto",
+        "font-size": "12px",
+        "border": "none"
+      }
+      $(info.el).find(".fc-daygrid-event-dot").css(dotStyle)
+
+      const startAt = info.event._instance.range.start
+      const startString = startAt.getUTCHours() + ":" + ("00" + startAt.getUTCMinutes()).slice(-2)
+      const endAt = info.event._instance.range.end
+      const endString = endAt.getUTCHours() + ":" + ("00" + endAt.getUTCMinutes()).slice(-2)
+      $(info.el).find(".fc-daygrid-event-dot").html(startString  + "~" + endString)
     }
   });
 
