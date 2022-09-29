@@ -252,6 +252,90 @@
             "image": "developer.png",
             "author": "松本響子",
             "created_at": "2022-09-13T12:27:34+00:00"
+        },
+        {
+            "id": 22,
+            "type": "選考体験記",
+            "company": "BCG",
+            "industries": [
+                "コンサルティング"
+            ],
+            "atsumori": "interview",
+            "image": "consulting.png",
+            "author": "福島佳奈",
+            "created_at": "2022-09-29T11:37:34+00:00"
+        },
+        {
+            "id": 23,
+            "type": "選考体験記",
+            "company": "NTT西日本",
+            "industries": [
+                "IT"
+            ],
+            "atsumori": "interview",
+            "image": "IT.png",
+            "author": "福島佳奈",
+            "created_at": "2022-09-29T11:38:34+00:00"
+        },
+        {
+            "id": 24,
+            "type": "選考体験記",
+            "company": "大阪ガス",
+            "industries": [
+                "インフラ"
+            ],
+            "atsumori": "interview",
+            "image": "infrastructure.png",
+            "author": "福島佳奈",
+            "created_at": "2022-09-29T11:41:34+00:00"
+        },
+        {
+            "id": 25,
+            "type": "選考体験記",
+            "company": "サントリーホールディングス",
+            "industries": [
+                "食品"
+            ],
+            "atsumori": "interview",
+            "image": ".png",
+            "author": "福島佳奈",
+            "created_at": "2022-09-29T11:42:34+00:00"
+        },
+        {
+            "id": 26,
+            "type": "選考体験記",
+            "company": "ANA",
+            "industries": [
+                "航空"
+            ],
+            "atsumori": "interview",
+            "image": "aviation.png",
+            "author": "江口公基",
+            "created_at": "2022-09-29T11:43:34+00:00"
+        },
+        {
+            "id": 27,
+            "type": "選考体験記",
+            "company": "NTTドコモ",
+            "industries": [
+                "IT"
+            ],
+            "atsumori": "interview",
+            "image": "IT.png",
+            "author": "江口公基",
+            "created_at": "2022-09-29T11:44:34+00:00"
+        },
+        {
+            "id": 28,
+            "type": "選考体験記",
+            "company": "JAL",
+            "industries": [
+                "航空"
+            ],
+            "atsumori": "interview",
+            "image": "aviation.png",
+            "author": "江口公基",
+            "created_at": "2022-09-29T11:45:34+00:00"
         }
     ]
 }
