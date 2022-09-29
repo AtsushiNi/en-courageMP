@@ -19,7 +19,7 @@ header {
 
 .header-logo a{
     color: white;
-    font-size: 25px;
+    font-size: 2.5rem;
     text-decoration: none;
     padding: auto;
 }
@@ -41,7 +41,7 @@ nav ul li a {
     font-weight: 700;
     width: auto;
     white-space: nowrap;
-    font-size: 18px;
+    font-size: 1.8rem;
     text-decoration: none;
     padding: 10px 20px;
     border: 2px solid none;

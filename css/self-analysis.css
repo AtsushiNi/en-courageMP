@@ -22,7 +22,7 @@
     position: absolute;
     top: 30px;
     left: 350px;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: left;
 }
 .how-to-use-content ul li {
@@ -63,12 +63,12 @@
     padding-right: 5%;
 }
 .band-string h1 {
-    font-size: 30px;
+    font-size: 3rem;
     display: inline;
     border-bottom: 1px solid white;
 }
 .band-string span {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .item-list {

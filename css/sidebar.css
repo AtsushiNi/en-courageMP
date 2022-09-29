@@ -33,7 +33,7 @@ aside {
   position: absolute;
   top: 10px;
   left: 38px;
-  font-size: 14px;
+  font-size: 1.4rem;
   background: none;
   color: #5a6674;
   width: 195px;
@@ -79,7 +79,7 @@ aside {
   margin: auto;
 }
 .card div {
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: center;
 }
 .background {

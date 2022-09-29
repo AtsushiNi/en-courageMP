@@ -38,7 +38,7 @@ img.ev{
   background: #f4f4f4;/*背景色*/
   border-left: solid 5px #000B77;/*左線*/
   border-bottom: solid 3px #d7d7d7;/*下線*/
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 /*ラジオボタンを全て消す*/
@@ -80,7 +80,7 @@ input[name="tab_item"] {
 
 .name{
   color: #000B77;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .voice_content{
@@ -157,7 +157,7 @@ div[id^=tippy-] {
   color: #fff;
   padding: 5px 9px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 #tooltip .title {
   text-align: center;

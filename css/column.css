@@ -17,7 +17,7 @@ img {
 }
 
 .title h1 {
-  font-size: 30px;
+  font-size: 3rem;
   margin-top: 5px;
 }
 
@@ -32,7 +32,7 @@ img {
 }
 
 #mokuji li {
-  font-size: 14px;
+  font-size: 1.4rem;
   border-bottom: 1px solid #7d807f;
   margin-bottom: 10px;
   padding-bottom: 4px;

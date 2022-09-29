@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
     font-style: normal;
     margin: 0px;
     background-color: #F3F2EF;
+    font-size: 1.6rem;
 }
 
 .content {
@@ -123,7 +125,7 @@ img.bg{
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: '\f102';
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #3f98ef;
   position: absolute;
   width: 25px;
@@ -137,7 +139,7 @@ img.bg{
 }
 #page_top a::after{
   content: 'PAGE TOP';
-  font-size: 13px;
+  font-size: 1.3rem;
   color: #fff;
   position: absolute;
   top: 35px;

@@ -18,7 +18,7 @@ img.top-img {
 .top h1{
     color: #000B77;
     font-weight: 700;
-    font-size: 52px;
+    font-size: 5.2rem;
     line-height: 76px;
     margin-left: 5%;
     margin-bottom: 0%;
@@ -49,7 +49,7 @@ img.top-img {
     font-weight: 700;
     display:flex;
     justify-content:end;
-    font-size: 32px;
+    font-size: 3.2rem;
     margin-top: -5%;
     padding-top: 0.5%;
     letter-spacing: 0.2em;
@@ -80,7 +80,7 @@ img.top-img {
     padding: 0 5%;
     text-align: center;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 3.2rem;
     text-decoration: none;
     border: 2px solid none;
     -webkit-border-radius: 6px;

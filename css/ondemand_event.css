@@ -11,7 +11,7 @@
 .section {
   margin-bottom: 40px;
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 26px;
 }
 .section h2 {
@@ -59,7 +59,7 @@
 }
 .name-form form label {
   display: block;
-  font-size: 10px;
+  font-size: 1rem;
 }
 .name-form form input {
   border: 1px solid silver;
@@ -88,7 +88,7 @@
   background-color: #0311a9;
   text-decoration: none;
   color: #fff;
-  font-size: 14px;
+  font-size: 1.4rem;
   display: none;
 }
 .download-button:hover {

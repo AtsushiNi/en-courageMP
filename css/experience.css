@@ -36,7 +36,6 @@ img.sample_img {
 	--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 	font-style: normal;
 	font-family: var(--bs-font-sans-serif);
-	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
 	color: #212529;
@@ -137,11 +136,11 @@ img.sample_img {
 }
 
 .text {
-	font-size: 14px;
+	font-size: 1.4rem;
 }
 
 .cp_stepflow01 {
-	font-size: 80%;
+	font-size: 1.4rem;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -218,7 +217,7 @@ div.table {
     margin-left: 106px;
     margin-right: 176px;
     position: relative;
-		font-size: 14px;
+		font-size: 1.4rem;
 }
 .table table {
     width: 100%;
