@@ -3,50 +3,62 @@
         {
             "id": 5,
             "type": "面接",
-            "date": "9/30",
+            "date": "9/30(金)",
             "title": "集団面接セミナー",
             "url": "https://en-courage.com/events/Npp2opqeAj8cOHtKTTqv",
-            "image": "10\/8\/62UjE2lHRuR64kHxMiiy4IsezQqsg1t4cQlgk4mJoXFoQUlfvooOr7PJ89J226Hw.jpeg"
+            "image": "10\/8\/62UjE2lHRuR64kHxMiiy4IsezQqsg1t4cQlgk4mJoXFoQUlfvooOr7PJ89J226Hw.jpeg",
+            "start": "19:00",
+            "end": "21:00"
         },
         {
             "id": 6,
             "type": "GD",
-            "date": "10/14",
+            "date": "10/14(金)",
             "title": "【GD vol1 の続編！】GD vol 1.5 　～秋冬インターン・選考対策に向けて～",
             "url": "https://en-courage.com/events/QXiCzQ445pqFcQZQD86P",
-            "image": "10\/9\/X1F6AJEwAfBo2hhfFKJ1wHEwCyEwJLNjvEl6eqazIdnfJrfqCgk9bXSt8zG988Hy.jpeg"
+            "image": "10\/9\/X1F6AJEwAfBo2hhfFKJ1wHEwCyEwJLNjvEl6eqazIdnfJrfqCgk9bXSt8zG988Hy.jpeg",
+            "start": "19:00",
+            "end": "21:00"
         },
         {
             "id": 7,
             "type": "面接",
-            "date": "10/17",
+            "date": "10/17(月)",
             "title": "【選考突破率グーンとアップ】集団面接セミナー（前回参加者も参加可能！）",
             "url": "https://en-courage.com/events/Kn8kIbYKkoHhbpQGGR0f",
-            "image": "10\/9\/vocHisyb80zaZH1QtlhAqrZfIIP5h5cgdiH721UNGLTvIjMBg52zNuEGt8OkcCec.jpeg"
+            "image": "10\/9\/vocHisyb80zaZH1QtlhAqrZfIIP5h5cgdiH721UNGLTvIjMBg52zNuEGt8OkcCec.jpeg",
+            "start": "20:15",
+            "end": "21:15"
         },
         {
             "id": 8,
             "type": "GD",
-            "date": "10/26",
+            "date": "10/24(月)",
             "title": "【秋冬インターンに向けて最後のブラッシュアップ】GD実践編vol2",
             "url": "https://en-courage.com/events/jZ8QXRBxE8Pey1SDMDWK",
-            "image": "10\/9\/z8NkrumDwdEVm2wwHLA96Z3fpS88TkUZL2j51CwBY0ofOOohHsMa6sngmuqmtfGF.jpeg"
+            "image": "10\/9\/z8NkrumDwdEVm2wwHLA96Z3fpS88TkUZL2j51CwBY0ofOOohHsMa6sngmuqmtfGF.jpeg",
+            "start": "19:00",
+            "end": "21:00"
         },
         {
             "id": 9,
             "type": "説明会",
-            "date": "10/29",
+            "date": "10/29(土)",
             "title": "今だからこそ、業界広く見とかない？👀　10業界（まだまだ増える予定！）内定者座談会",
             "url": "https://en-courage.com/events/NhGGP3XQKUXUkAt26xOt",
-            "image": "10\/9\/mmvj98TwkrTqHxaKJJkstQRTQqSM9YTTtFMszvToNRQwSZR2kjXsyZebv4keF7vt.jpeg"
+            "image": "10\/9\/mmvj98TwkrTqHxaKJJkstQRTQqSM9YTTtFMszvToNRQwSZR2kjXsyZebv4keF7vt.jpeg",
+            "start": "19:00",
+            "end": "20:30"
         },
         {
             "id": 10,
             "type": "説明会",
-            "date": "10/31",
+            "date": "10/31(月)",
             "title": "文系も理系も！メーカー気になる人集まれ座談会📢～機械・食品飲料・化学など～",
             "url": "https://en-courage.com/events/gBGNkLZQEl2vX7KTaAX2",
-            "image": "10\/9\/1oLqlZkuYnUxW05ywF2xGcECQOWbhY0MTHhyJSUjZ2ahdpey8vM1gBI1dtXApLNn.png"
+            "image": "10\/9\/1oLqlZkuYnUxW05ywF2xGcECQOWbhY0MTHhyJSUjZ2ahdpey8vM1gBI1dtXApLNn.png",
+            "start": "19:00",
+            "end": "20:30"
         }
     ]
 }

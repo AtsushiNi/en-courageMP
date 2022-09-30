@@ -77,6 +77,9 @@
                   foreach($events as $event) {
                     $title = $event["title"];
                     $date = $event["date"];
+                    $start = $event["start"];
+                    $end = $event["end"];
+                    $date_time = $date . " " . $start . "~" . $end;
                     $image = $event["image"];
                     $url = $event["url"];
                     echo <<< EOM
@@ -84,7 +87,8 @@
                         <div>
                           <img src="../images/events/{$image}" class="image">
                           <div>
-                            <p>{$date}<br>{$title}</p>
+                            <p class="event-datetime">{$date_time}</p>
+                            <p>{$title}</p>
                           </div>
                         </div>
                         <a href="{$url}" target="_blank" class="background"></a>
