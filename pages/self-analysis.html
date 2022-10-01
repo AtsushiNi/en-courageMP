@@ -1,42 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
+<?php $Path = '../'; ?>
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
-    </script>
-    <!-- End Google Tag Manager -->
-    <meta charset='utf-8' />
-    <title>en-courage京大支部</title>
-    <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-    <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-    <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-    <link href='../css/default.css' rel='stylesheet' />
-    <link href='../css/self-analysis.css' rel='stylesheet' />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/self-analysis.css' />
 </head>
 
-<?php $Path = '../'; ?>
 <?php
     $json = file_get_contents("../admin/data/experience.json");
     $json = json_decode($json, true);
@@ -77,51 +48,51 @@
 ?>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <?php include(__DIR__ . '/../components/header.html'); ?>
-    <div class="content">
-        <main>
-            <div class="title">
-                <h1>自己分析</h1>
-                <div class="how-to-use-content">
-                    <img src='../images/self-analysis/how-to-use.jpg' alt="" class='how-to-use-logo'>
-                    <ul>
-                        <li>知る→体験記とオモシロコラム</li>
-                        <li>参加→自己分析にピッタリのイベント</li>
-                    </ul>
-                </div>
-            </div>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <div class="title">
+        <h1>自己分析</h1>
+        <div class="how-to-use-content">
+          <img src='../images/self-analysis/how-to-use.jpg' alt="" class='how-to-use-logo'>
+          <ul>
+            <li>知る→体験記とオモシロコラム</li>
+            <li>参加→自己分析にピッタリのイベント</li>
+          </ul>
+        </div>
+      </div>
 
-            <div class="block pickup">
-                <div class="pickup">
-                    <div>
-                        <h1>Pick Up !</h1>
-                        <img src="../images/self-analysis/IMG_5942.PNG" class="pickup-img" />
-                    </div>
-                    <?php
+      <div class="block pickup">
+        <div class="pickup">
+          <div>
+            <h1>Pick Up !</h1>
+            <img src="../images/self-analysis/IMG_5942.PNG" class="pickup-img" />
+          </div>
+          <?php
                             $path = "../images/events/".$pick_up["image"];
                             echo '<a href="'.$pick_up["url"].'" target="_blank"/>';
                             echo '<img src="'.$path.'"/>';
                     ?>
-                    </a>
-                </div>
-            </div>
+          </a>
+        </div>
+      </div>
 
-            <div class="block" id="know">
-                <div class='band'>
-                    <div class="band-string">
-                        <h1>知る&nbsp;&nbsp;&nbsp;<span>know</span></h1>
-                    </div>
-                </div>
-                <div class="component">
-                    <h1>選考体験記</h1>
-                    <div class="item-list">
-                        <button class="ul-button left"></button>
-                        <ul id="prepare-item-list">
-                            <?php
+      <div class="block" id="know">
+        <div class='band'>
+          <div class="band-string">
+            <h1>知る&nbsp;&nbsp;&nbsp;<span>know</span></h1>
+          </div>
+        </div>
+        <div class="component">
+          <h1>選考体験記</h1>
+          <div class="item-list">
+            <button class="ul-button left"></button>
+            <ul id="prepare-item-list">
+              <?php
                                 foreach ($experiences as $experience) {
                                     $company = $experience["company"];
                                     $id = $experience["id"];
@@ -139,21 +110,21 @@
                                     EOM;
                                 }
                             ?>
-                        </ul>
-                        <button class="ul-button right">
-                        </button>
-                    </div>
-                    <div class="view-more" id="prepare-view-more">
-                        <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a>
-                    </div>
-                </div>
+            </ul>
+            <button class="ul-button right">
+            </button>
+          </div>
+          <div class="view-more" id="prepare-view-more">
+            <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a>
+          </div>
+        </div>
 
-                <div class="component">
-                    <h1>コラム</h1>
-                    <div class="item-list">
-                        <button class="ul-button left"></button>
-                        <ul id="prepare-item-list">
-                            <?php
+        <div class="component">
+          <h1>コラム</h1>
+          <div class="item-list">
+            <button class="ul-button left"></button>
+            <ul id="prepare-item-list">
+              <?php
                                 foreach($columns as $column) {
                                     $id = $column["id"];
                                     $title = $column["title"];
@@ -171,26 +142,26 @@
                                     EOM;
                                 }
                             ?>
-                        </ul>
-                        <button class="ul-button right">
-                    </div>
-                    <div class="view-more" id="prepare-view-more">
-                        <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a>
-                    </div>
-                </div>
-            </div>
+            </ul>
+            <button class="ul-button right">
+          </div>
+          <div class="view-more" id="prepare-view-more">
+            <a href="../pages/articles.html" class="view-more-btn" id="prepare">view more</a>
+          </div>
+        </div>
+      </div>
 
-            <div class="block" id="join">
-                <div class='band'>
-                    <div class="band-string right">
-                        <h1><span>join</span>&nbsp;&nbsp;&nbsp;参加する</h1>
-                    </div>
-                </div>
+      <div class="block" id="join">
+        <div class='band'>
+          <div class="band-string right">
+            <h1><span>join</span>&nbsp;&nbsp;&nbsp;参加する</h1>
+          </div>
+        </div>
 
-                <div class="component">
-                    <div class="item-list">
-                        <ul id="prepare-item-list">
-                            <?php
+        <div class="component">
+          <div class="item-list">
+            <ul id="prepare-item-list">
+              <?php
                                     foreach ($events as $event) {
                                         $href = $event["url"];
                                         $title = $event["title"];
@@ -209,27 +180,27 @@
                                         EOM;
                                     }
                                 ?>
-                        </ul>
-                    </div>
-                    <!-- <div class="view-more" id="prepare-view-more"> -->
-                    <!--     <a class="view-more-btn" id="prepare">view more</a> -->
-                    <!-- </div> -->
-                </div>
-            </div>
+            </ul>
+          </div>
+          <!-- <div class="view-more" id="prepare-view-more"> -->
+          <!--     <a class="view-more-btn" id="prepare">view more</a> -->
+          <!-- </div> -->
+        </div>
+      </div>
 
-            <div class="block">
-                <div class="return-btn">
-                    <a class="return" href="../index.html">トップページへ戻る</a>
-                </div>
-            </div>
-        </main>
-    </div>
-    <div id="page_top"><a href="#"></a></div>
-    <?php include(__DIR__ . '/../components/footer.html'); ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/script.js"></script>
-    <script type="text/javascript" src="../js/self-analysis.js"></script>
-    <script src='../js/view_more.js'></script>
+      <div class="block">
+        <div class="return-btn">
+          <a class="return" href="../index.html">トップページへ戻る</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/self-analysis.js"></script>
+  <script src='../js/view_more.js'></script>
 </body>
 
 </html>

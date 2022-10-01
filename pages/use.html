@@ -1,52 +1,29 @@
 <!DOCTYPE html>
 <html>
+
+<?php $Path = '../'; ?>
+
 <head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WLHCR88');
-  </script>
-  <!-- End Google Tag Manager -->
-  <meta charset='utf-8' />
-  <title>en-courage京大支部</title>
-  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-  <link href='../css/default.css' rel='stylesheet' />
-  <link href='../css/use.css' rel='stylesheet' />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/use.css' />
 </head>
-  <?php $Path = '../'; ?>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <?php include(__DIR__ . '/../components/header.html'); ?>
-    <main>
-      <div id="main-title">
-        None
-      </div>
-    </main>
-    <div id="page_top"><a href="#"></a></div>
-    <?php include(__DIR__ . '/../components/footer.html'); ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/script.js"></script>
-  </body>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <main>
+    <div id="main-title">
+      None
+    </div>
+  </main>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+</body>
+
 </html>

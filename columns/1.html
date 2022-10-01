@@ -1,113 +1,84 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
-    </script>
-    <!-- End Google Tag Manager -->
-    <meta charset='utf-8' />
-    <title>en-courage京大支部</title>
-    <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-    <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-    <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-    <link href='../css/default.css' rel='stylesheet' />
-    <link href='../css/column.css' rel='stylesheet' />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-</head>
 <?php $Path = '../'; ?>
 
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/column.css'/>
+</head>
+
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <?php include(__DIR__ . '/../components/header.html'); ?>
-    <div class="content">
-        <article>
-            <div class="section title">
-                <img src="../images/columns/selection-reason.jpg" class="sample_img">
-                <h4>内定先決定理由コラム</h4>
-                <h1>理系学部生・化学メーカー（医療機器）</h1>
-            </div>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <article>
+      <div class="section title">
+        <img src="../images/columns/selection-reason.jpg" class="sample_img">
+        <h4>内定先決定理由コラム</h4>
+        <h1>理系学部生・化学メーカー（医療機器）</h1>
+      </div>
 
-            <div class="section">
-                <div id="mokuji" class="close">
-                    <div id="mokuji-button">
-                        <button>
-                            <h3>目次</h3>
-                        </button>
-                    </div>
-                    <div id="mokuji-ul">
-                        <ul>
-                            <li>
-                                <a href="#1">
-                                    医療機器業界、特に内定先を選んだ理由
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#2">
-                                    選考体験
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="section">
+        <div id="mokuji" class="close">
+          <div id="mokuji-button">
+            <button>
+              <h3>目次</h3>
+            </button>
+          </div>
+          <div id="mokuji-ul">
+            <ul>
+              <li>
+                <a href="#1">
+                  医療機器業界、特に内定先を選んだ理由
+                </a>
+              </li>
+              <li>
+                <a href="#2">
+                  選考体験
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-            <div class="section">
-                <h3 class="section-title" id="1">
-                    医療機器業界、特に内定先を選んだ理由
-                </h3>
-                <div class="section-body">
-                    まず医療機器業界を選んだ理由ですが、結論から言うと「医療IT技術の開発によって医師と患者双方の負担を軽減したい」と考えたからです。僕は大学院で「医用画像処理AI」について研究を行っていまして、その過程で、医療には未だに多くの課題が存在し、その中にはIT技術によって解決できるものがたくさんあると感じました。<br>
-                    もともと大学院から研究室を変えてまで医療に関する研究を行いたかったというのもあり、医療への思い入れは強かったです。人のために何かをして喜ばれることがすごく好きだった自分は、それを突き詰めた時に医療技術によって命を救うという選択肢に至りました。そこで、大学院では医用工学の道に進み、研究を通してその思いが信念を帯びてより強くなったという流れです。<br>
-                    次に、数ある医療機器メーカーの中から内定先を選んだ理由についてです。これはいくつかあるのですが、一番は「自分のやりたいことが一番できる企業」だったからです。他の企業と内定先の大きな違いは、「医療にAIを積極的に導入している」という部分だと思います。先ほども述べたように、僕はIT技術を用いた新たな医療技術の開発ということに焦点を当てていたため、製品ラインナップや企業方針などから自ずと内定先が第一志望となりました。他にも、給料・カバー領域の広さ・将来性・勤務地など企業選定軸はたくさんあり、すべてにおいて内定先が一番でした。<br>
-                </div>
-            </div>
+      <div class="section">
+        <h3 class="section-title" id="1">
+          医療機器業界、特に内定先を選んだ理由
+        </h3>
+        <div class="section-body">
+          まず医療機器業界を選んだ理由ですが、結論から言うと「医療IT技術の開発によって医師と患者双方の負担を軽減したい」と考えたからです。僕は大学院で「医用画像処理AI」について研究を行っていまして、その過程で、医療には未だに多くの課題が存在し、その中にはIT技術によって解決できるものがたくさんあると感じました。<br>
+          もともと大学院から研究室を変えてまで医療に関する研究を行いたかったというのもあり、医療への思い入れは強かったです。人のために何かをして喜ばれることがすごく好きだった自分は、それを突き詰めた時に医療技術によって命を救うという選択肢に至りました。そこで、大学院では医用工学の道に進み、研究を通してその思いが信念を帯びてより強くなったという流れです。<br>
+          次に、数ある医療機器メーカーの中から内定先を選んだ理由についてです。これはいくつかあるのですが、一番は「自分のやりたいことが一番できる企業」だったからです。他の企業と内定先の大きな違いは、「医療にAIを積極的に導入している」という部分だと思います。先ほども述べたように、僕はIT技術を用いた新たな医療技術の開発ということに焦点を当てていたため、製品ラインナップや企業方針などから自ずと内定先が第一志望となりました。他にも、給料・カバー領域の広さ・将来性・勤務地など企業選定軸はたくさんあり、すべてにおいて内定先が一番でした。<br>
+        </div>
+      </div>
 
-            <div class="section">
-                <h3 class="section-title" id="2">
-                    選考体験
-                </h3>
-                <div class="section-body">
-                    ここでは、インターンから本選考までの体験を話したいと思います。<br>
-                    まず内定先の夏インターンですが、化学系などは開催されていたのに対して、ヘルスケア領域の募集はありませんでした。情報系の夏インターンとしては、ハッカソンが豊富に開催されていたので僕も参加しましたが、ちょうど研究などで忙しい期間と重なり、目立った結果を残すことはできませんでした。そもそも、プログラミング経験の浅かった自分が本気で取り組んでも良い成績は残せなかったと思います。そのため、インターンは経由せずに本選考に臨みました。<br>
-                    僕が受けた選考は少し特殊で、内定と奨学金が同時にもらえる、「奨学生選考」と呼ばれる早期の選考でした。この選考の存在は、内定者のメンターが開催してくれた同社人事との座談会で知りました。ここで縁の重要さを実感しました。選考過程のうち、ここでは技術面接と所長面接について話します。<br>
-                    まず技術面接では、自分の研究内容を技術系社員に説明し、質疑応答するという面接内容になっています。かなり厳しい質問が飛んでくるので、研究ちゃんとやっててよかったと強く思いました。というのも、僕は研究は大学院から始めたというのもあり、夏時点では成果が得られておらず、ES段階で落とされることが多かったです。なので、夏以降は秋冬インターン参加よりも、研究で成果を出すことを第一に熱心に研究に取り組んでいました。これが功を奏したと感じています。<br>
-                    次に所長面接は、研究所の所長らが面接官となる最終面接です。前回の技術面接で、一定の研究知識や技術はあることが認められたと考えたので、この面接では自分の人柄を最大限発揮することを意識しました。話がそれるのですが、正直僕が内定を頂けたのはこの人柄による部分が大きいと思います。なぜなら、研究を始めて1年で大したスキルもなく、またwebテスト関連でひどいスコアを叩き出したような僕だからです。それが分かっていたので、技術者らしくないような、明るく陽気な人物像をアピールしました。面接前に答えさせられるアンケートに、わざと陽気なエピソードを入れてみたり。詳しくは選考体験記をお読みください。<br>
-                    以上の流れで、私は第一志望に内定することができました。同社に内定するために必要なことは、これは後々人事部長がおっしゃっていたことなのですが、職場で活躍できるポテンシャルを持っていることです。なので、現在のスキルよりも、「自分はこういう人間で、こういう強い思いがあるのだ」ということをアピールすることが大切です。長くなりましたが、以上をコラムとさせていただきます。<br>
-                </div>
-            </div>
-        </article>
-    </div>
-    <div id="page_top"><a href="#"></a></div>
-    <?php include(__DIR__ . '/../components/footer.html'); ?>
+      <div class="section">
+        <h3 class="section-title" id="2">
+          選考体験
+        </h3>
+        <div class="section-body">
+          ここでは、インターンから本選考までの体験を話したいと思います。<br>
+          まず内定先の夏インターンですが、化学系などは開催されていたのに対して、ヘルスケア領域の募集はありませんでした。情報系の夏インターンとしては、ハッカソンが豊富に開催されていたので僕も参加しましたが、ちょうど研究などで忙しい期間と重なり、目立った結果を残すことはできませんでした。そもそも、プログラミング経験の浅かった自分が本気で取り組んでも良い成績は残せなかったと思います。そのため、インターンは経由せずに本選考に臨みました。<br>
+          僕が受けた選考は少し特殊で、内定と奨学金が同時にもらえる、「奨学生選考」と呼ばれる早期の選考でした。この選考の存在は、内定者のメンターが開催してくれた同社人事との座談会で知りました。ここで縁の重要さを実感しました。選考過程のうち、ここでは技術面接と所長面接について話します。<br>
+          まず技術面接では、自分の研究内容を技術系社員に説明し、質疑応答するという面接内容になっています。かなり厳しい質問が飛んでくるので、研究ちゃんとやっててよかったと強く思いました。というのも、僕は研究は大学院から始めたというのもあり、夏時点では成果が得られておらず、ES段階で落とされることが多かったです。なので、夏以降は秋冬インターン参加よりも、研究で成果を出すことを第一に熱心に研究に取り組んでいました。これが功を奏したと感じています。<br>
+          次に所長面接は、研究所の所長らが面接官となる最終面接です。前回の技術面接で、一定の研究知識や技術はあることが認められたと考えたので、この面接では自分の人柄を最大限発揮することを意識しました。話がそれるのですが、正直僕が内定を頂けたのはこの人柄による部分が大きいと思います。なぜなら、研究を始めて1年で大したスキルもなく、またwebテスト関連でひどいスコアを叩き出したような僕だからです。それが分かっていたので、技術者らしくないような、明るく陽気な人物像をアピールしました。面接前に答えさせられるアンケートに、わざと陽気なエピソードを入れてみたり。詳しくは選考体験記をお読みください。<br>
+          以上の流れで、私は第一志望に内定することができました。同社に内定するために必要なことは、これは後々人事部長がおっしゃっていたことなのですが、職場で活躍できるポテンシャルを持っていることです。なので、現在のスキルよりも、「自分はこういう人間で、こういう強い思いがあるのだ」ということをアピールすることが大切です。長くなりましたが、以上をコラムとさせていただきます。<br>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/script.js"></script>
-    <script type="text/javascript" src="../js/footer_script.js"></script>
-    <script type="text/javascript" src="../js/column.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+  <script type="text/javascript" src="../js/column.js"></script>
 </body>
 
 </html>

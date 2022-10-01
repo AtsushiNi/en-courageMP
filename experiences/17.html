@@ -1,596 +1,579 @@
 <!DOCTYPE html>
 <html>
-      <head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WLHCR88');
-    </script>
-    <!-- End Google Tag Manager -->
-        <meta charset='utf-8' />
-        <title>en-courage京大支部</title>
-        <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-        <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-        <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-        <link href='../css/default.css' rel='stylesheet' />
-        <link href='../css/experience.css' rel='stylesheet' />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    </head>
-    <?php $Path = '../'; ?>
+<?php $Path = '../'; ?>
 
-      <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-        <?php include(__DIR__ . '/../components/header.html'); ?>
-        <div class="content">
-            <main>
-                <img src="../images/industries/consulting.png" class="sample_img">
-                <h1>PwCの選考体験記</h1>
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/experience.css' />
+</head>
 
-                <div class="section">
-                    <h2>目次</h2>
-                    <div class="flow">
-                        <ul class="cp_stepflow01">
-                            <li>
-      <span class="bubble"></span>
-      <a href="#0">
-          <div>
-              <img src="../images/experience/ES.png">
-              <div>
-                エントリーシート
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#1">
-          <div>
-              <img src="../images/experience/web-test.png">
-              <div>
-                WEBテスト・動画面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#2">
-          <div>
-              <img src="../images/experience/GD.png">
-              <div>
-                GD
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#3">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                ケース面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#4">
-          <div>
-              <img src="../images/experience/intern.png">
-              <div>
-                インターン（ジョブ）
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#5">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                最終面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble last"></span>
-      <a href="#6">
-          <div>
-              <img src="../images/experience/good.png">
-              <div>
-                内定
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#7">
-          <div>
-              <img src="../images/experience/impressions.png">
-              <div>
-                選考全体の感想
-              </div>
-          </div>
-      </a>
-  </li>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <img src="../images/industries/consulting.png" class="sample_img">
+      <h1>PwCの選考体験記</h1>
 
-                        </ul>
-                    </div>
+      <div class="section">
+        <h2>目次</h2>
+        <div class="flow">
+          <ul class="cp_stepflow01">
+            <li>
+              <span class="bubble"></span>
+              <a href="#0">
+                <div>
+                  <img src="../images/experience/ES.png">
+                  <div>
+                    エントリーシート
+                  </div>
                 </div>
-              <div class="section ">
-    <h2>
-      <a id="0">
-        エントリーシート
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      提出期日/提出方法
-    </th>
-    <td>
-      ないです！！！！
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#1">
+                <div>
+                  <img src="../images/experience/web-test.png">
+                  <div>
+                    WEBテスト・動画面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#2">
+                <div>
+                  <img src="../images/experience/GD.png">
+                  <div>
+                    GD
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#3">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    ケース面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#4">
+                <div>
+                  <img src="../images/experience/intern.png">
+                  <div>
+                    インターン（ジョブ）
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#5">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    最終面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble last"></span>
+              <a href="#6">
+                <div>
+                  <img src="../images/experience/good.png">
+                  <div>
+                    内定
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#7">
+                <div>
+                  <img src="../images/experience/impressions.png">
+                  <div>
+                    選考全体の感想
+                  </div>
+                </div>
+              </a>
+            </li>
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/通知方法
-    </th>
-    <td>
-      6月・メール
+          </ul>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="0">
+            エントリーシート
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  提出期日/提出方法
+                </th>
+                <td>
+                  ないです！！！！
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    質問１：ガクチカ（400）
-  </h3>
-  <div class="text">
-    あなたのこれまでの人生の中で、最大のチャレンジについて教えてください。（字数自由）<br />
-私の人生で最大のチャレンジであったことは、経験談を伝えるラジオ番組を立ち上げ◯◯の理解度向上に寄与したことだ。私は◯◯経験者としてその認知度の低さに問題意識を抱き、経験者の声を社会に伝える場が必要だと考えた。しかし、他の◯◯経験者との接点はなく伝える場もなかった。そこで経験者支援を行う◯◯に連絡して関連プロジェクトに参加し他の経験者との接点を持った。そして、ラジオ経験を生かした新番組制作を提案したところ賛同を得られ、協同制作を行った。番組では◯◯や◯◯を知識のない人にも伝わるようインタビューした。主体的に行動し自身の経験と結び付けたことで、経験者の声を視聴者へ発信でき社会の認知度向上に貢献した。<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/通知方法
+                </th>
+                <td>
+                  6月・メール
 
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="1">
-        WEBテスト・動画面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      形式
-    </th>
-    <td>
-      TG-Web
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問１：ガクチカ（400）
+        </h3>
+        <div class="text">
+          あなたのこれまでの人生の中で、最大のチャレンジについて教えてください。（字数自由）<br />
+          私の人生で最大のチャレンジであったことは、経験談を伝えるラジオ番組を立ち上げ◯◯の理解度向上に寄与したことだ。私は◯◯経験者としてその認知度の低さに問題意識を抱き、経験者の声を社会に伝える場が必要だと考えた。しかし、他の◯◯経験者との接点はなく伝える場もなかった。そこで経験者支援を行う◯◯に連絡して関連プロジェクトに参加し他の経験者との接点を持った。そして、ラジオ経験を生かした新番組制作を提案したところ賛同を得られ、協同制作を行った。番組では◯◯や◯◯を知識のない人にも伝わるようインタビューした。主体的に行動し自身の経験と結び付けたことで、経験者の声を視聴者へ発信でき社会の認知度向上に貢献した。<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      難易度・ボーダー
-    </th>
-    <td>
-      ふつう
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="1">
+            WEBテスト・動画面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  形式
+                </th>
+                <td>
+                  TG-Web
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      対策方法
-    </th>
-    <td>
-      参考書
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  難易度・ボーダー
+                </th>
+                <td>
+                  ふつう
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    動画面接
-  </h3>
-  <div class="text">
-    自らの所属する団体（大学、研究室、ゼミ、学生団体、アルバイト先等…）を一つ上げ、<br />
-その団体が抱える課題を「ITソリューションコンサルタントとして」解決する方法を述べてください。<br />
-というお題に対し60秒以内で答える。<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  対策方法
+                </th>
+                <td>
+                  参考書
 
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="2">
-        GD
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      時期
-    </th>
-    <td>
-      7月下旬
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          動画面接
+        </h3>
+        <div class="text">
+          自らの所属する団体（大学、研究室、ゼミ、学生団体、アルバイト先等…）を一つ上げ、<br />
+          その団体が抱える課題を「ITソリューションコンサルタントとして」解決する方法を述べてください。<br />
+          というお題に対し60秒以内で答える。<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      40分
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="2">
+            GD
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  時期
+                </th>
+                <td>
+                  7月下旬
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      パートナー1名に対し学生7名
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  40分
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      1週間以内にメール
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  パートナー1名に対し学生7名
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    お題
-  </h3>
-  <div class="text">
-    良い仕組みとは<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  1週間以内にメール
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    タイムマネジメントと抽象度の高いお題に対してのある程度明確な回答が出来るように心がけた。また、時間が短いため、筋違いな意見を言っているメンバーに対し、端的かつ分かりやすくズレてることを指摘するようにした。<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          お題
+        </h3>
+        <div class="text">
+          良い仕組みとは<br />
 
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="3">
-        ケース面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      8月上旬
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          タイムマネジメントと抽象度の高いお題に対してのある程度明確な回答が出来るように心がけた。また、時間が短いため、筋違いな意見を言っているメンバーに対し、端的かつ分かりやすくズレてることを指摘するようにした。<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      45分
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="3">
+            ケース面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  8月上旬
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      1:1
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  45分
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      2～3日以内にメール
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  1:1
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    内容（テーマ・プレゼン時間など）
-  </h3>
-  <div class="text">
-    ケース面接として、第一次産業（農業林業漁業）のある組織（なんでもよし）が課題を抱えているとき、ITを用いて解決できる施策を考えた。思考時間は一定貰える。ケース面接後は、コロナきっかけで生活において工夫したことなど。逆質問の時間もある。<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  2～3日以内にメール
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    ケース面接では、MECEに施策を考え、優先順位を付けることまで一通り行うことを心がけた。フィードバックで、ITについての知識があることを確認したい、と言われたのである程度の知識が求められている。<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          ケース面接として、第一次産業（農業林業漁業）のある組織（なんでもよし）が課題を抱えているとき、ITを用いて解決できる施策を考えた。思考時間は一定貰える。ケース面接後は、コロナきっかけで生活において工夫したことなど。逆質問の時間もある。<br />
 
-  </div>
-</div>  <div class="section atsumori">
-    <h2>
-      <a id="4">
-        インターン（ジョブ）
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      開催時期/実施日数
-    </th>
-    <td>
-      8月下旬/1day
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          ケース面接では、MECEに施策を考え、優先順位を付けることまで一通り行うことを心がけた。フィードバックで、ITについての知識があることを確認したい、と言われたのである程度の知識が求められている。<br />
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    内容
-  </h3>
-  <div class="text">
-    午前は説明会と午後に利用するセールスフォースの利用方法についてのインプット。午後はワークで、課題はとあるクライアントの膨大な現状のセールスフォースデータを分析しての提案を行うもの。3時間程度でアウトプットを求められる。<br />
-セールスフォースのデータをまとめる（現状分析）→ボトルネック特定→提案の検討→発表スライドの制作<br />
+        </div>
+      </div>
+      <div class="section atsumori">
+        <h2>
+          <a id="4">
+            インターン（ジョブ）
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  開催時期/実施日数
+                </th>
+                <td>
+                  8月下旬/1day
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    インプットが十分量あり、業務理解をしっかり行ったのちケースワークでき、働くイメージをつけやすい。<br />
-課題に関して、時間が非常にタイトな一方でグループメンバーは多いので上手く分業して、アウトプットの作成までこぎつけた。<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容
+        </h3>
+        <div class="text">
+          午前は説明会と午後に利用するセールスフォースの利用方法についてのインプット。午後はワークで、課題はとあるクライアントの膨大な現状のセールスフォースデータを分析しての提案を行うもの。3時間程度でアウトプットを求められる。<br />
+          セールスフォースのデータをまとめる（現状分析）→ボトルネック特定→提案の検討→発表スライドの制作<br />
 
-  </div>
-  <h3>
-    選考への影響
-  </h3>
-  <div class="text">
-    有<br />
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          インプットが十分量あり、業務理解をしっかり行ったのちケースワークでき、働くイメージをつけやすい。<br />
+          課題に関して、時間が非常にタイトな一方でグループメンバーは多いので上手く分業して、アウトプットの作成までこぎつけた。<br />
 
-  </div>
-</div>  <div class="atsumori-event">
-    <h2>対策イベント！</h2>
-    <div class="event">
-      <?php
+        </div>
+        <h3>
+          選考への影響
+        </h3>
+        <div class="text">
+          有<br />
+
+        </div>
+      </div>
+      <div class="atsumori-event">
+        <h2>対策イベント！</h2>
+        <div class="event">
+          <?php
         $page_title = basename(__FILE__);
         preg_match("/[0-9]+/", $page_title, $id);
         $id = $id[0];
         require("../backend/get_atsumori_event.php");
       ?>
-    </div>
-  </div>
-  <div class="section ">
-    <h2>
-      <a id="5">
-        最終面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      期間内であれば自分で好きなタイミングで受けられるが、合格の場合1カ月以内に意思表示が必要
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      45分
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      1:1
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      2～3日以内にメール
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    内容（テーマ・プレゼン時間など）
-  </h3>
-  <div class="text">
-    志望理由の深堀がメイン。ほぼネガティブチェックであり、ジョブで内定を出すか既に決まっていそうな印象だった。<br />
-逆質問の時間あり。<br />
-
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    第一志望群でなかったので特になし。<br />
-
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="6">
-        内定
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      内定時期
-    </th>
-    <td>
-      12月末
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾検討期間
-    </th>
-    <td>
-      1ヵ月
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾or辞退
-    </th>
-    <td>
-      辞退
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾or辞退理由
-    </th>
-    <td>
-      第一志望の企業に内定を頂いたため。
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      内定者属性（大学とか文理とか）
-    </th>
-    <td>
-      知らない...
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="7">
-        選考全体の感想
-      </a>
-    </h2>
-  <h3>
-    内定先に興味を持ったきっかけ
-  </h3>
-  <div class="text">
-    様々な業界に携われると同時にIT技能も高めることができることに魅力を感じた<br />
-
-  </div>
-  <h3>
-    どういった基準でこの企業を選んだか
-  </h3>
-  <div class="text">
-    医療業界に接点があるかどうか、成長環境かどうか<br />
-
-  </div>
-  <h3>
-    選考を通して重要視されたと感じた点
-  </h3>
-  <div class="text">
-    論理的思考力や一定のIT知識、議論を引っ張るリーダーシップ<br />
-
-  </div>
-  <h3>
-    同業他社と比べてこの企業の魅力は？
-  </h3>
-  <div class="text">
-    社員（人）の良さ<br />
-
-  </div>
-  <h3>
-    この企業を受けるにあたって工夫した点
-  </h3>
-  <div class="text">
-    特になし<br />
-
-  </div>
-  <h3>
-    社員（と内定者）にどのような印象を持ったか
-  </h3>
-  <div class="text">
-    クライアントのことを念頭に置いて仕事をしている<br />
-
-  </div>
-  <h3>
-    後輩へのアドバイス
-  </h3>
-  <div class="text">
-    ITコンサルのうち、ERP・SFAをメインに行っている。<br />
-AR/VRやRPAなど先進テクノロジーも扱う。入社後は専門領域が確立されるため、広くIT領域に携わりたい人には不向きなものの、プロフェッショナルを目指す人にとっては海外出向も加納で魅力的な環境となっている。<br />
-
-  </div>
-</div>
-            </main>
-            <?php include(__DIR__ . '/../components/sidebar.html'); ?>
         </div>
-        <div id="page_top"><a href="#"></a></div>
-        <?php include(__DIR__ . '/../components/footer.html'); ?>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="5">
+            最終面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  期間内であれば自分で好きなタイミングで受けられるが、合格の場合1カ月以内に意思表示が必要
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/script.js"></script>
-        <script type="text/javascript" src="../js/sidebar_script.js"></script>
-        <script type="text/javascript" src="../js/footer_script.js"></script>
-    </body>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  45分
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  1:1
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  2～3日以内にメール
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          志望理由の深堀がメイン。ほぼネガティブチェックであり、ジョブで内定を出すか既に決まっていそうな印象だった。<br />
+          逆質問の時間あり。<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          第一志望群でなかったので特になし。<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="6">
+            内定
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  内定時期
+                </th>
+                <td>
+                  12月末
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾検討期間
+                </th>
+                <td>
+                  1ヵ月
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退
+                </th>
+                <td>
+                  辞退
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退理由
+                </th>
+                <td>
+                  第一志望の企業に内定を頂いたため。
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  内定者属性（大学とか文理とか）
+                </th>
+                <td>
+                  知らない...
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="7">
+            選考全体の感想
+          </a>
+        </h2>
+        <h3>
+          内定先に興味を持ったきっかけ
+        </h3>
+        <div class="text">
+          様々な業界に携われると同時にIT技能も高めることができることに魅力を感じた<br />
+
+        </div>
+        <h3>
+          どういった基準でこの企業を選んだか
+        </h3>
+        <div class="text">
+          医療業界に接点があるかどうか、成長環境かどうか<br />
+
+        </div>
+        <h3>
+          選考を通して重要視されたと感じた点
+        </h3>
+        <div class="text">
+          論理的思考力や一定のIT知識、議論を引っ張るリーダーシップ<br />
+
+        </div>
+        <h3>
+          同業他社と比べてこの企業の魅力は？
+        </h3>
+        <div class="text">
+          社員（人）の良さ<br />
+
+        </div>
+        <h3>
+          この企業を受けるにあたって工夫した点
+        </h3>
+        <div class="text">
+          特になし<br />
+
+        </div>
+        <h3>
+          社員（と内定者）にどのような印象を持ったか
+        </h3>
+        <div class="text">
+          クライアントのことを念頭に置いて仕事をしている<br />
+
+        </div>
+        <h3>
+          後輩へのアドバイス
+        </h3>
+        <div class="text">
+          ITコンサルのうち、ERP・SFAをメインに行っている。<br />
+          AR/VRやRPAなど先進テクノロジーも扱う。入社後は専門領域が確立されるため、広くIT領域に携わりたい人には不向きなものの、プロフェッショナルを目指す人にとっては海外出向も加納で魅力的な環境となっている。<br />
+
+        </div>
+      </div>
+    </main>
+    <?php include(__DIR__ . '/../components/sidebar.html'); ?>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/sidebar_script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
 </html>

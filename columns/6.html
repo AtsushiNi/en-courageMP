@@ -1,41 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-  <script>
-    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({
-      "userName": userName
-    })
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
-  </script>
-  <!-- End Google Tag Manager -->
-  <meta charset='utf-8' />
-  <title>en-courage京大支部</title>
-  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-  <link href='../css/default.css' rel='stylesheet' />
-  <link href='../css/column.css' rel='stylesheet' />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-</head>
 <?php $Path = '../'; ?>
+
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/column.css' />
+</head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -62,17 +33,17 @@
             <ul>
               <li>
                 <a href="#1">
-就活はじめ～夏インターンまで
+                  就活はじめ～夏インターンまで
                 </a>
               </li>
               <li>
                 <a href="#2">
-秋～冬インターンまで
+                  秋～冬インターンまで
                 </a>
               </li>
               <li>
                 <a href="#3">
-本選考～内々定まで
+                  本選考～内々定まで
                 </a>
               </li>
             </ul>
@@ -82,13 +53,13 @@
 
       <div class="section">
         <div class="section-body">
-このコラムは、メガバンクに就職することになった私の1年間の就活を振り返って書いたものである。
+          このコラムは、メガバンクに就職することになった私の1年間の就活を振り返って書いたものである。
         </div>
       </div>
 
       <div class="section">
         <h3 class="section-title" id="1">
-就活はじめ～夏インターンまで
+          就活はじめ～夏インターンまで
         </h3>
         <div class="section-body">
           　修士に上がる前の3月、私は就活をするのはまだ先のことだと思っていた。しかし隣の研究室の仲の良い友人が就活を始めているのを見て、もうそんな時期が来ているんだと思って就活を始めようと思った。今思えばその友人には感謝しなければならない。<br>
@@ -102,7 +73,7 @@
 
       <div class="section">
         <h3 class="section-title" id="2">
-秋～冬インターンまで
+          秋～冬インターンまで
         </h3>
         <div class="section-body">
           　秋からは夏のインターンを踏まえて自己分析を本格化させた。日系大手志望の人で夏までにあまり自己分析が出来なかったという人は、9月〜10月に比較的余裕が出来るのでこの時期にするといいと思う。夏のインターンでメガバンクに興味を持ったため、秋以降は食品メーカーとメガバンクの2つをメインで考えていた。しかしこの時期の一番の反省点は、「就活の軸」を決めることに固執するあまり、この全く異なる2つの業界に当てはまる（かつ他の業界には当てはまらない）文言をひたすら考えることに時間を使っていたということである。人間誰しも、自分の嗜好性や興味に一本の揺るぎない軸が通っていることなどほとんどなく、全く異なる別のものに魅力を感じるのは当然である。だから業界に合わせて「就活の軸」を無理に定めようとするのではなく、もっと早い段階で自分がその業界に興味を持ったポイントを素直に言語化すれば良かったと思っている。<br>
@@ -113,7 +84,7 @@
 
       <div class="section">
         <h3 class="section-title" id="3">
-本選考～内々定まで
+          本選考～内々定まで
         </h3>
         <div class="section-body">
           　2月からは本格的に社員面談が始まった。ここでは、気になることを質問することに加え、毎回社員の方に志望動機や銀行でやりたいことを壁打ちして、ブラッシュアップしていくことを意識した。また、銀行で働く自分の知り合いや先輩にも志望動機を見てもらいアドバイスをもらう中で、面接で話す時の表現や言い回しを積極的に拾っていった。<br>

@@ -1,69 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WLHCR88');
-    </script>
-    <!-- End Google Tag Manager -->
-    <meta charset="utf-8">
-    <meta name="google-site-verification" content="Ur7bUvFoaTbHX9ev7z45o-qwsiqR-gj86pvstV-4HQg" />
-    <title>en-courage京大支部</title>
-    <link rel=”shortcut icon” href=”images/favicons/favicon.ico” type=”image/x-icon”>
-    <link rel=”apple-touch-icon” href=”images/favicons/apple-touch-icon-180×180.png” sizes=”180×180″>
-    <link rel=”icon” type=”image/png” href=”images/favicons/android-chrome-192×192.png” sizes=”192×192″>
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-  </head>
+<?php $Path = './'; ?>
 
-  <?php $Path = './'; ?>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <?php include(__DIR__ . '/components/header.html'); ?>
-    <div class="content">
-      <main>
-        <div id="q_01" class="fit">
-            <div class="top">
-                <div class="top-wrap">
-                    <img src="./images/top.PNG" class="top-img">
-                    <h1>今日は、<br>どこから<span>可能性</span>を広げる？</h1>
-                </div>
-                <h2>en-courage京大支部</h2>
-            </div>
+<head>
+  <?php include(__DIR__ . '/components/head.html'); ?>
+  <link rel="stylesheet" href="css/index.css">
+</head>
 
-            <ul class="flexbox fw">
-                <li><a class="btn" href="./pages/self-analysis.html"><img src="./images/self.PNG" alt="" class="self-img"><p>自己分析</p></a></li>
-                <li><a class="btn" href="./pages/industry-research.html"><img src="./images/company.PNG" alt="" class="comp-img"><p>業界研究</p></a></li>
-                <li><a class="btn" href="./pages/selection-preparation.html"><img src="./images/exam.PNG" alt="" class="exam-img"><p>選考対策</p></a></li>
-            </ul>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/components/header.html'); ?>
+  <div class="content">
+    <main>
+      <div id="q_01" class="fit">
+        <div class="top">
+          <div class="top-wrap">
+            <img src="./images/top.PNG" class="top-img">
+            <h1>今日は、<br>どこから<span>可能性</span>を広げる？</h1>
+          </div>
+          <h2>en-courage京大支部</h2>
         </div>
-      </main>
-    </div>
-    <div id="page_top"><a href="#"></a></div>
-    <?php include(__DIR__ . '/components/footer.html'); ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/footer_script.js"></script>
-  </body>
+        <ul class="flexbox fw">
+          <li><a class="btn" href="./pages/self-analysis.html"><img src="./images/self.PNG" alt="" class="self-img">
+              <p>自己分析</p>
+            </a></li>
+          <li><a class="btn" href="./pages/industry-research.html"><img src="./images/company.PNG" alt=""
+                class="comp-img">
+              <p>業界研究</p>
+            </a></li>
+          <li><a class="btn" href="./pages/selection-preparation.html"><img src="./images/exam.PNG" alt=""
+                class="exam-img">
+              <p>選考対策</p>
+            </a></li>
+        </ul>
+      </div>
+    </main>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/footer_script.js"></script>
+</body>
+
 </html>

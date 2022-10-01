@@ -127,48 +127,41 @@
   $html = <<< EOM
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8' />
-        <title>en-courage京大支部</title>
-        <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-        <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-        <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-        <link href='../../css/default.css' rel='stylesheet' />
-        <link href='../../css/experience.css' rel='stylesheet' />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    </head>
-    <?php \$Path = '../../'; ?>
 
-    <body>
-        <?php include(__DIR__ . '/../../components/header.html'); ?>
-        <div class="content">
-            <main>
-                <img src="../../images/self-analysis/IMG_5934.PNG" class="sample_img">
-                <h1>${company_name}の選考体験記</h1>
+<?php \$Path = '../../'; ?>
 
-                <div class="section">
-                    <h2>目次</h2>
-                    <div class="flow">
-                        <ul class="cp_stepflow01">
-                          $mokujis
-                        </ul>
-                    </div>
-                </div>
-            $sections
-            </main>
-            <?php include(__DIR__ . '/../../components/sidebar.html'); ?>
+<head>
+  <?php include(__DIR__ . '/../../components/head.html'); ?>
+  <link rel='stylesheet' href='../../css/experience.css'/>
+</head>
+
+<body>
+  <?php include(__DIR__ . '/../../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <img src="../../images/self-analysis/IMG_5934.PNG" class="sample_img">
+      <h1>${company_name}の選考体験記</h1>
+
+      <div class="section">
+        <h2>目次</h2>
+        <div class="flow">
+          <ul class="cp_stepflow01">
+            $mokujis
+          </ul>
         </div>
-        <div id="page_top"><a href="#"></a></div>
-        <?php include(__DIR__ . '/../../components/footer.html'); ?>
+      </div>
+    $sections
+    </main>
+    <?php include(__DIR__ . '/../../components/sidebar.html'); ?>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../../components/footer.html'); ?>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../../js/script.js"></script>
-        <script type="text/javascript" src="../js/sidebar_script.js"></script>
-        <script type="text/javascript" src="../../js/footer_script.js"></script>
-    </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../../js/script.js"></script>
+  <script type="text/javascript" src="../js/sidebar_script.js"></script>
+  <script type="text/javascript" src="../../js/footer_script.js"></script>
+</body>
 </html>
 EOM;
 

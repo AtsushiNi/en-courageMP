@@ -1,579 +1,561 @@
 <!DOCTYPE html>
 <html>
-      <head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WLHCR88');
-    </script>
-    <!-- End Google Tag Manager -->
-        <meta charset='utf-8' />
-        <title>en-courage京大支部</title>
-        <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-        <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-        <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-        <link href='../css/default.css' rel='stylesheet' />
-        <link href='../css/experience.css' rel='stylesheet' />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    </head>
-    <?php $Path = '../'; ?>
+<?php $Path = '../'; ?>
 
-      <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-        <?php include(__DIR__ . '/../components/header.html'); ?>
-        <div class="content">
-            <main>
-                <img src="../images/industries/IT.png" class="sample_img">
-                <h1>NTTドコモの選考体験記</h1>
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/experience.css' />
+</head>
 
-                <div class="section">
-                    <h2>目次</h2>
-                    <div class="flow">
-                        <ul class="cp_stepflow01">
-                            <li>
-      <span class="bubble"></span>
-      <a href="#0">
-          <div>
-              <img src="../images/experience/ES.png">
-              <div>
-                エントリーシート
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#1">
-          <div>
-              <img src="../images/experience/web-test.png">
-              <div>
-                WEBテスト
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#2">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                １次面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#3">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                ２次面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#4">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                最終面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble last"></span>
-      <a href="#5">
-          <div>
-              <img src="../images/experience/good.png">
-              <div>
-                内定
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#6">
-          <div>
-              <img src="../images/experience/impressions.png">
-              <div>
-                選考全体の感想
-              </div>
-          </div>
-      </a>
-  </li>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <img src="../images/industries/IT.png" class="sample_img">
+      <h1>NTTドコモの選考体験記</h1>
 
-                        </ul>
-                    </div>
+      <div class="section">
+        <h2>目次</h2>
+        <div class="flow">
+          <ul class="cp_stepflow01">
+            <li>
+              <span class="bubble"></span>
+              <a href="#0">
+                <div>
+                  <img src="../images/experience/ES.png">
+                  <div>
+                    エントリーシート
+                  </div>
                 </div>
-              <div class="section ">
-    <h2>
-      <a id="0">
-        エントリーシート
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      提出期日/提出方法
-    </th>
-    <td>
-      2月上旬/マイページ
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#1">
+                <div>
+                  <img src="../images/experience/web-test.png">
+                  <div>
+                    WEBテスト
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#2">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    １次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#3">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    ２次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#4">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    最終面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble last"></span>
+              <a href="#5">
+                <div>
+                  <img src="../images/experience/good.png">
+                  <div>
+                    内定
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#6">
+                <div>
+                  <img src="../images/experience/impressions.png">
+                  <div>
+                    選考全体の感想
+                  </div>
+                </div>
+              </a>
+            </li>
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/通知方法
-    </th>
-    <td>
-      2週間以内/マイページ
+          </ul>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="0">
+            エントリーシート
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  提出期日/提出方法
+                </th>
+                <td>
+                  2月上旬/マイページ
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    質問①：チャレンジしたこと
-  </h3>
-  <div class="text">
-    大学で所属したオーケストラ部での持続可能な組織づくりに挑戦した。部には様々なモチベーションをもつ部員がいた。部は年1回の定期演奏会を目標に活動をしていたが、1年間、全員がやる気を高く持ち続けることは困難で、やる気の低下を理由に退部する部員も多くいた。私を含めた運営陣は、部員の部へのエンゲージメントの醸成を課題に設定し、活動意義の共有に着手。活動意義を「音楽を通じて地域の文化水準向上に貢献する」と定義した。そこから、KPIを「地域からの依頼演奏会数」に設定。例年比4倍の12回の依頼演奏会を行った。演奏機会を多くもつことで、目的意識を持ちながら部員は練習に励み、さらに地域の方の喜ぶ姿を見ることで、部の存在意義を頻繁に意識するようになった。結果、部には向上心と一体感が生まれ、エンゲージメントが醸成される仕組みづくりに成功した。ここから、活動意義を共有し、それを目指す仕組みづくりの重要性を学んだ。<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/通知方法
+                </th>
+                <td>
+                  2週間以内/マイページ
 
-  </div>
-  <h3>
-    質問②：ドコモで叶えたいの夢
-  </h3>
-  <div class="text">
-    人が賑わい、快適に行き交うオフライン空間を実現することで、日本を情緒的、経済的に豊かにすることだ。この夢を抱いた理由は2点。それは、大学での音楽活動と都市計画の研究を行う上で、①五感を伴うオフラインでの体験が最も豊かな体験である②日本の素晴らしい文化、地域を後世に残したい、という2つの考えを持つようになったからだ。人の賑わいは人を幸せにし、経済的な観点からも地域を持続可能にするだろう。貴社は、賑わいあふれる街づくりに必須なMaaSに関連するAI運行バスや携帯に紐づいた生活者の行動ビッグデータを保有している。私は現在、大学院で位置情報データを用いて最適な街づくりを研究中だ。以上のように、貴社のアセットと私の学生時代で培ったITと都市計画の専門性、そして日本のまちの賑わいを復興、創出したいという想いを活かして、人が賑わう仕組みづくりを貴社で行いたい。それにより、日本を豊かにできると考える。<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問①：チャレンジしたこと
+        </h3>
+        <div class="text">
+          大学で所属したオーケストラ部での持続可能な組織づくりに挑戦した。部には様々なモチベーションをもつ部員がいた。部は年1回の定期演奏会を目標に活動をしていたが、1年間、全員がやる気を高く持ち続けることは困難で、やる気の低下を理由に退部する部員も多くいた。私を含めた運営陣は、部員の部へのエンゲージメントの醸成を課題に設定し、活動意義の共有に着手。活動意義を「音楽を通じて地域の文化水準向上に貢献する」と定義した。そこから、KPIを「地域からの依頼演奏会数」に設定。例年比4倍の12回の依頼演奏会を行った。演奏機会を多くもつことで、目的意識を持ちながら部員は練習に励み、さらに地域の方の喜ぶ姿を見ることで、部の存在意義を頻繁に意識するようになった。結果、部には向上心と一体感が生まれ、エンゲージメントが醸成される仕組みづくりに成功した。ここから、活動意義を共有し、それを目指す仕組みづくりの重要性を学んだ。<br />
 
-  </div>
-  <h3>
-    注意した点
-  </h3>
-  <div class="text">
-    ・具体的なドコモのサービスがどのように自分のやりたいことをつながっているのかを示した。<br />
-・インフラの企業でもあるため、自分がもっているガクチカでもより全体最適や、組織の折衝のようなトピックを選んだ<br />
+        </div>
+        <h3>
+          質問②：ドコモで叶えたいの夢
+        </h3>
+        <div class="text">
+          人が賑わい、快適に行き交うオフライン空間を実現することで、日本を情緒的、経済的に豊かにすることだ。この夢を抱いた理由は2点。それは、大学での音楽活動と都市計画の研究を行う上で、①五感を伴うオフラインでの体験が最も豊かな体験である②日本の素晴らしい文化、地域を後世に残したい、という2つの考えを持つようになったからだ。人の賑わいは人を幸せにし、経済的な観点からも地域を持続可能にするだろう。貴社は、賑わいあふれる街づくりに必須なMaaSに関連するAI運行バスや携帯に紐づいた生活者の行動ビッグデータを保有している。私は現在、大学院で位置情報データを用いて最適な街づくりを研究中だ。以上のように、貴社のアセットと私の学生時代で培ったITと都市計画の専門性、そして日本のまちの賑わいを復興、創出したいという想いを活かして、人が賑わう仕組みづくりを貴社で行いたい。それにより、日本を豊かにできると考える。<br />
 
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="1">
-        WEBテスト
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      形式
-    </th>
-    <td>
-      SPI
+        </div>
+        <h3>
+          注意した点
+        </h3>
+        <div class="text">
+          ・具体的なドコモのサービスがどのように自分のやりたいことをつながっているのかを示した。<br />
+          ・インフラの企業でもあるため、自分がもっているガクチカでもより全体最適や、組織の折衝のようなトピックを選んだ<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      難易度・ボーダー
-    </th>
-    <td>
-      ・ボーダーはそこまで高くないと思われる
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="1">
+            WEBテスト
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  形式
+                </th>
+                <td>
+                  SPI
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      対策方法
-    </th>
-    <td>
-      ・何回も解く
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  難易度・ボーダー
+                </th>
+                <td>
+                  ・ボーダーはそこまで高くないと思われる
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="2">
-        １次面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      2月上旬
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  対策方法
+                </th>
+                <td>
+                  ・何回も解く
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      30分
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="2">
+            １次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2月上旬
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      当日/電話
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  30分
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    面接官の人数・役職/学生の人数
-  </h3>
-  <div class="text">
-    現場社員1人/学生１<br />
-希望職種の現場社員がでてくる<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  当日/電話
 
-  </div>
-  <h3>
-    質問内容
-  </h3>
-  <div class="text">
-    ・自己紹介<br />
-・志望動機<br />
-・その深堀<br />
-・企画職ってなにするか把握してる<br />
-・逆質問<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          面接官の人数・役職/学生の人数
+        </h3>
+        <div class="text">
+          現場社員1人/学生１<br />
+          希望職種の現場社員がでてくる<br />
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    ・NTTドコモへどのような印象を抱いていて、なぜ受けているのかを伝えた<br />
-・感想としては、面接官の属性を最初に聞いていなかったせいで、自分の伝え方がまずく一瞬不穏な空気になり焦ったものの挽回して話を聞いてくれてよかった<br />
+        </div>
+        <h3>
+          質問内容
+        </h3>
+        <div class="text">
+          ・自己紹介<br />
+          ・志望動機<br />
+          ・その深堀<br />
+          ・企画職ってなにするか把握してる<br />
+          ・逆質問<br />
 
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="3">
-        ２次面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      3月中旬
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          ・NTTドコモへどのような印象を抱いていて、なぜ受けているのかを伝えた<br />
+          ・感想としては、面接官の属性を最初に聞いていなかったせいで、自分の伝え方がまずく一瞬不穏な空気になり焦ったものの挽回して話を聞いてくれてよかった<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      20分
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="3">
+            ２次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  3月中旬
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      部長または課長レベル1人/学生1
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  20分
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      当日/電話
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  部長または課長レベル1人/学生1
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    質問内容
-  </h3>
-  <div class="text">
-    ・志望動機<br />
-・ガクチカ深堀<br />
-・ドコモでやりたいこと<br />
-・興味をもっていること<br />
-・ほぼ雑談（面接官の方がしゃべっていた）<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  当日/電話
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    ESはかなり読んでくれており、面接が始まる前から合否が決まっているのではないかというほど面接官のあたりが柔らかかった。終始、私になにを社内でさせてやれるかみたいな話だった。<br />
-社風にビタハマリしていることをこの面接で年次の高い現場の社員の生の想いを聞くことで確信し、志望度があがった。<br />
-中でも「ドコモはコミュニケーションの会社だから」と熱く語られ、これからのビジネス界でのドコモの展望を本気の目で語られて心が動いた。<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問内容
+        </h3>
+        <div class="text">
+          ・志望動機<br />
+          ・ガクチカ深堀<br />
+          ・ドコモでやりたいこと<br />
+          ・興味をもっていること<br />
+          ・ほぼ雑談（面接官の方がしゃべっていた）<br />
 
-  </div>
-</div>  <div class="section atsumori">
-    <h2>
-      <a id="4">
-        最終面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      3月中旬
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          ESはかなり読んでくれており、面接が始まる前から合否が決まっているのではないかというほど面接官のあたりが柔らかかった。終始、私になにを社内でさせてやれるかみたいな話だった。<br />
+          社風にビタハマリしていることをこの面接で年次の高い現場の社員の生の想いを聞くことで確信し、志望度があがった。<br />
+          中でも「ドコモはコミュニケーションの会社だから」と熱く語られ、これからのビジネス界でのドコモの展望を本気の目で語られて心が動いた。<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      20分
+        </div>
+      </div>
+      <div class="section atsumori">
+        <h2>
+          <a id="4">
+            最終面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  3月中旬
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      人事2人/学生１
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  20分
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      当日/電話
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  人事2人/学生１
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    質問内容
-  </h3>
-  <div class="text">
-    【面接】<br />
-・志望動機<br />
-・なぜドコモか<br />
-・やりたいことがあるそうだがなぜそれをやりたい<br />
-・やりたいことがあるそうだがどこが課題か<br />
-・他に取り組みたい課題はあるか<br />
-・働く際のイメージはできているか<br />
-・就活状況<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  当日/電話
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    今までの面接の楽勝さ加減で予想はしていたがかなり厳しい詰めるような質問が多かった。笑がなかったので、常に笑を取ろうと明るくふるまった。<br />
-自分なりの考えを自分の夢を論理だてて伝えたため、FBでも大きいことを言える夢とそれを達成するためのマイルストーンをしっかりと伝えられ、地頭の良さとコミュニケーション能力を評価された。<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問内容
+        </h3>
+        <div class="text">
+          【面接】<br />
+          ・志望動機<br />
+          ・なぜドコモか<br />
+          ・やりたいことがあるそうだがなぜそれをやりたい<br />
+          ・やりたいことがあるそうだがどこが課題か<br />
+          ・他に取り組みたい課題はあるか<br />
+          ・働く際のイメージはできているか<br />
+          ・就活状況<br />
 
-  </div>
-</div>  <div class="atsumori-event">
-    <h2>対策イベント！</h2>
-    <div class="event">
-      <?php
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          今までの面接の楽勝さ加減で予想はしていたがかなり厳しい詰めるような質問が多かった。笑がなかったので、常に笑を取ろうと明るくふるまった。<br />
+          自分なりの考えを自分の夢を論理だてて伝えたため、FBでも大きいことを言える夢とそれを達成するためのマイルストーンをしっかりと伝えられ、地頭の良さとコミュニケーション能力を評価された。<br />
+
+        </div>
+      </div>
+      <div class="atsumori-event">
+        <h2>対策イベント！</h2>
+        <div class="event">
+          <?php
         $page_title = basename(__FILE__);
         preg_match("/[0-9]+/", $page_title, $id);
         $id = $id[0];
         require("../backend/get_atsumori_event.php");
       ?>
-    </div>
-  </div>
-  <div class="section ">
-    <h2>
-      <a id="5">
-        内定
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      内定時期
-    </th>
-    <td>
-      6月初旬
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾検討期間
-    </th>
-    <td>
-      不明
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾or辞退
-    </th>
-    <td>
-      承諾
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    承諾or辞退理由
-  </h3>
-  <div class="text">
-    ・これからの街づくりをできる企業だと思ったから<br />
-・政府とのつながりも強く、業界でのプレゼンスがトップ<br />
-・働き方が柔軟で、がつがつ働きたいときそうでないときの調整がしやすそうだったから<br />
-・社員さんがいい人すぎた<br />
-・採用人数が多いが、その中でも埋もれない自信がついたから<br />
-
-  </div>
-  <h3>
-    内定者属性（大学とか文理とか）
-  </h3>
-  <div class="text">
-    幅が広い。旧帝早慶上智からMARCH以下の大学群まで様々<br />
-聞いたことない大学の人もいるため、学歴であまりフィルターを書けない企業かも<br />
-
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="6">
-        選考全体の感想
-      </a>
-    </h2>
-  <h3>
-    内定先に興味を持ったきっかけ
-  </h3>
-  <div class="text">
-    2017年Mr.chidrenとdocomoのタイアップCMをみて<br />
-
-  </div>
-  <h3>
-    どういった基準でこの企業を選んだか
-  </h3>
-  <div class="text">
-    ・人流データ（モバイル空間統計）の事業がある<br />
-・スマートシティに携われる<br />
-・転職市場でも価値が高い経験を積める<br />
-・働き手にやさしい<br />
-・挑戦的（変革するだけの体力と姿勢があるか）<br />
-・事業領域広すぎてなんでもできる<br />
-
-  </div>
-  <h3>
-    選考を通して重要視されたと感じた点
-  </h3>
-  <div class="text">
-    ・説明力<br />
-・技術力（？）<br />
-・コミュニケーション能力<br />
-・夢・ビジョン・野望とそれを叶えるためのロードマップ<br />
-
-  </div>
-  <h3>
-    同業他社と比べてこの企業の魅力は？
-  </h3>
-  <div class="text">
-    ・８０００万人超の顧客基盤<br />
-・天下のNTT。アセットが無尽蔵で官公庁との繋がりも強固<br />
-・積み上げてきたブランドの信頼<br />
-・きたるsociety5.0をメインストリームで構築できる<br />
-
-  </div>
-  <h3>
-    この企業を受けるにあたって工夫した点
-  </h3>
-  <div class="text">
-    ・企業研究を徹底する（テクニカルジャーナルなど読む）<br />
-・夢を叶える具体的なビジョンを語れるようにする<br />
-
-  </div>
-  <h3>
-    社員（と内定者）にどのような印象を持ったか
-  </h3>
-  <div class="text">
-    ・面倒見がいい<br />
-・地頭がいい<br />
-・気持ちの良いコミュニケーションがとれる<br />
-・でかい会社なのに、ビジョンが共有できている<br />
-
-  </div>
-  <h3>
-    後輩へのアドバイス
-  </h3>
-  <div class="text">
-    ・地に足つけて、夢を語れ<br />
-採用の際に入社のスタートラインが決まると言われているので、手を抜かないこと。内定をとるだけならそこまで難しい企業ではないはずだが、なぜドコモでないといけないかは必ず固めて臨もう。<br />
-
-  </div>
-</div>
-            </main>
-            <?php include(__DIR__ . '/../components/sidebar.html'); ?>
         </div>
-        <div id="page_top"><a href="#"></a></div>
-        <?php include(__DIR__ . '/../components/footer.html'); ?>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="5">
+            内定
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  内定時期
+                </th>
+                <td>
+                  6月初旬
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/script.js"></script>
-        <script type="text/javascript" src="../js/sidebar_script.js"></script>
-        <script type="text/javascript" src="../js/footer_script.js"></script>
-    </body>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾検討期間
+                </th>
+                <td>
+                  不明
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退
+                </th>
+                <td>
+                  承諾
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          承諾or辞退理由
+        </h3>
+        <div class="text">
+          ・これからの街づくりをできる企業だと思ったから<br />
+          ・政府とのつながりも強く、業界でのプレゼンスがトップ<br />
+          ・働き方が柔軟で、がつがつ働きたいときそうでないときの調整がしやすそうだったから<br />
+          ・社員さんがいい人すぎた<br />
+          ・採用人数が多いが、その中でも埋もれない自信がついたから<br />
+
+        </div>
+        <h3>
+          内定者属性（大学とか文理とか）
+        </h3>
+        <div class="text">
+          幅が広い。旧帝早慶上智からMARCH以下の大学群まで様々<br />
+          聞いたことない大学の人もいるため、学歴であまりフィルターを書けない企業かも<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="6">
+            選考全体の感想
+          </a>
+        </h2>
+        <h3>
+          内定先に興味を持ったきっかけ
+        </h3>
+        <div class="text">
+          2017年Mr.chidrenとdocomoのタイアップCMをみて<br />
+
+        </div>
+        <h3>
+          どういった基準でこの企業を選んだか
+        </h3>
+        <div class="text">
+          ・人流データ（モバイル空間統計）の事業がある<br />
+          ・スマートシティに携われる<br />
+          ・転職市場でも価値が高い経験を積める<br />
+          ・働き手にやさしい<br />
+          ・挑戦的（変革するだけの体力と姿勢があるか）<br />
+          ・事業領域広すぎてなんでもできる<br />
+
+        </div>
+        <h3>
+          選考を通して重要視されたと感じた点
+        </h3>
+        <div class="text">
+          ・説明力<br />
+          ・技術力（？）<br />
+          ・コミュニケーション能力<br />
+          ・夢・ビジョン・野望とそれを叶えるためのロードマップ<br />
+
+        </div>
+        <h3>
+          同業他社と比べてこの企業の魅力は？
+        </h3>
+        <div class="text">
+          ・８０００万人超の顧客基盤<br />
+          ・天下のNTT。アセットが無尽蔵で官公庁との繋がりも強固<br />
+          ・積み上げてきたブランドの信頼<br />
+          ・きたるsociety5.0をメインストリームで構築できる<br />
+
+        </div>
+        <h3>
+          この企業を受けるにあたって工夫した点
+        </h3>
+        <div class="text">
+          ・企業研究を徹底する（テクニカルジャーナルなど読む）<br />
+          ・夢を叶える具体的なビジョンを語れるようにする<br />
+
+        </div>
+        <h3>
+          社員（と内定者）にどのような印象を持ったか
+        </h3>
+        <div class="text">
+          ・面倒見がいい<br />
+          ・地頭がいい<br />
+          ・気持ちの良いコミュニケーションがとれる<br />
+          ・でかい会社なのに、ビジョンが共有できている<br />
+
+        </div>
+        <h3>
+          後輩へのアドバイス
+        </h3>
+        <div class="text">
+          ・地に足つけて、夢を語れ<br />
+          採用の際に入社のスタートラインが決まると言われているので、手を抜かないこと。内定をとるだけならそこまで難しい企業ではないはずだが、なぜドコモでないといけないかは必ず固めて臨もう。<br />
+
+        </div>
+      </div>
+    </main>
+    <?php include(__DIR__ . '/../components/sidebar.html'); ?>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/sidebar_script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
 </html>

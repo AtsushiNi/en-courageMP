@@ -1,556 +1,538 @@
 <!DOCTYPE html>
 <html>
-      <head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WLHCR88');
-    </script>
-    <!-- End Google Tag Manager -->
-        <meta charset='utf-8' />
-        <title>en-courage京大支部</title>
-        <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-        <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-        <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-        <link href='../css/default.css' rel='stylesheet' />
-        <link href='../css/experience.css' rel='stylesheet' />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    </head>
-    <?php $Path = '../'; ?>
+<?php $Path = '../'; ?>
 
-      <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-        <?php include(__DIR__ . '/../components/header.html'); ?>
-        <div class="content">
-            <main>
-                <img src="../images/industries/financial.png" class="sample_img">
-                <h1>三菱UFJモルガンスタンレー証券の選考体験記</h1>
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/experience.css' />
+</head>
 
-                <div class="section">
-                    <h2>目次</h2>
-                    <div class="flow">
-                        <ul class="cp_stepflow01">
-                            <li>
-      <span class="bubble"></span>
-      <a href="#0">
-          <div>
-              <img src="../images/experience/ES.png">
-              <div>
-                エントリーシート
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#1">
-          <div>
-              <img src="../images/experience/web-test.png">
-              <div>
-                WEBテスト・筆記試験
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#2">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                1次面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#3">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                本選考の面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#4">
-          <div>
-              <img src="../images/experience/intern.png">
-              <div>
-                インターン（ジョブ）
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble last"></span>
-      <a href="#5">
-          <div>
-              <img src="../images/experience/good.png">
-              <div>
-                内定
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#6">
-          <div>
-              <img src="../images/experience/impressions.png">
-              <div>
-                選考全体の感想
-              </div>
-          </div>
-      </a>
-  </li>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <img src="../images/industries/financial.png" class="sample_img">
+      <h1>三菱UFJモルガンスタンレー証券の選考体験記</h1>
 
-                        </ul>
-                    </div>
+      <div class="section">
+        <h2>目次</h2>
+        <div class="flow">
+          <ul class="cp_stepflow01">
+            <li>
+              <span class="bubble"></span>
+              <a href="#0">
+                <div>
+                  <img src="../images/experience/ES.png">
+                  <div>
+                    エントリーシート
+                  </div>
                 </div>
-              <div class="section ">
-    <h2>
-      <a id="0">
-        エントリーシート
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      提出期日/提出方法
-    </th>
-    <td>
-      7月上旬/マイページ
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#1">
+                <div>
+                  <img src="../images/experience/web-test.png">
+                  <div>
+                    WEBテスト・筆記試験
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#2">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    1次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#3">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    本選考の面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#4">
+                <div>
+                  <img src="../images/experience/intern.png">
+                  <div>
+                    インターン（ジョブ）
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble last"></span>
+              <a href="#5">
+                <div>
+                  <img src="../images/experience/good.png">
+                  <div>
+                    内定
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#6">
+                <div>
+                  <img src="../images/experience/impressions.png">
+                  <div>
+                    選考全体の感想
+                  </div>
+                </div>
+              </a>
+            </li>
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/通知方法
-    </th>
-    <td>
-      3週間以内/マイページ
+          </ul>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="0">
+            エントリーシート
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  提出期日/提出方法
+                </th>
+                <td>
+                  7月上旬/マイページ
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    質問１：投資銀行の志望理由（400）
-  </h3>
-  <div class="text">
-    貴社の投資銀行部門を志望する理由は2点ある。1点目は金融に興味があるから、2点目は経営者を支えたいからだ。1点目について、私は高校時代から部活を作り金融について勉強し、大学でもゼミでコーポレートファイナンスを学習する中で企業の戦略と企業価値の結びつきに興味を抱いた。2点目に関して、父が経営者として会社や従業員のために奮闘する姿を見る中で経営者を支えたいと思うようになった。以上の理由を掛け合わせて、投資銀行業務は金融の専門性を持って経営を支えることが出来る業務だと感じている。特にシェアプロジェクトのM&Aについての講座を受講する中で、M&Aが経営に大きなインパクトを与えると共に、成功した際には大きく感謝されることがわかった。自身が目指すキャリアとして、財務のプロとして自分にしか出来ない価値を提供することで経営者を支えたいという思いがあり、M&Aに携ることで実現できるキャリアだと感じている。<br />
-<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/通知方法
+                </th>
+                <td>
+                  3週間以内/マイページ
 
-  </div>
-  <h3>
-    質問２：就職先を決めるにあたって重視するポイントや仕事に求めるもの（300）
-  </h3>
-  <div class="text">
-    探究心が常に満たされることと、自分が行ったからこそ他人に感謝されることを仕事に求めている。生協学生委員会で新たな企画を作ることやゼミで3ヶ月でバリュエーションをマスターし4名のチームを率いてレポートを作成する中で、常に変化する環境に身を置きながら新たな知識をインプットすることにモチベーションを抱いた。また、新企画の作成とゼミでのリーダー経験いずれも、立候補者がいない中で自ら立候補し実行したことで、チームメンバーからも感謝され自分がリードしたからこそ得られる結果を得ることが出来た。将来も、財務のプロとして経営に深く携り、経営者をはじめとする多くのステイクホルダーから感謝されるようになりたい。<br />
-<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問１：投資銀行の志望理由（400）
+        </h3>
+        <div class="text">
+          貴社の投資銀行部門を志望する理由は2点ある。1点目は金融に興味があるから、2点目は経営者を支えたいからだ。1点目について、私は高校時代から部活を作り金融について勉強し、大学でもゼミでコーポレートファイナンスを学習する中で企業の戦略と企業価値の結びつきに興味を抱いた。2点目に関して、父が経営者として会社や従業員のために奮闘する姿を見る中で経営者を支えたいと思うようになった。以上の理由を掛け合わせて、投資銀行業務は金融の専門性を持って経営を支えることが出来る業務だと感じている。特にシェアプロジェクトのM&Aについての講座を受講する中で、M&Aが経営に大きなインパクトを与えると共に、成功した際には大きく感謝されることがわかった。自身が目指すキャリアとして、財務のプロとして自分にしか出来ない価値を提供することで経営者を支えたいという思いがあり、M&Aに携ることで実現できるキャリアだと感じている。<br />
+          <br />
 
-  </div>
-  <h3>
-    質問3：これまでの人生の中で特にがんばったこと、その中でどのように周囲の人と協力したか（300）
-  </h3>
-  <div class="text">
-    生協学生委員会でリーダーとして企画を成功させた。例年企業と協力しながら自転車・パソコン・メガネの点検を行う企画をしていたが、点検以外にも新たな需要を開拓して来場者の満足度を上げることが目標であった。そこで、一人暮らしの大学生に対し掃除と金銭管理について生活に役立つ情報提供をする企画を作り、15名のチームを率いて5ヶ月間の準備に取り組んだ。リーダーとして私が工夫したことは2点ある。1点目は一人一人に段階的な目標を設定してタスクを明確にしたこと、2点目は一人一人と適したタスク配分を行ったことだ。来場者は2日間で700名ほどに及び、来場者満足度も90%を超え、企画を成功に収めることができた。<br />
-<br />
+        </div>
+        <h3>
+          質問２：就職先を決めるにあたって重視するポイントや仕事に求めるもの（300）
+        </h3>
+        <div class="text">
+          探究心が常に満たされることと、自分が行ったからこそ他人に感謝されることを仕事に求めている。生協学生委員会で新たな企画を作ることやゼミで3ヶ月でバリュエーションをマスターし4名のチームを率いてレポートを作成する中で、常に変化する環境に身を置きながら新たな知識をインプットすることにモチベーションを抱いた。また、新企画の作成とゼミでのリーダー経験いずれも、立候補者がいない中で自ら立候補し実行したことで、チームメンバーからも感謝され自分がリードしたからこそ得られる結果を得ることが出来た。将来も、財務のプロとして経営に深く携り、経営者をはじめとする多くのステイクホルダーから感謝されるようになりたい。<br />
+          <br />
 
-  </div>
-  <h3>
-    質問4：今関心のある社会課題と、それに個人または社会としてどのように解決するか（300）
-  </h3>
-  <div class="text">
-    コロナ禍における大学生のうつ問題に関心がある。昨年度から大学の授業がオンラインになり、特に今の大学2年生は友達作りも出来ず、やりたいことも出来ずとつらい日々を送っている。私は生協学生委員会に所属し、アンケートで学生の暮らしの実態を把握したり友達と連絡を取る中で深刻な実態を把握した。この解決のために、対面での交流の場を提供し、個人間のコミュニケーションを保つ必要がある。学生委員会でもオンライン交流会を行い100名以上に来てもらったことがあるが、それだけで友人関係までは発展しにくいと認識した。そのため少なくとも私周りにいる新入生に対しては、積極的に外に出るようにコミュニケーションを取っている。<br />
-<br />
+        </div>
+        <h3>
+          質問3：これまでの人生の中で特にがんばったこと、その中でどのように周囲の人と協力したか（300）
+        </h3>
+        <div class="text">
+          生協学生委員会でリーダーとして企画を成功させた。例年企業と協力しながら自転車・パソコン・メガネの点検を行う企画をしていたが、点検以外にも新たな需要を開拓して来場者の満足度を上げることが目標であった。そこで、一人暮らしの大学生に対し掃除と金銭管理について生活に役立つ情報提供をする企画を作り、15名のチームを率いて5ヶ月間の準備に取り組んだ。リーダーとして私が工夫したことは2点ある。1点目は一人一人に段階的な目標を設定してタスクを明確にしたこと、2点目は一人一人と適したタスク配分を行ったことだ。来場者は2日間で700名ほどに及び、来場者満足度も90%を超え、企画を成功に収めることができた。<br />
+          <br />
 
-  </div>
-  <h3>
-    注意した点
-  </h3>
-  <div class="text">
-    自分自身がアピールしたい強みと一貫性がもてるようにした<br />
+        </div>
+        <h3>
+          質問4：今関心のある社会課題と、それに個人または社会としてどのように解決するか（300）
+        </h3>
+        <div class="text">
+          コロナ禍における大学生のうつ問題に関心がある。昨年度から大学の授業がオンラインになり、特に今の大学2年生は友達作りも出来ず、やりたいことも出来ずとつらい日々を送っている。私は生協学生委員会に所属し、アンケートで学生の暮らしの実態を把握したり友達と連絡を取る中で深刻な実態を把握した。この解決のために、対面での交流の場を提供し、個人間のコミュニケーションを保つ必要がある。学生委員会でもオンライン交流会を行い100名以上に来てもらったことがあるが、それだけで友人関係までは発展しにくいと認識した。そのため少なくとも私周りにいる新入生に対しては、積極的に外に出るようにコミュニケーションを取っている。<br />
+          <br />
 
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="1">
-        WEBテスト・筆記試験
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      形式
-    </th>
-    <td>
-      玉手箱
+        </div>
+        <h3>
+          注意した点
+        </h3>
+        <div class="text">
+          自分自身がアピールしたい強みと一貫性がもてるようにした<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      難易度・ボーダー
-    </th>
-    <td>
-      普通
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="1">
+            WEBテスト・筆記試験
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  形式
+                </th>
+                <td>
+                  玉手箱
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      対策方法
-    </th>
-    <td>
-      対策本と他社での練習
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  難易度・ボーダー
+                </th>
+                <td>
+                  普通
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="2">
-        1次面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      8月上旬
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  対策方法
+                </th>
+                <td>
+                  対策本と他社での練習
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      1時間
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="2">
+            1次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  8月上旬
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      若手社員1名・部長クラス1名の1対1面接を2ターム
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  1時間
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      8月下旬・メールにて
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  若手社員1名・部長クラス1名の1対1面接を2ターム
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    質問内容
-  </h3>
-  <div class="text">
-    いろいろな形で質問された記憶はあるが、基本的には<br />
-・投資銀行の志望動機<br />
-・学生時代力を入れたこと<br />
-・自信の強みとどのように投資銀行で生かせるか<br />
-・気になるM&Aや経済ニュース<br />
-しか聞かれていない。<br />
-逆質問の時間が必ずあるので、活躍する社員の特徴や面白かった案件等を聞いていた<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  8月下旬・メールにて
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    投資宇銀行に適した粘り強さと志望動機の強さ。<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問内容
+        </h3>
+        <div class="text">
+          いろいろな形で質問された記憶はあるが、基本的には<br />
+          ・投資銀行の志望動機<br />
+          ・学生時代力を入れたこと<br />
+          ・自信の強みとどのように投資銀行で生かせるか<br />
+          ・気になるM&Aや経済ニュース<br />
+          しか聞かれていない。<br />
+          逆質問の時間が必ずあるので、活躍する社員の特徴や面白かった案件等を聞いていた<br />
 
-  </div>
-</div>  <div class="section atsumori">
-    <h2>
-      <a id="3">
-        本選考の面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      2022年3月に4回程度
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          投資宇銀行に適した粘り強さと志望動機の強さ。<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      各回1時間半（3人×30分）
+        </div>
+      </div>
+      <div class="section atsumori">
+        <h2>
+          <a id="3">
+            本選考の面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  2022年3月に4回程度
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      アソシエイト➝VP➝ED➝MDと回を重ねるごとに階級が上がっていく。
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  各回1時間半（3人×30分）
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      メンターから大体面接の1～2日後に電話で
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  アソシエイト➝VP➝ED➝MDと回を重ねるごとに階級が上がっていく。
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    内容（テーマ・プレゼン時間など）
-  </h3>
-  <div class="text">
-    いろいろな形で質問された記憶はあるが、基本的には<br />
-・投資銀行の志望動機<br />
-・学生時代力を入れたこと<br />
-・自信の強みとどのように投資銀行で生かせるか<br />
-・気になるM&Aや経済ニュース<br />
-しか聞かれていない。<br />
-逆質問の時間が必ずあるので、活躍する社員の特徴や面白かった案件等を聞いていた<br />
-インターンと大きく違うのは、「本当にその会社に来るのか」という強い志望動機が必要な点である。<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  メンターから大体面接の1～2日後に電話で
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    投資銀行で求められる力に加えて、本当にこの会社が第一志望なのかを強く求められているため、インターン中に実際に聞いた社員の方の話しを聞くとよい。<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          いろいろな形で質問された記憶はあるが、基本的には<br />
+          ・投資銀行の志望動機<br />
+          ・学生時代力を入れたこと<br />
+          ・自信の強みとどのように投資銀行で生かせるか<br />
+          ・気になるM&Aや経済ニュース<br />
+          しか聞かれていない。<br />
+          逆質問の時間が必ずあるので、活躍する社員の特徴や面白かった案件等を聞いていた<br />
+          インターンと大きく違うのは、「本当にその会社に来るのか」という強い志望動機が必要な点である。<br />
 
-  </div>
-</div>  <div class="atsumori-event">
-    <h2>対策イベント！</h2>
-    <div class="event">
-      <?php
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          投資銀行で求められる力に加えて、本当にこの会社が第一志望なのかを強く求められているため、インターン中に実際に聞いた社員の方の話しを聞くとよい。<br />
+
+        </div>
+      </div>
+      <div class="atsumori-event">
+        <h2>対策イベント！</h2>
+        <div class="event">
+          <?php
         $page_title = basename(__FILE__);
         preg_match("/[0-9]+/", $page_title, $id);
         $id = $id[0];
         require("../backend/get_atsumori_event.php");
       ?>
-    </div>
-  </div>
-  <div class="section ">
-    <h2>
-      <a id="4">
-        インターン（ジョブ）
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      開催時期/実施日数
-    </th>
-    <td>
-      9月中旬・4日間
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    内容
-  </h3>
-  <div class="text">
-    投資銀行での業務説明・M&Aに関するグループワーク<br />
-
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    特にグループワークでの活躍は確実に見られている。ワーク中に議論をリードする姿勢や社員の方に積極的に質問する姿勢、あきらめずに粘り強くワークに取り組む姿勢が需要である。<br />
-
-  </div>
-  <h3>
-    選考への影響
-  </h3>
-  <div class="text">
-    優秀と認定されればチームのメンターがそのまま選考をフォローしてくれて、社員の方と併せていただいたりランチ会があったりする。<br />
-
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="5">
-        内定
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      内定時期
-    </th>
-    <td>
-      3月下旬
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾検討期間
-    </th>
-    <td>
-      2週間程度
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾or辞退
-    </th>
-    <td>
-      承諾
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾or辞退理由
-    </th>
-    <td>
-      自分の希望部署に最適だから
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      内定者属性（大学とか文理とか）
-    </th>
-    <td>
-      東京早慶・海外大など
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="6">
-        選考全体の感想
-      </a>
-    </h2>
-  <h3>
-    内定先に興味を持ったきっかけ
-  </h3>
-  <div class="text">
-    投手銀行業務に興味を持ったきっかけはゼミの先輩の紹介でした。ゼミで学習していた内容も面白いと感じていましたし、自分の名前を売って仕事をすることができることも非常に魅力に感じています。<br />
-
-  </div>
-  <h3>
-    どういった基準でこの企業を選んだか
-  </h3>
-  <div class="text">
-    この会社はほかの投資銀行各社と比べて、部署ごとに採用している点が特徴的です。さらにＭ＆Ａにこだわる上では案件数多い中でも規模の大きさを担保し、魅力を感じました。<br />
-
-  </div>
-  <h3>
-    選考を通して重要視されたと感じた点
-  </h3>
-  <div class="text">
-    前提として、投資銀行で働く上での最低限の資質は見られていたと思います。<br />
-具体的には、体力面かつ精神面でのタフさ、最低限の計算や頭の回転の速さ、クライアントとの交渉やチームで働く上でのコミュニケーション能力などです。<br />
-そのうえで、競合他社が多い中でなぜこの企業なのかを見られています。<br />
-
-  </div>
-  <h3>
-    同業他社と比べてこの企業の魅力は？
-  </h3>
-  <div class="text">
-    初期から部署の配属が確定していることは、もし希望部署が決まっていれば最も良い点だと思います！<br />
-
-  </div>
-  <h3>
-    この企業を受けるにあたって工夫した点
-  </h3>
-  <div class="text">
-    どの投資銀行でも共通ですが、インターン中やそのあとのフォローアップで社員さんと積極的に話をして、「なぜこの会社なのか」を判別できる要素を徹底的に見つけること、その中で自分に合ったところを見つけることが重要です！<br />
-
-  </div>
-  <h3>
-    社員（と内定者）にどのような印象を持ったか
-  </h3>
-  <div class="text">
-    ほかの投資銀行各社と比べても、一番社員の方が明るいという印象を持ちました！また案件当たりのフィーが高い分、一つ一つへのこだわりが強いイメージがあります！！<br />
-
-  </div>
-  <h3>
-    後輩へのアドバイス
-  </h3>
-  <div class="text">
-    まずはインターンシップに参加することが最低条件なので、志望動機や興味のあるM&Aなど、一定準備しておくことが必要です！その中で、投資銀行に合う素質など、自己分析を通して納得感高く深ぼることが重要です！<br />
-
-  </div>
-</div>
-            </main>
-            <?php include(__DIR__ . '/../components/sidebar.html'); ?>
         </div>
-        <div id="page_top"><a href="#"></a></div>
-        <?php include(__DIR__ . '/../components/footer.html'); ?>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="4">
+            インターン（ジョブ）
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  開催時期/実施日数
+                </th>
+                <td>
+                  9月中旬・4日間
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/script.js"></script>
-        <script type="text/javascript" src="../js/sidebar_script.js"></script>
-        <script type="text/javascript" src="../js/footer_script.js"></script>
-    </body>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容
+        </h3>
+        <div class="text">
+          投資銀行での業務説明・M&Aに関するグループワーク<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          特にグループワークでの活躍は確実に見られている。ワーク中に議論をリードする姿勢や社員の方に積極的に質問する姿勢、あきらめずに粘り強くワークに取り組む姿勢が需要である。<br />
+
+        </div>
+        <h3>
+          選考への影響
+        </h3>
+        <div class="text">
+          優秀と認定されればチームのメンターがそのまま選考をフォローしてくれて、社員の方と併せていただいたりランチ会があったりする。<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="5">
+            内定
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  内定時期
+                </th>
+                <td>
+                  3月下旬
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾検討期間
+                </th>
+                <td>
+                  2週間程度
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退
+                </th>
+                <td>
+                  承諾
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退理由
+                </th>
+                <td>
+                  自分の希望部署に最適だから
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  内定者属性（大学とか文理とか）
+                </th>
+                <td>
+                  東京早慶・海外大など
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="6">
+            選考全体の感想
+          </a>
+        </h2>
+        <h3>
+          内定先に興味を持ったきっかけ
+        </h3>
+        <div class="text">
+          投手銀行業務に興味を持ったきっかけはゼミの先輩の紹介でした。ゼミで学習していた内容も面白いと感じていましたし、自分の名前を売って仕事をすることができることも非常に魅力に感じています。<br />
+
+        </div>
+        <h3>
+          どういった基準でこの企業を選んだか
+        </h3>
+        <div class="text">
+          この会社はほかの投資銀行各社と比べて、部署ごとに採用している点が特徴的です。さらにＭ＆Ａにこだわる上では案件数多い中でも規模の大きさを担保し、魅力を感じました。<br />
+
+        </div>
+        <h3>
+          選考を通して重要視されたと感じた点
+        </h3>
+        <div class="text">
+          前提として、投資銀行で働く上での最低限の資質は見られていたと思います。<br />
+          具体的には、体力面かつ精神面でのタフさ、最低限の計算や頭の回転の速さ、クライアントとの交渉やチームで働く上でのコミュニケーション能力などです。<br />
+          そのうえで、競合他社が多い中でなぜこの企業なのかを見られています。<br />
+
+        </div>
+        <h3>
+          同業他社と比べてこの企業の魅力は？
+        </h3>
+        <div class="text">
+          初期から部署の配属が確定していることは、もし希望部署が決まっていれば最も良い点だと思います！<br />
+
+        </div>
+        <h3>
+          この企業を受けるにあたって工夫した点
+        </h3>
+        <div class="text">
+          どの投資銀行でも共通ですが、インターン中やそのあとのフォローアップで社員さんと積極的に話をして、「なぜこの会社なのか」を判別できる要素を徹底的に見つけること、その中で自分に合ったところを見つけることが重要です！<br />
+
+        </div>
+        <h3>
+          社員（と内定者）にどのような印象を持ったか
+        </h3>
+        <div class="text">
+          ほかの投資銀行各社と比べても、一番社員の方が明るいという印象を持ちました！また案件当たりのフィーが高い分、一つ一つへのこだわりが強いイメージがあります！！<br />
+
+        </div>
+        <h3>
+          後輩へのアドバイス
+        </h3>
+        <div class="text">
+          まずはインターンシップに参加することが最低条件なので、志望動機や興味のあるM&Aなど、一定準備しておくことが必要です！その中で、投資銀行に合う素質など、自己分析を通して納得感高く深ぼることが重要です！<br />
+
+        </div>
+      </div>
+    </main>
+    <?php include(__DIR__ . '/../components/sidebar.html'); ?>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/sidebar_script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
 </html>

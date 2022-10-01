@@ -1,603 +1,586 @@
 <!DOCTYPE html>
 <html>
-      <head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WLHCR88');
-    </script>
-    <!-- End Google Tag Manager -->
-        <meta charset='utf-8' />
-        <title>en-courage京大支部</title>
-        <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-        <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-        <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-        <link href='../css/default.css' rel='stylesheet' />
-        <link href='../css/experience.css' rel='stylesheet' />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    </head>
-    <?php $Path = '../'; ?>
+<?php $Path = '../'; ?>
 
-      <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-        <?php include(__DIR__ . '/../components/header.html'); ?>
-        <div class="content">
-            <main>
-                <img src="../images/industries/developer.png" class="sample_img">
-                <h1>三井不動産の選考体験記</h1>
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/experience.css' />
+</head>
 
-                <div class="section">
-                    <h2>目次</h2>
-                    <div class="flow">
-                        <ul class="cp_stepflow01">
-                            <li>
-      <span class="bubble"></span>
-      <a href="#0">
-          <div>
-              <img src="../images/experience/ES.png">
-              <div>
-                エントリーシート
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#1">
-          <div>
-              <img src="../images/experience/web-test.png">
-              <div>
-                WEBテスト・筆記試験
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#2">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                1次面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#3">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                2次面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#4">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                最終面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#5">
-          <div>
-              <img src="../images/experience/intern.png">
-              <div>
-                インターン（ジョブ）
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble last"></span>
-      <a href="#6">
-          <div>
-              <img src="../images/experience/good.png">
-              <div>
-                内定
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#7">
-          <div>
-              <img src="../images/experience/impressions.png">
-              <div>
-                選考全体の感想
-              </div>
-          </div>
-      </a>
-  </li>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <img src="../images/industries/developer.png" class="sample_img">
+      <h1>三井不動産の選考体験記</h1>
 
-                        </ul>
-                    </div>
+      <div class="section">
+        <h2>目次</h2>
+        <div class="flow">
+          <ul class="cp_stepflow01">
+            <li>
+              <span class="bubble"></span>
+              <a href="#0">
+                <div>
+                  <img src="../images/experience/ES.png">
+                  <div>
+                    エントリーシート
+                  </div>
                 </div>
-              <div class="section ">
-    <h2>
-      <a id="0">
-        エントリーシート
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      提出期日/提出方法
-    </th>
-    <td>
-      3月上旬/マイページ
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#1">
+                <div>
+                  <img src="../images/experience/web-test.png">
+                  <div>
+                    WEBテスト・筆記試験
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#2">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    1次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#3">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    2次面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#4">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    最終面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#5">
+                <div>
+                  <img src="../images/experience/intern.png">
+                  <div>
+                    インターン（ジョブ）
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble last"></span>
+              <a href="#6">
+                <div>
+                  <img src="../images/experience/good.png">
+                  <div>
+                    内定
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#7">
+                <div>
+                  <img src="../images/experience/impressions.png">
+                  <div>
+                    選考全体の感想
+                  </div>
+                </div>
+              </a>
+            </li>
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/通知方法
-    </th>
-    <td>
-      3週間以内/マイページ
+          </ul>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="0">
+            エントリーシート
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  提出期日/提出方法
+                </th>
+                <td>
+                  3月上旬/マイページ
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    質問１：あなたが三井不動産を志望する理由(300)
-  </h3>
-  <div class="text">
-    --
-  </div>
-  <h3>
-    質問２：今までの経験から、あなた自身が社会に出て仕事をするうえで、大切にしたい価値観(300)
-  </h3>
-  <div class="text">
-    --
-  </div>
-  <h3>
-    質問３：大学入学までの経験の詳細と、その経験が今のあなたにどうつながっているのか（テーマ50、時期50、詳細350)
-  </h3>
-  <div class="text">
-    --
-  </div>
-  <h3>
-    質問４：大学・大学院の学生生活での経験の詳細と、その経験が今のあなたにどうつながっているのか２つ（テーマ50、時期50、詳細350)
-  </h3>
-  <div class="text">
-    --
-  </div>
-  <h3>
-    質問５：自分が輝いていると思う写真と、個性をPRするキャッチフレーズと補足文章(50、100)
-  </h3>
-  <div class="text">
-    --
-  </div>
-  <h3>
-    注意したこと
-  </h3>
-  <div class="text">
-    全ての質問に一貫性を持たせるようにした。またデベロッパーはリーダー経験が問われていると感じたため、自分自身のリーダー経験やリーダー像について書いた。<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/通知方法
+                </th>
+                <td>
+                  3週間以内/マイページ
 
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="1">
-        WEBテスト・筆記試験
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      形式
-    </th>
-    <td>
-      SPI
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問１：あなたが三井不動産を志望する理由(300)
+        </h3>
+        <div class="text">
+          --
+        </div>
+        <h3>
+          質問２：今までの経験から、あなた自身が社会に出て仕事をするうえで、大切にしたい価値観(300)
+        </h3>
+        <div class="text">
+          --
+        </div>
+        <h3>
+          質問３：大学入学までの経験の詳細と、その経験が今のあなたにどうつながっているのか（テーマ50、時期50、詳細350)
+        </h3>
+        <div class="text">
+          --
+        </div>
+        <h3>
+          質問４：大学・大学院の学生生活での経験の詳細と、その経験が今のあなたにどうつながっているのか２つ（テーマ50、時期50、詳細350)
+        </h3>
+        <div class="text">
+          --
+        </div>
+        <h3>
+          質問５：自分が輝いていると思う写真と、個性をPRするキャッチフレーズと補足文章(50、100)
+        </h3>
+        <div class="text">
+          --
+        </div>
+        <h3>
+          注意したこと
+        </h3>
+        <div class="text">
+          全ての質問に一貫性を持たせるようにした。またデベロッパーはリーダー経験が問われていると感じたため、自分自身のリーダー経験やリーダー像について書いた。<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      難易度・ボーダー
-    </th>
-    <td>
-      普通
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="1">
+            WEBテスト・筆記試験
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  形式
+                </th>
+                <td>
+                  SPI
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      対策方法
-    </th>
-    <td>
-      問題を解くスピードを上げるためにひたすら解く
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  難易度・ボーダー
+                </th>
+                <td>
+                  普通
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="2">
-        1次面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      5月下旬
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  対策方法
+                </th>
+                <td>
+                  問題を解くスピードを上げるためにひたすら解く
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      25分ほど(オンライン)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="2">
+            1次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  5月下旬
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      2:1
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  25分ほど(オンライン)
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      翌日/電話で
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  2:1
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    質問内容
-  </h3>
-  <div class="text">
-    ・自己紹介<br />
-・なぜ京大受験したのか、なぜ部活に入ったのか<br />
-・学生時代頑張ったこと(２つ）とその深掘り<br />
-・異なる価値観の部員を束ねるときに意識していること<br />
-・自分の強みと弱み<br />
-・最後に一言<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  翌日/電話で
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    自己分析に関する質問が多く、志望動機などは全く聞かれなかった。そのため最後に一言のときに三井不動産で好きな物件について話し、志望度の高さをアピールした。また、自分の強みである「穏やかなリーダーシップ」をエピソードに反映させるなど、一貫性を持たせた。<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          質問内容
+        </h3>
+        <div class="text">
+          ・自己紹介<br />
+          ・なぜ京大受験したのか、なぜ部活に入ったのか<br />
+          ・学生時代頑張ったこと(２つ）とその深掘り<br />
+          ・異なる価値観の部員を束ねるときに意識していること<br />
+          ・自分の強みと弱み<br />
+          ・最後に一言<br />
 
-  </div>
-</div>  <div class="section atsumori">
-    <h2>
-      <a id="3">
-        2次面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      6/1
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          自己分析に関する質問が多く、志望動機などは全く聞かれなかった。そのため最後に一言のときに三井不動産で好きな物件について話し、志望度の高さをアピールした。また、自分の強みである「穏やかなリーダーシップ」をエピソードに反映させるなど、一貫性を持たせた。<br />
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      2:1
+        </div>
+      </div>
+      <div class="section atsumori">
+        <h2>
+          <a id="3">
+            2次面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  6/1
 
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      2~3時間後/電話で
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  2:1
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    面接時間
-  </h3>
-  <div class="text">
-    1時間ほど(対面。最初に20分モチベーショングラフと小論文を書く。そのあと25分ほど面接)<br />
-小論文のテーマ：あなたが日頃からおかしいと感じていることは何ですか<br />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  2~3時間後/電話で
 
-  </div>
-  <h3>
-    質問内容
-  </h3>
-  <div class="text">
-    ・自己紹介<br />
-・学生時代頑張ったこと(2つ）とその深掘り<br />
-・高校時代に頑張ったこと(1つ)とその深掘り<br />
-・高校の部活と、大学の部活の違い<br />
-・最後に１分くらいあげるからアピールして<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          面接時間
+        </h3>
+        <div class="text">
+          1時間ほど(対面。最初に20分モチベーショングラフと小論文を書く。そのあと25分ほど面接)<br />
+          小論文のテーマ：あなたが日頃からおかしいと感じていることは何ですか<br />
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    １次面接と同様、自己分析に関する質問が多く、志望動機などは全く聞かれなかった。そのため最後に志望理由となぜ御社なのかを話し、アピールした。隣のブースでは他の就活生も面接を受けており、その声が非常に聞こえたため、面接官の質問を聞くのが難しかった。今思えば、集中力を保つのが難しい環境の中で、自分をアピールできたのが良かったのかなと思う。<br />
+        </div>
+        <h3>
+          質問内容
+        </h3>
+        <div class="text">
+          ・自己紹介<br />
+          ・学生時代頑張ったこと(2つ）とその深掘り<br />
+          ・高校時代に頑張ったこと(1つ)とその深掘り<br />
+          ・高校の部活と、大学の部活の違い<br />
+          ・最後に１分くらいあげるからアピールして<br />
 
-  </div>
-</div>  <div class="atsumori-event">
-    <h2>対策イベント！</h2>
-    <div class="event">
-      <?php
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          １次面接と同様、自己分析に関する質問が多く、志望動機などは全く聞かれなかった。そのため最後に志望理由となぜ御社なのかを話し、アピールした。隣のブースでは他の就活生も面接を受けており、その声が非常に聞こえたため、面接官の質問を聞くのが難しかった。今思えば、集中力を保つのが難しい環境の中で、自分をアピールできたのが良かったのかなと思う。<br />
+
+        </div>
+      </div>
+      <div class="atsumori-event">
+        <h2>対策イベント！</h2>
+        <div class="event">
+          <?php
         $page_title = basename(__FILE__);
         preg_match("/[0-9]+/", $page_title, $id);
         $id = $id[0];
         require("../backend/get_atsumori_event.php");
       ?>
-    </div>
-  </div>
-  <div class="section ">
-    <h2>
-      <a id="4">
-        最終面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      6/1(2次面接から7時間後)
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      4:1
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      4時間後/電話で
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    面接時間
-  </h3>
-  <div class="text">
-    1時間ほど(対面。休憩ブースがあり社員の方と20分待機した後、25分面接)<br />
-
-  </div>
-  <h3>
-    質問内容
-  </h3>
-  <div class="text">
-    ・自己紹介<br />
-・モチベーショングラフで気になったところの深掘り（小学校のときはどんな人だったか、中学でモチベーションが下がっているのはなぜか）<br />
-・高校時代頑張ったことの深掘り<br />
-・あなたは人を怒ることができますか<br />
-・自分の嫌いなところは何ですか<br />
-・人と比べてしまうとはどういうことですか<br />
-・最後に一言<br />
-
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    ４人の役員の方が並び、マスクもとっての面接だったため、非常に緊張感のある空間だった。大学時代のことはあまり聞かれず、幼少期から高校までの話で気になったところを中心に深掘りされた。基本１名の方が質問していたが、最後に残りの３名からひとつずつ質問された。少し変わった質問も来たが、落ち着いて自分の素直な考えを述べたことと、最後に一言で本当に三井不動産に入りたいと熱意を持って伝えられたことが内定に繋がったと考える。<br />
-
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="5">
-        インターン（ジョブ）
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      開催時期/実施日数
-    </th>
-    <td>
-      二次面接落ち
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="6">
-        内定
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      内定時期
-    </th>
-    <td>
-      6/1
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾検討期間
-    </th>
-    <td>
-      その場で承諾したため不明
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾or辞退
-    </th>
-    <td>
-      承諾
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      承諾or辞退理由
-    </th>
-    <td>
-      業界トップで、第一志望だったから
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      内定者属性（大学とか文理とか）
-    </th>
-    <td>
-      東大、京大、早慶、旧帝多め、文理や学部卒・院卒は半々くらい。体育会がやや多め。
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="7">
-        選考全体の感想
-      </a>
-    </h2>
-  <h3>
-    内定先に興味を持ったきっかけ
-  </h3>
-  <div class="text">
-    デベロッパーのインターンに複数参加しており。街づくりに携わりたい気持ちが強くなったから。また業界トップでダイナミックな事業に携われると思ったから。好きな物件があるから。<br />
-
-  </div>
-  <h3>
-    どういった基準でこの企業を選んだか
-  </h3>
-  <div class="text">
-    街づくりに携わることができる。特に商業施設の開発・運営ができる。裁量権を持って働ける。働く環境(年収、福利厚生、制度、勤務地など)が申し分ない。<br />
-
-  </div>
-  <h3>
-    選考を通して重要視されたと感じた点
-  </h3>
-  <div class="text">
-    人となりや個性が非常に重要視されていると感じた。また何かしらでリーダー経験をしているかも重要視されていると思った。あとは取り繕わず素直に自分の考えを言えるか、など。<br />
-
-  </div>
-  <h3>
-    同業他社と比べてこの企業の魅力は？
-  </h3>
-  <div class="text">
-    規模感。働く環境。社員の方の親しみやすさ。<br />
-
-  </div>
-  <h3>
-    この企業を受けるにあたって工夫した点
-  </h3>
-  <div class="text">
-    私はインターン落ちであるため、本選考でリベンジしたい気持ちが強かった。三井不動産はあまり志望動機は聞かれず、その人の考え方や人柄をよく見られるため、自分という人を相手に伝えるためにはどういう伝え方や言い回し、表情が効果的なのかをよく考え、実践した。<br />
-
-  </div>
-  <h3>
-    社員（と内定者）にどのような印象を持ったか
-  </h3>
-  <div class="text">
-    親しみやすく学生目線で会話してくれる社員の方が多い。内定者も同様である。人を好きな人が多い。<br />
-
-  </div>
-  <h3>
-    後輩へのアドバイス
-  </h3>
-  <div class="text">
-    まずは自己分析をしっかり行うことが大切です。例えば、なぜ中学では○○部に入ったのか、なぜこの時モチベーションが下がっていたのか、などを分析することです。それができたら次はどうしたら面接の場で「自分」をうまく出せるか、伝えられるかを分析するといいと思います。三井不動産では、「素直さ」と「異なる考えの相手でも一緒に仕事できるか」が重視されていると感じました。また最後に一言では、志望動機を言うなど、志望度の高さをアピールするといいと思います。<br />
-
-  </div>
-</div>
-            </main>
-            <?php include(__DIR__ . '/../components/sidebar.html'); ?>
         </div>
-        <div id="page_top"><a href="#"></a></div>
-        <?php include(__DIR__ . '/../components/footer.html'); ?>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="4">
+            最終面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  6/1(2次面接から7時間後)
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/script.js"></script>
-        <script type="text/javascript" src="../js/sidebar_script.js"></script>
-        <script type="text/javascript" src="../js/footer_script.js"></script>
-    </body>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  4:1
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  4時間後/電話で
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          面接時間
+        </h3>
+        <div class="text">
+          1時間ほど(対面。休憩ブースがあり社員の方と20分待機した後、25分面接)<br />
+
+        </div>
+        <h3>
+          質問内容
+        </h3>
+        <div class="text">
+          ・自己紹介<br />
+          ・モチベーショングラフで気になったところの深掘り（小学校のときはどんな人だったか、中学でモチベーションが下がっているのはなぜか）<br />
+          ・高校時代頑張ったことの深掘り<br />
+          ・あなたは人を怒ることができますか<br />
+          ・自分の嫌いなところは何ですか<br />
+          ・人と比べてしまうとはどういうことですか<br />
+          ・最後に一言<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          ４人の役員の方が並び、マスクもとっての面接だったため、非常に緊張感のある空間だった。大学時代のことはあまり聞かれず、幼少期から高校までの話で気になったところを中心に深掘りされた。基本１名の方が質問していたが、最後に残りの３名からひとつずつ質問された。少し変わった質問も来たが、落ち着いて自分の素直な考えを述べたことと、最後に一言で本当に三井不動産に入りたいと熱意を持って伝えられたことが内定に繋がったと考える。<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="5">
+            インターン（ジョブ）
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  開催時期/実施日数
+                </th>
+                <td>
+                  二次面接落ち
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="6">
+            内定
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  内定時期
+                </th>
+                <td>
+                  6/1
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾検討期間
+                </th>
+                <td>
+                  その場で承諾したため不明
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退
+                </th>
+                <td>
+                  承諾
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  承諾or辞退理由
+                </th>
+                <td>
+                  業界トップで、第一志望だったから
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  内定者属性（大学とか文理とか）
+                </th>
+                <td>
+                  東大、京大、早慶、旧帝多め、文理や学部卒・院卒は半々くらい。体育会がやや多め。
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="7">
+            選考全体の感想
+          </a>
+        </h2>
+        <h3>
+          内定先に興味を持ったきっかけ
+        </h3>
+        <div class="text">
+          デベロッパーのインターンに複数参加しており。街づくりに携わりたい気持ちが強くなったから。また業界トップでダイナミックな事業に携われると思ったから。好きな物件があるから。<br />
+
+        </div>
+        <h3>
+          どういった基準でこの企業を選んだか
+        </h3>
+        <div class="text">
+          街づくりに携わることができる。特に商業施設の開発・運営ができる。裁量権を持って働ける。働く環境(年収、福利厚生、制度、勤務地など)が申し分ない。<br />
+
+        </div>
+        <h3>
+          選考を通して重要視されたと感じた点
+        </h3>
+        <div class="text">
+          人となりや個性が非常に重要視されていると感じた。また何かしらでリーダー経験をしているかも重要視されていると思った。あとは取り繕わず素直に自分の考えを言えるか、など。<br />
+
+        </div>
+        <h3>
+          同業他社と比べてこの企業の魅力は？
+        </h3>
+        <div class="text">
+          規模感。働く環境。社員の方の親しみやすさ。<br />
+
+        </div>
+        <h3>
+          この企業を受けるにあたって工夫した点
+        </h3>
+        <div class="text">
+          私はインターン落ちであるため、本選考でリベンジしたい気持ちが強かった。三井不動産はあまり志望動機は聞かれず、その人の考え方や人柄をよく見られるため、自分という人を相手に伝えるためにはどういう伝え方や言い回し、表情が効果的なのかをよく考え、実践した。<br />
+
+        </div>
+        <h3>
+          社員（と内定者）にどのような印象を持ったか
+        </h3>
+        <div class="text">
+          親しみやすく学生目線で会話してくれる社員の方が多い。内定者も同様である。人を好きな人が多い。<br />
+
+        </div>
+        <h3>
+          後輩へのアドバイス
+        </h3>
+        <div class="text">
+          まずは自己分析をしっかり行うことが大切です。例えば、なぜ中学では○○部に入ったのか、なぜこの時モチベーションが下がっていたのか、などを分析することです。それができたら次はどうしたら面接の場で「自分」をうまく出せるか、伝えられるかを分析するといいと思います。三井不動産では、「素直さ」と「異なる考えの相手でも一緒に仕事できるか」が重視されていると感じました。また最後に一言では、志望動機を言うなど、志望度の高さをアピールするといいと思います。<br />
+
+        </div>
+      </div>
+    </main>
+    <?php include(__DIR__ . '/../components/sidebar.html'); ?>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/sidebar_script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
 </html>

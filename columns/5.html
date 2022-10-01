@@ -1,41 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-  <script>
-    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({
-      "userName": userName
-    })
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
-  </script>
-  <!-- End Google Tag Manager -->
-  <meta charset='utf-8' />
-  <title>en-courage京大支部</title>
-  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-  <link href='../css/default.css' rel='stylesheet' />
-  <link href='../css/column.css' rel='stylesheet' />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-</head>
 <?php $Path = '../'; ?>
+
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/column.css' />
+</head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -62,22 +33,22 @@
             <ul>
               <li>
                 <a href="#1">
-1.なんとなく就活(春から夏)
+                  1.なんとなく就活(春から夏)
                 </a>
               </li>
               <li>
                 <a href="#2">
-2.業界分析で迷走(夏から冬前まで)
+                  2.業界分析で迷走(夏から冬前まで)
                 </a>
               </li>
               <li>
                 <a href="#3">
-3. 最初にやめた道に目を向けてみた(冬から)
+                  3. 最初にやめた道に目を向けてみた(冬から)
                 </a>
               </li>
               <li>
                 <a href="#4">
-4.選考を終えて
+                  4.選考を終えて
                 </a>
               </li>
             </ul>
@@ -93,7 +64,7 @@
 
       <div class="section">
         <h3 class="section-title" id="1">
-1.なんとなく就活(春から夏)
+          1.なんとなく就活(春から夏)
         </h3>
         <div class="section-body">
           なんとなく周りが始めたから就活を始めないと、と思った。なんとなく4月にエンカレに登録した。なんとなく6月からのインターン選考に向けて、今まで大学生活でなんとなく始めたアルバイトに意味付けをしてガクチカを作り、メンターさんに添削してもらうようになった。<br>
@@ -104,7 +75,7 @@
 
       <div class="section">
         <h3 class="section-title" id="2">
-2.業界分析で迷走(夏から冬前まで)
+          2.業界分析で迷走(夏から冬前まで)
         </h3>
         <div class="section-body">
           「金融業界以外も見てやっぱり金融だ、と言えるようにしよう！」<br>
@@ -116,7 +87,7 @@
 
       <div class="section">
         <h3 class="section-title" id="3">
-3. 最初にやめた道に目を向けてみた(冬から)
+          3. 最初にやめた道に目を向けてみた(冬から)
         </h3>
         <div class="section-body">
           　コンサルは就活を始めた段階で選択肢から外していた。ブラックそう。カタカナもよくわからんし。<br>
@@ -128,7 +99,7 @@
 
       <div class="section">
         <h3 class="section-title" id="4">
-4.選考を終えて
+          4.選考を終えて
         </h3>
         <div class="section-body">
           　なぜ内定先に決めたのか。まずやっぱり軸に合っていた。そしてリクルーターがついてくれてすごくよくお世話してくれた。そういうのに弱い。話し始めたらもっと話せるけど結局はこの２点だと思う。めちゃめちゃ働かされるかも…という不安はなくはないが、そんなバリキャリできるのも今のうちか、と思って諦めた。<br>

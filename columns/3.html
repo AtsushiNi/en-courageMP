@@ -1,41 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-  <script>
-    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({
-      "userName": userName
-    })
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
-  </script>
-  <!-- End Google Tag Manager -->
-  <meta charset='utf-8' />
-  <title>en-courage京大支部</title>
-  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-  <link href='../css/default.css' rel='stylesheet' />
-  <link href='../css/column.css' rel='stylesheet' />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-</head>
 <?php $Path = '../'; ?>
+
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/column.css' />
+</head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -67,22 +38,22 @@
               </li>
               <li>
                 <a href="#2">
-選抜コミュニティ参加と初のインターン
+                  選抜コミュニティ参加と初のインターン
                 </a>
               </li>
               <li>
                 <a href="#3">
-絶望の6月・迷走の7月
+                  絶望の6月・迷走の7月
                 </a>
               </li>
               <li>
                 <a href="#4">
-サマーインターンラッシュ・思考の転換
+                  サマーインターンラッシュ・思考の転換
                 </a>
               </li>
               <li>
                 <a href="#5">
-意志決定の決め手は「未来志向」
+                  意志決定の決め手は「未来志向」
                 </a>
               </li>
             </ul>
@@ -92,16 +63,16 @@
 
       <div class="section">
         <h3 class="section-title" id="1">
-                  就活を始めたきっかけ
+          就活を始めたきっかけ
         </h3>
         <div class="section-body">
-自分自身初めて就活に目を向けたのは、2年生の9月です。ゼミの先輩の内定先が日系の投資銀行で、3回生向けの説明会に混じって参加したことがきっかけです。当初はゼミでの経験からファイナンスには一定興味を持っていましたが、この時点ではそこまで「働くこと」に対して特に意識は持っていなかったなあと思います。
+          自分自身初めて就活に目を向けたのは、2年生の9月です。ゼミの先輩の内定先が日系の投資銀行で、3回生向けの説明会に混じって参加したことがきっかけです。当初はゼミでの経験からファイナンスには一定興味を持っていましたが、この時点ではそこまで「働くこと」に対して特に意識は持っていなかったなあと思います。
         </div>
       </div>
 
       <div class="section">
         <h3 class="section-title" id="2">
-選抜コミュニティ参加と初のインターン
+          選抜コミュニティ参加と初のインターン
         </h3>
         <div class="section-body">
           2回生の2月ごろ、その先輩が所属していた選抜コミュニティの選考をなんとなーく受けて、何故か合格してしまいました。ここから本格的に「外資系投資銀行」と言われる世界を見始めるようになります。<br>
@@ -112,7 +83,7 @@
 
       <div class="section">
         <h3 class="section-title" id="3">
-絶望の6月・迷走の7月
+          絶望の6月・迷走の7月
         </h3>
         <div class="section-body">
           6月に入ると外資系投資銀行の選考が本格化します。しかしうまくいかない。シンプルな能力不足もあるかもしれませんが、話していて「刺さってないな」と思うことが多々ありました。<br>
@@ -126,7 +97,7 @@
 
       <div class="section">
         <h3 class="section-title" id="4">
-サマーインターンラッシュ・思考の転換
+          サマーインターンラッシュ・思考の転換
         </h3>
         <div class="section-body">
           受かったサマーインターンを断らなかったことと、業界の性質上複数daysが多かったこともあり、8月末から9月にかけて「8日連続インターン→土日→12日連続インターン」というブラックスケジュールが生まれました。本命の投資銀行から事業会社・ベンチャーまで幅広く行きましたが、その中で事業開発になんの面白みも感じなかったこと、逆に投資銀行の面白さを感じたことで志望度はグッと上がりました。その中でも一番大きかったところは、「この部署は合わなそうだけど、この部署ならば活躍できそう」という実感が具体的に持てたことです。<br>
@@ -136,7 +107,7 @@
 
       <div class="section">
         <h3 class="section-title" id="5">
-意志決定の決め手は「未来志向」
+          意志決定の決め手は「未来志向」
         </h3>
         <div class="section-body">
           最終的には日系投資銀行数社と新聞記者に内定をいただくことが出来ましたが、正直意志決定の決め手は最後まで明確ではありませんでした。いろいろ悩んだ末に、自分自身キャリアを考える上で欠けていたことが「10年の自分の姿を描くこと」だったのだと気づきました。<br>

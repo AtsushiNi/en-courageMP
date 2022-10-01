@@ -1,397 +1,377 @@
 <!DOCTYPE html>
 <html>
-      <head>
-    <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
-    <script>
-        const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            "userName": userName
-        })
-    </script>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WLHCR88');
-    </script>
-    <!-- End Google Tag Manager -->
-        <meta charset='utf-8' />
-        <title>en-courage京大支部</title>
-        <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
-        <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
-        <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
-        <link href='../css/default.css' rel='stylesheet' />
-        <link href='../css/experience.css' rel='stylesheet' />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
-    </head>
-    <?php $Path = '../'; ?>
+<?php $Path = '../'; ?>
 
-      <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-        <?php include(__DIR__ . '/../components/header.html'); ?>
-        <div class="content">
-            <main>
-                <img src="../images/industries/consulting.png" class="sample_img">
-                <h1>BCGの選考体験記</h1>
+<head>
+  <?php include(__DIR__ . '/../components/head.html'); ?>
+  <link rel='stylesheet' href='../css/experience.css' />
+</head>
 
-                <div class="section">
-                    <h2>目次</h2>
-                    <div class="flow">
-                        <ul class="cp_stepflow01">
-                            <li>
-      <span class="bubble"></span>
-      <a href="#0">
-          <div>
-              <img src="../images/experience/GD.png">
-              <div>
-                GD会<br>
-                （選抜コミュニティ）
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#1">
-          <div>
-              <img src="../images/experience/intern.png">
-              <div>
-                1dayインターン
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#2">
-          <div>
-              <img src="../images/experience/interview.png">
-              <div>
-                最終面接
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble last"></span>
-      <a href="#3">
-          <div>
-              <img src="../images/experience/good.png">
-              <div>
-                内定
-              </div>
-          </div>
-      </a>
-  </li>
-  <li>
-      <span class="bubble"></span>
-      <a href="#4">
-          <div>
-              <img src="../images/experience/impressions.png">
-              <div>
-                選考全体の感想
-              </div>
-          </div>
-      </a>
-  </li>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <img src="../images/industries/consulting.png" class="sample_img">
+      <h1>BCGの選考体験記</h1>
 
-                        </ul>
-                    </div>
+      <div class="section">
+        <h2>目次</h2>
+        <div class="flow">
+          <ul class="cp_stepflow01">
+            <li>
+              <span class="bubble"></span>
+              <a href="#0">
+                <div>
+                  <img src="../images/experience/GD.png">
+                  <div>
+                    GD会<br>
+                    （選抜コミュニティ）
+                  </div>
                 </div>
-              <div class="section ">
-    <h2>
-      <a id="0">
-        GD会（選抜コミュニティ）
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      開催時期/実施日数
-    </th>
-    <td>
-      5月半ば
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#1">
+                <div>
+                  <img src="../images/experience/intern.png">
+                  <div>
+                    1dayインターン
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#2">
+                <div>
+                  <img src="../images/experience/interview.png">
+                  <div>
+                    最終面接
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble last"></span>
+              <a href="#3">
+                <div>
+                  <img src="../images/experience/good.png">
+                  <div>
+                    内定
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <span class="bubble"></span>
+              <a href="#4">
+                <div>
+                  <img src="../images/experience/impressions.png">
+                  <div>
+                    選考全体の感想
+                  </div>
+                </div>
+              </a>
+            </li>
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    内容
-  </h3>
-  <div class="text">
-    1時間半程度のグループワーク<br />
-（売上向上施策系、リサーチあり）<br />
+          </ul>
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="0">
+            GD会（選抜コミュニティ）
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  開催時期/実施日数
+                </th>
+                <td>
+                  5月半ば
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    レベルが高い環境であったため発言の量と質の担保には気をつけた<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容
+        </h3>
+        <div class="text">
+          1時間半程度のグループワーク<br />
+          （売上向上施策系、リサーチあり）<br />
 
-  </div>
-  <h3>
-    選考への影響
-  </h3>
-  <div class="text">
-    優秀者が1dayインターンに招待される<br />
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          レベルが高い環境であったため発言の量と質の担保には気をつけた<br />
 
-  </div>
-</div>  <div class="section atsumori">
-    <h2>
-      <a id="1">
-        1dayインターン
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      開催時期/実施日数
-    </th>
-    <td>
-      7月上旬
+        </div>
+        <h3>
+          選考への影響
+        </h3>
+        <div class="text">
+          優秀者が1dayインターンに招待される<br />
 
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    内容
-  </h3>
-  <div class="text">
-    グループワーク<br />
+        </div>
+      </div>
+      <div class="section atsumori">
+        <h2>
+          <a id="1">
+            1dayインターン
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  開催時期/実施日数
+                </th>
+                <td>
+                  7月上旬
 
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    向こうの提示する論点に沿って仮説思考をすること、柔軟にFBを受け入れることを注意した<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容
+        </h3>
+        <div class="text">
+          グループワーク<br />
 
-  </div>
-  <h3>
-    選考への影響
-  </h3>
-  <div class="text">
-    優秀者に面談の連絡がされる<br />
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          向こうの提示する論点に沿って仮説思考をすること、柔軟にFBを受け入れることを注意した<br />
 
-  </div>
-</div>  <div class="atsumori-event">
-    <h2>対策イベント！</h2>
-    <div class="event">
-      <?php
+        </div>
+        <h3>
+          選考への影響
+        </h3>
+        <div class="text">
+          優秀者に面談の連絡がされる<br />
+
+        </div>
+      </div>
+      <div class="atsumori-event">
+        <h2>対策イベント！</h2>
+        <div class="event">
+          <?php
         $page_title = basename(__FILE__);
         preg_match("/[0-9]+/", $page_title, $id);
         $id = $id[0];
         require("../backend/get_atsumori_event.php");
       ?>
-    </div>
-  </div>
-  <div class="section ">
-    <h2>
-      <a id="2">
-        最終面接
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      面接時期
-    </th>
-    <td>
-      7月下旬～8月下旬
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接時間
-    </th>
-    <td>
-      1時間程度
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      面接官の人数・役職/学生の人数
-    </th>
-    <td>
-      パートナーの方 / 学生1人
-
-    </td>
-  </tr>
-  <tr>
-    <th>
-      結果通知時期/方法
-    </th>
-    <td>
-      その場で通知
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    内容（テーマ・プレゼン時間など）
-  </h3>
-  <div class="text">
-    1dayで懸念なしの場合はインターンの振り返りをしてその場で内定<br />
-著者は懸念ありパターンだったため3度の面接を行った<br />
-内容は、<br />
-1回目　インターンの振り返り（今ならどう考えるか）<br />
-2回目　社会課題に関するディスカッション<br />
-3回目　自分の良く知る題材、知らない題材に関するケース<br />
-
-  </div>
-  <h3>
-    注意した点・感想
-  </h3>
-  <div class="text">
-    メンタル面も見られていたらしく、やや詰められているという印象であった<br />
-
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="3">
-        内定
-      </a>
-    </h2>
-  <div class="table">
-    <table>
-      <tbody>
-  <tr>
-    <th>
-      内定時期
-    </th>
-    <td>
-      8月下旬
-
-    </td>
-  </tr>
-      </tbody>
-    </table>
-  </div>
-  <h3>
-    承諾検討期間
-  </h3>
-  <div class="text">
-    2週間程度<br />
-日系の選考も受けると宣言した場合は承諾したうえで決まり次第連絡する（後から辞退可能）、という形式<br />
-他社コンサルなどと検討の場合は確定のうえで承諾<br />
-
-  </div>
-  <h3>
-    承諾or辞退
-  </h3>
-  <div class="text">
-    承諾<br />
-
-  </div>
-  <h3>
-    承諾or辞退理由
-  </h3>
-  <div class="text">
-    転職が広く可能かつ多種の業界に関わることができるため今後の可能性が狭まらない<br />
-最懸念事項であったワークライフバランスに関し改善した現状について説明を受けた<br />
-
-  </div>
-  <h3>
-    内定者属性（大学とか文理とか）
-  </h3>
-  <div class="text">
-    東大生、京大生が9割程度<br />
-
-  </div>
-</div>  <div class="section ">
-    <h2>
-      <a id="4">
-        選考全体の感想
-      </a>
-    </h2>
-  <h3>
-    内定先に興味を持ったきっかけ
-  </h3>
-  <div class="text">
-    先輩から話を聞いて<br />
-<br />
-
-  </div>
-  <h3>
-    どういった基準でこの企業を選んだか
-  </h3>
-  <div class="text">
-    成長環境、企業の雰囲気<br />
-
-  </div>
-  <h3>
-    選考を通して重要視されたと感じた点
-  </h3>
-  <div class="text">
-    論理性、人柄、タフさ<br />
-
-  </div>
-  <h3>
-    同業他社と比べてこの企業の魅力は？
-  </h3>
-  <div class="text">
-    個人に合った働き方ができる<br />
-日本国内では大企業の華やかな案件が多い<br />
-
-  </div>
-  <h3>
-    この企業を受けるにあたって工夫した点
-  </h3>
-  <div class="text">
-    相手にリスペクトをもって話をすること<br />
-ワークを楽しむこと<br />
-
-  </div>
-  <h3>
-    社員（と内定者）にどのような印象を持ったか
-  </h3>
-  <div class="text">
-    穏やかな人が多い<br />
-入社したころは自分もやっていけるか不安だったと伝えてくださる方が多かった<br />
-
-  </div>
-  <h3>
-    後輩へのアドバイス
-  </h3>
-  <div class="text">
-    通ることだけを意識するというよりは、ディスカッションを楽しむ気持ちを素直にもっていただけると良いかと思います<br />
-
-  </div>
-</div>
-            </main>
-            <?php include(__DIR__ . '/../components/sidebar.html'); ?>
         </div>
-        <div id="page_top"><a href="#"></a></div>
-        <?php include(__DIR__ . '/../components/footer.html'); ?>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="2">
+            最終面接
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  面接時期
+                </th>
+                <td>
+                  7月下旬～8月下旬
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/script.js"></script>
-        <script type="text/javascript" src="../js/sidebar_script.js"></script>
-        <script type="text/javascript" src="../js/footer_script.js"></script>
-    </body>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接時間
+                </th>
+                <td>
+                  1時間程度
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  面接官の人数・役職/学生の人数
+                </th>
+                <td>
+                  パートナーの方 / 学生1人
+
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  結果通知時期/方法
+                </th>
+                <td>
+                  その場で通知
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          内容（テーマ・プレゼン時間など）
+        </h3>
+        <div class="text">
+          1dayで懸念なしの場合はインターンの振り返りをしてその場で内定<br />
+          著者は懸念ありパターンだったため3度の面接を行った<br />
+          内容は、<br />
+          1回目　インターンの振り返り（今ならどう考えるか）<br />
+          2回目　社会課題に関するディスカッション<br />
+          3回目　自分の良く知る題材、知らない題材に関するケース<br />
+
+        </div>
+        <h3>
+          注意した点・感想
+        </h3>
+        <div class="text">
+          メンタル面も見られていたらしく、やや詰められているという印象であった<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="3">
+            内定
+          </a>
+        </h2>
+        <div class="table">
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  内定時期
+                </th>
+                <td>
+                  8月下旬
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          承諾検討期間
+        </h3>
+        <div class="text">
+          2週間程度<br />
+          日系の選考も受けると宣言した場合は承諾したうえで決まり次第連絡する（後から辞退可能）、という形式<br />
+          他社コンサルなどと検討の場合は確定のうえで承諾<br />
+
+        </div>
+        <h3>
+          承諾or辞退
+        </h3>
+        <div class="text">
+          承諾<br />
+
+        </div>
+        <h3>
+          承諾or辞退理由
+        </h3>
+        <div class="text">
+          転職が広く可能かつ多種の業界に関わることができるため今後の可能性が狭まらない<br />
+          最懸念事項であったワークライフバランスに関し改善した現状について説明を受けた<br />
+
+        </div>
+        <h3>
+          内定者属性（大学とか文理とか）
+        </h3>
+        <div class="text">
+          東大生、京大生が9割程度<br />
+
+        </div>
+      </div>
+      <div class="section ">
+        <h2>
+          <a id="4">
+            選考全体の感想
+          </a>
+        </h2>
+        <h3>
+          内定先に興味を持ったきっかけ
+        </h3>
+        <div class="text">
+          先輩から話を聞いて<br />
+          <br />
+
+        </div>
+        <h3>
+          どういった基準でこの企業を選んだか
+        </h3>
+        <div class="text">
+          成長環境、企業の雰囲気<br />
+
+        </div>
+        <h3>
+          選考を通して重要視されたと感じた点
+        </h3>
+        <div class="text">
+          論理性、人柄、タフさ<br />
+
+        </div>
+        <h3>
+          同業他社と比べてこの企業の魅力は？
+        </h3>
+        <div class="text">
+          個人に合った働き方ができる<br />
+          日本国内では大企業の華やかな案件が多い<br />
+
+        </div>
+        <h3>
+          この企業を受けるにあたって工夫した点
+        </h3>
+        <div class="text">
+          相手にリスペクトをもって話をすること<br />
+          ワークを楽しむこと<br />
+
+        </div>
+        <h3>
+          社員（と内定者）にどのような印象を持ったか
+        </h3>
+        <div class="text">
+          穏やかな人が多い<br />
+          入社したころは自分もやっていけるか不安だったと伝えてくださる方が多かった<br />
+
+        </div>
+        <h3>
+          後輩へのアドバイス
+        </h3>
+        <div class="text">
+          通ることだけを意識するというよりは、ディスカッションを楽しむ気持ちを素直にもっていただけると良いかと思います<br />
+
+        </div>
+      </div>
+    </main>
+    <?php include(__DIR__ . '/../components/sidebar.html'); ?>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/sidebar_script.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
 </html>
