@@ -4,10 +4,18 @@
   $oc_list = file_get_contents("../data/oc.json");
   $oc_list = json_decode($oc_list, true);
 
+  $delete_image_paths = [];
   foreach ($oc_list["data"] as $index => $oc) {
     if(in_array((string) $oc["id"], $_POST["data"])) {
-      /* print_r($oc); */
+      array_push($delete_image_paths, $oc_list["data"][$index]["image"]);
       unset($oc_list["data"][$index]);
+    }
+  }
+
+  $delete_image_paths = array_unique($delete_image_paths);
+  foreach ($delete_image_paths as $path) {
+    if(!in_array($path, array_column($oc_list["data"], "image"))) {
+      unlink("../../images/events/" . $path);
     }
   }
 
