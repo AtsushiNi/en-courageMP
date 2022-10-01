@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 閲覧者がメンターかエンターかをGTMが判別するためのコード -->
+  <script>
+    const userName = "<?php array_key_exists('REMOTE_USER', $_SERVER) && print_r($_SERVER['REMOTE_USER']);?>"
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      "userName": userName
+    })
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WLHCR88');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset='utf-8' />
+  <title>en-courage京大支部</title>
+  <link rel=”shortcut icon” href=”favicon.ico” type=”image/x-icon”>
+  <link rel=”apple-touch-icon” href=”apple-touch-icon-180×180.png” sizes=”180×180″>
+  <link rel=”icon” type=”image/png” href=”android-chrome-192×192.png” sizes=”192×192″>
+  <link href='../css/default.css' rel='stylesheet' />
+  <link href='../css/ondemand_event.css' rel='stylesheet' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+</head>
+<?php $Path = '../'; ?>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLHCR88" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <?php include(__DIR__ . '/../components/header.html'); ?>
+  <div class="content">
+    <main>
+      <div class="block title">
+        <img src="../images/ondemand_events/financial_ondemand.jpg">
+        <h1>～時代を生き抜く金融マンへ～一歩深く金融業界の知識を学ぼう</h1>
+      </div>
+
+      <div class="block description">
+        <div class="section">
+          <h2>金融業界に興味のある方・これから選考対策を行いたい方必見！</h2>
+          金融業界は、カネの力で幅広い業界に関わる事ができる分、全体像を捉えるのが難しい業界です。<br>
+          どんな業務・業界があるの？どうやったら選考突破できるの？本オンデマンドで金融業界とその対策法について理解を深め、早期内定を勝ち取るための第一歩を踏み出しましょう！！<br>
+        </div>
+        <div class="section">
+          <h2>こんな人におすすめ！</h2>
+          ✅すきま時間で効率よく情報収集がしたい方！<br>
+          ✅金融業界に興味があるけど、どんな対策をしたらいいかわからない方！<br>
+          ✅金融業界の仕事内容について理解を深めたい方<br>
+        </div>
+        <div class="section">
+          <h2>コンテンツ内容</h2>
+          1. 金融業界ってどんな業界？<br>
+          2. どんな業界・業務があるの？<br>
+          3. 内定者ES分析（近日公開）<br>
+        </div>
+      </div>
+
+      <div class="block pdf">
+        <div class="section pdf">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxFR7zIflwRlb06hQBiS-nIv8xg7W4P53qrQdGQTHET5uVIuI4wBatEDsgTkDHjn_pCldBD6WKyjpo/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          <a href="https://docs.google.com/presentation/d/1P0gx8YrbY6_mloBzVKbtEWWKP9td1zAGAE9Y4s_By70/export?format=pdf" class="download-button">資料DL</a>
+        </div>
+        <div class="name-form-bg">
+        </div>
+        <div class="name-form">
+          <div>
+            資料を見る前にお名前を入力してください
+          </div>
+          <form onsubmit="handleSubmit(); return false;">
+            <input placeholder="例) 山田太朗">
+            <button>送信</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="page_top"><a href="#"></a></div>
+  <?php include(__DIR__ . '/../components/footer.html'); ?>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/ondemand_event.js"></script>
+  <script type="text/javascript" src="../js/footer_script.js"></script>
+</body>
+
+</html>

@@ -63,6 +63,22 @@
             "image": "../ondemand_events/dTKtxIMDAo9rCEAaVn3TUZmD2GNlrI6nJkKXDIOtRpLNKmaOUivlf8kFUdqq1dHN.jpeg",
             "industries": [],
             "created_at": "2022-09-08T02:08:34+00:00"
+        },
+        {
+            "id": 9,
+            "type": "オンデマンド講座",
+            "title": "【理系学生必見】手軽に知れる技術面接対策",
+            "image": "../ondemand_events/technical_interview.png",
+            "industries": [],
+            "created_at": "2022-10-01T16:42:34+00:00"
+        },
+        {
+            "id": 10,
+            "type": "オンデマンド講座",
+            "title": "～時代を生き抜く金融マンへ～一歩深く金融業界の知識を学ぼう",
+            "image": "../ondemand_events/financial_ondemand.jpg",
+            "industries": [],
+            "created_at": "2022-10-01T16:43:34+00:00"
         }
     ]
 }

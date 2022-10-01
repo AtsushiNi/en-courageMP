@@ -2,6 +2,11 @@
   margin-top: 60px;
 }
 
+.block.title img {
+  display: block;
+  margin: auto;
+}
+
 .block.description {
   box-shadow: 0 2px 4px 0 rgb(2 20 17 / 8%);
   background-color: #fff;
