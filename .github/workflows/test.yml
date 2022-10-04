@@ -17,4 +17,3 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }} 
           LOCAL_DIR: ./                           
           REMOTE_DIR: ./test-encourage-hp.com/public_html/
-          ARGS: --delete --parallel=10
