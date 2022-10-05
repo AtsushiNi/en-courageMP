@@ -89,3 +89,5 @@ $(document).on({
     isTooltipHover = false
   }
 }, "#tooltip")
+
+$("#deleted-element").css("display", "none");

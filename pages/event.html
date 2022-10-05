@@ -41,6 +41,7 @@
     <div id="select">
       <div id="new_event">
         <h1>新着イベント</h1>
+          <div class="item-list" id="deleted-element"><ul>deleted</ul></div> <!-- これがないとなぜかスマホでfont-sizeが壊れる -->
         <div class="item-list">
           <button class="ul-button left"></button>
           <ul>
@@ -62,7 +63,6 @@
                             <p>{$title}</p>
                           </div>
                         </div>
-                        <a href="{$url}" target="_blank" class="background"></a>
                       </li>
                     EOM;
                   }

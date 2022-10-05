@@ -14,3 +14,5 @@ $(".item-list ul").scroll(function() {
     $(this).next().css("opacity",0)
   }
 })
+
+$("#deleted-element").css("display", "none");
