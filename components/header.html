@@ -2,11 +2,22 @@
     <div class="header-logo">
         <a href="<?php print $Path;?>index.html">en-courage京大支部</a>
     </div>
-    <nav>
+    <nav class="pc-nav">
         <ul>
-            <li class="tab_menu"><a href="<?php print $Path;?>pages/interview.html">　面談　</a></li>
-            <li class="tab_menu"><a href="<?php print $Path;?>pages/event.html">イベント</a></li>
-            <li class="tab_menu"><a href="<?php print $Path;?>pages/articles.html">記事一覧</a></li>
+            <li><a href="<?php print $Path;?>pages/interview.html">　面談　</a></li>
+            <li><a href="<?php print $Path;?>pages/event.html">イベント</a></li>
+            <li><a href="<?php print $Path;?>pages/articles.html">記事一覧</a></li>
         </ul>
     </nav>
+    <nav class="sp-nav">
+        <ul>
+            <li><a href="<?php print $Path;?>pages/interview.html">　面談　</a></li>
+            <li><a href="<?php print $Path;?>pages/event.html">イベント</a></li>
+            <li><a href="<?php print $Path;?>pages/articles.html">記事一覧</a></li>
+            <li class="close"><span>閉じる</span></li>
+        </ul>
+    </nav>
+    <div id="hamburger">
+        <span></span>
+    </div>
 </header>
