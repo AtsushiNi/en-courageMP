@@ -82,3 +82,21 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+@media screen and (max-width: 375px) {
+    .footer-logo {
+        font-size: 1.6rem;
+    }
+    .footer-description {
+        font-size: 1rem;
+    }
+    .footer-description br {
+        display: none;
+    }
+    .footer-right {
+        display: none;
+    }
+    .footer-copyright {
+    font-size: 0.5rem;
+    }
+}

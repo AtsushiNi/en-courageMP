@@ -13,7 +13,7 @@
 img.top-img {
     width: 18%;
     height: 18%;
-    }
+}
 
 .top h1{
     color: #000B77;
@@ -108,4 +108,40 @@ img.top-img {
     height: auto;
     background-color: #fff;
     border-radius: 20px;
+}
+
+@media screen and (max-width: 640px) {
+    .top .top-wrap {
+        position: relative;
+    }
+    .top .top-img {
+        position: absolute;
+        right: 0;
+        top: -15px;
+        width: auto;
+        height: 40%;
+    }
+    .top h1 {
+        font-size: 6vh;
+    }
+    .top h2 {
+        font-size: 3vh;
+    }
+    .flexbox {
+        display: block;
+    }
+    .flexbox li {
+        width: auto;
+        margin: 30px auto;
+    }
+    .flexbox li a {
+        font-size: 1.6rem;
+        display: flex;
+    }
+    .flexbox li img {
+        width:40%;
+    }
+    .flexbox li p {
+        margin: auto;
+    }
 }
