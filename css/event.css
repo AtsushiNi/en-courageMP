@@ -259,3 +259,9 @@ div[id^=tippy-] {
 .item .background:hover {
     opacity: 0.3;
 }
+
+@media screen and (max-width: 640px) {
+  .fc-daygrid-event div {
+    font-size: 10px !important;
+  }
+}
