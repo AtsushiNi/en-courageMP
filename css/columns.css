@@ -231,7 +231,7 @@ input[name="tab_item"] {
   margin: 10% auto;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 640px){
   #calendar {
     width: 150%;
     margin: 0 auto;

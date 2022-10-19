@@ -64,7 +64,7 @@ nav ul li a:hover {
      opacity: 0.7;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
     .header-logo a {
         font-size: 1.5rem;
     }
