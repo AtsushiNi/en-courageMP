@@ -136,13 +136,6 @@ img.sample_img{
   height: auto;
 }
 
-@media screen and (max-width: 768px){
-  #calendar {
-    width: 150%;
-    margin: 0 auto;
-  }
-}
-
 div[id^=tippy-] {
   pointer-events: auto !important;
 }
@@ -200,12 +193,6 @@ div[id^=tippy-] {
 }
 .item-list ul::-webkit-scrollbar {
     display: none;
-}
-
-@media screen and (max-width: 375px) {
-  .item-list ul {
-    font-size: 1.2rem;
-  }
 }
 
 .item-list .ul-button {
