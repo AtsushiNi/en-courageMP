@@ -186,3 +186,31 @@ div.view-more {
 .pickup-img {
     max-width: 400px;
 }
+
+@media screen and (max-width: 640px) {
+    .title {
+        display: block;
+    }
+    .how-to-use-logo {
+        position: static;
+    }
+    .how-to-use-content ul {
+        position: static;
+        font-size: 1rem;
+    }
+    .pickup {
+        display: block;
+    }
+    .pickup-img {
+        display: none;
+    }
+    .band-string h1 {
+        font-size: 2.2rem;
+    }
+    .component h1 {
+        font-size: 1.6rem;
+    }
+    #join .band-string {
+        text-align: left;
+    }
+}
