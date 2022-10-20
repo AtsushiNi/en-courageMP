@@ -82,3 +82,31 @@ aside .input-group-text img {
   width: 20px;
   height: 20px;
 }
+
+@media screen and (max-width: 640px) {
+  .content {
+    display: block;
+  }
+  aside {
+    position: static;
+  }
+  #main-title {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  #main-title img {
+    width: 100%;
+  }
+  .card {
+    width: calc(50vw - 41px);
+  }
+  .card img {
+    width: 100%;
+  }
+  .card h5 {
+    font-size: 1rem;
+  }
+  .card-body .badges span {
+    font-size: 0.5rem;
+  }
+}
