@@ -96,3 +96,9 @@ aside {
 .background:hover {
   opacity: 0.3;
 }
+
+@media screen and (max-width: 640px) {
+  .card div {
+    font-size: 1rem;
+  }
+}

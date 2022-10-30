@@ -100,3 +100,19 @@
   transition: all 0.3s;
   background-color: #3646f6;
 }
+
+@media screen and (max-width: 640px) {
+  .block.title {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .block.title img {
+    width:  100%;
+  }
+  .section {
+    font-size: 1rem;
+  }
+  .download-button {
+    font-size: 1rem;
+  }
+}

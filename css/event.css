@@ -261,6 +261,9 @@ div[id^=tippy-] {
 }
 
 @media screen and (max-width: 640px) {
+  #select h1 {
+    font-size: 1.75rem;
+  }
   .fc-daygrid-event div {
     font-size: 10px !important;
   }

@@ -97,3 +97,12 @@ img {
   line-height: 200%;
   letter-spacing: 0.6px;
 }
+
+@media screen and (max-width: 640px) {
+  .title h1 {
+    font-size: 2.2rem;
+  }
+  #mokuji li {
+    font-size:  1rem;
+  }
+}

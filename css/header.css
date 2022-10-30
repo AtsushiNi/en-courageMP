@@ -146,11 +146,11 @@ nav ul li a:hover {
         padding: 20px 0;
     }
     /*-閉じるアイコンー*/
-    .sp-nav .close {
+    .sp-nav .nav-close {
         position: relative;
         padding-left: 20px;
     }
-    .sp-nav .close::before {
+    .sp-nav .nav-close::before {
         content: '';
         position: absolute;
         top: 50%;
@@ -161,7 +161,7 @@ nav ul li a:hover {
         background: #fff;
         transform: rotate( 45deg );
     }
-    .sp-nav .close::after {
+    .sp-nav .nav-close::after {
         content: '';
         position: absolute;
         top: 50%;
