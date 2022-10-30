@@ -1,36 +1,6 @@
 {
     "data": [
         {
-            "id": 6,
-            "type": "GD",
-            "date": "10/14(金)",
-            "title": "【GD vol1 の続編！】GD vol 1.5<br>～秋冬インターン・選考対策に向けて～",
-            "url": "https://en-courage.com/events/QXiCzQ445pqFcQZQD86P",
-            "image": "10\/9\/X1F6AJEwAfBo2hhfFKJ1wHEwCyEwJLNjvEl6eqazIdnfJrfqCgk9bXSt8zG988Hy.jpeg",
-            "start": "19:00",
-            "end": "21:00"
-        },
-        {
-            "id": 7,
-            "type": "面接",
-            "date": "10/17(月)",
-            "title": "【選考突破率グーンとアップ】<br>集団面接セミナー（前回参加者も参加可能！）",
-            "url": "https://en-courage.com/events/Kn8kIbYKkoHhbpQGGR0f",
-            "image": "10\/9\/vocHisyb80zaZH1QtlhAqrZfIIP5h5cgdiH721UNGLTvIjMBg52zNuEGt8OkcCec.jpeg",
-            "start": "20:15",
-            "end": "21:15"
-        },
-        {
-            "id": 8,
-            "type": "GD",
-            "date": "10/24(月)",
-            "title": "【秋冬インターンに向けて<br>最後のブラッシュアップ】<br>GD実践編vol2",
-            "url": "https://en-courage.com/events/jZ8QXRBxE8Pey1SDMDWK",
-            "image": "10\/9\/z8NkrumDwdEVm2wwHLA96Z3fpS88TkUZL2j51CwBY0ofOOohHsMa6sngmuqmtfGF.jpeg",
-            "start": "19:00",
-            "end": "21:00"
-        },
-        {
             "id": 9,
             "type": "説明会",
             "date": "10/29(土)",
@@ -47,6 +17,36 @@
             "title": "文系も理系も！<br>メーカー気になる人集まれ座談会📢<br>～機械・食品飲料・化学など～",
             "url": "https://en-courage.com/events/gBGNkLZQEl2vX7KTaAX2",
             "image": "10\/9\/1oLqlZkuYnUxW05ywF2xGcECQOWbhY0MTHhyJSUjZ2ahdpey8vM1gBI1dtXApLNn.png",
+            "start": "19:00",
+            "end": "20:30"
+        },
+        {
+            "id": 11,
+            "type": "面接",
+            "date": "11/21(月)",
+            "title": "本選考面接対策セミナー<br>【本番さながらの面接とFBつき！】",
+            "url": "https://en-courage.com/events/K5kWWG250NLfAflSVCqJ",
+            "image": "10\/10\/dwFduyC1jwFcBhUDvFefWGRxB7kwGWu6tntfHvTCGFgxHh5AhO1EMlaoolUsIUS7.png",
+            "start": "19:00",
+            "end": "20:30"
+        },
+        {
+            "id": 12,
+            "type": "GD",
+            "date": "11/25(金)",
+            "title": "京大・東大・早稲田合同<br>ハイレベルGD＆就活生交流会📢",
+            "url": "https://en-courage.com/events/yZBNJpLnmEPRKHcQplZg",
+            "image": "10\/10\/fdx1ZmWr8KLzxpD3yoVR4oVYLhZxaIVPMW3rVLDmI8KLgEj7MlDKdaTnJNEuUMjJ.png",
+            "start": "19:00",
+            "end": "21:00"
+        },
+        {
+            "id": 13,
+            "type": "説明会",
+            "date": "11/28(月)",
+            "title": "【23卒内定者に学ぶ！】<br>本選考対策セミナー",
+            "url": "https://en-courage.com/events/X6QrNkKvRt7GMQZXZwJH",
+            "image": "10\/10\/VJXNHBycTgLDY6D6EwDC4KPccXiVNEdCoSc0vTHENUv9p5eU0YzIpGuvsH28DPVI.jpeg",
             "start": "19:00",
             "end": "20:30"
         }
