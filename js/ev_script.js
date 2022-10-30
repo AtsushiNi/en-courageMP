@@ -29,8 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
       let image = description.match(/image:[\w\/\.]+/)[0]
       image = image.slice(6)
       image = "../images/events/" + image
-      let type = description.match(/type:.*/)[0]
-      type = type.slice(5)
 
       const tooltip = $("#tooltip").clone(true, true)
       tooltip.find("img").attr("src", image)
@@ -42,7 +40,10 @@ document.addEventListener('DOMContentLoaded', function () {
       $(info.el).attr("target", "_blank")
       $(info.el).find(".fc-event-title").css("white-space", "normal")
       if(isSmartPhone()) {
+        let type = description.match(/type:.*/)[0]
+        type = type.slice(5)
         $(info.el).find(".fc-event-title").html(type)
+        $(info.el).attr("href", "")
       }
       $(info.el).css("display", "block")
       const dotStyle =  {
