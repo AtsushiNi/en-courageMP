@@ -1,26 +1,6 @@
 {
     "data": [
         {
-            "id": 9,
-            "type": "説明会",
-            "date": "10/29(土)",
-            "title": "今だからこそ、業界広く見とかない？👀<br>　10業界（まだまだ増える予定！）<br>内定者座談会",
-            "url": "https://en-courage.com/events/NhGGP3XQKUXUkAt26xOt",
-            "image": "10\/9\/mmvj98TwkrTqHxaKJJkstQRTQqSM9YTTtFMszvToNRQwSZR2kjXsyZebv4keF7vt.jpeg",
-            "start": "19:00",
-            "end": "20:30"
-        },
-        {
-            "id": 10,
-            "type": "説明会",
-            "date": "10/31(月)",
-            "title": "文系も理系も！<br>メーカー気になる人集まれ座談会📢<br>～機械・食品飲料・化学など～",
-            "url": "https://en-courage.com/events/gBGNkLZQEl2vX7KTaAX2",
-            "image": "10\/9\/1oLqlZkuYnUxW05ywF2xGcECQOWbhY0MTHhyJSUjZ2ahdpey8vM1gBI1dtXApLNn.png",
-            "start": "19:00",
-            "end": "20:30"
-        },
-        {
             "id": 11,
             "type": "面接",
             "date": "11/21(月)",
@@ -29,16 +9,6 @@
             "image": "10\/10\/dwFduyC1jwFcBhUDvFefWGRxB7kwGWu6tntfHvTCGFgxHh5AhO1EMlaoolUsIUS7.png",
             "start": "19:00",
             "end": "20:30"
-        },
-        {
-            "id": 12,
-            "type": "GD",
-            "date": "11/25(金)",
-            "title": "京大・東大・早稲田合同<br>ハイレベルGD＆就活生交流会📢",
-            "url": "https://en-courage.com/events/yZBNJpLnmEPRKHcQplZg",
-            "image": "10\/10\/fdx1ZmWr8KLzxpD3yoVR4oVYLhZxaIVPMW3rVLDmI8KLgEj7MlDKdaTnJNEuUMjJ.png",
-            "start": "19:00",
-            "end": "21:00"
         },
         {
             "id": 13,
