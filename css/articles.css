@@ -45,6 +45,15 @@ body * {
   margin-top: 10px;
   font-size: 1.8rem;
 }
+.card .image {
+  position: relative;
+}
+.card .image .new {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 50px;
+}
 .card img {
   border-radius: 10px 10px 0 0;
 }

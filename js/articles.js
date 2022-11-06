@@ -8,6 +8,10 @@ async function setArticles() {
     let image = "../images/industries/" + article.image
     let path = ""
     let title = ""
+    let created_at = new Date(article.created_at)
+    let date = new Date()
+    date.setDate(date.getDate() - 10)
+
     switch(article.type) {
       case "内定先決定理由コラム":
         image = "../images/columns/" + article.image
@@ -26,7 +30,10 @@ async function setArticles() {
     const card = $("#card-tmp > div").clone(true, true)
 
     card.css("display", "")
-    card.find("img").attr("src", image)
+    card.find(".card-img-top").attr("src", image)
+    if(date > created_at) {
+      card.find(".new").css("display", "none")
+    }
     card.find("h5").html("<strong>"+ title +"</strong>")
     card.find("p").html(new Date(article.created_at).toLocaleDateString())
     card.find(".background").attr("href", path)
