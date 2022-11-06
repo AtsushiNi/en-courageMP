@@ -139,8 +139,10 @@
   <?php include(__DIR__ . '/../../components/header.html'); ?>
   <div class="content">
     <main>
-      <img src="../../images/self-analysis/IMG_5934.PNG" class="sample_img">
-      <h1>${company_name}の選考体験記</h1>
+      <div class="section title">
+        <img src="../../images/self-analysis/IMG_5934.PNG" class="sample_img">
+        <h1>${company_name}の選考体験記</h1>
+      </div>
 
       <div class="section">
         <h2>目次</h2>
