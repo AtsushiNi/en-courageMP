@@ -82,7 +82,22 @@ HP更新時の動作確認や記事作成に使用
 1. gitをインストール
 2. MAMPをインストール
 3. MAMPのhtdocsフォルダに本レポジトリをclone
-4. localhost/{本ディレクトリ名} にブラウザでアクセス
+4. /Applications/MAMP/conf/apache/httpd.confを以下のように修正
+    1. 最終業に以下を追加(文字化け防止)
+```
+IndexOptions Charset=UTF-8
+AddDefaultCharset UTF-8
+```
+    2. 163行目を修正
+```
+AddType application/x-httpd-php .php .phtml
+```
+から
+```
+AddType application/x-httpd-php .php .phtml .html
+```
+へ
+5. localhost/{本ディレクトリ名} にブラウザでアクセス
 
 ## デプロイ
 GitHub Actionsを用いて自動化した<br>
