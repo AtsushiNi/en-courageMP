@@ -87,6 +87,38 @@
             "image": "../ondemand_events/vxjUDElTnfegI0XWqOyWD4gNHjiqzCw8Id4HKn33ERj6OudCnAYuh4UpTxeKX6KN.jpg",
             "industries": [],
             "created_at": "2022-11-16T15:33:34+00:00"
+        },
+        {
+            "id": 12,
+            "type": "オンデマンド講座",
+            "title": "【オンデマンド】面接セミナーインプット編",
+            "image": "../ondemand_events/NELRyBe9tH5ubjZ6QoJaS8GANS74Zghyhx7GN1SNjGwEdR0ptuLmx4ZiyEZVe6m5.jpg",
+            "industries": [],
+            "created_at": "2022-11-16T20:36:34+00:00"
+        },
+        {
+            "id": 13,
+            "type": "オンデマンド講座",
+            "title": "【オンデマンド】GD対策のいろは",
+            "image": "../ondemand_events/0kYs6rNp9fzRudZP2aQijjETdrQpE3UngymMvucK9YdEu046CjelRuwQNDzvA6Au.jpeg",
+            "industries": [],
+            "created_at": "2022-11-16T20:46:34+00:00"
+        },
+        {
+            "id": 14,
+            "type": "オンデマンド講座",
+            "title": "【オンデマンド】外資コンサルセミナー入門編",
+            "image": "../ondemand_events/X5NxifalrKR9YxRnPdGDT9DobZy5YIT2FoyHfopKdPsoBQptltsCyO4qQFL6k9SQ.jpeg",
+            "industries": [],
+            "created_at": "2022-11-16T20:51:34+00:00"
+        },
+        {
+            "id": 15,
+            "type": "オンデマンド講座",
+            "title": "本当は就活生全員に届けたい...！今すぐ使える！就活Tips💡",
+            "image": "../ondemand_events/uFqCng1HVTPICNWSytxUraMckQv8KqqhU0QeBzjBnvE1vyNkWRhmx74LSRcIxUr0.jpeg",
+            "industries": [],
+            "created_at": "2022-11-16T20:58:34+00:00"
         }
     ]
 }
