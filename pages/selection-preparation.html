@@ -32,7 +32,7 @@
     $oc_ids = array_column($oc_list["data"], "id");
 
     $ondemand_list = file_get_contents("../admin/data/ondemand_events.json");
-    $ondemand_list = json_decode($ondemand_list, ture);
+    $ondemand_list = json_decode($ondemand_list, true);
     $ondemand_ids = array_column($ondemand_list["data"], "id");
 
     $pick_up_index = array_search($page_data["pickup"], $oc_ids);
