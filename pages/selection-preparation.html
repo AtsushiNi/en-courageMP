@@ -31,6 +31,10 @@
     $oc_list = json_decode($oc_list, true);
     $oc_ids = array_column($oc_list["data"], "id");
 
+    $ondemand_list = file_get_contents("../admin/data/ondemand_events.json");
+    $ondemand_list = json_decode($ondemand_list, ture);
+    $ondemand_ids = array_column($ondemand_list["data"], "id");
+
     $pick_up_index = array_search($page_data["pickup"], $oc_ids);
     $pick_up = $oc_list["data"][$pick_up_index];
 
@@ -57,6 +61,12 @@
         $event_index = array_search($id, $oc_ids);
         $event = $oc_list["data"][$event_index];
         array_push($other_events, $event);
+    }
+    $ondemand_events = [];
+    foreach ($page_data["ondemand"] as $id) {
+        $ondemand_index = array_search($id, $ondemand_ids);
+        $ondemand = $ondemand_list["data"][$ondemand_index];
+        array_push($ondemand_events, $ondemand);
     }
 
    $events = array("ES対策" => $es_events, "GD対策" => $gd_events, "インターン" => $intern_events, "その他" => $other_events)
@@ -106,7 +116,9 @@
         </div>
         <div class="component">
           <h1>選考体験記</h1>
-          <div class="item-list" id="deleted-element" style="color:#F3F2EF"><ul>deleted</ul></div> <!-- これがないとなぜかスマホでfont-sizeが壊れる -->
+          <div class="item-list" id="deleted-element" style="color:#F3F2EF">
+            <ul>deleted</ul>
+          </div> <!-- これがないとなぜかスマホでfont-sizeが壊れる -->
           <div class="item-list">
             <button class="ul-button left"></button>
             <ul id="prepare-item-list">
@@ -142,92 +154,19 @@
           <div class="item-list">
             <button class="ul-button left"></button>
             <ul id="prepare-item-list">
-              <li class="item">
-                <div>
-                  <img src="../images/ondemand_events/financial_ondemand.jpg" class="image">
-                  <div>～時代を生き抜く金融マンへ～一歩深く金融業界の知識を学ぼう</div>
-                </div>
-                <a href="../ondemand_events/10.html" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img src="../images/ondemand_events/technical_interview.png" class="image">
-                  <div>【理系学生必見】手軽に知れる技術面接対策</div>
-                </div>
-                <a href="../ondemand_events/9.html" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img
-                    src="../images/ondemand_events/2bTVWgvTlFoWE7vpYpnIJV9JwSsnThuIW45AMWY1q6fBIqnrvCH3Hv6XFDnSpwVd.jpeg"
-                    class="image">
-                  <div>インターンでぶっちぎれ！！</div>
-                </div>
-                <a href="../ondemand_events/1.html" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img
-                    src="../images/ondemand_events/AD4s0wa1a7ScfxEK5PT915AHjB1CRvnjfQXCW0R0ZtH64xgYjPuntfhsB4IktLFL.jpeg"
-                    class="image">
-                  <div>受かるES・落ちるES</div>
-                </div>
-                <a href="../ondemand_events/2.html" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img
-                    src="../images/ondemand_events/mUoNLEBrjCJywGvrV7CuXrBNuqfA2VRpYDJTQqxTRZ8B0GWjTMMXerOgkicQX2nl.jpeg"
-                    class="image">
-                  <div>総合商社内々定者に聞いた！～7大商社徹底解剖～</div>
-                </div>
-                <a href="../ondemand_events/3.html" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img
-                    src="../images/ondemand_events/JT1AT572WGdDXLbpdkT3JpIKC9ZpbASKcxFBQedaAEhTY53jmtEITu4TNzPMUPQ9.jpeg"
-                    class="image">
-                  <div>【オンデマンド版】IT業界完全攻略資料💻</div>
-                </div>
-                <a href="../ondemand_events/4.html" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img
-                    src="../images/ondemand_events/lBRPA0jFycMPDWGljqFkOfHJtw34EFFUFWZkEwDpzulb9ZdbHD4GJWUJSWnsJioS.jpeg"
-                    class="image">
-                  <div>【オンデマンド】デベロッパー</div>
-                </div>
-                <a href="../ondemand_events/5.html" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img
-                    src="../images/ondemand_events/cGfh0DiOts1RNnvbQ556bxGAmuFuCxadvrsLjKxSet6Ta5I7mFJz6mWC8kBS1ywX.jpeg"
-                    class="image">
-                  <div>【オンデマンド】テレビ・広告</div>
-                </div>
-                <a href="../ondemand_events/6.html" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img
-                    src="../images/ondemand_events/85S5n7zGnalub8YErbxOdbamkyg4TSpxmMGWnuvxVtmAhKytruNt5U12wS43EFmB.jpeg"
-                    class="image">
-                  <div>【オンデマンド】食品飲料</div>
-                </div>
-                <a href="../ondemand_events/7.html" class="background"></a>
-              </li>
-              <li class="item">
-                <div>
-                  <img
-                    src="../images/ondemand_events/dTKtxIMDAo9rCEAaVn3TUZmD2GNlrI6nJkKXDIOtRpLNKmaOUivlf8kFUdqq1dHN.jpeg"
-                    class="image">
-                  <div>【オンデマンド】コンサル</div>
-                </div>
-                <a href="../ondemand_events/8.html" class="background"></a>
-              </li>
+              <?php
+                foreach ($ondemand_events as $ondemand_event) {
+                  echo <<< EOM
+                    <li class='item'>
+                      <div>
+                        <img src="../images/ondemand_events/{$ondemand_event['image']}" class="image">
+                        <div>{$ondemand_event["title"]}</div>
+                      </div>
+                      <a href="../ondemand_events/{$ondemand_event['id']}.html" class="background"></a>
+                    </li>
+                  EOM;
+                }
+              ?>
             </ul>
             <button class="ul-button right"></button>
           </div>
