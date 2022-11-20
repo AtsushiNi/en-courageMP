@@ -19,6 +19,16 @@
             "image": "10\/10\/VJXNHBycTgLDY6D6EwDC4KPccXiVNEdCoSc0vTHENUv9p5eU0YzIpGuvsH28DPVI.jpeg",
             "start": "19:00",
             "end": "20:30"
+        },
+        {
+            "id": 14,
+            "type": "説明会",
+            "date": "12/13(火)",
+            "title": "33人のメンターさんを連れてきた。<br>〜火曜の夜、きっとあなたはぶっ飛んじゃう。〜",
+            "url": "https://en-courage.com/events/M8JCPvib2FnMuw897Xuy",
+            "image": "10\/12\/12_13_event.png",
+            "start": "19:00",
+            "end": "20:30"
         }
     ]
 }
