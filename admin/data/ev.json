@@ -1,26 +1,6 @@
 {
     "data": [
         {
-            "id": 11,
-            "type": "面接",
-            "date": "11/21(月)",
-            "title": "本選考面接対策セミナー<br>【本番さながらの面接とFBつき！】",
-            "url": "https://en-courage.com/events/K5kWWG250NLfAflSVCqJ",
-            "image": "10\/10\/dwFduyC1jwFcBhUDvFefWGRxB7kwGWu6tntfHvTCGFgxHh5AhO1EMlaoolUsIUS7.png",
-            "start": "19:00",
-            "end": "20:30"
-        },
-        {
-            "id": 13,
-            "type": "説明会",
-            "date": "11/28(月)",
-            "title": "【23卒内定者に学ぶ！】<br>本選考対策セミナー",
-            "url": "https://en-courage.com/events/X6QrNkKvRt7GMQZXZwJH",
-            "image": "10\/10\/VJXNHBycTgLDY6D6EwDC4KPccXiVNEdCoSc0vTHENUv9p5eU0YzIpGuvsH28DPVI.jpeg",
-            "start": "19:00",
-            "end": "20:30"
-        },
-        {
             "id": 14,
             "type": "説明会",
             "date": "12/13(火)",
