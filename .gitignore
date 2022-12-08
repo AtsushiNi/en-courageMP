@@ -2,5 +2,6 @@
 .htpasswd
 generator/tmp/*
 .htaccess
+generator/.htaccess
 credentials.js
 admin/vendor
