@@ -480,6 +480,90 @@
             "image": "IT.png",
             "author": "西山幸志",
             "created_at": "2022-11-06T12:38:34+00:00"
+        },
+        {
+            "id": 41,
+            "type": "選考体験記",
+            "company": "住友商事",
+            "industries": [
+                "商社"
+            ],
+            "atsumori": "",
+            "image": "trading.png",
+            "author": "濱田洸輔",
+            "created_at": "2022-12-14T16:28:34+00:00"
+        },
+        {
+            "id": 42,
+            "type": "選考体験記",
+            "company": "住友商事",
+            "industries": [
+                "商社"
+            ],
+            "atsumori": "",
+            "image": "trading.png",
+            "author": "錦織優花",
+            "created_at": "2022-12-14T16:29:34+00:00"
+        },
+        {
+            "id": 43,
+            "type": "選考体験記",
+            "company": "SONY",
+            "industries": [
+                "メーカー", "IT"
+            ],
+            "atsumori": "intern",
+            "image": "manufacturer.png",
+            "author": "新濱敦史",
+            "created_at": "2022-12-14T17:57:34+00:00"
+        },
+        {
+            "id": 44,
+            "type": "選考体験記",
+            "company": "農林中央金庫",
+            "industries": [
+                "金融", "食品"
+            ],
+            "atsumori": "interview",
+            "image": "financial.png",
+            "author": "安藤有菜",
+            "created_at": "2022-12-14T18:03:34+00:00"
+        },
+        {
+            "id": 45,
+            "type": "選考体験記",
+            "company": "マーサージャパン",
+            "industries": [
+                "コンサルティング"
+            ],
+            "atsumori": "interview",
+            "image": "consulting.png",
+            "author": "東山昇平",
+            "created_at": "2022-12-14T18:08:34+00:00"
+        },
+        {
+            "id": 46,
+            "type": "選考体験記",
+            "company": "双日株式会社",
+            "industries": [
+                "商社"
+            ],
+            "atsumori": "",
+            "image": "trading.png",
+            "author": "東山昇平",
+            "created_at": "2022-12-14T18:12:34+00:00"
+        },
+        {
+            "id": 47,
+            "type": "選考体験記",
+            "company": "KDDI",
+            "industries": [
+                "IT"
+            ],
+            "atsumori": "interview",
+            "image": "IT.png",
+            "author": "岩田光流",
+            "created_at": "2022-12-14T18:17:34+00:00"
         }
     ]
 }
