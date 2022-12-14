@@ -9,17 +9,17 @@
   $atsumori_events = json_decode($atsumori_events, true);
   $event_id = $atsumori_events["data"][$experience["atsumori"]];
 
-  $event_list = file_get_contents("../admin/data/ev.json");
+  $event_list = file_get_contents("../admin/data/ondemand_events.json");
   $event_list  = json_decode($event_list, true);
   $event_ids = array_column($event_list["data"], "id");
   $event_index = array_search($event_id, $event_ids);
   $event = $event_list["data"][$event_index];
   $image = $event["image"];
   $title = $event["title"];
-  $url = $event["url"];
+  $url = "../ondemand_events/" . $event["id"] . ".html";
 
   echo <<< EOM
-    <img src="../images/events/${image}" class="sample_img">
+    <img src="../images/ondemand_events/${image}" class="sample_img">
     <div>
       ${title}
     </div>
