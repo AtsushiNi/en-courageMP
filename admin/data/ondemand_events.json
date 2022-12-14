@@ -71,6 +71,22 @@
             "image": "../ondemand_events/uFqCng1HVTPICNWSytxUraMckQv8KqqhU0QeBzjBnvE1vyNkWRhmx74LSRcIxUr0.jpeg",
             "industries": [],
             "created_at": "2022-11-16T20:58:34+00:00"
+        },
+        {
+            "id": 16,
+            "type": "オンデマンド講座",
+            "title": "模擬面接のぞき見<br>～自信を持って面接を受けるための第一歩～",
+            "image": "../ondemand_events/H1jAJKqyy4SXW9HYKlMYMfCtOTAufLLc9s3E4hoeVmIvQfskzGP98qypiSIT24nj.jpeg",
+            "industries": [],
+            "created_at": "2022-12-14T22:17:34+00:00"
+        },
+        {
+            "id": 17,
+            "type": "オンデマンド講座",
+            "title": "GDのぞき見👀<br>〜GDってメンバーゲー?!〜",
+            "image": "../ondemand_events/4sPIUZ4Y19PXpyvZ2JGPd4XhQVGVUxYvw8N5vgYG0EBXG0m16JS5v4dXPMjhTNRm.jpeg",
+            "industries": [],
+            "created_at": "2022-12-14T22:18:34+00:00"
         }
     ]
 }
